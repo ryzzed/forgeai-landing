@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Nail Salons — Book Appointments 24/7 | ChatFlow</title>
+  <meta name="description" content="ChatFlow's AI chatbot for nail salons answers questions about services, pricing, availability, and nail care — automatically. Start free, $39/month."/>
+  <meta property="og:title" content="AI Chatbot for Nail Salons — Fill Your Appointment Book While You Work"/>
+  <meta property="og:description" content="Your AI assistant answers questions about nail services, pricing, gel vs acrylic, and how to book — 24/7, while your hands are busy with clients. Start free."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/nail-salon-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an AI chatbot help a nail salon?","acceptedAnswer":{"@type":"Answer","text":"A nail salon chatbot answers client questions when you're busy with appointments. It explains services, pricing, gel vs acrylic differences, appointment availability, and nail care tips — converting website visitors into booked clients without interrupting your work."}},{"@type":"Question","name":"What questions can a nail salon chatbot answer?","acceptedAnswer":{"@type":"Answer","text":"A ChatFlow nail salon chatbot can answer: manicure and pedicure services and pricing, gel vs acrylic vs dip powder differences, appointment availability and how to book, nail care maintenance tips, what to expect for nail extensions, and whether walk-ins are accepted. Configure it with your specific menu."}},{"@type":"Question","name":"How do I set up ChatFlow for my nail salon?","acceptedAnswer":{"@type":"Answer","text":"Sign up at myflow.chat, describe your salon — services, pricing, booking process, nail care tips, and policies — in a system prompt. Paste one embed code into your website. Live in under 10 minutes — capturing appointment requests even after hours."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .example-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px}
+    .example-box h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+    .chat-bubble{display:flex;gap:10px;margin-bottom:14px}
+    .chat-bubble.user{flex-direction:row-reverse}
+    .bubble-text{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;font-size:13px;color:#94a3b8;max-width:70%;line-height:1.5}
+    .chat-bubble.user .bubble-text{background:rgba(124,58,237,.2);color:#c4b5fd}
+    .bubble-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+    .bubble-avatar.bot{background:rgba(124,58,237,.3);color:#a78bfa}
+    .bubble-avatar.user{background:rgba(255,255,255,.1);color:#94a3b8}
+    .steps{display:flex;flex-direction:column;gap:20px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+    .step-content h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+    .step-content p{font-size:13px;color:#64748b;line-height:1.5}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    AI Chatbot for Nail Salons
+  </div>
+  <h1>Fill your appointment book<br/><span>while your hands are busy.</span></h1>
+  <p class="hero-sub">Your AI assistant answers questions about nail services, pricing, gel vs acrylic, and how to book — 24/7, while you focus on the client in front of you.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free — no card needed</a>
+    <a href="/" class="btn-ghost">Learn more →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your nail salon chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">Answer service questions, book appointments, convert visitors into clients</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Service menu & pricing</h3>
+      <p>Explains your full service menu — manicures, pedicures, gel, acrylic, dip powder, nail art, extensions — and pricing so clients arrive knowing what to expect.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
+      <h3>Gel vs acrylic questions</h3>
+      <p>Answers the most common comparison questions — gel vs acrylic vs dip powder durability, removal process, damage concerns, and which is right for the client's lifestyle.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Appointment booking</h3>
+      <p>Collects preferred service, date/time preference, and contact info — then directs clients to book online or confirms they'll receive a callback to schedule.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Hours & walk-in policy</h3>
+      <p>Answers hours, whether walk-ins are accepted, wait time expectations, and cancellation policy — reducing no-shows and helping clients plan their visit.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">See it in action</h2>
+  <div class="example-box">
+    <h3>Example nail salon chat</h3>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">C</div>
+      <div class="bubble-text">Hi! What's the difference between gel and acrylic? I want something that lasts at least 3 weeks</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Great question! Both can last 3+ weeks with proper care. Gel nails are cured under UV light and look more natural — they're flexible and gentler on your natural nails. Acrylics are stronger and better for extensions if you want added length. For 3-week wear without extension, gel is most popular. We also offer dip powder which is similar to gel but even more durable. Which do you prefer — natural look or can we add length?</div>
+    </div>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">C</div>
+      <div class="bubble-text">Natural look, maybe just a bit of length. How much does gel manicure cost?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Gel manicure with short extensions starts at $55. If you want a specific nail art design, that's an add-on from $10–$30 depending on complexity. We're open Mon–Sat 9am–7pm and Sundays 10am–5pm. Want to book an appointment? I can take your name and preferred time!</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Set up in 3 steps</h2>
+  <p class="section-sub" style="text-align:center">No developer. No complicated setup. Just a full appointment book.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Describe your salon</h3>
+        <p>Sign up and write a system prompt: full service menu with prices, nail types offered, hours, walk-in policy, and how to book. The AI uses this as its knowledge base.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Customize the widget</h3>
+        <p>Add your salon name, brand color, and a welcoming greeting. A polished widget creates the professional first impression your work deserves.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Add one line to your website</h3>
+        <p>Paste the embed code — works on WordPress, Squarespace, Wix, or any HTML site. Booking inquiries start coming in immediately, even at midnight.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle nail art inquiries and custom design requests?</p>
+      <p class="faq-a">Yes — include your nail art offerings and pricing in the system prompt. For custom design requests, configure the bot to collect the client's vision and direct them to share a reference photo when they book. It's a great way to set expectations before the appointment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if clients ask about nail care and maintenance between appointments?</p>
+      <p class="faq-a">Include maintenance tips in your system prompt — cuticle care, products to avoid, how long before a fill is needed. Clients who get good advice from your bot trust your expertise more and become loyal regulars.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How much does ChatFlow cost for a nail salon?</p>
+      <p class="faq-a">Free plan: 1,000 conversations/month. Starter: $39/month for 5,000 conversations without ChatFlow branding. Pro: $79/month for unlimited. One fully booked week covers months of subscription cost.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Stop losing bookings to missed after-hours inquiries</h2>
+    <p>Start free today. No credit card. Live in 10 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Create your nail salon chatbot →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hair-salon-chatbot.html">Hair Salon</a> · <a href="/spa-chatbot.html">Spa</a> · <a href="/personal-trainer-chatbot.html">Personal Trainer</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>
