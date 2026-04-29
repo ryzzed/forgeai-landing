@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Personal Trainers — Answer Clients 24/7 | ChatFlow</title>
+  <meta name="description" content="ChatFlow's AI chatbot for personal trainers answers questions about packages, pricing, schedules, and onboarding — automatically. Start free, $39/month."/>
+  <meta property="og:title" content="AI Chatbot for Personal Trainers — Convert Website Visitors to Clients"/>
+  <meta property="og:description" content="Stop losing prospects who visit your site at 11pm. Your AI training assistant answers questions about programs, pricing, and availability instantly."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/personal-trainer-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a chatbot help a personal trainer get more clients?","acceptedAnswer":{"@type":"Answer","text":"Most people researching personal trainers browse websites outside business hours. A ChatFlow AI chatbot answers their questions about training packages, pricing, experience, and scheduling immediately — even at midnight. Visitors who get answers stay on your site and are more likely to book a consultation. Without a chatbot, they leave and find a trainer who responds faster."}},{"@type":"Question","name":"What questions can a personal trainer chatbot answer?","acceptedAnswer":{"@type":"Answer","text":"A personal trainer ChatFlow bot can answer: training packages and pricing, in-person vs online training options, specialties (weight loss, strength, sports performance, pre/postnatal), how to get started, what a first session looks like, cancellation policies, and gym or studio location. You write these in a system prompt once."}},{"@type":"Question","name":"Can ChatFlow book personal training sessions?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow's AI can collect client interest (name, goal, preferred time) and link to your booking tool (Calendly, Acuity, etc.). The AI guides the visitor to book while answering their questions. Direct calendar integration is on the roadmap."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    AI Chatbot for Personal Trainers
+  </div>
+  <h1>Convert prospects while<br/><span>you're training clients.</span></h1>
+  <p class="hero-sub">Potential clients visit your website at all hours. Your AI assistant answers their questions about programs, pricing, and getting started — so you never lose a lead to voicemail.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free — no card needed</a>
+    <a href="/" class="btn-ghost">Learn more →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your AI training assistant handles</h2>
+  <p class="section-sub" style="text-align:center">Every question a prospect asks before booking their first session</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Package pricing</h3>
+      <p>Explains your training packages — 1-on-1 sessions, monthly packages, online coaching, group training — with pricing so prospects know what to expect before they reach out.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Your specialties</h3>
+      <p>Communicates your niche — weight loss, strength and conditioning, sports performance, pre/postnatal fitness, senior fitness — so the right clients self-select.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Getting started process</h3>
+      <p>Walks prospects through your onboarding — free consultation, fitness assessment, program design — so they know exactly what to expect and feel confident booking.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <h3>In-person vs online</h3>
+      <p>Explains the difference between your in-person and online coaching options so visitors choose the right fit before contacting you.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does ChatFlow cost for a personal trainer?</p>
+      <p class="faq-a">Free plan includes 1,000 conversations/month — more than enough to get started. Starter is $39/month for 5,000 conversations with your own branding. Pro is $79/month for unlimited conversations and multiple bots if you have a studio with other trainers.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle nutrition questions too?</p>
+      <p class="faq-a">Yes. You can configure the bot's system prompt with nutrition guidance information — general principles, whether you offer nutrition coaching, and what your approach covers. Be mindful of regulatory requirements in your jurisdiction around specific nutrition advice.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Will it work on my Squarespace or Wix trainer website?</p>
+      <p class="faq-a">Yes. ChatFlow works on any website — Squarespace, Wix, WordPress, Webflow, or custom sites. You paste one JavaScript embed code into your site's footer or custom code section.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if a client asks if I'm certified?</p>
+      <p class="faq-a">Include your certifications (NASM, ACE, ISSA, CSCS, etc.) and experience in your system prompt and the AI will share that information confidently when asked. You control exactly what the bot knows about your credentials.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Start converting website visitors into training clients</h2>
+    <p>Free plan. No card needed. Your AI assistant live in 10 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Create your trainer chatbot →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/gym-chatbot.html">Gym</a> · <a href="/spa-chatbot.html">Spa</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>
