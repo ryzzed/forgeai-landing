@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Electricians — Capture Service Requests 24/7 | ChatFlow</title>
+  <meta name="description" content="ChatFlow's AI chatbot for electricians answers service questions, qualifies jobs, and captures leads around the clock. Start free, $39/month to remove branding."/>
+  <meta property="og:title" content="AI Chatbot for Electricians — Never Miss a Service Call Again"/>
+  <meta property="og:description" content="Your AI assistant answers questions about electrical services, pricing, and availability — capturing leads while you're on the job. Start free."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/electrician-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an AI chatbot help an electrician business?","acceptedAnswer":{"@type":"Answer","text":"An AI chatbot on your electrical contractor website captures service requests and answers questions when you're on a job and can't pick up the phone. It handles questions about residential vs commercial work, service areas, pricing estimates, and emergency availability — so you don't lose leads to competitors who respond faster."}},{"@type":"Question","name":"What questions can an electrician chatbot answer?","acceptedAnswer":{"@type":"Answer","text":"A ChatFlow AI chatbot for electricians can answer questions about: types of electrical work you perform (panel upgrades, EV charger installation, rewiring, outlet installation), service area, emergency availability, rough pricing estimates, licensing and insurance, and how to schedule a service call. Configure it with your specific services and it handles the rest."}},{"@type":"Question","name":"How do I set up ChatFlow for my electrical business?","acceptedAnswer":{"@type":"Answer","text":"Sign up at myflow.chat, create a chatbot, and write a system prompt describing your electrical services — what you do, your service area, pricing ranges, and how to book. Paste one embed code into your website. Your AI assistant is live in under 10 minutes, capturing leads while you're in the field."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .example-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px}
+    .example-box h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+    .chat-bubble{display:flex;gap:10px;margin-bottom:14px}
+    .chat-bubble.user{flex-direction:row-reverse}
+    .bubble-text{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;font-size:13px;color:#94a3b8;max-width:70%;line-height:1.5}
+    .chat-bubble.user .bubble-text{background:rgba(124,58,237,.2);color:#c4b5fd}
+    .bubble-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+    .bubble-avatar.bot{background:rgba(124,58,237,.3);color:#a78bfa}
+    .bubble-avatar.user{background:rgba(255,255,255,.1);color:#94a3b8}
+    .steps{display:flex;flex-direction:column;gap:20px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+    .step-content h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+    .step-content p{font-size:13px;color:#64748b;line-height:1.5}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    AI Chatbot for Electricians
+  </div>
+  <h1>Capture service calls<br/><span>while you're on the job.</span></h1>
+  <p class="hero-sub">Your AI assistant answers questions about electrical services, qualifies jobs, and collects contact details — 24/7, even when you're in a panel box and can't pick up the phone.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free — no card needed</a>
+    <a href="/" class="btn-ghost">Learn more →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your electrician chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">Qualify jobs, capture leads, answer questions — automatically</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <h3>Service inquiries</h3>
+      <p>Explains what work you do — panel upgrades, EV charger installation, rewiring, outlet and switch installation, breaker replacement, and more.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Lead capture</h3>
+      <p>Collects name, address, job description, and preferred contact time — so every inquiry becomes a qualified lead in your inbox, not a missed call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing guidance</h3>
+      <p>Shares ballpark pricing for common jobs — service call fees, hourly rates, project ranges — so leads arrive with realistic expectations.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg></div>
+      <h3>Service area & availability</h3>
+      <p>Tells visitors which areas you serve, current booking availability, and whether you handle emergency calls — filters out out-of-area tire-kickers instantly.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">See it in action</h2>
+  <div class="example-box">
+    <h3>Example electrician chat</h3>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">K</div>
+      <div class="bubble-text">Do you install EV chargers? I have a Tesla.</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Yes, we install Level 2 EV chargers for all major brands including Tesla, and we're certified for both residential and commercial installations. For a Tesla, most homeowners need a 60-amp dedicated circuit and a 240V outlet or hardwired charger — total cost typically runs $400–$800 depending on panel capacity and cable run distance. Would you like a free estimate?</div>
+    </div>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">K</div>
+      <div class="bubble-text">Yes! I'm in [city]. How quickly can you come out?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Great — we serve [city] and typically schedule estimates within 2–3 business days. Can I get your name, address, and best phone number? I'll have someone reach out to confirm the appointment.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Set up in 3 steps</h2>
+  <p class="section-sub" style="text-align:center">No developer needed. Works on any website.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Describe your electrical services</h3>
+        <p>Sign up and create a chatbot. Write a prompt covering your services, service area, pricing ranges, licensing, and how to book — the AI uses this as its knowledge base.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Customize the widget</h3>
+        <p>Set your business name, brand color, and a greeting message. Keep it professional and on-brand for your electrical contracting business.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Paste one line into your website</h3>
+        <p>Copy your embed code and add it to your website — WordPress, Wix, Squarespace, or any HTML page. Your AI assistant starts capturing leads immediately.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle emergency service requests?</p>
+      <p class="faq-a">Yes — configure your system prompt to include your emergency line number and availability. The AI can identify urgent requests (power outages, sparking outlets, tripped breakers that won't reset) and immediately provide your emergency contact, ensuring no urgent job goes unanswered.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Will the AI give wrong pricing information?</p>
+      <p class="faq-a">The chatbot only shares what you tell it. Write your pricing as ranges with caveats ("pricing varies based on panel condition and cable run") and the AI will communicate that accurately. It won't invent numbers it wasn't given.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How much does ChatFlow cost for an electrician?</p>
+      <p class="faq-a">Free plan: 1,000 conversations/month. Starter: $39/month for 5,000 conversations without ChatFlow branding. Pro: $79/month for unlimited conversations. One captured job from a chatbot lead pays for years of subscription.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can it collect photos of the job site?</p>
+      <p class="faq-a">The current version handles text conversations. For photo collection, configure the bot to ask for a description and direct customers to email photos to your business address. Native image upload support is on the roadmap.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Stop losing leads while you're on the job</h2>
+    <p>Start free today. No credit card. Live in 10 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Create your electrician chatbot →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/plumber-chatbot.html">Plumber</a> · <a href="/mechanic-chatbot.html">Mechanic</a> · <a href="/roofing-chatbot.html">Roofing</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Photographers — Book Sessions 24/7 | ChatFlow</title>
+  <meta name="description" content="ChatFlow's AI chatbot for photography studios answers package questions, shares pricing, and captures session bookings 24/7. Start free, $39/month."/>
+  <meta property="og:title" content="AI Chatbot for Photographers — Turn Website Visitors Into Booked Sessions"/>
+  <meta property="og:description" content="Your AI assistant explains photography packages, pricing, and availability — capturing inquiries while you're on a shoot. Start free."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/photography-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an AI chatbot help a photography business?","acceptedAnswer":{"@type":"Answer","text":"A photography chatbot answers inquiries about packages, pricing, availability, and what to expect during a shoot — when you're with a client or editing and can't respond. It captures lead details and helps visitors move from browsing to booking, reducing the back-and-forth email chains that delay conversions."}},{"@type":"Question","name":"What questions can a photography chatbot answer?","acceptedAnswer":{"@type":"Answer","text":"A ChatFlow photography chatbot can answer: session types (portraits, weddings, newborns, commercial, events), package inclusions and pricing, turnaround time for edited photos, booking deposit requirements, what to wear and how to prepare, location options, and how to reserve a date."}},{"@type":"Question","name":"How do I set up ChatFlow for my photography studio?","acceptedAnswer":{"@type":"Answer","text":"Sign up at myflow.chat, describe your photography services — session types, packages, pricing, turnaround, and booking process — in a system prompt. Add one embed code to your portfolio site. Your AI assistant is live in under 10 minutes, capturing bookings while you shoot."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .example-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px}
+    .example-box h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+    .chat-bubble{display:flex;gap:10px;margin-bottom:14px}
+    .chat-bubble.user{flex-direction:row-reverse}
+    .bubble-text{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;font-size:13px;color:#94a3b8;max-width:70%;line-height:1.5}
+    .chat-bubble.user .bubble-text{background:rgba(124,58,237,.2);color:#c4b5fd}
+    .bubble-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+    .bubble-avatar.bot{background:rgba(124,58,237,.3);color:#a78bfa}
+    .bubble-avatar.user{background:rgba(255,255,255,.1);color:#94a3b8}
+    .steps{display:flex;flex-direction:column;gap:20px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+    .step-content h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+    .step-content p{font-size:13px;color:#64748b;line-height:1.5}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    AI Chatbot for Photographers
+  </div>
+  <h1>Turn portfolio visitors<br/><span>into booked sessions.</span></h1>
+  <p class="hero-sub">Your AI assistant explains packages, answers pricing questions, and captures booking inquiries — 24/7, even when you're shooting a wedding or in the editing cave.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free — no card needed</a>
+    <a href="/" class="btn-ghost">Learn more →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your photography chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">Answer every inquiry, book more sessions, do less emailing</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Package & pricing details</h3>
+      <p>Explains your photography packages — what's included, number of edited images, print rights, delivery method, and price — for every session type you offer.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Session booking</h3>
+      <p>Collects session type, preferred dates, number of people, location preference, and contact details — delivering a qualified lead so you can confirm and send a contract.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Session preparation</h3>
+      <p>Tells clients what to wear, what to expect, how long sessions typically run, turnaround time for galleries, and how photos are delivered.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg></div>
+      <h3>Locations & travel</h3>
+      <p>Explains studio location, outdoor location options, and your travel fees for shoots outside your area — filtering out geographic mismatches early.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">See it in action</h2>
+  <div class="example-box">
+    <h3>Example photography chat</h3>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">A</div>
+      <div class="bubble-text">Hi! I'm looking for a family photographer for about 4-5 people, outdoors. What are your packages?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Hi! I'd love to photograph your family. For outdoor family sessions I offer two packages: Standard (1 hour, 30 edited digital images, $350) and Extended (2 hours, 60 edited images, perfect for larger families or multiple locations, $525). Both include a private online gallery and full print rights. Do you have a location in mind, or would you like suggestions?</div>
+    </div>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">A</div>
+      <div class="bubble-text">That sounds great! We're thinking fall colors in October. Do you have weekend availability?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">October weekends are beautiful for fall sessions! My weekends book out fast for fall — typically 6–8 weeks in advance. Can I get your name and preferred weekend dates? I'll check availability and send over the booking details.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Set up in 3 steps</h2>
+  <p class="section-sub" style="text-align:center">Works on any portfolio site. No developer needed.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Describe your photography services</h3>
+        <p>Sign up and write your system prompt: session types, package pricing, inclusions, turnaround, booking process, and deposit policy. The AI knows what you tell it.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Customize the widget</h3>
+        <p>Set your name (or studio name), accent color, and a warm welcome message. The widget blends into your portfolio site design.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Add one line to your portfolio</h3>
+        <p>Paste the embed code into your site — works on Squarespace, WordPress, Wix, ShowIt, or any HTML portfolio. Booking inquiries start flowing immediately.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">What if someone asks about a session type I don't offer?</p>
+      <p class="faq-a">Configure your system prompt to only cover services you offer. If someone asks about something outside your scope (e.g., commercial product photography if you only do portraits), the AI will politely explain your focus and redirect them to what you do offer.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot take deposits or collect payment?</p>
+      <p class="faq-a">ChatFlow handles conversation and lead capture — payment collection happens through your invoicing system (HoneyBook, Dubsado, PayPal, etc.). Configure the bot to direct clients to your booking link or email after collecting their information.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How much does ChatFlow cost for a photographer?</p>
+      <p class="faq-a">Free plan: 1,000 conversations/month. Starter: $39/month for 5,000 conversations without ChatFlow branding. Pro: $79/month for unlimited. One booked session easily covers months of subscription.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Your portfolio deserves a 24/7 booking assistant</h2>
+    <p>Start free today. No credit card. Up and running in 10 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Create your photography chatbot →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/spa-chatbot.html">Spa</a> · <a href="/hair-salon-chatbot.html">Hair Salon</a> · <a href="/personal-trainer-chatbot.html">Personal Trainer</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>
