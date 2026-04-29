@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Wedding Venues — Answer Availability Questions 24/7 | ChatFlow</title>
+  <meta name="description" content="ChatFlow's AI chatbot for wedding venues answers questions about availability, packages, guest capacity, and pricing — automatically. Start free, $39/month."/>
+  <meta property="og:title" content="AI Chatbot for Wedding Venues — Book More Dates While You Host Events"/>
+  <meta property="og:description" content="Your AI assistant answers questions about venue availability, wedding packages, catering, and capacity — 24/7, converting inquiries to booked dates. Start free."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/wedding-venue-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an AI chatbot help a wedding venue?","acceptedAnswer":{"@type":"Answer","text":"A wedding venue chatbot answers couple and planner questions when you're hosting events and unavailable. It explains packages, capacity, catering options, availability windows, and how to book a tour — converting website visitors into scheduled visits and deposits without phone tag."}},{"@type":"Question","name":"What questions can a wedding venue chatbot answer?","acceptedAnswer":{"@type":"Answer","text":"A ChatFlow wedding venue chatbot can answer: venue capacity (ceremony and reception), package pricing, what's included, catering options (in-house vs outside vendors), overnight accommodation, parking, accessibility, vendor policies, and how to schedule a tour. Configure it with your specific offerings."}},{"@type":"Question","name":"How do I set up ChatFlow for my wedding venue?","acceptedAnswer":{"@type":"Answer","text":"Sign up at myflow.chat, describe your venue — capacity, packages, pricing, catering policy, availability windows, and tour process — in a system prompt. Paste one embed code into your website. Live in under 10 minutes — capturing wedding inquiries around the clock."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .example-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px}
+    .example-box h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+    .chat-bubble{display:flex;gap:10px;margin-bottom:14px}
+    .chat-bubble.user{flex-direction:row-reverse}
+    .bubble-text{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;font-size:13px;color:#94a3b8;max-width:70%;line-height:1.5}
+    .chat-bubble.user .bubble-text{background:rgba(124,58,237,.2);color:#c4b5fd}
+    .bubble-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+    .bubble-avatar.bot{background:rgba(124,58,237,.3);color:#a78bfa}
+    .bubble-avatar.user{background:rgba(255,255,255,.1);color:#94a3b8}
+    .steps{display:flex;flex-direction:column;gap:20px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+    .step-content h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+    .step-content p{font-size:13px;color:#64748b;line-height:1.5}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    AI Chatbot for Wedding Venues
+  </div>
+  <h1>Book more dates<br/><span>while you host events.</span></h1>
+  <p class="hero-sub">Your AI assistant answers questions about availability, packages, capacity, and catering — 24/7, converting browsing couples into scheduled tours and deposits.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free — no card needed</a>
+    <a href="/" class="btn-ghost">Learn more →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your wedding venue chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">Answer couple questions, schedule tours, convert inquiries to deposits</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Availability & capacity</h3>
+      <p>Answers questions about available dates, capacity for ceremony and reception spaces, indoor vs outdoor options, and whether you accommodate micro-weddings or large celebrations.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Packages & pricing</h3>
+      <p>Explains venue rental packages, what's included (tables, chairs, linens, AV, coordinator hours), pricing tiers by day of week and season, and deposit requirements.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+      <h3>Catering & vendors</h3>
+      <p>Explains in-house catering options, outside vendor policies, preferred vendor lists, and any restrictions — so couples can plan their full vision before investing in a site visit.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Tour scheduling</h3>
+      <p>Collects the couple's names, wedding date range, guest count, and contact info — then directs them to book a tour. Pre-qualified leads show up ready to fall in love with your space.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">See it in action</h2>
+  <div class="example-box">
+    <h3>Example wedding venue chat</h3>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">B</div>
+      <div class="bubble-text">Hi! We're looking at venues for a September 2026 wedding, about 120 guests. Do you have availability and what does it cost?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Congratulations on your engagement! September is one of our most popular months — we have some Saturday dates still open for 2026. Our ballroom holds up to 200 guests for dinner, so 120 would be a lovely, comfortable fit. Weekend packages start at $4,500 and include tables, chairs, linens, AV setup, and 10 hours of venue access. Would you like to schedule a tour?</div>
+    </div>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">B</div>
+      <div class="bubble-text">Yes! Do you have in-house catering or can we bring our own?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">We offer both options. We have an in-house catering team with wedding menus starting at $75/person, or you can choose from our preferred caterers list. Outside catering from non-preferred vendors is permitted with a $500 coordination fee. On a tour you'd get to taste test some of our menu options too! Can I get your name and number to schedule that visit?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Set up in 3 steps</h2>
+  <p class="section-sub" style="text-align:center">No developer. No complicated setup. Just more tours booked and dates held.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Describe your venue</h3>
+        <p>Sign up and write a system prompt: spaces and capacities, packages and pricing, catering policy, included amenities, vendor rules, and how to schedule a tour.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Customize the widget</h3>
+        <p>Add your venue name, brand color, and an elegant greeting. First impressions matter to couples — your chatbot should feel as polished as your venue.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Add one line to your website</h3>
+        <p>Paste the embed code — works on WordPress, Squarespace, or any HTML site. Tour requests and availability inquiries start flowing in around the clock.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle elopement or micro-wedding inquiries?</p>
+      <p class="faq-a">Yes — configure the bot to explain your micro-wedding or elopement packages separately. If you offer weekday or Sunday pricing for smaller ceremonies, include those details so budget-conscious couples have a clear path to booking without thinking you're out of their range.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if someone asks about specific date availability?</p>
+      <p class="faq-a">The bot can explain general availability windows and direct couples to contact you for specific date confirmation. Configure it to collect their date preference and contact info so you can follow up with a direct answer — this is the natural conversion flow for venue bookings.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How much does ChatFlow cost for a wedding venue?</p>
+      <p class="faq-a">Free plan: 1,000 conversations/month. Starter: $39/month for 5,000 conversations without ChatFlow branding. Pro: $79/month for unlimited. One additional booking covers years of subscription cost.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Every unanswered inquiry is a couple who booked another venue</h2>
+    <p>Start free today. No credit card. Live in 10 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Create your wedding venue chatbot →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/florist-chatbot.html">Florist</a> · <a href="/hotel-chatbot.html">Hotel</a> · <a href="/photography-chatbot.html">Photography</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>

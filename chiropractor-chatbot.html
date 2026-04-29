@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Chiropractors — Book Appointments 24/7 | ChatFlow</title>
+  <meta name="description" content="ChatFlow's AI chatbot for chiropractic offices answers questions about treatments, insurance accepted, and appointment availability — automatically. Start free, $39/month."/>
+  <meta property="og:title" content="AI Chatbot for Chiropractors — Fill Your Schedule While You Treat Patients"/>
+  <meta property="og:description" content="Your AI assistant answers questions about chiropractic treatments, insurance, and new patient intake — 24/7, without interrupting patient care. Start free."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/chiropractor-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an AI chatbot help a chiropractic office?","acceptedAnswer":{"@type":"Answer","text":"A chiropractor chatbot answers new patient questions when you're in treatment rooms and unavailable. It explains services, insurance accepted, what to expect on a first visit, and how to book — converting website visitors into scheduled appointments without front-desk calls."}},{"@type":"Question","name":"What questions can a chiropractic chatbot answer?","acceptedAnswer":{"@type":"Answer","text":"A ChatFlow chiropractic chatbot can answer: conditions treated (back pain, neck pain, sciatica, sports injuries), insurance plans accepted, new patient intake process, what to expect at first visit, appointment availability, and adjustment techniques used. Configure it with your specific practice details."}},{"@type":"Question","name":"How do I set up ChatFlow for my chiropractic practice?","acceptedAnswer":{"@type":"Answer","text":"Sign up at myflow.chat, describe your practice — services, insurance, conditions treated, new patient process — in a system prompt. Paste one embed code into your website. Live in under 10 minutes — booking new patients even after office hours."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .example-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px}
+    .example-box h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+    .chat-bubble{display:flex;gap:10px;margin-bottom:14px}
+    .chat-bubble.user{flex-direction:row-reverse}
+    .bubble-text{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;font-size:13px;color:#94a3b8;max-width:70%;line-height:1.5}
+    .chat-bubble.user .bubble-text{background:rgba(124,58,237,.2);color:#c4b5fd}
+    .bubble-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+    .bubble-avatar.bot{background:rgba(124,58,237,.3);color:#a78bfa}
+    .bubble-avatar.user{background:rgba(255,255,255,.1);color:#94a3b8}
+    .steps{display:flex;flex-direction:column;gap:20px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+    .step-content h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+    .step-content p{font-size:13px;color:#64748b;line-height:1.5}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    AI Chatbot for Chiropractors
+  </div>
+  <h1>Book more new patients<br/><span>while you treat.</span></h1>
+  <p class="hero-sub">Your AI assistant answers questions about chiropractic treatments, insurance, and new patient intake — 24/7, while you focus on the patient on your table.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free — no card needed</a>
+    <a href="/" class="btn-ghost">Learn more →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your chiropractic chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">Answer patient questions, capture new appointments, reduce front-desk calls</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Conditions treated</h3>
+      <p>Explains which conditions you treat — back pain, neck pain, sciatica, sports injuries, headaches, posture correction — so patients immediately know if you can help them.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Insurance & payment</h3>
+      <p>Lists which insurance plans you accept and whether you offer cash pay rates. Answers the number one pre-booking question before a potential patient goes elsewhere.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+      <h3>New patient intake</h3>
+      <p>Explains what to expect on the first visit, what forms to complete, how long the initial appointment is, and where to park — eliminating anxiety that delays new patients from booking.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Appointment booking</h3>
+      <p>Collects patient name, contact info, and chief complaint — then directs them to call, use your scheduling system, or wait for a callback to confirm availability.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">See it in action</h2>
+  <div class="example-box">
+    <h3>Example chiropractic office chat</h3>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">P</div>
+      <div class="bubble-text">I've been having lower back pain for a few weeks. Do you treat that and do you take Blue Cross insurance?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">Yes to both! Lower back pain is one of the most common conditions we treat and we see great results. We accept Blue Cross Blue Shield PPO and HMO plans. Dr. Patel typically does a thorough evaluation on the first visit — about 45 minutes — to understand the root cause before starting adjustments. Would you like to schedule a new patient appointment?</div>
+    </div>
+    <div class="chat-bubble user">
+      <div class="bubble-avatar user">P</div>
+      <div class="bubble-text">Yes please! What does a first visit cost with my insurance?</div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-avatar bot">AI</div>
+      <div class="bubble-text">With most Blue Cross plans, your cost depends on your specific deductible and copay — typically $20–$50 per visit after deductible. We verify insurance before your first visit so there are no surprises. Let me collect your information and our front desk will confirm your exact coverage when they call to schedule. Can I get your name and phone number?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Set up in 3 steps</h2>
+  <p class="section-sub" style="text-align:center">No developer. No complicated setup. Just more new patients booked.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Describe your practice</h3>
+        <p>Sign up and write a system prompt: conditions treated, adjustment techniques, insurance accepted, new patient process, and appointment scheduling method.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Customize the widget</h3>
+        <p>Add your practice name, brand color, and a reassuring greeting. Patients in pain need to feel welcomed and confident they're in the right place.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Add one line to your website</h3>
+        <p>Paste the embed code — works on WordPress, Wix, Squarespace, or any HTML site. New patient inquiries start coming in immediately, including after hours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot give medical advice?</p>
+      <p class="faq-a">No — and that's important. Configure your bot with a guardrail: it answers questions about your practice and services but directs medical questions to call the office or consult a doctor. ChatFlow's topic guardrails keep the bot on-topic and prevent it from venturing into clinical guidance.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if a patient has an emergency or acute pain?</p>
+      <p class="faq-a">Include an emergency redirect in your system prompt: "For severe acute pain or any emergency, please call the office directly at [number] or call 911." The bot handles this appropriately without needing to escalate complex cases itself.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How much does ChatFlow cost for a chiropractic practice?</p>
+      <p class="faq-a">Free plan: 1,000 conversations/month. Starter: $39/month for 5,000 conversations without ChatFlow branding. Pro: $79/month for unlimited. One new patient covers the subscription cost many times over.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Every unanswered question is a patient that booked somewhere else</h2>
+    <p>Start free today. No credit card. Live in 10 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Create your chiropractic chatbot →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/dental-chatbot.html">Dental</a> · <a href="/therapist-chatbot.html">Therapist</a> · <a href="/veterinarian-chatbot.html">Veterinarian</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>
