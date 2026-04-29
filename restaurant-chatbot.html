@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chatbot for Restaurants — ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your restaurant website in 2 minutes. Answer menu questions, take reservations, and handle FAQs 24/7 — starting at $39/month." />
+  <meta property="og:title" content="AI Chatbot for Restaurants — ChatFlow" />
+  <meta property="og:description" content="Handle menu questions, reservations, and FAQs automatically. One line of code, no backend needed." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0a0a0f;
+      color: #f1f5f9;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 0 24px; height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(10,10,15,0.85); backdrop-filter: blur(12px);
+    }
+    .logo { display: flex; align-items: center; gap: 9px; }
+    .logo-icon {
+      width: 28px; height: 28px; border-radius: 7px;
+      background: #7c3aed;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-name { font-size: 1rem; font-weight: 700; color: white; letter-spacing: -0.01em; }
+    .btn-primary {
+      background: #7c3aed; color: white; border: none; border-radius: 9px;
+      padding: 9px 20px; font-size: 0.875rem; font-weight: 600;
+      cursor: pointer; text-decoration: none; display: inline-flex;
+      align-items: center; gap: 6px; transition: background 0.15s;
+    }
+    .btn-primary:hover { background: #6d28d9; }
+    .btn-ghost {
+      background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 9px; padding: 9px 20px; font-size: 0.875rem; font-weight: 500;
+      cursor: pointer; text-decoration: none; display: inline-flex;
+      align-items: center; transition: all 0.15s;
+    }
+    .btn-ghost:hover { color: white; border-color: rgba(255,255,255,0.2); }
+    .hero {
+      padding: 140px 24px 80px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 70% 50% at 20% 0%, rgba(124,58,237,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 100%, rgba(59,130,246,0.12) 0%, transparent 55%);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.25);
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 24px;
+      font-size: 0.75rem; font-weight: 600; color: #a78bfa;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: #a78bfa; }
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+      font-weight: 900; letter-spacing: -0.03em; line-height: 1.1;
+      color: white; margin-bottom: 20px;
+    }
+    .gradient { background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: #64748b; max-width: 560px; margin: 0 auto 36px;
+      line-height: 1.75;
+    }
+    .cta-row { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .section { padding: 80px 24px; max-width: 860px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; color: #a78bfa;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      font-weight: 800; color: white; letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+    .section-desc { color: #64748b; font-size: 0.9375rem; line-height: 1.7; max-width: 540px; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 40px; }
+    .card {
+      background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 24px;
+    }
+    .card-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(124,58,237,0.15); display: flex; align-items: center;
+      justify-content: center; margin-bottom: 16px;
+    }
+    .card h3 { font-size: 0.9375rem; font-weight: 700; color: white; margin-bottom: 8px; }
+    .card p { font-size: 0.8125rem; color: #64748b; line-height: 1.65; }
+    .demo-box {
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px;
+    }
+    .demo-box p { color: #64748b; font-size: 0.875rem; margin-top: 10px; }
+    .steps { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
+    .step { display: flex; align-items: flex-start; gap: 20px; }
+    .step-num {
+      flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1rem; color: white;
+      box-shadow: 0 0 18px rgba(124,58,237,0.3);
+    }
+    .step-body h4 { font-size: 0.9375rem; font-weight: 700; color: white; margin-bottom: 4px; }
+    .step-body p { font-size: 0.8125rem; color: #64748b; line-height: 1.65; }
+    .pricing-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 40px; max-width: 600px; }
+    .price-card {
+      background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 28px;
+    }
+    .price-card.featured { border-color: rgba(124,58,237,0.35); position: relative; }
+    .price-card.featured::before {
+      content: 'Most Popular';
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: #7c3aed; color: white; font-size: 0.6875rem; font-weight: 700;
+      padding: 3px 12px; border-radius: 0 0 8px 8px; text-transform: uppercase;
+      letter-spacing: 0.05em; white-space: nowrap;
+    }
+    .price-name { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #a78bfa; margin-bottom: 8px; }
+    .price-amount { font-size: 2.25rem; font-weight: 900; color: white; letter-spacing: -0.03em; }
+    .price-per { font-size: 0.8125rem; color: #475569; margin-left: 2px; }
+    .price-desc { color: #475569; font-size: 0.8125rem; margin: 8px 0 20px; }
+    .price-features { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .price-features li { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: #94a3b8; }
+    .faq-section { padding: 80px 24px; background: rgba(255,255,255,0.01); }
+    .faq-inner { max-width: 680px; margin: 0 auto; }
+    .faq-list { display: flex; flex-direction: column; gap: 1px; margin-top: 40px; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; overflow: hidden; }
+    details { background: rgba(255,255,255,0.025); }
+    details + details { border-top: 1px solid rgba(255,255,255,0.05); }
+    summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #f1f5f9; font-size: 0.9rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    details p { padding: 0 22px 18px; color: #64748b; font-size: 0.875rem; line-height: 1.7; }
+    footer { text-align: center; padding: 40px 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    footer p { color: #334155; font-size: 0.8125rem; }
+    footer a { color: #475569; }
+    footer a:hover { color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://myflow.chat" class="logo">
+    <div class="logo-icon">
+      <svg width="14" height="14" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-name">ChatFlow</span>
+  </a>
+  <div style="display:flex;gap:8px">
+    <a href="https://myflow.chat" class="btn-ghost">Sign In</a>
+    <a href="https://myflow.chat/register" class="btn-primary">Start Free</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow"><div class="dot"></div>Restaurant Chatbots</div>
+  <h1>Your restaurant, answering<br/><span class="gradient">questions 24/7</span></h1>
+  <p class="sub">
+    Customers ask menu questions at midnight, on weekends, before deciding where to eat.
+    ChatFlow answers instantly — so you close more bookings without lifting a finger.
+  </p>
+  <div class="cta-row">
+    <a href="https://myflow.chat/register" class="btn-primary">
+      Start Free — 2 min setup
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+    </a>
+    <a href="#demo" class="btn-ghost">See it live</a>
+  </div>
+  <p style="color:#334155;font-size:0.8125rem;margin-top:16px">No credit card required &bull; Free plan available</p>
+</section>
+
+<!-- USE CASES -->
+<div class="section" style="padding-top:60px">
+  <div style="text-align:center">
+    <p class="section-label">What it handles</p>
+    <h2 class="section-title">Built for how customers actually interact with restaurants</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">
+        <svg width="18" height="18" fill="none" stroke="#a78bfa" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+        </svg>
+      </div>
+      <h3>Menu & pricing questions</h3>
+      <p>"Is the pasta gluten-free?" — answered instantly, every time, without a call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="18" height="18" fill="none" stroke="#a78bfa" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <h3>Reservation inquiries</h3>
+      <p>Tell customers your hours, how to book, and what to expect — then hand off to your booking system.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="18" height="18" fill="none" stroke="#a78bfa" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+      </div>
+      <h3>Location, parking & access</h3>
+      <p>Hours, directions, parking info, accessibility — all handled without anyone picking up the phone.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="18" height="18" fill="none" stroke="#a78bfa" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+        </svg>
+      </div>
+      <h3>Dietary & allergen info</h3>
+      <p>Answer allergy questions accurately with your own custom training data — reduce phone calls and keep customers safe.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="18" height="18" fill="none" stroke="#a78bfa" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h3>After-hours coverage</h3>
+      <p>Most bookings are researched outside business hours. ChatFlow captures those customers while you sleep.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="18" height="18" fill="none" stroke="#a78bfa" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+      </div>
+      <h3>Fewer phone interruptions</h3>
+      <p>Every call about "what time do you close" is time your team could spend on guests in front of them.</p>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE DEMO -->
+<div class="section" id="demo">
+  <div style="text-align:center">
+    <p class="section-label">Live Demo</p>
+    <h2 class="section-title">Try a real restaurant bot right now</h2>
+    <p class="section-desc" style="margin:0 auto">
+      This is a live ChatFlow bot for "Bella Cucina" — an Italian restaurant. Click the chat button in the bottom-right corner and ask anything: menu, reservations, hours, specials.
+    </p>
+  </div>
+  <div class="demo-box">
+    <svg width="40" height="40" fill="none" stroke="#a78bfa" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 12px;display:block">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+    </svg>
+    <h3 style="color:white;font-weight:700;font-size:1.0625rem">Bella Cucina — Italian Restaurant Bot</h3>
+    <p>The chat widget is loading in the bottom-right corner of this page. Try asking: "What are your hours?", "Do you have gluten-free pasta?", or "How do I make a reservation?"</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section" style="background:rgba(255,255,255,0.01);max-width:100%;padding:80px 24px">
+  <div style="max-width:860px;margin:0 auto">
+    <div style="text-align:center">
+      <p class="section-label">Setup</p>
+      <h2 class="section-title">Live on your site in under 2 minutes</h2>
+    </div>
+    <div class="steps" style="max-width:560px;margin:40px auto 0">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Create a free account</h4>
+          <p>Sign up at myflow.chat — no credit card required. Your first bot is free.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Describe your restaurant</h4>
+          <p>Fill in the 4-step form: name, menu highlights, hours, FAQs, booking info. Takes about 2 minutes.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Copy one line of code</h4>
+          <p>Paste our script tag before <code style="color:#a78bfa">&lt;/body&gt;</code> on your website. Works with WordPress, Squarespace, Wix, and any HTML site.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>You're live</h4>
+          <p>Your AI assistant starts handling questions immediately. Update training data anytime — changes go live instantly.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://myflow.chat/register" class="btn-primary" style="font-size:1rem;padding:12px 28px">
+        Create your free restaurant bot
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section" style="text-align:center">
+  <p class="section-label">Pricing</p>
+  <h2 class="section-title">One flat price, no surprises</h2>
+  <p class="section-desc" style="margin:0 auto 0">Cancel anytime. No setup fees.</p>
+  <div class="pricing-row" style="margin:0 auto">
+    <div class="price-card">
+      <p class="price-name">Free</p>
+      <p><span class="price-amount">$0</span><span class="price-per">/mo</span></p>
+      <p class="price-desc">Try it risk-free</p>
+      <ul class="price-features">
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>1 chatbot</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>100 messages/month</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>1-line embed code</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>WordPress plugin</li>
+      </ul>
+      <a href="https://myflow.chat/register" class="btn-ghost" style="display:block;text-align:center">Get started free</a>
+    </div>
+    <div class="price-card featured">
+      <p class="price-name">Starter</p>
+      <p><span class="price-amount">$39</span><span class="price-per">/mo</span></p>
+      <p class="price-desc">For active restaurants</p>
+      <ul class="price-features">
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>1 chatbot</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>500 messages/month</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Remove ChatFlow branding</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority support</li>
+        <li><svg width="14" height="14" fill="none" stroke="#a78bfa" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Analytics dashboard</li>
+      </ul>
+      <a href="https://myflow.chat/register" class="btn-primary" style="display:block;text-align:center">Start free trial</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div style="text-align:center">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title" style="margin-bottom:0">Restaurant chatbot questions</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Do I need a developer to set this up?
+          <svg width="15" height="15" fill="none" stroke="#64748b" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p>No. If you can copy-paste text, you can set up ChatFlow. For WordPress, we have a one-click plugin — no code at all. Most restaurant owners are done in under 5 minutes.</p>
+      </details>
+      <details>
+        <summary>How does the bot know about my menu?
+          <svg width="15" height="15" fill="none" stroke="#64748b" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p>You type it in during setup. Describe your dishes, prices, specials, dietary info — as much or as little as you like. The bot is trained on exactly what you provide. You can update it anytime, and changes go live instantly.</p>
+      </details>
+      <details>
+        <summary>What if a customer asks something the bot doesn't know?
+          <svg width="15" height="15" fill="none" stroke="#64748b" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p>You configure "allowed topics" so the bot stays focused on restaurant questions. If someone asks something outside scope, the bot politely redirects them to call or contact you directly — no hallucinated answers.</p>
+      </details>
+      <details>
+        <summary>Can it take reservations?
+          <svg width="15" height="15" fill="none" stroke="#64748b" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p>ChatFlow handles the information side — hours, availability, how to book, your booking link. Direct table booking integration is on our roadmap. For now, the bot directs customers to your booking system (OpenTable, Resy, your phone, etc.).</p>
+      </details>
+      <details>
+        <summary>What websites does it work on?
+          <svg width="15" height="15" fill="none" stroke="#64748b" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p>Any website that supports adding custom HTML — WordPress, Squarespace, Wix, Webflow, plain HTML. We have step-by-step guides for each platform at our <a href="/embed.html" style="color:#a78bfa">embed guide</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding:80px 24px;text-align:center">
+  <div style="max-width:560px;margin:0 auto">
+    <h2 style="font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:800;color:white;letter-spacing:-0.025em;margin-bottom:14px">
+      Ready to stop missing customers?
+    </h2>
+    <p style="color:#64748b;font-size:0.9375rem;line-height:1.7;margin-bottom:32px">
+      Set up your restaurant's AI chatbot in 2 minutes. Free to start — no card required.
+    </p>
+    <a href="https://myflow.chat/register" class="btn-primary" style="font-size:1rem;padding:13px 30px">
+      Create my free restaurant bot
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+    </a>
+    <p style="color:#334155;font-size:0.8125rem;margin-top:12px">Free forever plan available &bull; Upgrade anytime</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 ForgeAI &mdash; ChatFlow &mdash;
+    <a href="https://myflow.chat">myflow.chat</a> &mdash;
+    <a href="/embed.html">Embed Guide</a> &mdash;
+    <a href="/real-estate-chatbot.html">Real Estate</a> &mdash;
+    <a href="/ecommerce-chatbot.html">E-commerce</a>
+  </p>
+</footer>
+
+<!-- Load restaurant demo bot -->
+<script src="https://chatflow-api-406c.onrender.com/widget.js" data-bot-id="cmokj26oe0002730r5mpk9lbn" defer></script>
+
+</body>
+</html>
