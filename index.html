@@ -536,11 +536,27 @@
           Live Demo
         </p>
         <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:white;letter-spacing:-0.025em;margin:0 0 14px">
-          Try a real bot, right now
+          Try real bots, right now
         </h2>
         <p style="color:#64748b;max-width:500px;margin:0 auto;line-height:1.7;font-size:0.9375rem">
-          This is a live ChatFlow bot trained for an Italian restaurant. Ask about the menu, hours, or how to make a reservation.
+          These are live ChatFlow bots — each built in under 2 minutes. The chat button appears in the bottom-right corner.
         </p>
+      </div>
+
+      <!-- Demo tabs -->
+      <div style="display:flex;gap:8px;justify-content:center;margin-bottom:24px">
+        <button onclick="switchDemo('restaurant','cmokj26oe0002730r5mpk9lbn','bellacucina.com')" id="demo-tab-restaurant"
+          style="padding:8px 16px;border-radius:8px;border:1px solid rgba(124,58,237,0.5);background:rgba(124,58,237,0.12);color:#a78bfa;font-size:0.8125rem;font-weight:600;cursor:pointer;transition:all 0.15s">
+          🍝 Restaurant
+        </button>
+        <button onclick="switchDemo('realty','cmokj4qqx0005730rhih6zy2i','homefind.com')" id="demo-tab-realty"
+          style="padding:8px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.07);background:transparent;color:#64748b;font-size:0.8125rem;font-weight:500;cursor:pointer;transition:all 0.15s">
+          🏠 Real Estate
+        </button>
+        <button onclick="switchDemo('shop','cmokj9gkz0002116w3mpab70y','stylehive.com')" id="demo-tab-shop"
+          style="padding:8px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.07);background:transparent;color:#64748b;font-size:0.8125rem;font-weight:500;cursor:pointer;transition:all 0.15s">
+          🛍️ E-commerce
+        </button>
       </div>
 
       <div class="glass-card reveal" style="overflow:hidden;max-width:480px;margin:0 auto">
@@ -549,7 +565,7 @@
           <div style="width:10px;height:10px;border-radius:50%;background:#ef4444;opacity:0.6"></div>
           <div style="width:10px;height:10px;border-radius:50%;background:#f59e0b;opacity:0.6"></div>
           <div style="width:10px;height:10px;border-radius:50%;background:#22c55e;opacity:0.6"></div>
-          <span style="margin-left:8px;font-size:0.75rem;color:#334155;background:rgba(255,255,255,0.04);padding:3px 12px;border-radius:4px;flex:1;text-align:center">bellacucina.com</span>
+          <span id="demo-domain" style="margin-left:8px;font-size:0.75rem;color:#334155;background:rgba(255,255,255,0.04);padding:3px 12px;border-radius:4px;flex:1;text-align:center">bellacucina.com</span>
         </div>
 
         <!-- Fake webpage with widget -->
@@ -570,20 +586,50 @@
 
       <div style="text-align:center;margin-top:28px" class="reveal">
         <p style="color:#475569;font-size:0.875rem;margin:0 0 16px">
-          This bot was built in under 2 minutes with ChatFlow. Want one for your site?
+          Each of these was built in under 2 minutes. Create yours free:
         </p>
-        <a href="https://myflow.chat/dashboard/register" target="_blank" rel="noopener" class="btn-primary" style="margin-right:12px">
-          Build Your Free Bot
-        </a>
-        <a href="https://chatflow-api-406c.onrender.com/demo/cmokj26oe0002730r5mpk9lbn" target="_blank" rel="noopener" class="btn-ghost">
-          Open full demo page
+        <a href="https://myflow.chat/register" target="_blank" rel="noopener" class="btn-primary">
+          Build Your Free Bot &rarr;
         </a>
       </div>
 
     </div>
   </section>
-  <!-- Widget for demo section -->
+  <!-- Widgets for demo section — restaurant loads by default -->
   <script src="https://chatflow-api-406c.onrender.com/widget.js" data-bot-id="cmokj26oe0002730r5mpk9lbn" defer></script>
+  <script>
+    var _currentDemoScript = null;
+    function switchDemo(id, botId, domain) {
+      // Update tab styles
+      ['restaurant','realty','shop'].forEach(function(t) {
+        var btn = document.getElementById('demo-tab-' + t);
+        if (t === id) {
+          btn.style.borderColor = 'rgba(124,58,237,0.5)';
+          btn.style.background  = 'rgba(124,58,237,0.12)';
+          btn.style.color       = '#a78bfa';
+          btn.style.fontWeight  = '600';
+        } else {
+          btn.style.borderColor = 'rgba(255,255,255,0.07)';
+          btn.style.background  = 'transparent';
+          btn.style.color       = '#64748b';
+          btn.style.fontWeight  = '500';
+        }
+      });
+      document.getElementById('demo-domain').textContent = domain;
+      // Remove existing widget
+      var btn = document.getElementById('cf-widget-btn');
+      var panel = document.getElementById('cf-widget-panel');
+      if (btn) btn.remove();
+      if (panel) panel.remove();
+      if (_currentDemoScript) _currentDemoScript.remove();
+      // Load new bot
+      var s = document.createElement('script');
+      s.src = 'https://chatflow-api-406c.onrender.com/widget.js';
+      s.setAttribute('data-bot-id', botId);
+      document.body.appendChild(s);
+      _currentDemoScript = s;
+    }
+  </script>
 
   <!-- ══ CHATFLOW SAAS ══════════════════════════════════════════ -->
   <section id="chatflow" style="padding:96px 24px;background:rgba(255,255,255,0.015)">
