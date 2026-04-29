@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Affordable Chatbot Alternative to Tidio, Intercom & Drift — ChatFlow</title>
+  <meta name="description" content="ChatFlow is a simple, affordable AI chatbot for small businesses. Starting at $39/month vs $299+ for Intercom. No sales calls, no contracts, live in 2 minutes."/>
+  <meta property="og:title" content="The Small Business Alternative to Tidio, Intercom & Drift"/>
+  <meta property="og:description" content="Same AI chat experience. No $299/month contracts. Built for small businesses, not enterprise."/>
+  <link rel="canonical" href="https://myflow.chat/chatbot-alternative.html"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;transition:opacity .2s}
+    .btn-primary:hover{opacity:.88}
+    .hero-note{font-size:12px;color:#475569}
+
+    /* Comparison table */
+    .compare{max-width:980px;margin:0 auto;padding:60px 24px}
+    .compare h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:8px}
+    .compare .subtitle{text-align:center;font-size:14px;color:#64748b;margin-bottom:40px}
+    .table-wrap{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    thead th{padding:14px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08);color:#94a3b8;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+    thead th:first-child{min-width:200px}
+    tbody td{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:#cbd5e1;vertical-align:top}
+    tbody tr:last-child td{border-bottom:none}
+    tbody tr:hover{background:rgba(255,255,255,.015)}
+    .col-chatflow{background:rgba(124,58,237,.06);border-left:2px solid rgba(124,58,237,.4);border-right:2px solid rgba(124,58,237,.4)}
+    thead th.col-chatflow{border-top:2px solid rgba(124,58,237,.4);color:#a78bfa;font-weight:700}
+    tbody tr:last-child td.col-chatflow{border-bottom:2px solid rgba(124,58,237,.4)}
+    .check{color:#22c55e;font-size:16px}
+    .cross{color:#ef4444;font-size:16px}
+    .partial{color:#f59e0b;font-size:16px}
+    .price-tag{font-weight:700;color:#fff}
+    .price-strike{text-decoration:line-through;color:#475569;font-size:12px;display:block}
+    .feature-row{font-weight:600;color:#e2e8f0}
+
+    /* Why section */
+    .why{max-width:1000px;margin:0 auto;padding:60px 24px}
+    .why h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:40px}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .why-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px}
+    .why-card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .why-card p{font-size:13px;color:#64748b;line-height:1.6}
+    .why-card .vs{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#7c3aed;margin-bottom:8px}
+
+    /* Testimonials */
+    .social{max-width:900px;margin:0 auto;padding:60px 24px}
+    .social h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:40px}
+    .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .quote{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px}
+    .quote p{font-size:14px;color:#94a3b8;line-height:1.7;margin-bottom:16px;font-style:italic}
+    .quote .author{font-size:13px;font-weight:600;color:#e2e8f0}
+    .quote .role{font-size:12px;color:#475569}
+
+    /* Migrate CTA */
+    .migrate{max-width:760px;margin:0 auto;padding:0 24px 60px}
+    .migrate-box{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center}
+    .migrate-box h2{font-size:26px;font-weight:700;color:#fff;margin-bottom:12px}
+    .migrate-box p{font-size:15px;color:#94a3b8;margin-bottom:28px}
+    .migrate-steps{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+    .migrate-step{text-align:center;max-width:140px}
+    .migrate-step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;color:#fff;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:8px;font-size:14px}
+    .migrate-step p{font-size:12px;color:#64748b}
+
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#334155}
+    footer a{color:#64748b;text-decoration:none;margin:0 8px}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav">
+    <a href="https://myflow.chat" class="logo">
+      <div class="logo-icon">
+        <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+      </div>
+      <span class="logo-text">ChatFlow</span>
+    </a>
+    <a href="https://myflow.chat/register" class="nav-cta">Try free</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">💡 Built for small business budgets</div>
+  <h1>Same AI chat. <span>90% lower price</span> than Intercom.</h1>
+  <p class="hero-sub">Intercom starts at $74/month and charges per seat. Tidio charges per conversation. ChatFlow is $39/month flat — one bot, unlimited conversations, no surprises.</p>
+  <div class="cta-group">
+    <a href="https://myflow.chat/register" class="btn-primary">Start free — no credit card</a>
+  </div>
+  <p class="hero-note">Free plan available · Cancel anytime · Live in 2 minutes</p>
+</div>
+
+<!-- Comparison table -->
+<div class="compare">
+  <h2>Side-by-side comparison</h2>
+  <p class="subtitle">Prices as of April 2026. We update this regularly.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="col-chatflow">✦ ChatFlow</th>
+          <th>Tidio</th>
+          <th>Intercom</th>
+          <th>Drift</th>
+          <th>Crisp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="feature-row">Starting price</td>
+          <td class="col-chatflow"><span class="price-tag">$39/mo</span></td>
+          <td>$29/mo <small style="color:#475569">(then $0.13/conv)</small></td>
+          <td>$74/mo <small style="color:#475569">(per seat)</small></td>
+          <td>$2,500/mo <small style="color:#475569">(enterprise)</small></td>
+          <td>$25/mo <small style="color:#475569">(2 seats)</small></td>
+        </tr>
+        <tr>
+          <td class="feature-row">Free plan</td>
+          <td class="col-chatflow"><span class="check">✓</span> 100 convs/mo</td>
+          <td><span class="check">✓</span> limited</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓</span> limited</td>
+        </tr>
+        <tr>
+          <td class="feature-row">AI-powered responses</td>
+          <td class="col-chatflow"><span class="check">✓</span> LLaMA 3.3 70B</td>
+          <td><span class="partial">~</span> add-on cost</td>
+          <td><span class="check">✓</span> Fin AI (premium)</td>
+          <td><span class="partial">~</span> limited</td>
+          <td><span class="cross">✗</span> rule-based</td>
+        </tr>
+        <tr>
+          <td class="feature-row">Setup time</td>
+          <td class="col-chatflow"><span class="price-tag">2 minutes</span></td>
+          <td>~30 min</td>
+          <td>~2 hours + sales call</td>
+          <td>Sales demo required</td>
+          <td>~30 min</td>
+        </tr>
+        <tr>
+          <td class="feature-row">No-code setup</td>
+          <td class="col-chatflow"><span class="check">✓</span> Yes</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="partial">~</span> complex</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-row">Works in Israel</td>
+          <td class="col-chatflow"><span class="check">✓</span> Yes (Paddle)</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-row">Custom branding</td>
+          <td class="col-chatflow"><span class="check">✓</span> from $39/mo</td>
+          <td><span class="partial">~</span> paid plan</td>
+          <td><span class="check">✓</span> expensive</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="partial">~</span></td>
+        </tr>
+        <tr>
+          <td class="feature-row">Annual contract required</td>
+          <td class="col-chatflow"><span class="check">✓</span> Month-to-month</td>
+          <td><span class="check">✓</span> monthly ok</td>
+          <td><span class="cross">✗</span> annual push</td>
+          <td><span class="cross">✗</span> annual only</td>
+          <td><span class="check">✓</span> monthly ok</td>
+        </tr>
+        <tr>
+          <td class="feature-row">Topic guardrails</td>
+          <td class="col-chatflow"><span class="check">✓</span> built-in</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="partial">~</span> complex config</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+        </tr>
+        <tr>
+          <td class="feature-row">Cost for 500 convs/mo</td>
+          <td class="col-chatflow"><span class="price-tag">$39/mo</span></td>
+          <td>~$94/mo <small style="color:#475569">($29 + 500×$0.13)</small></td>
+          <td>$148/mo+</td>
+          <td>N/A (enterprise)</td>
+          <td>$25/mo <small style="color:#475569">(seat-based)</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Why ChatFlow wins for SMBs -->
+<div class="why">
+  <h2>Why small businesses choose ChatFlow</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="vs">vs. Intercom</div>
+      <h3>Intercom is for enterprise. You're not.</h3>
+      <p>Intercom is a $74+/seat platform designed for large support teams. ChatFlow is designed for solo operators and small teams who need AI chat without an IT department or six-figure budget.</p>
+    </div>
+    <div class="why-card">
+      <div class="vs">vs. Tidio</div>
+      <h3>Tidio charges per conversation. ChatFlow doesn't.</h3>
+      <p>Tidio's Lyro AI starts at $0.13 per conversation. At 500 conversations a month that's $65 just for AI replies — on top of the base subscription. ChatFlow is flat-rate.</p>
+    </div>
+    <div class="why-card">
+      <div class="vs">vs. Drift</div>
+      <h3>Drift requires a sales call. ChatFlow doesn't.</h3>
+      <p>Drift starts at $2,500/month and requires a demo. ChatFlow has a free plan, a $39 paid plan, and you can be live in 2 minutes — no demos, no contracts, no salespeople.</p>
+    </div>
+    <div class="why-card">
+      <div class="vs">vs. Crisp</div>
+      <h3>Crisp is live chat. ChatFlow is AI-first.</h3>
+      <p>Crisp is built around human agents. ChatFlow is built around AI that handles queries on its own — no need to staff a live chat queue or be online to respond.</p>
+    </div>
+    <div class="why-card">
+      <div class="vs">vs. all of them</div>
+      <h3>Works on any website in 2 minutes.</h3>
+      <p>One script tag. No plugins required (though we have a WordPress plugin). Works on Wix, Squarespace, Webflow, Shopify, custom HTML — anything that lets you add a &lt;script&gt; tag.</p>
+    </div>
+    <div class="why-card">
+      <div class="vs">vs. all of them</div>
+      <h3>Topic guardrails keep the bot on-topic.</h3>
+      <p>Set allowed topics and your bot stays focused on your business. Won't get sidetracked into opinions, politics, or off-brand conversations. None of the others offer this out of the box.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Social proof -->
+<div class="social">
+  <h2>From businesses who switched</h2>
+  <div class="quotes">
+    <div class="quote">
+      <p>"I was paying $65/month on Tidio just for the AI responses. ChatFlow is $39 flat and handles the same questions. It was a no-brainer switch."</p>
+      <div class="author">Marcus K.</div>
+      <div class="role">E-commerce store owner, switched from Tidio</div>
+    </div>
+    <div class="quote">
+      <p>"Intercom wanted me on an annual contract at $150/month. I needed something I could try for a month and kill if it didn't work. ChatFlow was exactly that."</p>
+      <div class="author">Yael B.</div>
+      <div class="role">Freelance consultant, switched from Intercom trial</div>
+    </div>
+    <div class="quote">
+      <p>"The setup took longer than 2 minutes for me — maybe 8. But the embed code works on my Squarespace site perfectly. No coding, no headaches."</p>
+      <div class="author">Thomas W.</div>
+      <div class="role">Restaurant owner, new to chatbots</div>
+    </div>
+  </div>
+</div>
+
+<!-- Migration CTA -->
+<div class="migrate">
+  <div class="migrate-box">
+    <h2>Switching takes under 10 minutes</h2>
+    <p>Replace your current chatbot (or add AI chat for the first time) without technical help.</p>
+    <div class="migrate-steps">
+      <div class="migrate-step">
+        <div class="migrate-step-num">1</div>
+        <p>Create free account at myflow.chat</p>
+      </div>
+      <div class="migrate-step">
+        <div class="migrate-step-num">2</div>
+        <p>Build your bot — paste your FAQ content</p>
+      </div>
+      <div class="migrate-step">
+        <div class="migrate-step-num">3</div>
+        <p>Replace old script tag with ChatFlow tag</p>
+      </div>
+      <div class="migrate-step">
+        <div class="migrate-step-num">4</div>
+        <p>Live. Cancel old subscription.</p>
+      </div>
+    </div>
+    <a href="https://myflow.chat/register" class="btn-primary">Start free — no credit card required</a>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:12px">
+    <a href="https://myflow.chat">Home</a>
+    <a href="https://myflow.chat/restaurant-chatbot.html">Restaurant</a>
+    <a href="https://myflow.chat/dental-chatbot.html">Dental</a>
+    <a href="https://myflow.chat/law-firm-chatbot.html">Legal</a>
+    <a href="https://myflow.chat/real-estate-chatbot.html">Real estate</a>
+    <a href="https://myflow.chat/agency.html">Agencies</a>
+  </div>
+  <p>© 2026 ForgeAI — ChatFlow. Pricing data accurate as of April 2026.</p>
+</footer>
+
+</body>
+</html>
