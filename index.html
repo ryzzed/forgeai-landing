@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForgeAI — AI Automation for Small Business</title>
+  <meta name="description" content="ForgeAI builds AI-powered automations, chatbots, and workflows that eliminate repetitive work — so you can focus on growing your business." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              50:  '#f0f4ff',
+              100: '#dde6ff',
+              200: '#c3d1ff',
+              300: '#9db3fe',
+              400: '#748bfa',
+              500: '#4f62f5',
+              600: '#3b44ea',
+              700: '#2f35cd',
+              800: '#2a2ea5',
+              900: '#272c82',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    }
+    .card-glow:hover {
+      box-shadow: 0 0 0 1px rgba(79, 98, 245, 0.3), 0 20px 40px rgba(79, 98, 245, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <span class="text-xl font-bold tracking-tight text-white">Forge<span class="text-forge-400">AI</span></span>
+      <a href="#contact"
+         class="text-sm font-semibold px-4 py-2 rounded-lg bg-forge-600 hover:bg-forge-500 text-white transition-colors">
+        Book a Free Call
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="gradient-hero pt-32 pb-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-forge-400 text-sm font-semibold uppercase tracking-widest mb-4">AI Automation Agency</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6">
+        Stop Doing <span class="text-forge-400">Manual Work</span>.<br/>
+        Start Automating It.
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+        ForgeAI builds custom AI automations, chatbots, and workflows that run while you sleep — so your team can focus on what actually grows the business.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact"
+           class="inline-block px-8 py-3.5 rounded-lg bg-forge-600 hover:bg-forge-500 text-white font-semibold text-base transition-colors">
+          Get a Free Automation Audit
+        </a>
+        <a href="#how-it-works"
+           class="inline-block px-8 py-3.5 rounded-lg border border-gray-600 hover:border-forge-400 text-gray-300 hover:text-white font-semibold text-base transition-colors">
+          See How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 px-6 bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">What We Build</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Practical AI solutions delivered fast — no bloated agencies, no 6-month timelines.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+        <div class="card-glow bg-gray-900 border border-gray-800 rounded-2xl p-8 transition-all duration-200">
+          <div class="w-12 h-12 bg-forge-600/20 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-forge-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">AI Chatbot</h3>
+          <p class="text-gray-400 text-sm mb-6">A trained chatbot that handles FAQs, qualifies leads, and books appointments — 24/7, no staff required.</p>
+          <div class="border-t border-gray-800 pt-4">
+            <p class="text-forge-400 font-bold text-lg">From $500</p>
+            <p class="text-gray-500 text-sm">Delivered in 7 days</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-glow bg-gray-900 border border-gray-800 rounded-2xl p-8 transition-all duration-200">
+          <div class="w-12 h-12 bg-forge-600/20 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-forge-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Workflow Automation</h3>
+          <p class="text-gray-400 text-sm mb-6">Connect your tools and eliminate repetitive tasks — invoicing, follow-ups, data entry, reports. All automated.</p>
+          <div class="border-t border-gray-800 pt-4">
+            <p class="text-forge-400 font-bold text-lg">From $750</p>
+            <p class="text-gray-500 text-sm">Delivered in 5–10 days</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-glow bg-gray-900 border border-gray-800 rounded-2xl p-8 transition-all duration-200">
+          <div class="w-12 h-12 bg-forge-600/20 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-forge-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">AI Integration Sprint</h3>
+          <p class="text-gray-400 text-sm mb-6">A full audit of your ops + a custom AI roadmap with the top 3 automations that will save the most time immediately.</p>
+          <div class="border-t border-gray-800 pt-4">
+            <p class="text-forge-400 font-bold text-lg">From $1,200</p>
+            <p class="text-gray-500 text-sm">2-week sprint, turnkey delivery</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-24 px-6 bg-gray-900/50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">How It Works</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Three steps from first call to running automation — no long retainers, no surprises.</p>
+      </div>
+      <div class="relative">
+        <!-- Step connector line (desktop) -->
+        <div class="hidden md:block absolute top-8 left-[calc(16.67%-1px)] right-[calc(16.67%-1px)] h-px bg-forge-800"></div>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-forge-600 rounded-full flex items-center justify-center text-2xl font-black text-white mx-auto mb-6 relative z-10">1</div>
+            <h3 class="text-lg font-bold text-white mb-2">We Audit</h3>
+            <p class="text-gray-400 text-sm">We map your current workflow and pinpoint the biggest manual bottlenecks draining time and money.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-forge-600 rounded-full flex items-center justify-center text-2xl font-black text-white mx-auto mb-6 relative z-10">2</div>
+            <h3 class="text-lg font-bold text-white mb-2">We Build</h3>
+            <p class="text-gray-400 text-sm">Our team builds and tests the automation. You get a demo before anything goes live — no surprises.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-forge-600 rounded-full flex items-center justify-center text-2xl font-black text-white mx-auto mb-6 relative z-10">3</div>
+            <h3 class="text-lg font-bold text-white mb-2">You Automate</h3>
+            <p class="text-gray-400 text-sm">We hand over everything, train your team, and offer post-launch support. Your workflow runs itself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="py-24 px-6 bg-gray-950">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-16">Early Results</h2>
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+          <p class="text-4xl font-black text-forge-400 mb-2">10h+</p>
+          <p class="text-gray-400 text-sm">saved per week for typical client workflows</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+          <p class="text-4xl font-black text-forge-400 mb-2">7 days</p>
+          <p class="text-gray-400 text-sm">average delivery time for a working chatbot</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+          <p class="text-4xl font-black text-forge-400 mb-2">$0</p>
+          <p class="text-gray-400 text-sm">upfront — pay only when you see the demo</p>
+        </div>
+      </div>
+      <!-- Testimonial placeholder -->
+      <blockquote class="bg-gray-900 border border-gray-800 rounded-2xl p-8 text-left max-w-2xl mx-auto">
+        <p class="text-gray-300 italic text-base mb-4">"ForgeAI automated our client follow-up process in under a week. We're saving around 12 hours per week and haven't missed a lead since."</p>
+        <footer class="text-sm text-gray-500">— Early client, retail services</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6 bg-gray-900/50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">About ForgeAI</h2>
+      <p class="text-gray-400 text-base leading-relaxed mb-4">
+        ForgeAI is a lean AI automation agency. We build practical, fast, and affordable automations for small and medium businesses that are tired of paying their team to do the same thing over and over.
+      </p>
+      <p class="text-gray-400 text-base leading-relaxed">
+        We work async, ship fast, and charge fairly. No long-term retainers required — just results you can measure.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="py-24 px-6 bg-gray-950">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Automate?</h2>
+      <p class="text-gray-400 mb-10">Book a free 30-minute call. We'll map one workflow you can automate this week — no commitment, no pitch deck.</p>
+
+      <!-- Contact form -->
+      <form action="mailto:hello@forgeai.io" method="GET" enctype="text/plain"
+            class="bg-gray-900 border border-gray-800 rounded-2xl p-8 text-left space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+          <input type="text" name="name" placeholder="Jane Smith"
+                 class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-forge-500 text-sm" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Work Email</label>
+          <input type="email" name="email" placeholder="jane@yourbusiness.com"
+                 class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-forge-500 text-sm" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">What do you want to automate?</label>
+          <textarea name="body" rows="3" placeholder="E.g. client follow-ups, invoicing, lead qualification..."
+                    class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-forge-500 text-sm resize-none"></textarea>
+        </div>
+        <button type="submit"
+                class="w-full py-3 rounded-lg bg-forge-600 hover:bg-forge-500 text-white font-semibold text-base transition-colors">
+          Send Message
+        </button>
+        <p class="text-center text-xs text-gray-500">Or email us directly at <a href="mailto:hello@forgeai.io" class="text-forge-400 hover:underline">hello@forgeai.io</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <span>© 2026 ForgeAI. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="#services" class="hover:text-gray-300 transition-colors">Services</a>
+        <a href="#how-it-works" class="hover:text-gray-300 transition-colors">How It Works</a>
+        <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
