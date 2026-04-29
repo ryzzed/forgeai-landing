@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Spas &amp; Beauty Salons — ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your spa or beauty salon website in 2 minutes. Handle booking inquiries, service questions, and pricing 24/7. No coding required."/>
+  <meta property="og:title" content="AI Chatbot for Spas &amp; Beauty Salons — ChatFlow"/>
+  <meta property="og:description" content="Stop losing clients to unanswered late-night inquiries. ChatFlow handles bookings, service menus, and pricing questions while you sleep."/>
+  <link rel="canonical" href="https://myflow.chat/spa-chatbot.html"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:opacity .2s}
+    .nav-cta:hover{opacity:.85}
+    .hero{max-width:780px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero p{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;transition:opacity .2s}
+    .btn-primary:hover{opacity:.88}
+    .btn-ghost{border:1px solid rgba(255,255,255,.12);color:#cbd5e1;padding:13px 24px;border-radius:10px;text-decoration:none;font-size:14px;transition:all .2s}
+    .btn-ghost:hover{border-color:rgba(255,255,255,.25);color:#fff}
+    .section{max-width:1100px;margin:0 auto;padding:60px 24px}
+    .section-label{text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#64748b;font-weight:600;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .stat-strip{background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:40px 24px;margin:20px 0}
+    .stats{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;text-align:center}
+    .stat-num{font-size:36px;font-weight:800;color:#7c3aed;margin-bottom:6px}
+    .stat-label{font-size:13px;color:#64748b;line-height:1.5}
+    .demo-section{max-width:1100px;margin:0 auto;padding:60px 24px}
+    .demo-wrapper{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start}
+    .demo-copy h2{font-size:28px;font-weight:700;color:#fff;margin-bottom:16px}
+    .demo-copy p{font-size:15px;color:#94a3b8;line-height:1.7;margin-bottom:20px}
+    .demo-copy ul{list-style:none}
+    .demo-copy li{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:#cbd5e1;margin-bottom:10px}
+    .demo-copy li::before{content:"✓";color:#7c3aed;font-weight:700;flex-shrink:0;margin-top:1px}
+    .demo-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;position:relative;min-height:400px}
+    .demo-box p{font-size:13px;color:#64748b;margin-bottom:12px}
+    .steps{max-width:900px;margin:0 auto;padding:60px 24px}
+    .steps h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:48px}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+    .step{text-align:center}
+    .step-num{width:36px;height:36px;background:#7c3aed;border-radius:50%;color:#fff;font-weight:700;font-size:15px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px}
+    .step h3{font-size:14px;font-weight:600;color:#fff;margin-bottom:6px}
+    .step p{font-size:13px;color:#64748b}
+    .pricing{max-width:900px;margin:0 auto;padding:60px 24px;text-align:center}
+    .pricing h2{font-size:28px;font-weight:700;color:#fff;margin-bottom:12px}
+    .pricing p{color:#64748b;margin-bottom:40px;font-size:15px}
+    .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:32px}
+    .plan{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;text-align:left}
+    .plan.featured{border-color:rgba(124,58,237,.5);background:rgba(124,58,237,.07)}
+    .plan-name{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#64748b;font-weight:600;margin-bottom:8px}
+    .plan-price{font-size:32px;font-weight:800;color:#fff;margin-bottom:16px}
+    .plan-price span{font-size:14px;color:#64748b;font-weight:400}
+    .plan ul{list-style:none}
+    .plan li{font-size:13px;color:#94a3b8;padding:4px 0;display:flex;align-items:center;gap:6px}
+    .plan li::before{content:"✓";color:#7c3aed;font-size:11px;font-weight:700}
+    .faq{max-width:740px;margin:0 auto;padding:60px 24px}
+    .faq h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:40px}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:20px 0}
+    .faq-item h3{font-size:15px;font-weight:600;color:#e2e8f0;margin-bottom:8px}
+    .faq-item p{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:720px;margin:0 auto 60px}
+    .cta-banner h2{font-size:26px;font-weight:700;color:#fff;margin-bottom:12px}
+    .cta-banner p{font-size:15px;color:#94a3b8;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#334155}
+    footer a{color:#64748b;text-decoration:none;margin:0 8px}
+    footer a:hover{color:#94a3b8}
+    @media(max-width:768px){.demo-wrapper{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav">
+    <a href="https://myflow.chat" class="logo">
+      <div class="logo-icon">
+        <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+      </div>
+      <span class="logo-text">ChatFlow</span>
+    </a>
+    <a href="https://myflow.chat/register" class="nav-cta">Start free</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">💆 Built for spas &amp; beauty salons</div>
+  <h1>Book more clients — even when you're <span>hands-on</span></h1>
+  <p>ChatFlow's AI chatbot handles service questions, pricing, and booking inquiries around the clock. Your team focuses on giving amazing treatments — the chatbot handles everything else.</p>
+  <div class="cta-group">
+    <a href="https://myflow.chat/register" class="btn-primary">Add to my salon's website free</a>
+    <a href="#demo" class="btn-ghost">See it in action</a>
+  </div>
+</div>
+
+<div class="stat-strip">
+  <div class="stats">
+    <div>
+      <div class="stat-num">68%</div>
+      <div class="stat-label">of spa booking inquiries happen outside business hours</div>
+    </div>
+    <div>
+      <div class="stat-num">5 min</div>
+      <div class="stat-label">to set up ChatFlow on any website</div>
+    </div>
+    <div>
+      <div class="stat-num">$39</div>
+      <div class="stat-label">per month — less than one no-show cancellation</div>
+    </div>
+    <div>
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">coverage with no extra staff costs</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">What it handles for spas &amp; salons</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">📅</div>
+      <h3>Booking inquiries</h3>
+      <p>Tells clients about available services, duration, pricing, and links to your online booking system. Captures inquiries outside business hours.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💅</div>
+      <h3>Service menu questions</h3>
+      <p>Explains what each treatment includes, how long it takes, and what results to expect. Helps clients choose the right service before they call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <h3>Pricing &amp; packages</h3>
+      <p>Shares pricing clearly without making clients wait for a callback. Explains packages, membership deals, and gift voucher options.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚠️</div>
+      <h3>Pre-treatment prep</h3>
+      <p>Informs clients what to do before appointments: what to avoid, what to wear, when to arrive. Reduces no-shows from unprepared clients.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎁</div>
+      <h3>Gift vouchers</h3>
+      <p>Answers questions about gift certificate options, validity periods, and how to redeem them. Drives impulse purchases when you're closed.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <h3>Location &amp; parking</h3>
+      <p>Instantly answers address, parking instructions, arrival tips, and whether walk-ins are welcome — before clients even pick up the phone.</p>
+    </div>
+  </div>
+</div>
+
+<div class="demo-section" id="demo">
+  <div class="demo-wrapper">
+    <div class="demo-copy">
+      <h2>Live demo: Serenity Spa &amp; Wellness</h2>
+      <p>This is a real ChatFlow bot trained on a sample spa. Ask it anything a client would ask before booking:</p>
+      <ul>
+        <li>What's included in the signature facial?</li>
+        <li>How much is a 60-minute deep tissue massage?</li>
+        <li>Do I need to bring anything for my first appointment?</li>
+        <li>Do you offer couples packages?</li>
+        <li>Can I buy a gift certificate online?</li>
+      </ul>
+      <p style="margin-top:20px;font-size:13px;color:#475569">You'd train your own bot on your actual services, pricing, policies, and team — in about 5 minutes.</p>
+    </div>
+    <div class="demo-box">
+      <p>👇 Chat with the demo bot below</p>
+      <div id="chatflow-demo-container" style="position:relative;height:380px;border-radius:10px;overflow:hidden;background:rgba(0,0,0,.3)">
+        <!-- Widget loads here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="steps">
+  <h2>Add it to your spa website in 4 steps</h2>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Create your bot</h3>
+      <p>Sign up free. Name your spa, describe your services and vibe.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Train it on your menu</h3>
+      <p>Paste your service list, pricing, booking link, and prep instructions.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Test it live</h3>
+      <p>Use the built-in chat preview to ask client questions and refine.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Add to your site</h3>
+      <p>Paste one script tag before <code style="color:#a78bfa">&lt;/body&gt;</code>. Works on any website platform.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pricing">
+  <h2>Simple pricing for salons</h2>
+  <p>All plans include the chatbot widget, unlimited customization, and no setup fees.</p>
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-name">Free</div>
+      <div class="plan-price">$0 <span>/month</span></div>
+      <ul>
+        <li>1 chatbot</li>
+        <li>100 client conversations/month</li>
+        <li>Full AI capabilities</li>
+        <li>No credit card required</li>
+      </ul>
+    </div>
+    <div class="plan featured">
+      <div class="plan-name" style="color:#a78bfa">Starter — most popular</div>
+      <div class="plan-price">$39 <span>/month</span></div>
+      <ul>
+        <li>1 chatbot</li>
+        <li>500 conversations/month</li>
+        <li>Remove ChatFlow branding</li>
+        <li>Priority support</li>
+        <li>Analytics dashboard</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">$79 <span>/month</span></div>
+      <ul>
+        <li>Up to 5 chatbots</li>
+        <li>Unlimited conversations</li>
+        <li>Full white-label</li>
+        <li>Custom branding</li>
+        <li>Multi-location support</li>
+      </ul>
+    </div>
+  </div>
+  <a href="https://myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card</a>
+</div>
+
+<div class="faq">
+  <h2>Questions salons ask us</h2>
+  <div class="faq-item">
+    <h3>What if a client asks something the bot doesn't know?</h3>
+    <p>You define exactly what topics the bot covers. If a client asks something outside its knowledge, it politely says it can't answer and suggests they call or book directly. You're always in control of what it says.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can it take bookings directly?</h3>
+    <p>ChatFlow can explain your services and direct clients to your existing booking system (Vagaro, Mindbody, Fresha, Booksy, or a custom URL). Full booking integration is on our roadmap for 2026.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do I update pricing or add a new service?</h3>
+    <p>Log into your ChatFlow dashboard, click your bot, and update the information. Changes are instant — no re-deploying or contacting support.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Does it match our salon's branding?</h3>
+    <p>Yes. You set the accent color to match your brand. On the Starter plan you remove ChatFlow branding entirely. Pro includes full white-label with custom bot name and colors.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What website platforms does it work on?</h3>
+    <p>Any platform that allows a script tag: WordPress, Wix, Squarespace, Webflow, Vagaro website builder, custom HTML. Setup takes under 2 minutes.</p>
+  </div>
+</div>
+
+<div style="padding:0 24px 60px">
+  <div class="cta-banner">
+    <h2>Ready to stop missing bookings while you're with a client?</h2>
+    <p>Your hands are full. Your chatbot handles the questions. 5 minutes to set up, $39/month flat.</p>
+    <a href="https://myflow.chat/register" class="btn-primary">Create my spa chatbot free</a>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:12px">
+    <a href="https://myflow.chat">Home</a>
+    <a href="https://myflow.chat/dental-chatbot.html">Dental chatbot</a>
+    <a href="https://myflow.chat/gym-chatbot.html">Gym chatbot</a>
+    <a href="https://myflow.chat/real-estate-chatbot.html">Real estate chatbot</a>
+    <a href="https://myflow.chat/restaurant-chatbot.html">Restaurant chatbot</a>
+    <a href="https://myflow.chat/agency.html">For agencies</a>
+  </div>
+  <p>© 2026 ForgeAI — ChatFlow. All rights reserved.</p>
+</footer>
+
+<!-- Demo widget -->
+<script>
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'https://chatflow-api-406c.onrender.com/widget.js';
+    s.setAttribute('data-bot-id', 'cmokj26oe0002730r5mpk9lbn');
+    s.defer = true;
+    document.body.appendChild(s);
+  })();
+</script>
+</body>
+</html>
