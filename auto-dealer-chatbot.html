@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Car Dealerships — ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your car dealership website in 2 minutes. Answer inventory questions, financing inquiries, and trade-in questions 24/7. No coding required."/>
+  <meta property="og:title" content="AI Chatbot for Car Dealerships — ChatFlow"/>
+  <meta property="og:description" content="Shoppers research cars at midnight. ChatFlow answers their questions instantly — inventory, financing, test drives, trade-ins — so they walk in ready to buy."/>
+  <link rel="canonical" href="https://myflow.chat/auto-dealer-chatbot.html"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:opacity .2s}
+    .nav-cta:hover{opacity:.85}
+    .hero{max-width:780px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero p{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;transition:opacity .2s}
+    .btn-primary:hover{opacity:.88}
+    .btn-ghost{border:1px solid rgba(255,255,255,.12);color:#cbd5e1;padding:13px 24px;border-radius:10px;text-decoration:none;font-size:14px;transition:all .2s}
+    .btn-ghost:hover{border-color:rgba(255,255,255,.25);color:#fff}
+    .section{max-width:1100px;margin:0 auto;padding:60px 24px}
+    .section-label{text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#64748b;font-weight:600;margin-bottom:40px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .stat-strip{background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:40px 24px;margin:20px 0}
+    .stats{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;text-align:center}
+    .stat-num{font-size:36px;font-weight:800;color:#7c3aed;margin-bottom:6px}
+    .stat-label{font-size:13px;color:#64748b;line-height:1.5}
+    .demo-section{max-width:1100px;margin:0 auto;padding:60px 24px}
+    .demo-wrapper{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start}
+    .demo-copy h2{font-size:28px;font-weight:700;color:#fff;margin-bottom:16px}
+    .demo-copy p{font-size:15px;color:#94a3b8;line-height:1.7;margin-bottom:20px}
+    .demo-copy ul{list-style:none}
+    .demo-copy li{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:#cbd5e1;margin-bottom:10px}
+    .demo-copy li::before{content:"✓";color:#7c3aed;font-weight:700;flex-shrink:0;margin-top:1px}
+    .demo-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;position:relative;min-height:400px}
+    .demo-box p{font-size:13px;color:#64748b;margin-bottom:12px}
+    .steps{max-width:900px;margin:0 auto;padding:60px 24px}
+    .steps h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:48px}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+    .step{text-align:center}
+    .step-num{width:36px;height:36px;background:#7c3aed;border-radius:50%;color:#fff;font-weight:700;font-size:15px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px}
+    .step h3{font-size:14px;font-weight:600;color:#fff;margin-bottom:6px}
+    .step p{font-size:13px;color:#64748b}
+    .pricing{max-width:900px;margin:0 auto;padding:60px 24px;text-align:center}
+    .pricing h2{font-size:28px;font-weight:700;color:#fff;margin-bottom:12px}
+    .pricing p{color:#64748b;margin-bottom:40px;font-size:15px}
+    .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:32px}
+    .plan{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;text-align:left}
+    .plan.featured{border-color:rgba(124,58,237,.5);background:rgba(124,58,237,.07)}
+    .plan-name{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#64748b;font-weight:600;margin-bottom:8px}
+    .plan-price{font-size:32px;font-weight:800;color:#fff;margin-bottom:16px}
+    .plan-price span{font-size:14px;color:#64748b;font-weight:400}
+    .plan ul{list-style:none}
+    .plan li{font-size:13px;color:#94a3b8;padding:4px 0;display:flex;align-items:center;gap:6px}
+    .plan li::before{content:"✓";color:#7c3aed;font-size:11px;font-weight:700}
+    .faq{max-width:740px;margin:0 auto;padding:60px 24px}
+    .faq h2{text-align:center;font-size:28px;font-weight:700;color:#fff;margin-bottom:40px}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:20px 0}
+    .faq-item h3{font-size:15px;font-weight:600;color:#e2e8f0;margin-bottom:8px}
+    .faq-item p{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:720px;margin:0 auto 60px}
+    .cta-banner h2{font-size:26px;font-weight:700;color:#fff;margin-bottom:12px}
+    .cta-banner p{font-size:15px;color:#94a3b8;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#334155}
+    footer a{color:#64748b;text-decoration:none;margin:0 8px}
+    footer a:hover{color:#94a3b8}
+    @media(max-width:768px){.demo-wrapper{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav">
+    <a href="https://myflow.chat" class="logo">
+      <div class="logo-icon">
+        <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+      </div>
+      <span class="logo-text">ChatFlow</span>
+    </a>
+    <a href="https://myflow.chat/register" class="nav-cta">Start free</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">🚗 Built for car dealerships</div>
+  <h1>Answer every buyer question — before they visit the <span>competitor</span></h1>
+  <p>Shoppers research cars late at night. ChatFlow's AI chatbot answers inventory questions, financing options, and trade-in inquiries 24/7 — so they arrive at your lot warm and ready to buy.</p>
+  <div class="cta-group">
+    <a href="https://myflow.chat/register" class="btn-primary">Add to my dealership's website free</a>
+    <a href="#demo" class="btn-ghost">See it in action</a>
+  </div>
+</div>
+
+<div class="stat-strip">
+  <div class="stats">
+    <div>
+      <div class="stat-num">76%</div>
+      <div class="stat-label">of car shoppers research online after dealership hours</div>
+    </div>
+    <div>
+      <div class="stat-num">$2,300</div>
+      <div class="stat-label">average gross profit per vehicle — one extra sale pays for years of ChatFlow</div>
+    </div>
+    <div>
+      <div class="stat-num">5 min</div>
+      <div class="stat-label">to set up on any website</div>
+    </div>
+    <div>
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">coverage without hiring an extra sales associate</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">What it handles for dealerships</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🚗</div>
+      <h3>Inventory questions</h3>
+      <p>Tells shoppers what models, trim levels, and colors you carry. Explains the difference between trims. Links to your inventory pages so they can browse specific vehicles.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💳</div>
+      <h3>Financing &amp; leasing</h3>
+      <p>Explains your financing options, typical APR ranges, lease vs. buy trade-offs, and credit requirements. Qualifies buyers before they step foot on the lot.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <h3>Trade-in inquiries</h3>
+      <p>Explains your trade-in process, what factors affect trade-in value, and directs shoppers to your appraisal tool. Keeps prospects engaged instead of going to CarMax.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛠️</div>
+      <h3>Service &amp; maintenance</h3>
+      <p>Answers service department hours, what's included in your complimentary service packages, how to schedule appointments, and typical service pricing.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📅</div>
+      <h3>Test drive booking</h3>
+      <p>Explains test drive availability, what to bring, and directs interested buyers to schedule — capturing hot leads at their peak interest moment.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <h3>Location &amp; hours</h3>
+      <p>Instantly answers dealership address, sales hours, service department hours, and holiday closures so shoppers plan their visit without calling.</p>
+    </div>
+  </div>
+</div>
+
+<div class="demo-section" id="demo">
+  <div class="demo-wrapper">
+    <div class="demo-copy">
+      <h2>Live demo: Metro Auto Group</h2>
+      <p>This is a real ChatFlow bot trained on a sample dealership. Ask it what your shoppers ask at midnight:</p>
+      <ul>
+        <li>What's the difference between the LX and EX trim?</li>
+        <li>Do you offer financing for people with less than perfect credit?</li>
+        <li>How do I find out what my trade-in is worth?</li>
+        <li>Can I schedule a test drive online?</li>
+        <li>What are your service department hours?</li>
+      </ul>
+      <p style="margin-top:20px;font-size:13px;color:#475569">You'd train your own bot on your actual inventory, financing programs, service packages, and policies.</p>
+    </div>
+    <div class="demo-box">
+      <p>👇 Chat with the demo bot below</p>
+      <div id="chatflow-demo-container" style="position:relative;height:380px;border-radius:10px;overflow:hidden;background:rgba(0,0,0,.3)">
+        <!-- Widget loads here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="steps">
+  <h2>Add it to your dealership website in 4 steps</h2>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Create your bot</h3>
+      <p>Sign up free. Name your dealership and describe what you sell.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Train it on your inventory</h3>
+      <p>Paste your model lineup, financing programs, service offerings, and policies.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Test it live</h3>
+      <p>Use the built-in chat preview to ask shopper questions and fine-tune.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Add to your site</h3>
+      <p>Paste one script tag before <code style="color:#a78bfa">&lt;/body&gt;</code>. Works on DealerSocket, VinSolutions, WordPress, and any HTML site.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pricing">
+  <h2>Simple pricing for dealerships</h2>
+  <p>One extra car sold pays for years of ChatFlow. All plans include the chatbot widget and unlimited customization.</p>
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-name">Free</div>
+      <div class="plan-price">$0 <span>/month</span></div>
+      <ul>
+        <li>1 chatbot</li>
+        <li>100 shopper conversations/month</li>
+        <li>Full AI capabilities</li>
+        <li>No credit card required</li>
+      </ul>
+    </div>
+    <div class="plan featured">
+      <div class="plan-name" style="color:#a78bfa">Starter — most popular</div>
+      <div class="plan-price">$39 <span>/month</span></div>
+      <ul>
+        <li>1 chatbot</li>
+        <li>500 conversations/month</li>
+        <li>Remove ChatFlow branding</li>
+        <li>Priority support</li>
+        <li>Analytics dashboard</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">$79 <span>/month</span></div>
+      <ul>
+        <li>Up to 5 chatbots</li>
+        <li>Unlimited conversations</li>
+        <li>Full white-label</li>
+        <li>Custom branding</li>
+        <li>Multi-location support</li>
+      </ul>
+    </div>
+  </div>
+  <a href="https://myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card</a>
+</div>
+
+<div class="faq">
+  <h2>Questions dealerships ask us</h2>
+  <div class="faq-item">
+    <h3>Can it tell shoppers about specific vehicles in stock?</h3>
+    <p>Yes, if you add your current inventory to the bot's training information. You can paste your top sellers, key trim levels, and current promotions. For live inventory feeds (real-time stock updates), that's on our roadmap.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Will it promise pricing or rates we can't honor?</h3>
+    <p>You control exactly what the bot says. Keep pricing ranges general ("financing from 3.9% APR for qualified buyers") and it won't create expectations you can't meet. You can also restrict it to topics like test drives and trade-ins only.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What CMS/website platforms does it work with?</h3>
+    <p>Any website that supports a script tag: WordPress, DealerSocket, VinSolutions, CDK, Dealer.com, Squarespace, and custom HTML sites. Your IT team can install it in under 5 minutes.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can we see what shoppers asked?</h3>
+    <p>Yes. Your ChatFlow dashboard shows every conversation, what questions were asked, and how the bot responded. Great for identifying inventory gaps and training opportunities.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do we need a developer to set it up?</h3>
+    <p>No. It's one script tag — your service manager or a BDC rep can do it. If your website is managed by a vendor, you can send them the 1-line snippet and ask them to add it to the footer.</p>
+  </div>
+</div>
+
+<div style="padding:0 24px 60px">
+  <div class="cta-banner">
+    <h2>Ready to stop losing midnight car shoppers to the competition?</h2>
+    <p>Your BDC works 8–8. Your chatbot works 24/7. One extra sale a month pays for years of ChatFlow.</p>
+    <a href="https://myflow.chat/register" class="btn-primary">Create my dealership chatbot free</a>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:12px">
+    <a href="https://myflow.chat">Home</a>
+    <a href="https://myflow.chat/real-estate-chatbot.html">Real estate chatbot</a>
+    <a href="https://myflow.chat/law-firm-chatbot.html">Law firm chatbot</a>
+    <a href="https://myflow.chat/ecommerce-chatbot.html">E-commerce chatbot</a>
+    <a href="https://myflow.chat/chatbot-alternative.html">Intercom alternative</a>
+    <a href="https://myflow.chat/agency.html">For agencies</a>
+  </div>
+  <p>© 2026 ForgeAI — ChatFlow. All rights reserved.</p>
+</footer>
+
+<!-- Demo widget -->
+<script>
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'https://chatflow-api-406c.onrender.com/widget.js';
+    s.setAttribute('data-bot-id', 'cmokj26oe0002730r5mpk9lbn');
+    s.defer = true;
+    document.body.appendChild(s);
+  })();
+</script>
+</body>
+</html>
