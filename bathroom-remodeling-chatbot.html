@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Bathroom Remodeling Contractors | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your bathroom remodeling website. Pre-qualify leads, explain scope and cost by bathroom type, and book free consultations 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Bathroom Remodeling Contractors — Book More Consultations"/>
+  <meta property="og:description" content="ChatFlow helps bathroom remodeling contractors capture and pre-qualify leads around the clock — answering budget questions, explaining tub-to-shower conversion scope, and booking consultations."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/bathroom-remodeling-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the chatbot quote bathroom remodels accurately?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure realistic ranges in the system prompt — guest bath cosmetic update $4,000–8,000; tub-to-shower conversion $6,000–12,000; master bath full remodel $15,000–35,000; luxury master bath $40,000–80,000+. The chatbot scopes the project with the customer, gives an honest range based on what they describe, and captures a consultation lead for exact pricing after seeing the space."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle tub-to-shower conversion questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tub-to-shower conversions are one of the most searched bathroom remodel queries. You configure the scope explanation in the system prompt: tub removal, subfloor inspection and waterproofing, new shower pan or custom tile floor, glass enclosure or curtain, wall tile, fixtures. The chatbot explains what's involved, gives the $6,000–12,000 range depending on tile selection and glass door versus frameless enclosure, and captures the lead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot address accessibility remodels like grab bars and walk-in showers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Aging-in-place bathroom remodels are a distinct and growing market. You can configure the chatbot to explain curbless shower construction, grab bar placement (ADA-compliant blocking in walls), comfort height toilets, and widened doorways. These projects often involve adult children researching on behalf of aging parents — a demographic that really appreciates having questions answered at their own pace before calling."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Bathroom Remodeling</div>
+  <h1>Convert bathroom remodel researchers into booked consultations</h1>
+  <p class="hero-sub">Homeowners planning a bathroom remodel spend weeks researching before they contact anyone. ChatFlow answers their questions about cost, scope, and timeline — and captures the lead while they're engaged.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Tub-to-shower scope, honest cost ranges, and consultation booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! I'm here to help answer bathroom remodeling questions. Are you thinking about a full renovation, a specific update like tub-to-shower conversion, or something else?</div>
+      <div class="bubble user-b">We want to convert the master bath tub into a walk-in shower. The tub hasn't been used in years.</div>
+      <div class="bubble bot">Tub-to-shower conversions are one of the most popular master bath upgrades — and it makes a lot of sense if the tub isn't being used.
+        <br><br>A few questions to scope it properly:
+        <br>• Is this an alcove tub (3 walls around it) or a freestanding/garden tub?
+        <br>• Do you want a basic prefab shower or custom tile?
+        <br>• Glass enclosure or shower curtain?</div>
+      <div class="bubble user-b">It's an alcove tub, we'd like custom tile, and definitely a glass door or enclosure.</div>
+      <div class="bubble bot">Custom tile alcove conversion with a glass enclosure — great choice. That's our most popular master bath upgrade.
+        <br><br>Scope typically includes: tub removal, subfloor inspection and waterproofing, custom tile floor and walls, glass frameless enclosure or semi-frameless, new shower fixtures.
+        <br><br>Range for that scope: <strong>$8,500–14,000</strong> depending on tile selection and frameless vs. semi-frameless glass. Frameless adds about $800–1,500 but looks significantly better.
+        <br><br>Does that range work for you?</div>
+      <div class="bubble user-b">Yes that's what we expected. Can we get a free consultation?</div>
+      <div class="bubble bot">Absolutely! We offer free in-home consultations — it takes about 45 minutes and you'll leave with a scope and ballpark estimate.
+        <br><br>What's the best name and number or email to reach you, and what city/area are you in?</div>
+      <div class="bubble user-b">Kevin and Dana Shore, 407-555-0291, we're in Lake Nona</div>
+      <div class="bubble bot">Perfect, Kevin and Dana! Our team covers Lake Nona and will be in touch within one business day to schedule your free consultation. Looking forward to it!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why bathroom remodelers use ChatFlow</h2>
+  <p class="section-sub">Answer the questions homeowners ask at midnight before they call someone else in the morning</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Scope by project type</h3>
+      <p>Tub-to-shower conversions, master bath full renovations, guest bath updates, and accessibility remodels are all different projects with different budgets. Configure the chatbot to ask the right questions — alcove vs. freestanding, tile vs. prefab, layout change or not — and quote the right range for each.</p>
+    </div>
+    <div class="card">
+      <h3>Capture the tub-to-shower searchers</h3>
+      <p>"Tub to shower conversion cost" is one of the highest-searched bathroom remodel queries. ChatFlow turns that search intent into a consultation booking — explaining what the conversion involves, what it costs, and capturing contact info while the homeowner is engaged and research-mode.</p>
+    </div>
+    <div class="card">
+      <h3>Aging-in-place bathroom leads</h3>
+      <p>Curbless showers, grab bar blocking, comfort height toilets, and widened doorways are a growing market. Often it's adult children researching on behalf of aging parents — a demographic that prefers researching at their own pace over calling a contractor they don't know yet. The chatbot meets them where they are.</p>
+    </div>
+    <div class="card">
+      <h3>Set material expectations early</h3>
+      <p>A big source of friction in bathroom remodeling sales is tile sticker shock. If a homeowner wants floor-to-ceiling Carrara marble for $6,000, that's a conversation worth having before the site visit. ChatFlow can explain realistic tile cost tiers and set expectations that make the consultation more productive.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot quote bathroom remodels accurately?</p>
+      <p class="faq-a">You configure realistic ranges in the system prompt — guest bath cosmetic update $4,000–8,000; tub-to-shower conversion $6,000–14,000; master bath full remodel $15,000–35,000; luxury master bath $40,000–80,000+. The chatbot scopes the project with the customer, gives an honest range based on what they describe, and captures a consultation lead for exact pricing after seeing the space.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle tub-to-shower conversion questions?</p>
+      <p class="faq-a">Tub-to-shower conversions are one of the most searched bathroom remodel queries. You configure the scope explanation in the system prompt: tub removal, subfloor inspection and waterproofing, new shower pan or custom tile floor, glass enclosure, wall tile, fixtures. The chatbot explains what's involved, gives the $6,000–14,000 range depending on tile selection and frameless vs. semi-frameless glass, and captures the lead for a free consultation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot address accessibility remodels like grab bars and walk-in showers?</p>
+      <p class="faq-a">Yes. Aging-in-place bathroom remodels are a distinct and growing market. You can configure the chatbot to explain curbless shower construction, grab bar placement (ADA-compliant blocking in walls), comfort height toilets, and widened doorways. These projects often involve adult children researching on behalf of aging parents — a demographic that really appreciates having questions answered at their own pace before calling a contractor they've never spoken with.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn bathroom remodel research into booked consultations</h2>
+    <p>ChatFlow captures leads 24/7 with project scoping, budget ranges, and consultation booking built in. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/kitchen-remodeling-chatbot.html">Kitchen Remodeling</a> · <a href="/flooring-contractor-chatbot.html">Flooring Contractor</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

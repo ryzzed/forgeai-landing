@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Auto Detailing Shops | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your auto detailing shop website. Instantly quote interior, exterior, and full-detail packages — and book appointments 24/7 without phone calls."/>
+  <meta property="og:title" content="AI Chatbot for Auto Detailing Shops — Book More Details"/>
+  <meta property="og:description" content="ChatFlow answers pricing questions, quotes packages by vehicle size, and captures bookings for your auto detailing shop around the clock."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/auto-detailing-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the chatbot quote different vehicle sizes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You configure pricing tiers by vehicle class — sedan, SUV/crossover, truck, full-size SUV, van — and the chatbot applies the right rate based on what the customer tells it. A full detail on a sedan might be $180-220 while the same service on a large SUV runs $240-300. The chatbot handles this automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if a customer asks about paint correction or ceramic coating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You include your add-on services in the system prompt — paint correction ($150-400 depending on severity), ceramic coating ($500-1,200), paint protection film, headlight restoration, odor elimination. The chatbot explains what each service does, gives price ranges, and captures a contact for those higher-ticket consultations that benefit from a personal call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle fleet or commercial accounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can instruct the chatbot to recognize fleet inquiries (3+ vehicles, company name mentioned) and route them directly to your fleet pricing conversation — typically 10-20% volume discounts, monthly billing, dedicated scheduling windows. The chatbot captures the fleet size, vehicle types, and contact info so you can follow up with a custom proposal."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Auto Detailing</div>
+  <h1>Book more details — without answering the same pricing calls all day</h1>
+  <p class="hero-sub">Customers want to know: "how much for my truck?" ChatFlow answers instantly with package options and pricing by vehicle size, then captures the booking — day or night.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Instant answers on packages, pricing by vehicle, and appointment capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to Prestige Auto Detail. What can I help you with today — pricing, availability, or questions about our services?</div>
+      <div class="bubble user-b">How much for a full detail on my F-150?</div>
+      <div class="bubble bot">For a full-size truck like an F-150, our Full Detail package runs $220–260. That includes:
+        <br><br>• <strong>Exterior:</strong> hand wash, clay bar, machine polish, tire dressing, windows
+        <br>• <strong>Interior:</strong> vacuum, steam clean surfaces, leather conditioning, odor treatment
+        <br><br>Turnaround is about 4–5 hours. Want to hear about add-ons like paint correction or ceramic coating, or are you ready to book?</div>
+      <div class="bubble user-b">What's ceramic coating?</div>
+      <div class="bubble bot">Ceramic coating is a semi-permanent protective layer bonded to your paint — it repels water, resists UV fade, and makes future washes much easier. Our 1-year coating is $350 on a truck (applied over a fresh detail), and our 3-year coating is $650.
+        <br><br>It's popular on newer or freshly-polished vehicles. Want to add it to the Full Detail, or just book the detail for now?</div>
+      <div class="bubble user-b">Just the full detail. When can you fit me in?</div>
+      <div class="bubble bot">We have openings this week — typically book 1–3 days out. To lock in your slot, I'll grab your info:
+        <br><br>What's your name and best phone number or email? I'll have someone confirm the exact time with you within the hour.</div>
+      <div class="bubble user-b">Marcus Tilley, 407-555-0183</div>
+      <div class="bubble bot">Got it, Marcus! Full Detail on your F-150, $220–260 — I'll send your contact to the team and you'll get a confirmation call to confirm the day/time. We're located at 4820 Curry Ford Rd. Anything else before then?</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why detailing shops use ChatFlow</h2>
+  <p class="section-sub">Stop losing bookings to shops that answer faster</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Pricing by vehicle class, automatically</h3>
+      <p>Configure your rate sheet by vehicle type — sedan, SUV, truck, van, full-size SUV — and the chatbot quotes the right price range the moment the customer mentions their vehicle. No more "I'll have to call you back with a price."</p>
+    </div>
+    <div class="card">
+      <h3>Upsell add-ons naturally</h3>
+      <p>Ceramic coating, paint correction, headlight restoration, odor elimination, fabric protection — the chatbot mentions relevant add-ons in context, not as a hard sell. Customers who ask about a full detail often book a coating too when it's explained clearly.</p>
+    </div>
+    <div class="card">
+      <h3>Books while you're under a car</h3>
+      <p>Detailing is physical, hands-on work. You can't answer the phone from inside a vehicle. ChatFlow captures every inquiry that comes in while you're working — name, vehicle, service interest, contact info — so nothing falls through.</p>
+    </div>
+    <div class="card">
+      <h3>Fleet account routing</h3>
+      <p>When a customer mentions multiple vehicles or a business name, the chatbot routes to your fleet flow — captures fleet size, vehicle types, and contact info for a custom proposal. Fleet accounts are high-value repeat business worth a personal follow-up.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot quote different vehicle sizes?</p>
+      <p class="faq-a">Yes. You configure pricing tiers by vehicle class — sedan, SUV/crossover, truck, full-size SUV, van — and the chatbot applies the right rate based on what the customer tells it. A full detail on a sedan might be $180–220 while the same service on a large SUV runs $240–300. The chatbot handles this automatically.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if a customer asks about paint correction or ceramic coating?</p>
+      <p class="faq-a">You include your add-on services in the system prompt — paint correction ($150–400 depending on severity), ceramic coating ($500–1,200), paint protection film, headlight restoration, odor elimination. The chatbot explains what each service does, gives price ranges, and captures a contact for higher-ticket consultations that benefit from a personal call.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle fleet or commercial accounts?</p>
+      <p class="faq-a">You can instruct the chatbot to recognize fleet inquiries (3+ vehicles, company name mentioned) and route them to your fleet pricing conversation — typically 10–20% volume discounts, monthly billing, dedicated scheduling windows. The chatbot captures the fleet size, vehicle types, and contact info so you can follow up with a custom proposal.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Stop losing bookings to the shop that picks up faster</h2>
+    <p>ChatFlow answers pricing questions and captures appointments 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/car-wash-chatbot.html">Car Wash</a> · <a href="/mechanic-chatbot.html">Auto Repair</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
