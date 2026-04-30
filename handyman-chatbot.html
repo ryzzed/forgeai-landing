@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handyman Chatbot — Capture Job Requests and Qualify Projects 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for handyman services and home repair businesses. Capture job requests, answer service questions, and give ballpark estimates — automatically. $39/month."/>
+  <meta property="og:title" content="Handyman Chatbot — Never Miss a Job Request While You're on a Job"/>
+  <meta property="og:description" content="ChatFlow AI captures handyman job requests, qualifies project scope, and gives ballpark estimates — so homeowners don't move on to the next contractor while you're working."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/handyman-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a handyman service?","acceptedAnswer":{"@type":"Answer","text":"A handyman chatbot can answer questions about the types of jobs you handle, your service area, approximate pricing ranges for common tasks, scheduling availability, and whether you're licensed or insured. It captures job requests by asking about the type of work, property details, and preferred timing — giving you a complete brief before you call back. Homeowners who find you on Google late at night or on weekends get immediate responses instead of going to the next handyman on their list."}},{"@type":"Question","name":"How should I handle pricing questions for handyman work?","acceptedAnswer":{"@type":"Answer","text":"Share hourly rates and give typical ranges for common jobs: 'Our hourly rate is $75-95 for most repairs. Typical jobs like hanging doors run $150-250, drywall patch repairs run $100-200, and faucet replacements run $80-150 in labor.' Ranges with specific examples help homeowners self-qualify and set expectations — more useful than 'it depends' and more honest than exact quotes for work you haven't seen."}},{"@type":"Question","name":"How much does a handyman chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For a handyman charging $75-100/hour, even capturing one additional half-day job per month more than covers the cost. The free plan (1,000 conversations/month) is often sufficient for handyman website traffic."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Handyman Chatbot</div>
+  <h1>Capture job requests and ballpark estimates<br/><span>while you're on a job site.</span></h1>
+  <p class="hero-sub">You're on a ladder hanging cabinets when three homeowners visit your website and want quotes. Without a chatbot, they move on. With ChatFlow AI, they get an instant response, a ballpark estimate, and a captured inquiry — waiting for your callback when the job is done.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A homeowner with a honey-do list — captured and qualified</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Handyman Services. Looking for a quote on a specific project, or do you have questions about what we handle?</div></div>
+    <div class="msg user"><div class="bubble">I have a few things — need a ceiling fan installed, a door that won't latch fixed, and some drywall patched from where we removed a TV mount.</div></div>
+    <div class="msg bot"><div class="bubble">That's a perfect handyman job! Ballpark on those three: ceiling fan install $100-150, door latch adjustment $60-100, drywall patch (small, up to 6") $100-150. Total estimate around $260-400 for all three, assuming no complications. Most homeowners batch a few items like this into one visit — very efficient. What's your zip code and are you flexible on scheduling?</div></div>
+    <div class="msg user"><div class="bubble">32827. Flexible, whenever you have availability.</div></div>
+    <div class="msg bot"><div class="bubble">That's in our service area. To get you on the schedule, I just need your name and best contact number. The owner will call you back within a few hours to confirm availability and any details.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your handyman business</h2>
+  <p class="section-sub" style="text-align:center">Capture every job request — even during a full day of work</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Job intake and scoping</h3>
+      <p>Type of work, approximate size, how many items, property type — the context you need to arrive prepared and quote accurately. Captures the full job list from homeowners with multiple tasks, so your first visit is efficient.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Ballpark estimates</h3>
+      <p>Give price ranges for common tasks — ceiling fan install, drywall patch, door adjustment, TV mounting, furniture assembly. Homeowners who know your rough rate before calling are more likely to follow through and less likely to be surprised.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Service area qualification</h3>
+      <p>Confirm the zip code is in your territory before capturing the lead. No more quoting jobs that are too far out of range to be profitable — the bot confirms coverage upfront and sets the expectation before you call back.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>License and insurance FAQ</h3>
+      <p>Are you licensed? Insured? Can you pull permits? These questions determine whether a homeowner trusts you with their home. Answer them clearly and consistently in every conversation — building confidence before the first callback.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">What jobs should I tell the chatbot I don't do?</p>
+      <p class="faq-a">Be explicit about your scope limits in the system prompt: "We don't do major electrical work, HVAC, roofing, or jobs requiring a specialized license beyond general contractor." When a homeowner asks about something outside your scope, the bot should say so directly and suggest they contact a specialist — not waste their time or yours on a job you won't take. Clear scope limits also protect you from liability questions about work you're not qualified to do.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I handle multi-item job lists without being too far off on estimates?</p>
+      <p class="faq-a">Configure the bot to give per-item ranges and a combined total estimate with a caveat: "This is a ballpark — the final quote depends on what I see on-site, particularly for things like drywall where the size and extent determine the time." Most homeowners understand that estimates require a site visit. The ballpark gets them engaged; the caveat manages expectations. Add "I do confirm the scope and price before starting any work" to remove commitment anxiety.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I specialize in certain types of work — how do I communicate that?</p>
+      <p class="faq-a">Configure your specializations prominently in the system prompt: "We specialize in kitchen and bathroom repairs, tile work, and carpentry. We're comfortable with most general repairs but particularly experienced with finish work, door and window adjustments, and bathroom fixture replacement." This attracts better-fit clients and lets the bot highlight your strengths rather than presenting you as a generalist who does anything.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn every website visit into a captured job request</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your handyman website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/plumber-chatbot.html">Plumber chatbot</a> · <a href="/electrician-chatbot.html">Electrician chatbot</a> · <a href="/cleaning-chatbot.html">Cleaning service chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

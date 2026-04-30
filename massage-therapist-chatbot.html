@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Massage Therapist Chatbot — Book Appointments and Answer Service Questions 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for massage therapists and massage studios. Answer questions about modalities, pricing, and booking — and capture appointment requests automatically. $39/month."/>
+  <meta property="og:title" content="Massage Therapist Chatbot — Fill Your Schedule While You're With a Client"/>
+  <meta property="og:description" content="ChatFlow AI answers massage questions and captures appointment requests — so your schedule fills automatically while you're in a session."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/massage-therapist-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a massage therapist?","acceptedAnswer":{"@type":"Answer","text":"A massage therapy chatbot can answer questions about your modalities (Swedish, deep tissue, sports, prenatal, hot stone, reflexology), session lengths and pricing, what to expect at a first appointment, cancellation policies, and gift certificate availability. It captures appointment requests from new clients who prefer not to call — especially important for solo therapists who can't answer the phone while working."}},{"@type":"Question","name":"How does a chatbot help a solo massage therapist specifically?","acceptedAnswer":{"@type":"Answer","text":"Solo therapists face a unique problem: you can't answer the phone or respond to messages during a 60 or 90-minute session. New client inquiries that go unanswered often move on to the next therapist on their list. A chatbot captures those inquiries the moment someone reaches your website — at any hour — and holds their intent until you're free to follow up."}},{"@type":"Question","name":"How much does a massage therapist chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For massage therapists, where a single new client booking generates $80-150+ and often leads to recurring appointments, even two or three additional bookings per month captured through the chatbot represents strong ROI. Many solo therapists find the free plan (1,000 conversations/month) sufficient for their website traffic."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Massage Therapist Chatbot</div>
+  <h1>Fill your schedule while you're<br/><span>in a session with a client.</span></h1>
+  <p class="hero-sub">When you're 40 minutes into a deep tissue session, you can't answer a new client's question about your availability. ChatFlow AI handles those inquiries around the clock — answering modality questions, sharing pricing, and capturing appointment requests while you're focused on the client in front of you.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A new client inquiry — captured while you're with someone else</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name]'s massage therapy practice. Are you looking to book an appointment, or do you have questions about services?</div></div>
+    <div class="msg user"><div class="bubble">I have really bad neck and shoulder tension from working at a desk all day. What would you recommend?</div></div>
+    <div class="msg bot"><div class="bubble">Desk tension in the neck and shoulders is one of the most common things I work on. I'd recommend a 60 or 90-minute deep tissue session focused on the upper back, trapezius, and neck — combined with some Swedish work to warm up the tissue first. If the tension is chronic, many clients book every 2-4 weeks and notice significant improvement within 3-4 sessions. Would you like to request an appointment?</div></div>
+    <div class="msg user"><div class="bubble">Yes! What are your rates?</div></div>
+    <div class="msg bot"><div class="bubble">60-minute sessions are $90 and 90-minute sessions are $130. I have openings this week and next — if you leave your name and contact info, I'll reach out to confirm a time that works for both of us.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your practice</h2>
+  <p class="section-sub" style="text-align:center">Every new client inquiry captured — even in the middle of a session</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Modality guidance</h3>
+      <p>Swedish, deep tissue, sports massage, prenatal, hot stone, trigger point, reflexology — describe each service and when it's appropriate. Help new clients choose the right session before they arrive, reducing first-appointment anxiety.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing and session lengths</h3>
+      <p>Share your rates for 30, 60, 90, and 120-minute sessions. Package pricing, gift certificate availability, and any first-time client discounts. Transparency about pricing removes hesitation from new clients comparing therapists.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Appointment requests</h3>
+      <p>Capture new client name, contact info, preferred service, and timing preference. You follow up when you're free to confirm the booking — no phone tag, no missed opportunities while you're working.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+      <h3>Gift certificates and packages</h3>
+      <p>Gift certificates are a major revenue driver for massage therapists, especially around holidays. Configure the bot to explain your gift certificate process and how to purchase — capturing gift buyers who arrive on your site outside business hours.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">I only take clients by referral — should I still use a chatbot?</p>
+      <p class="faq-a">If your practice is full and you're not accepting new clients, configure the bot accordingly: "I'm currently at capacity and not taking new clients. If you'd like to be added to my waitlist, leave your name and contact info and I'll reach out when an opening becomes available." The chatbot captures waitlist registrations and handles the "are you taking new clients?" question without you having to respond individually to every inquiry.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle intake health history questions?</p>
+      <p class="faq-a">The chatbot can explain your intake process and what health history information you collect before a first session. For actual health intake forms (conditions, medications, areas to avoid), direct new clients to your intake form link rather than collecting that information through chat. The bot's job is to book the appointment — the intake form collects the clinical information you need before the session.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I work out of a spa and also have my own private clients — can the chatbot serve both?</p>
+      <p class="faq-a">Yes — configure the bot to handle inquiries for your private practice separately from the spa. "For appointments through [Spa Name], visit their booking system at [link]. For my private practice appointments, leave your details here and I'll be in touch." This keeps the two client streams organized and ensures the bot captures private client leads without redirecting them to the spa's booking system.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Fill your schedule without interrupting your sessions</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your massage practice website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/spa-chatbot.html">Spa chatbot</a> · <a href="/personal-trainer-chatbot.html">Personal trainer chatbot</a> · <a href="/yoga-studio-chatbot.html">Yoga studio chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
