@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Inspector Chatbot — Capture Inspection Bookings and Answer Service Questions 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for home inspectors. Capture inspection booking requests, answer pricing questions, and explain your services automatically. $39/month."/>
+  <meta property="og:title" content="Home Inspector Chatbot — Book Inspections While You're Inspecting"/>
+  <meta property="og:description" content="ChatFlow AI captures home inspection booking requests, answers questions about your services, and explains the inspection process — so buyers don't move on to another inspector while you're on a job."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/home-inspector-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a home inspector?","acceptedAnswer":{"@type":"Answer","text":"A home inspection chatbot can explain what's included in a standard inspection, give pricing by property size and type, describe add-on services (radon, mold, sewer scope, pool, infrared), answer questions about turnaround time for the report, and capture booking requests. Home buyers are often first-time clients making a time-sensitive decision — an immediate response can be the difference between booking your inspection or calling someone else."}},{"@type":"Question","name":"How do I price home inspections through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Give ranges by home size: 'Up to 1,500 sq ft: $350. 1,500-2,500 sq ft: $400. 2,500-3,500 sq ft: $450. Over 3,500 sq ft: contact for quote.' List add-ons separately (radon: $125, mold air sample: $80/sample, sewer scope: $175). Transparency on pricing helps buyers who are comparing 2-3 inspectors and want to know cost before calling — a common behavior among first-time buyers especially."}},{"@type":"Question","name":"How much does a home inspector chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For home inspectors charging $350-600 per inspection, capturing even one additional booking per month through the chatbot yields 9-15x ROI. The free plan (1,000 conversations/month) works for home inspectors who are just starting their web presence."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Home Inspector Chatbot</div>
+  <h1>Book inspections while you're<br/><span>on the roof with a flashlight.</span></h1>
+  <p class="hero-sub">Home buyers on a tight closing timeline don't wait — they book the first inspector who responds. ChatFlow AI answers their questions about services, pricing, and availability the moment they visit your website, capturing the booking while you're on another inspection.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A first-time buyer inquiry — answered and captured</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Home Inspections. Are you booking an inspection, or do you have questions about our services?</div></div>
+    <div class="msg user"><div class="bubble">Need an inspection ASAP — we're under contract on a 2,400 sq ft house and have an inspection contingency deadline in 5 days.</div></div>
+    <div class="msg bot"><div class="bubble">Five days is workable — we typically have availability within 1-2 business days. For a 2,400 sq ft home, the standard inspection is $425 and takes about 3 hours. The report is delivered digitally within 24 hours. Would you also want radon testing added? The contingency period is a good time to do it — it runs $125 and requires 48 hours for the test so we'd set that up at the same time.</div></div>
+    <div class="msg user"><div class="bubble">Yes include the radon. How do I book?</div></div>
+    <div class="msg bot"><div class="bubble">Leave your name and best phone number and I'll reach out within an hour to confirm a date and get the property address. You'll also receive a booking confirmation with what to expect and whether the sellers need to be notified.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your inspection business</h2>
+  <p class="section-sub" style="text-align:center">Every booking opportunity captured — even during a 3-hour inspection</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Booking intake and scoping</h3>
+      <p>Property size, type (single family, condo, multi-unit), age, and any specific concerns (foundation, roof, water intrusion). Captures the information you need to schedule and estimate duration — before you ever pick up the phone.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing by size and add-ons</h3>
+      <p>Standard inspection rates by square footage, plus add-on services: radon, mold, sewer scope, pool/spa, infrared thermal imaging, well and septic. Buyers comparing inspectors get clear pricing instead of "call for a quote."</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>What's included in the inspection</h3>
+      <p>Systems covered (HVAC, electrical, plumbing, roof, foundation, windows), report format and turnaround time, whether buyers can attend. First-time buyers especially need this explained — the bot answers it without you having to walk through it on every intake call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Credentials and coverage</h3>
+      <p>State license, certifications (InterNACHI, ASHI), years of experience, E&O insurance coverage. Home buyers want to know who's walking through the biggest purchase of their life — the bot establishes credibility before the first conversation.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How do I handle real estate agent referrals through the chatbot?</p>
+      <p class="faq-a">When a buyer mentions their agent sent them, capture both: "Great — can I ask who referred you? We work with a lot of local agents and want to make sure we're taking good care of their clients." This tells you your referral source and creates a moment to thank the agent later. You can also configure the bot to mention: "We're happy to coordinate directly with your agent's office for scheduling if that's easier." Agents appreciate inspectors who make their transaction smoother.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot explain what a pre-listing inspection is?</p>
+      <p class="faq-a">Yes — this is a growth opportunity worth explaining: "A pre-listing inspection is done before you put your home on the market. You get the same thorough report a buyer would get — so you can address issues proactively, price accurately, and avoid surprises that kill deals in escrow. Many sellers find it reduces negotiation and speeds up the closing." Sellers searching for pre-listing inspections are an underserved segment for many inspectors — configure the bot to mention this service proactively when someone asks about selling a home.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What should I say about limitations of the inspection?</p>
+      <p class="faq-a">Be matter-of-fact: "A home inspection is a visual, non-invasive examination — we inspect what's accessible and visible. We're not able to see inside walls, under concrete slabs, or into sealed areas. We report on the condition of the home at the time of inspection." This sets accurate expectations before the inspection and protects you from post-closing complaints about things that weren't observable. Saying it upfront in chat is better than explaining it after a buyer is upset.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book the inspection before the buyer calls someone else</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your inspection website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/real-estate-chatbot.html">Real estate chatbot</a> · <a href="/mortgage-chatbot.html">Mortgage chatbot</a> · <a href="/law-firm-chatbot.html">Law firm chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
