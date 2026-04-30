@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Water Heater Installation Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your water heater installation website. Quote tankless vs tank replacement, handle emergency no-hot-water calls, and book same-day installs 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Water Heater Installation — Quote and Book Same-Day 24/7"/>
+  <meta property="og:description" content="ChatFlow helps water heater installation companies capture leads around the clock — quoting tankless vs tank replacement, routing emergency no-hot-water calls, and booking same-day installs."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/water-heater-installation-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote water heater installation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by unit type in the system prompt. Standard 40–50 gallon gas tank replacement (same location, same fuel): $900–1,500 installed. 50 gallon electric tank: $800–1,300 installed. Tankless gas (whole-home, 199,000 BTU): $2,200–3,800 installed. Tankless electric: $1,000–2,200 installed. Heat pump water heater: $1,800–3,200 installed. Relocation, new gas line, or panel upgrade for electric adds $300–800. The chatbot asks about current unit type and size, fuel source, and whether this is a planned replacement or emergency, then gives a range and books the appointment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle emergency no-hot-water calls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Water heater failures are often urgent — no hot water means same-day demand in most households. Configure the chatbot to ask whether the unit stopped working suddenly (likely failed element, thermocouple, or tank failure) or is gradually declining (sediment buildup, aging anode). Sudden failure with an older unit (10+ years) = route for same-day replacement quote. Sudden failure on a newer unit = route for repair diagnosis. Slow decline = schedule a planned replacement. The chatbot captures urgency before routing so your dispatcher knows the call priority."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot help customers decide between tankless and tank water heaters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tank water heater: lower upfront cost ($800–1,500 installed), familiar technology, 10–12 year lifespan, runs out of hot water if demand exceeds capacity, standby heat loss. Tankless: higher upfront cost ($2,200–3,800 installed for whole-home gas), endless hot water on demand, 20+ year lifespan, 20–30% more energy efficient, requires adequate gas line size (3/4 inch or 1 inch). The chatbot asks about household size, simultaneous hot water demand, and whether they have gas — and gives a clear recommendation based on their situation before the booking."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Water Heater Installation</div>
+  <h1>Route same-day emergency replacements and answer the tankless question before customers call five plumbers</h1>
+  <p class="hero-sub">Water heater calls come in two modes: urgent emergency (no hot water right now) and planned upgrade (considering tankless). ChatFlow handles both — routing emergencies for same-day dispatch, answering the tankless vs tank tradeoff question, and booking installs before customers give up and call whoever answers first.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Emergency vs planned triage, tankless education, and same-day booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Need a water heater replaced or repaired? Is this an emergency — no hot water right now — or a planned replacement?</div>
+      <div class="bubble user-b">We woke up to no hot water. The unit is 14 years old, 50 gallon gas. There's water pooled around the base. I think it's done.</div>
+      <div class="bubble bot">Water pooling around the base of a 14-year-old unit almost always means the tank has failed — a crack or corrosion at the bottom. At 14 years that's past the expected lifespan (typically 10–12 years for a gas tank), so repair isn't worth it. You need a replacement.
+        <br><br>For a 50-gallon gas replacement in the same location with the same fuel source:
+        <br><strong>Same-day installed: $1,050–1,450</strong>
+        <br><br>That includes a new 50-gallon gas unit (Bradford White or Rheem), installation, new supply lines and shutoff, and haul-off of the old unit. Permit if required in your jurisdiction is additional ($75–150).
+        <br><br>Since you're replacing anyway — want to hear the 30-second case for tankless? It's $800–1,500 more upfront but lasts 20+ years and you never run out of hot water. Or we can keep it simple with a direct tank replacement.
+        <br><br>Either way, we can be there today. Where are you located?</div>
+      <div class="bubble user-b">Let's just do the tank replacement for now. We're in Cincinnati, OH.</div>
+      <div class="bubble bot">Cincinnati is our service area. What's your name and best contact number?</div>
+      <div class="bubble user-b">Carol Whitfield, 513-555-0139</div>
+      <div class="bubble bot">Got it, Carol! Same-day 50-gallon gas water heater replacement in Cincinnati. I'm flagging this as urgent — our dispatcher will call you within the hour to confirm a same-day window. Stay warm!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why water heater installers use ChatFlow</h2>
+  <p class="section-sub">Capture emergency replacements at 2am and convert planned-upgrade researchers year-round</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Emergency call capture around the clock</h3>
+      <p>Water heater failures don't respect business hours — a tank that failed Saturday night needs a replacement Sunday morning, not Monday afternoon. Configure ChatFlow to ask whether this is an emergency immediately and route urgent calls with a flag for same-day dispatch. Customers with no hot water will call whoever responds fastest — a chatbot that engages at midnight and promises a callback by opening is converting leads your competitors are sleeping through. Emergency water heater replacement is one of the highest-urgency service calls in residential plumbing.</p>
+    </div>
+    <div class="card">
+      <h3>Age-based replacement routing</h3>
+      <p>A water heater over 10 years old with any symptom — slower recovery, intermittent hot water, minor leak — is a replacement candidate. Configure ChatFlow to ask about the unit age and frame repair vs replace accordingly: "A repair on a 12-year-old unit is usually money better spent on a new unit." Customers who've been told the unit can be repaired often get a second opinion — the chatbot that explains the economics honestly and books the replacement faster wins the job. Age-based routing also reduces diagnostic trip costs by pre-qualifying replacement-ready calls.</p>
+    </div>
+    <div class="card">
+      <h3>Tankless upgrade conversion</h3>
+      <p>Customers replacing a failed tank are the best audience for a tankless upgrade pitch — they're already spending money. Configure ChatFlow to mention tankless briefly after quoting the tank replacement: "Since you're replacing anyway — the tankless option is $800–1,500 more upfront but lasts 20+ years and you never run out of hot water. Worth considering while the labor cost is the same." Customers who weren't considering tankless often upgrade when the decision is presented this way — and tankless installs generate more revenue per job.</p>
+    </div>
+    <div class="card">
+      <h3>Expansion tank and code compliance capture</h3>
+      <p>Many jurisdictions now require an expansion tank with new water heater installations in closed systems — a $150–250 add-on that's a code requirement, not an upsell. Configure ChatFlow to mention this so customers aren't surprised when your installer adds it to the scope. Similarly, some older homes need the gas line upgraded for a tankless unit. Pre-surfacing these requirements during the chat prevents "that wasn't quoted" friction at installation and builds trust in your thoroughness.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote water heater installation?</p>
+      <p class="faq-a">You configure price ranges by unit type. 40–50 gallon gas tank: $900–1,500 installed. 50 gallon electric: $800–1,300. Tankless gas (whole-home): $2,200–3,800. Tankless electric: $1,000–2,200. Heat pump water heater: $1,800–3,200. The chatbot asks about current unit type, fuel source, and urgency, gives a range, and books same-day or scheduled installation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle emergency no-hot-water calls?</p>
+      <p class="faq-a">The chatbot identifies emergencies in the first message and routes them for same-day dispatch priority. Sudden failure on an older unit (10+ years) is routed for replacement. Sudden failure on a newer unit routes for repair diagnosis. Gradual decline routes for planned replacement scheduling. Emergency context is captured and flagged so your dispatcher knows call priority without re-asking.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot help customers decide between tankless and tank?</p>
+      <p class="faq-a">Tank: lower upfront ($800–1,500), simpler, 10–12 year lifespan. Tankless: higher upfront ($2,200–3,800), endless hot water, 20+ year lifespan, 20–30% more efficient, requires adequate gas line. The chatbot asks about household size and simultaneous demand, gives a clear recommendation, and offers a brief tankless mention when customers are replacing a failed tank to capture upgrade revenue.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Capture same-day water heater emergencies and convert tank replacements to tankless upgrades 24/7</h2>
+    <p>ChatFlow routes emergency water heater calls and books installs around the clock. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/plumber-chatbot.html">Plumber</a> · <a href="/hvac-chatbot.html">HVAC</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
