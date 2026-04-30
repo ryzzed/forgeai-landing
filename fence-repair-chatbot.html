@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Fence Repair Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your fence repair website. Answer repair vs replace questions, quote storm damage and post rot repairs, and book fence jobs automatically."/>
+  <meta property="og:title" content="AI Chatbot for Fence Repair Companies — Book More Repair and Replacement Jobs"/>
+  <meta property="og:description" content="ChatFlow helps fence repair companies capture leads 24/7 — triaging repair vs replace decisions, quoting post rot and storm damage repairs, and booking fence jobs automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/fence-repair-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does fence repair typically cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fence repair cost depends on the damage type and extent. Single post replacement (rotted wood post) runs $150–300 per post including concrete. Gate repair or rehang runs $100–250. Section replacement (replacing 4–6 ft of damaged panels) runs $200–450 per section for wood. Storm damage repairs covering multiple sections run $500–1,500. Full fence replacement for a typical residential yard (150–200 linear feet of 6-ft privacy fence) runs $3,000–7,000 for wood or $5,000–10,000 for vinyl. The chatbot helps customers identify whether repair or replacement makes more financial sense for their situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle the repair vs replace decision?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Repair vs replace is the first question for most fence customers — and the answer determines whether you book a $300 service call or a $6,000 replacement project. Configure the chatbot to ask about fence age, material, number of damaged sections, and whether posts are rotted. If more than 30–40% of a wood fence is damaged or posts are failing, replacement often costs less long-term than ongoing repairs. The chatbot helps customers understand this math, which positions your company as honest and expert rather than just selling the most expensive option."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle storm damage and insurance claim scenarios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Storm-damaged fences are high-urgency and often involve homeowners insurance. Configure the chatbot to ask whether the damage was storm-related and whether the customer plans to file an insurance claim. If so, route for a priority inspection appointment — insurance adjusters require documentation quickly, and customers who get a fast response from a fence company often have that company complete the work. Provide a 'storm damage inspection' booking path with same-day or next-day availability."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Fence Repair</div>
+  <h1>Book fence repairs before customers call three companies and pick whoever answers first</h1>
+  <p class="hero-sub">Storm damage, rotted posts, leaning sections — fence problems feel urgent, especially with dogs or kids in the yard. ChatFlow triages repair vs replace, gives a cost range, and books the job while the motivation is still high.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Damage triage, repair vs replace guidance, and job booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to SolidLine Fence. Dealing with storm damage, a rotted post, a leaning section, or something else?</div>
+      <div class="bubble user-b">We had a bad storm last week and three fence sections blew down in the backyard. It's a 6-foot wood privacy fence. I have two dogs so I need it fixed ASAP.</div>
+      <div class="bubble bot">Totally understand — with dogs in the yard, this is a priority. Three sections down from a storm is usually a clean repair job.
+        <br><br>For 3 blown-down sections of 6-foot privacy fence, you're typically looking at <strong>$450–850</strong> depending on whether the posts held or need resetting. If the posts are still solid and it's just panels that blew, it's the lower end. If posts snapped at the ground, add $150–250 per post for concrete removal and reset.
+        <br><br>One quick question: was this storm-related damage? Some homeowners policies cover fence damage from wind — worth checking if you haven't already. We can provide documentation for an insurance claim if needed.
+        <br><br>Do you want to get someone out to assess and get an exact quote?</div>
+      <div class="bubble user-b">Yes, let's do it. I'll check on the insurance. I'm in Frisco, TX.</div>
+      <div class="bubble bot">We serve Frisco — we can usually get out within 1–2 business days for storm damage assessments. What's your name and best contact?</div>
+      <div class="bubble user-b">Marcus Webb, 469-555-0177. Any day works.</div>
+      <div class="bubble bot">Booked, Marcus! Storm damage assessment in Frisco — we'll call to confirm the exact day within one business day. If you do file an insurance claim, just let us know and we'll make sure the documentation covers what the adjuster needs.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why fence repair companies use ChatFlow</h2>
+  <p class="section-sub">Capture urgent fence repairs and storm damage jobs before competitors respond</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Storm damage urgency capture</h3>
+      <p>Storm-damaged fences are high-urgency leads — customers with dogs, kids, or security concerns can't wait. ChatFlow captures these at the moment of highest motivation, gives an immediate estimate range, and books the job before the customer moves on to the next Google result. Configure storm-damage priority routing for same-day or next-day assessment availability to maximize conversion on these time-sensitive inquiries.</p>
+    </div>
+    <div class="card">
+      <h3>Repair vs replace guidance builds trust</h3>
+      <p>The honest answer on repair vs replace converts more customers than always pushing replacement. Configure ChatFlow to ask fence age, material, and damage extent — and explain when repair makes sense (isolated damage, fence under 10 years old, posts solid) vs when replacement is more economical (more than 30–40% damaged, posts failing, fence over 15 years old). Customers who feel you gave them honest guidance sign contracts at higher rates.</p>
+    </div>
+    <div class="card">
+      <h3>Insurance claim documentation routing</h3>
+      <p>Storm damage fences often qualify for homeowners insurance coverage — and many customers don't think to ask. Configure ChatFlow to proactively ask whether the damage was storm-related and offer to provide insurance documentation. Companies that offer insurance support capture a larger share of storm damage jobs, and insurance-funded repairs often convert to full replacement projects once the scope is clear.</p>
+    </div>
+    <div class="card">
+      <h3>Post rot and gate repair upsells</h3>
+      <p>A crew fixing a blown-down section is already set up to replace rotted posts nearby, repair a sagging gate, or stain and seal the fence while they're there. Configure ChatFlow to ask about other issues the customer has noticed — leaning posts, gate not latching, weathered wood needing sealing. Customers who mention these problems during booking receive a more comprehensive quote and approve add-on work at the job.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does fence repair cost?</p>
+      <p class="faq-a">Single post replacement runs $150–300. Gate repair runs $100–250. Section replacement runs $200–450 per section. Storm damage repairs covering multiple sections run $500–1,500. Full replacement for 150–200 linear feet of 6-ft privacy fence runs $3,000–7,000 for wood. The chatbot asks about damage type and extent to give a relevant range before the first call.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle the repair vs replace decision?</p>
+      <p class="faq-a">Configure the chatbot to ask fence age, material, number of damaged sections, and whether posts are rotted. It explains when repair makes sense (isolated damage, posts solid, fence under 10 years) vs when replacement is more economical (posts failing, widespread damage, fence over 15 years). Honest guidance builds trust and converts customers even when the answer is "repair is fine for now."</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle insurance claim situations?</p>
+      <p class="faq-a">Configure the chatbot to ask whether damage was storm-related and whether the customer plans to file a homeowners insurance claim. If so, route for priority assessment with insurance documentation support. Insurance-funded repairs convert at high rates — customers who find a company that handles documentation are more likely to stay with that company for the full project.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book fence repairs and storm damage assessments 24/7</h2>
+    <p>ChatFlow triages damage and books jobs automatically. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/fence-company-chatbot.html">Fence Installation</a> · <a href="/deck-builder-chatbot.html">Deck Builder</a> · <a href="/landscaping-chatbot.html">Landscaping</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

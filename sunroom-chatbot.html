@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Sunroom Installation Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your sunroom website. Answer three-season vs four-season questions, scope size and style, and book design consultations automatically."/>
+  <meta property="og:title" content="AI Chatbot for Sunroom Companies — Book More Design Consultations"/>
+  <meta property="og:description" content="ChatFlow helps sunroom installation companies capture leads 24/7 — explaining three-season vs four-season options, scoping size and glazing, and booking consultations automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/sunroom-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a sunroom addition cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sunroom cost depends primarily on whether it's a three-season or four-season room. A prefabricated three-season sunroom (screened or single-pane glass, not insulated for winter) runs $15,000–30,000 installed for a 12x16 room. A four-season sunroom with insulated glass, HVAC extension, and full foundation runs $40,000–80,000 for the same footprint. A screen enclosure or aluminum porch enclosure runs $8,000–18,000. The chatbot determines which type the customer actually needs — many customers confuse three-season and four-season — before pricing is discussed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle three-season vs four-season questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three-season vs four-season is the most important decision in sunroom planning — and the most commonly misunderstood. Configure the chatbot to ask how the customer plans to use the room: if they want to use it in winter in a cold climate, it must be a four-season room with insulated glass and HVAC. If they want spring through fall use only, a three-season room is appropriate and costs significantly less. Customers who understand this distinction make the right choice and have realistic budget expectations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What sunroom add-ons can the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention ceiling fan and lighting package ($400–800), deck or patio connection (converting to a walkout from the sunroom), electrical outlets for entertainment or workspace use, window treatments or solar shades for glare control, and HVAC mini-split for four-season rooms not connected to existing HVAC. Customers who hear about these options during booking arrive at consultations ready to scope a complete room rather than just the structure."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Sunroom Installation</div>
+  <h1>Answer "three-season or four-season?" before customers get confused and walk away</h1>
+  <p class="hero-sub">Sunroom leads stall because customers don't know which type they need. ChatFlow resolves the three-season vs four-season question, sets realistic budget expectations, and books a design consultation — before they give up and just buy patio furniture instead.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Season type education, size scoping, and consultation booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to SunSpace Rooms. Are you thinking about a sunroom, screen enclosure, or porch enclosure? And do you have a rough size or use in mind?</div>
+      <div class="bubble user-b">We want a sunroom off the back of the house. We want to use it year-round — mostly for reading and morning coffee. Not sure about the whole three-season vs four-season thing.</div>
+      <div class="bubble bot">Year-round use means you need a <strong>four-season sunroom</strong> — that's the important distinction.
+        <br><br>Here's the difference:
+        <br>• <strong>Three-season</strong>: single-pane or insulated glass without a full thermal envelope — not comfortable below 40°F outside. Great for spring through fall.
+        <br>• <strong>Four-season</strong>: insulated Low-E glass, proper wall insulation, and connected HVAC (or a mini-split) — comfortable year-round regardless of outside temperature.
+        <br><br>For a four-season room sized for a reading nook and seating area, a 12x16 ft room typically runs <strong>$45,000–70,000</strong> fully finished with foundation, framing, glass walls, and HVAC connection.
+        <br><br>A few questions to scope it better:
+        <br>• Do you have an existing patio or deck where we'd be building, or is it currently just yard?
+        <br>• Any rough size in mind — intimate reading room or open family room feel?</div>
+      <div class="bubble user-b">There's a concrete patio back there already. We're thinking something like 12x14 or 12x16. We're in Columbus, OH.</div>
+      <div class="bubble bot">A concrete patio base is great — it simplifies the foundation work significantly and can reduce costs.
+        <br><br>For a 12x16 four-season room in Columbus, you're looking at <strong>$48,000–65,000</strong> depending on glass package, roofline style (gable vs shed roof), and HVAC approach. We'd also check whether your existing HVAC has capacity to extend a duct, or whether a mini-split makes more sense.
+        <br><br>Want to schedule a design consultation? We walk the space, take measurements, and bring a portfolio of completed rooms in your size range. No cost, no obligation.</div>
+      <div class="bubble user-b">Yes. Sandra and Rob Whitmore, 614-555-0163. Weekends are best.</div>
+      <div class="bubble bot">Booked, Sandra and Rob! Design consultation in Columbus — weekend appointment. We'll be in touch within one business day to confirm the time. This is going to be a great room.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why sunroom companies use ChatFlow</h2>
+  <p class="section-sub">Resolve the options confusion and book consultations before leads go cold</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Resolve the three-season vs four-season confusion</h3>
+      <p>Most sunroom leads start undecided between a three-season room and a four-season room — and get confused when they get quotes that vary by $30,000+. Configure ChatFlow to ask how the customer plans to use the room and in what climate, then steer them to the right type. A customer who understands the distinction before the consultation arrives educated, has appropriate budget expectations, and is far less likely to suffer sticker shock when the estimate arrives.</p>
+    </div>
+    <div class="card">
+      <h3>Screen enclosure capture for warm climates</h3>
+      <p>In Florida, Texas, and the Gulf Coast, screen enclosures ($8,000–18,000) are often the better fit for customers wanting outdoor-to-indoor living. Configure ChatFlow to recognize warm-climate customers and present screen enclosures as a distinct option — less expensive, faster to install, and ideally suited for year-round warm-weather use. Don't lose screen enclosure customers to competitors because your contact form only mentions "sunrooms."</p>
+    </div>
+    <div class="card">
+      <h3>Existing structure upgrade capture</h3>
+      <p>Many sunroom leads have an existing three-season room, screened porch, or covered patio they want to upgrade to a four-season space. Configure ChatFlow to recognize this use case — existing structure upgrades often have different scopes and cost profiles, and customers feel validated when the chatbot acknowledges that upgrading is a smart option rather than requiring them to demo and start over.</p>
+    </div>
+    <div class="card">
+      <h3>Interior finish and furniture upsells</h3>
+      <p>A sunroom consultation is the perfect time to mention flooring options (tile, LVP, or stamped concrete), ceiling fans and lighting packages, built-in bench seating, and window treatment partnerships. Configure ChatFlow to mention these options as part of the "complete the room" conversation during booking — customers who are already excited about the space are receptive to finishing it properly rather than discovering the gaps after installation.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does a sunroom addition cost?</p>
+      <p class="faq-a">A prefabricated three-season sunroom runs $15,000–30,000 for a 12x16 room. A four-season sunroom with insulated glass and HVAC runs $40,000–80,000. A screen enclosure runs $8,000–18,000. The chatbot determines which type fits the customer's use case and climate before discussing cost — preventing sticker shock on the wrong product.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle the three-season vs four-season decision?</p>
+      <p class="faq-a">Configure the chatbot to ask how the room will be used and whether winter use is expected. Year-round use in a cold climate means four-season — insulated glass, full thermal envelope, HVAC connection. Spring-through-fall use means three-season is appropriate and significantly less expensive. Customers who make this decision during the chat conversation arrive at consultations ready to scope the right project.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What add-ons can the chatbot scope during the consultation booking?</p>
+      <p class="faq-a">Configure the chatbot to mention ceiling fan and lighting package, mini-split HVAC for rooms not tied to central systems, flooring upgrade (tile or LVP over concrete), window shades for glare control, and deck or patio connection. Customers who hear about finishing options during the initial conversation arrive at the design meeting already thinking about the complete room.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book sunroom design consultations automatically — 24/7</h2>
+    <p>ChatFlow resolves the season-type question and books consultations before leads go cold. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/home-addition-chatbot.html">Home Addition</a> · <a href="/deck-builder-chatbot.html">Deck Builder</a> · <a href="/pergola-chatbot.html">Pergola</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

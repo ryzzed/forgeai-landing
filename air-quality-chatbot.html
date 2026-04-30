@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Indoor Air Quality Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your indoor air quality website. Answer air purifier vs whole-home filter questions, quote IAQ systems, and book assessments — 24/7 automatically."/>
+  <meta property="og:title" content="AI Chatbot for Indoor Air Quality Companies — Book More Assessments"/>
+  <meta property="og:description" content="ChatFlow helps indoor air quality companies capture leads 24/7 — explaining air purifier options, quoting whole-home IAQ systems, and booking assessments automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/air-quality-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a whole-home air purifier or IAQ system cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Indoor air quality system costs vary by type. A whole-home media filter upgrade (replacing 1-inch filter with 4–5 inch media filter) runs $300–600 installed. A whole-home UV air purifier installed in the HVAC system runs $500–900. A whole-home air purifier with HEPA-equivalent filtration and UV runs $800–1,500 installed. A whole-home humidifier or dehumidifier runs $400–900 installed. A full IAQ assessment and multi-component system runs $1,500–3,500. The chatbot identifies the customer's primary concern (allergies, asthma, odors, mold, dryness) before recommending a solution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot triage different indoor air quality concerns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Different IAQ problems need different solutions. Configure the chatbot to triage by symptom: allergy and asthma triggers (point to high-efficiency filtration and UV purification), dry air (humidifier), musty smell (dehumidifier or mold remediation routing), odors and VOCs (activated carbon + UV), pet dander (HEPA-equivalent whole-home filter). Customers who describe their symptom get a relevant solution — not a generic 'we improve air quality' response that doesn't tell them anything."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What high-urgency situations escalate IAQ sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure urgency routing for: new baby or pregnancy (heightened air quality concern), asthma or COPD diagnosis in the household, recent wildfire smoke event in the region, customer moved into an older home with unknown HVAC history, or new pet causing allergy symptoms. These situations create immediate motivation. The chatbot validates the health concern, explains which specific solution addresses it, and books a priority assessment or same-day consultation."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Indoor Air Quality</div>
+  <h1>Match the right IAQ solution to the right problem — before they buy a box fan air purifier</h1>
+  <p class="hero-sub">Allergy sufferers, new parents, and asthma households are searching for air quality help. ChatFlow asks what symptom they're dealing with, explains which system solves it, and books an assessment — before they spend $300 on a portable unit that won't fix the problem.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Symptom triage, solution recommendation, and assessment booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to ClearAir Home Solutions. Are you dealing with allergies, dry air, odors, or something else with your home's air quality?</div>
+      <div class="bubble user-b">My wife has pretty bad allergies and we just got a dog. The sneezing is constant now. We have central AC but it's just a basic 1-inch filter. What would actually help?</div>
+      <div class="bubble bot">A basic 1-inch filter is genuinely the weakest link for allergy and pet dander control — it catches large particles but lets fine allergens, dander, and dust mite particles pass right through.
+        <br><br>Here's what actually helps for your situation:
+        <br><br><strong>Best option — Whole-home media filter upgrade:</strong> Replaces your 1-inch slot with a 4–5 inch high-MERV media filter. Captures pet dander, pollen, dust mites at much higher efficiency. Runs <strong>$350–550 installed</strong>, filter replacement once a year.
+        <br><br><strong>Add UV air purifier:</strong> Installed in the air handler, UV light neutralizes bacteria, mold spores, and some VOCs. Adds <strong>$500–800</strong> on top of the media filter. Together these are the highest-impact combo for allergy households with pets.
+        <br><br>Both are installed in your existing HVAC — no portable units, no separate maintenance, whole-house coverage every time the system runs.
+        <br><br>Want to book an assessment? We'll look at your current system and give you exact pricing.</div>
+      <div class="bubble user-b">Yes, that makes sense. We're in Plano, TX.</div>
+      <div class="bubble bot">We serve Plano — perfect. What's your name and best contact? And do mornings or afternoons work better?</div>
+      <div class="bubble user-b">Kevin Barros, 972-555-0155. Afternoons work.</div>
+      <div class="bubble bot">Booked, Kevin! IAQ assessment in Plano — afternoon slot. We'll call to confirm within one business day. Your wife is going to notice the difference within the first week.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why indoor air quality companies use ChatFlow</h2>
+  <p class="section-sub">Convert health-motivated searches into booked IAQ assessments</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Symptom-to-solution triage</h3>
+      <p>IAQ customers don't know what they need — they know what's wrong. Allergies, dry skin, musty odors, excessive dust, waking up congested. Configure ChatFlow to ask about the symptom and map it to the right solution: high-MERV filtration for allergens and dander, UV purification for bacteria and mold spores, humidification for dry air, dehumidification for musty smell. Customers who get a specific answer convert far better than those who receive a generic "we improve air quality" response.</p>
+    </div>
+    <div class="card">
+      <h3>New baby and health-trigger urgency routing</h3>
+      <p>A new baby, pregnancy, asthma or COPD diagnosis, or recent wildfire smoke event creates immediate and high-urgency air quality motivation. Configure ChatFlow to recognize these triggers and respond with appropriate validation and urgency — booking priority assessments rather than standard scheduling. These customers have strong motivation and are least price-sensitive because the problem feels personal and health-related.</p>
+    </div>
+    <div class="card">
+      <h3>HVAC company IAQ upsell integration</h3>
+      <p>IAQ solutions are natural HVAC company add-ons. A technician servicing an AC system is already standing next to the air handler — the perfect moment to evaluate and upgrade filtration. Configure ChatFlow to handle standalone IAQ inquiries for HVAC companies, and mention IAQ assessment as part of the HVAC maintenance scheduling conversation. IAQ jobs are typically $500–1,500 with minimal labor time compared to full system replacements.</p>
+    </div>
+    <div class="card">
+      <h3>Whole-home vs portable comparison wins</h3>
+      <p>Many customers arrive at an IAQ company after trying portable air purifiers that didn't solve the problem. Configure ChatFlow to proactively address the portable vs whole-home comparison — single-room coverage vs whole-house, constant filter replacement vs annual media filter, visible clutter vs hidden installation. Customers who understand why whole-home solutions outperform portables are converted from the comparison rather than needing to be pushed.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does a whole-home air quality system cost?</p>
+      <p class="faq-a">A media filter upgrade runs $300–600. A UV air purifier runs $500–900. A combined high-MERV filter and UV system runs $800–1,500. A whole-home humidifier or dehumidifier runs $400–900. The chatbot identifies the customer's primary concern first — then recommends the right solution at the right price, rather than overwhelming them with every option.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot triage different air quality problems?</p>
+      <p class="faq-a">Configure the chatbot to triage by symptom: allergies and pet dander (high-MERV filter upgrade), musty smell (dehumidifier or mold remediation), dry air and static electricity (humidifier), bacteria and mold concerns (UV purifier), VOCs and cooking odors (activated carbon + UV). Each symptom gets a specific solution — not a generic answer that leaves customers no clearer than when they started.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What high-urgency situations escalate IAQ conversions?</p>
+      <p class="faq-a">Configure urgency routing for new baby or pregnancy, asthma or COPD household, recent wildfire smoke event, new pet causing allergy symptoms, or older home with unknown HVAC history. The chatbot validates the health concern and books a priority assessment — these customers have strong motivation and convert at the highest rates.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn air quality symptoms into booked IAQ assessments — 24/7</h2>
+    <p>ChatFlow triages air quality concerns and books assessments automatically. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hvac-chatbot.html">HVAC</a> · <a href="/air-duct-cleaning-chatbot.html">Air Duct Cleaning</a> · <a href="/mold-remediation-chatbot.html">Mold Remediation</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
