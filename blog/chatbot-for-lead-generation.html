@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Use a Chatbot for Lead Generation (Small Business Guide) | ChatFlow Blog</title>
+  <meta name="description" content="A practical guide to using AI chatbots for lead generation — how to qualify prospects, capture contact information, and convert website visitors into sales conversations."/>
+  <meta property="og:title" content="How to Use a Chatbot for Lead Generation (Small Business Guide)"/>
+  <meta property="og:description" content="Step-by-step guide to setting up a chatbot that generates qualified leads — covering qualification questions, lead capture forms, follow-up routing, and what to avoid."/>
+  <meta property="og:type" content="article"/>
+  <link rel="canonical" href="https://myflow.chat/blog/chatbot-for-lead-generation.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Use a Chatbot for Lead Generation (Small Business Guide)","description":"A practical guide to using AI chatbots for lead generation — covering qualification, capture, and conversion optimization for small businesses.","author":{"@type":"Organization","name":"ChatFlow"},"publisher":{"@type":"Organization","name":"ChatFlow","logo":{"@type":"ImageObject","url":"https://myflow.chat/favicon.ico"}},"datePublished":"2025-01-01","dateModified":"2025-01-01"}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .article-wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+    .article-meta{font-size:13px;color:#64748b;margin-bottom:32px}
+    .article-tag{display:inline-block;background:rgba(124,58,237,.15);color:#a78bfa;font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+    h1{font-size:clamp(26px,5vw,42px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px}
+    .lead{font-size:17px;color:#94a3b8;line-height:1.7;margin-bottom:40px;border-left:3px solid #7c3aed;padding-left:18px}
+    h2{font-size:clamp(19px,3vw,26px);font-weight:700;color:#fff;margin:40px 0 14px}
+    h3{font-size:17px;font-weight:700;color:#e2e8f0;margin:28px 0 10px}
+    p{font-size:15px;color:#94a3b8;line-height:1.75;margin-bottom:16px}
+    .toc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px 24px;margin-bottom:40px}
+    .toc h4{font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+    .toc ol{padding-left:18px}
+    .toc li{font-size:14px;color:#a78bfa;margin-bottom:6px;line-height:1.5}
+    .toc a{color:#a78bfa;text-decoration:none}
+    .toc a:hover{color:#c4b5fd}
+    .callout{background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.15);border-radius:12px;padding:18px 22px;margin:24px 0;font-size:14px;color:#c4b5fd;line-height:1.7}
+    .callout strong{color:#a78bfa}
+    .step-list{counter-reset:steps;list-style:none;padding:0;margin:20px 0 28px}
+    .step-list li{counter-increment:steps;display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+    .step-list li::before{content:counter(steps);background:#7c3aed;color:#fff;font-size:13px;font-weight:700;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .step-content h4{font-size:15px;font-weight:700;color:#e2e8f0;margin-bottom:4px}
+    .step-content p{font-size:14px;margin:0}
+    .example-box{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px;margin:16px 0 28px}
+    .example-box .label{font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+    .msg{margin-bottom:10px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:9px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:85%}
+    .bot .bubble{background:rgba(124,58,237,.12);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 28px}
+    @media(max-width:600px){.do-dont{grid-template-columns:1fr}}
+    .do-box,.dont-box{border-radius:12px;padding:18px 20px}
+    .do-box{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15)}
+    .dont-box{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.15)}
+    .do-box h4{font-size:13px;font-weight:700;color:#86efac;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+    .dont-box h4{font-size:13px;font-weight:700;color:#fca5a5;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+    .do-box li,.dont-box li{font-size:13px;color:#94a3b8;margin-bottom:6px;padding-left:4px}
+    ul{padding-left:20px;margin-bottom:16px}
+    li{font-size:15px;color:#94a3b8;line-height:1.75;margin-bottom:6px}
+    .cta-inline{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:16px;padding:32px;text-align:center;margin:48px 0}
+    .cta-inline h3{color:#fff;margin:0 0 10px;font-size:20px}
+    .cta-inline p{margin:0 0 20px;font-size:15px}
+    .btn-primary{background:#7c3aed;color:#fff;padding:12px 26px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="article-wrap">
+  <div class="article-tag">Lead Generation</div>
+  <h1>How to Use a Chatbot for Lead Generation</h1>
+  <div class="article-meta">ChatFlow Blog · 9 min read</div>
+  <p class="lead">A contact form captures a name and email. A chatbot captures intent, qualifies fit, and delivers a warm lead — all before you've spoken to anyone. Here's exactly how to set it up.</p>
+
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol>
+      <li><a href="#why">Why chatbots outperform contact forms for lead gen</a></li>
+      <li><a href="#qualification">How to structure qualification questions</a></li>
+      <li><a href="#capture">The lead capture moment — when and how</a></li>
+      <li><a href="#routing">Routing leads to the right person</a></li>
+      <li><a href="#mistakes">5 lead gen chatbot mistakes to avoid</a></li>
+      <li><a href="#setup">Setting it up in 15 minutes</a></li>
+    </ol>
+  </div>
+
+  <h2 id="why">Why chatbots outperform contact forms for lead generation</h2>
+
+  <p>Contact forms have a fundamental problem: they ask for contact information before giving the visitor a reason to provide it. You get anonymous email addresses from people who may or may not be serious — and no context about what they actually want.</p>
+
+  <p>A chatbot inverts this. It gives first — answering questions, explaining your value, addressing objections — and asks for contact information only after the visitor is engaged and has a specific reason to continue the conversation with you. The result is:</p>
+
+  <ul>
+    <li><strong>Higher completion rate:</strong> Visitors who are mid-conversation are far more likely to share their email than those staring at a blank form.</li>
+    <li><strong>Better lead quality:</strong> You capture qualification data (budget, timeline, service interest) alongside the contact info, so your sales team knows what they're working with.</li>
+    <li><strong>24/7 coverage:</strong> Most lead capture events happen outside business hours. Contact forms sit idle. Chatbots convert.</li>
+  </ul>
+
+  <h2 id="qualification">How to structure qualification questions</h2>
+
+  <p>The key to a high-converting lead gen chatbot is asking the <em>right</em> qualification questions — enough to understand the prospect, not so many that they abandon the conversation.</p>
+
+  <p>For most service businesses, you need answers to three things:</p>
+
+  <ol style="padding-left:20px;margin-bottom:16px">
+    <li style="font-size:15px;color:#94a3b8;line-height:1.75;margin-bottom:6px"><strong style="color:#e2e8f0">Fit:</strong> Is this prospect appropriate for your services? (Budget range, location, service needed)</li>
+    <li style="font-size:15px;color:#94a3b8;line-height:1.75;margin-bottom:6px"><strong style="color:#e2e8f0">Timing:</strong> Are they ready to act? (Timeline, urgency, decision stage)</li>
+    <li style="font-size:15px;color:#94a3b8;line-height:1.75;margin-bottom:6px"><strong style="color:#e2e8f0">Context:</strong> What's the situation? (Specific details that make your follow-up relevant)</li>
+  </ol>
+
+  <p>The biggest mistake is asking all three simultaneously — front-loading with a barrage of intake questions. Instead, weave them into a natural conversation.</p>
+
+  <div class="callout">
+    <strong>The golden rule:</strong> Always answer before you ask. Every question you ask should come after you've given the visitor useful information. "Our residential projects typically start at $15,000 — does that range work for what you have in mind?" earns the right to ask about budget because you shared your pricing first.
+  </div>
+
+  <h3>Industry-specific qualification questions</h3>
+
+  <p>Here are the highest-signal qualification questions by business type:</p>
+
+  <ul>
+    <li><strong>Home services (roofing, HVAC, plumbing):</strong> Own or rent? Urgency (repair vs. planned replacement)? Location zip code?</li>
+    <li><strong>Professional services (legal, accounting, financial):</strong> Specific situation/problem? Timeline? Have you worked with a [professional] before?</li>
+    <li><strong>Healthcare (dental, medical, therapy):</strong> New patient or existing? Insurance carrier? Preferred appointment timing?</li>
+    <li><strong>Real estate:</strong> Buying, selling, or both? Pre-approved? Timeline to move?</li>
+    <li><strong>B2B services:</strong> Company size? Current solution? Budget range? Decision timeline?</li>
+  </ul>
+
+  <h2 id="capture">The lead capture moment — when and how</h2>
+
+  <p>The most common lead gen chatbot mistake is asking for contact information too early. You haven't earned it yet — the visitor doesn't know if you're the right fit and neither do you.</p>
+
+  <p>The right moment to ask for contact info is when both of these are true:</p>
+  <ul>
+    <li>The visitor has expressed specific intent ("I'd like to book a consultation" or "Can you give me a quote?")</li>
+    <li>You've provided enough value that the visitor <em>wants</em> to continue the conversation with a human</li>
+  </ul>
+
+  <div class="example-box">
+    <div class="label">Correct capture sequence</div>
+    <div class="msg bot"><div class="bubble">For a 2,200 sq ft home, a full roof replacement typically runs $12,000-18,000 depending on materials. With your 15-year-old roof, you're likely approaching replacement territory — an inspection would tell us whether repair could buy you another few years or if replacement makes more sense now.</div></div>
+    <div class="msg user"><div class="bubble">Yeah I think I need a full inspection. How do I get that scheduled?</div></div>
+    <div class="msg bot"><div class="bubble">Easy — inspections are free and take about 45 minutes. Can I get your name, best contact number, and your zip code? Our scheduler will reach out within one business day to confirm a time.</div></div>
+  </div>
+
+  <p>Notice the structure: the bot gave pricing context (useful), the visitor expressed specific intent (schedule an inspection), and <em>then</em> the bot asked for contact info. The capture comes naturally out of a conversation the visitor wants to continue.</p>
+
+  <h3>What to capture</h3>
+
+  <p>Capture the minimum necessary — don't ask for information your team doesn't need before the first call:</p>
+  <ul>
+    <li><strong>Always capture:</strong> Name + primary contact (phone or email, not both unless necessary)</li>
+    <li><strong>Usually capture:</strong> Specific service interest, timeline</li>
+    <li><strong>Capture when relevant:</strong> Budget range, location/zip, group size</li>
+    <li><strong>Never capture:</strong> Information that will be re-collected during a formal intake process anyway</li>
+  </ul>
+
+  <h2 id="routing">Routing leads to the right person</h2>
+
+  <p>A captured lead is only valuable if it reaches the right person quickly. Configure your chatbot to route leads based on service type, urgency, or territory — and make sure the routing delivers enough context that the recipient can follow up intelligently.</p>
+
+  <p>The lead notification your team receives should include:</p>
+  <ul>
+    <li>Contact information (name, phone/email)</li>
+    <li>What service they're interested in</li>
+    <li>Key qualification details (budget, timeline, situation)</li>
+    <li>The full conversation transcript (so the rep can read the context)</li>
+  </ul>
+
+  <p>ChatFlow sends lead capture notifications via email — configure the recipient address to your CRM, sales team inbox, or a specific rep based on service type.</p>
+
+  <h2 id="mistakes">5 lead gen chatbot mistakes to avoid</h2>
+
+  <div class="do-dont">
+    <div class="dont-box">
+      <h4>Don't do this</h4>
+      <ul>
+        <li>Ask for email as the first message</li>
+        <li>Ask 6+ questions before offering value</li>
+        <li>Give vague non-answers ("call us for pricing")</li>
+        <li>Use chatbot-speak ("I'm sorry, I don't understand")</li>
+        <li>End without a clear next step</li>
+      </ul>
+    </div>
+    <div class="do-box">
+      <h4>Do this instead</h4>
+      <ul>
+        <li>Answer first, capture second</li>
+        <li>Ask 1-2 qualifying questions, then provide value</li>
+        <li>Give pricing ranges with context</li>
+        <li>Write conversationally in your brand voice</li>
+        <li>End every qualified conversation with a specific offer</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The "always ask for the call" mistake</h3>
+  <p>Some chatbot configurations push toward a phone call after every message, regardless of where the visitor is in their decision process. This feels pushy and produces low-quality leads. Instead, match the conversion offer to the visitor's stage: someone asking general "what is X?" questions gets information. Someone asking "how much does X cost?" gets pricing + a soft next step. Someone asking "how do I get started?" gets a direct booking offer.</p>
+
+  <h2 id="setup">Setting up a lead generation chatbot in 15 minutes</h2>
+
+  <ul class="step-list">
+    <li>
+      <div class="step-content">
+        <h4>Define your ideal lead</h4>
+        <p>Before writing a single word of your system prompt, decide what a qualified lead looks like. What service? What budget minimum? What timeline? What geography? Write this down — your chatbot can only qualify for criteria it knows about.</p>
+      </div>
+    </li>
+    <li>
+      <div class="step-content">
+        <h4>Write the qualification sequence</h4>
+        <p>Identify your 2-3 highest-signal qualification questions. Script them as natural follow-ups to likely visitor questions. "What's the square footage?" follows naturally after explaining that pricing depends on project size — it doesn't feel like an interrogation.</p>
+      </div>
+    </li>
+    <li>
+      <div class="step-content">
+        <h4>Define the capture trigger</h4>
+        <p>Write your system prompt to ask for contact info when the visitor asks "how do I get started?" or "can I book?" or "can I get a quote?" — not at the start of the conversation. Configure the exact fields to capture (name, phone, email, service interest).</p>
+      </div>
+    </li>
+    <li>
+      <div class="step-content">
+        <h4>Set up lead routing</h4>
+        <p>In ChatFlow settings, configure which email address receives lead notifications. If you have multiple service types or territories, configure routing rules so the right person gets each lead immediately.</p>
+      </div>
+    </li>
+    <li>
+      <div class="step-content">
+        <h4>Test with real scenarios</h4>
+        <p>Play the role of three different visitors: a perfect-fit lead, a price shopper who isn't ready, and a completely unqualified inquiry. Make sure the bot handles all three appropriately — capturing the first, educating the second, and politely filtering the third.</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="cta-inline">
+    <h3>Ready to start capturing leads automatically?</h3>
+    <p>ChatFlow is free to start — set up your lead generation chatbot in 15 minutes, no developer required.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try ChatFlow free →</a>
+  </div>
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/blog/chatbot-system-prompt-guide.html" style="color:#a78bfa">How to write a chatbot system prompt</a> — the complete guide to configuring your bot's voice and knowledge</li>
+    <li><a href="/blog/chatbot-examples-small-business.html" style="color:#a78bfa">7 chatbot examples for small businesses</a> — real conversations showing lead capture in action</li>
+    <li><a href="/chatbot-roi-calculator.html" style="color:#a78bfa">Chatbot ROI calculator</a> — estimate your lead value and monthly ROI</li>
+  </ul>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/resources.html">Resources</a> · <a href="/blog/chatbot-system-prompt-guide.html">System prompt guide</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

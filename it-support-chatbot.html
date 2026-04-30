@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT Support Chatbot — Triage Tickets and Qualify MSP Leads 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for IT support companies and MSPs. Triage incoming support requests, answer service questions, and capture new client inquiries — automatically. $39/month."/>
+  <meta property="og:title" content="IT Support Chatbot — First-Line Triage and MSP Lead Capture"/>
+  <meta property="og:description" content="ChatFlow AI handles IT support ticket triage and captures new MSP client inquiries — so your technicians focus on resolving issues, not answering the same intake questions repeatedly."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/it-support-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for an IT support company or MSP?","acceptedAnswer":{"@type":"Answer","text":"An IT support chatbot handles two functions: triage for existing clients (categorizing issues, collecting device info, and routing to the right technician or escalation tier) and lead capture for new client prospects (explaining managed service packages, pricing ranges, and capturing contact details for a discovery call). Both flows reduce the volume of repetitive questions your technicians handle while improving response quality for both audiences."}},{"@type":"Question","name":"How does a chatbot help with IT ticket triage?","acceptedAnswer":{"@type":"Answer","text":"Configure the bot to ask structured triage questions: What device is affected? What's the issue? Is this affecting multiple users? How urgent is it? This first-response triage categorizes the request, collects the information a technician needs before responding, and sets expectations on response time based on your SLA tiers. It's not a replacement for your ticketing system — it's a smart intake layer that reduces back-and-forth before a ticket is created."}},{"@type":"Question","name":"How much does an IT support chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For MSPs where a single new managed services contract typically generates $500-3,000/month in recurring revenue, capturing one additional qualified prospect per month through the chatbot produces an exceptional ROI. The free plan (1,000 conversations/month) may be sufficient for smaller IT shops."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> IT Support Chatbot</div>
+  <h1>First-line IT triage and MSP lead capture<br/><span>running 24/7 without a technician.</span></h1>
+  <p class="hero-sub">Your website handles two audiences: existing clients with support issues and new businesses researching managed IT services. ChatFlow AI triages support requests with structured intake questions and captures new client inquiries — so your technicians work on resolving issues, not collecting information.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">Structured triage before a ticket is created</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Are you an existing client with a support issue, or are you looking for information about our IT services?</div></div>
+    <div class="msg user"><div class="bubble">Existing client. Our email stopped working this morning. Everyone in the office is affected.</div></div>
+    <div class="msg bot"><div class="bubble">Got it — sounds like a server-side or email provider issue affecting your whole domain. That's a Priority 1 for us. A few quick questions: What email platform are you on (Microsoft 365, Google Workspace, on-premise Exchange)? And are you seeing an error message, or just no connection at all?</div></div>
+    <div class="msg user"><div class="bubble">Microsoft 365. The error says "cannot connect to server."</div></div>
+    <div class="msg bot"><div class="bubble">Understood — this sounds like a Microsoft 365 connectivity issue, possibly a tenant issue or DNS problem. I'm flagging this as urgent and routing it to our cloud team now. Can you confirm your company name and the primary contact's phone number so they can call you immediately?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your IT business</h2>
+  <p class="section-sub" style="text-align:center">Better intake for existing clients, more leads from new ones</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg></div>
+      <h3>Support ticket triage</h3>
+      <p>Device type, OS, error message, number of users affected, urgency — structured intake that gives your techs what they need before they pick up the phone. Reduces the back-and-forth that wastes 10 minutes per ticket.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <h3>Priority routing</h3>
+      <p>Configure your SLA tiers — P1 (all users down), P2 (single user critical), P3 (non-urgent). The bot categorizes and routes based on impact, ensuring critical issues get immediate escalation and low-priority tickets enter the queue without paging a senior tech.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+      <h3>MSP prospect qualification</h3>
+      <p>Company size, current IT setup, main pain points, budget range — the qualification questions that determine if a prospect is a fit for managed services. Capture discovery call requests from the businesses most likely to become long-term clients.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+      <h3>Service and pricing FAQ</h3>
+      <p>What's included in managed services? How does helpdesk pricing work? Do you handle cybersecurity? What's your response time guarantee? Answer the questions prospects research before making vendor decisions — 24/7, without sales staff.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot integrate with our ticketing system?</p>
+      <p class="faq-a">ChatFlow captures support request details and routes them via email notification to your team — your technician then creates the ticket in your existing system (ConnectWise, Autotask, Freshdesk, Zendesk, etc.) with the pre-collected information. Direct ticketing system API integration is not currently built-in, but the structured intake the bot collects (device, error, urgency, contact) pastes cleanly into any ticket form. Future integrations are on our roadmap.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">We have an after-hours answering service — does the chatbot replace that?</p>
+      <p class="faq-a">For P2 and P3 issues, yes — the chatbot captures the issue details and routes them to your on-call queue without requiring a human answering service. For true P1 emergencies (all users down, ransomware, etc.), configure the bot to provide your emergency hotline number immediately rather than asking intake questions. Most IT shops configure the bot to handle intake for everything except "entire office is down" severity — where it provides the emergency number and skips the form.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot answer basic troubleshooting questions itself?</p>
+      <p class="faq-a">Yes — configure common first-line troubleshooting steps in your system prompt: "For printer issues, try restarting the print spooler service" or "For Outlook not loading, try clearing the cache." Many IT shops add a troubleshooting section that resolves 20-30% of simple issues without a ticket being created at all. This reduces ticket volume while giving users an immediate, useful response at any hour.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Better intake, faster resolution, more new clients</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your IT company website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/law-firm-chatbot.html">Law firm chatbot</a> · <a href="/accountant-chatbot.html">Accountant chatbot</a> · <a href="/coworking-space-chatbot.html">Coworking space chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

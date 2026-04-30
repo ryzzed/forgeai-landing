@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Agency Chatbot — Qualify Trip Inquiries and Book Consultations 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for travel agencies and travel advisors. Answer destination questions, qualify trip budgets, and capture consultation requests from travelers planning their next trip. $39/month."/>
+  <meta property="og:title" content="Travel Agency Chatbot — Capture Dream Trip Inquiries While You're Off the Clock"/>
+  <meta property="og:description" content="ChatFlow AI answers destination questions, qualifies trip budgets, and captures consultation requests — turning late-night travel dreamers into booked planning sessions."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/travel-agency-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a travel agency?","acceptedAnswer":{"@type":"Answer","text":"A travel agency chatbot can answer questions about destinations, travel packages, pricing ranges, group vs. individual travel, visa requirements, and your agency's specializations. It qualifies prospects by asking about destination, budget, travel dates, and group size — then captures consultation requests from travelers who are ready to start planning. Most trip planning research happens late at night; a chatbot ensures you capture those inquiries before travelers book directly online."}},{"@type":"Question","name":"How do I qualify travel leads without giving away too much for free?","acceptedAnswer":{"@type":"Answer","text":"Configure the chatbot to provide destination and experience information freely — that's what travelers need to choose an advisor. Actual itinerary planning, pricing quotes, and vendor selection happen in your paid consultation. The chatbot's job is to demonstrate your expertise, capture the inquiry, and make it easy to book a planning session. The value you give away in the chat (destination knowledge, logistics overview) should make the prospect want to hire you, not DIY it."}},{"@type":"Question","name":"How much does a travel agency chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For travel advisors who earn 10-15% commissions on bookings, a single captured honeymoon or family vacation booking ($5,000-15,000 trip) produces commission revenue that covers the annual ChatFlow cost many times over. The free plan (1,000 conversations/month) is often sufficient for boutique travel agency websites."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Travel Agency Chatbot</div>
+  <h1>Turn late-night travel dreamers<br/><span>into booked planning sessions.</span></h1>
+  <p class="hero-sub">Most trip research happens after 9pm — when you're not at your desk. Travelers comparing destinations, asking about costs, wondering if they need a visa. ChatFlow AI answers those questions with genuine expertise and captures planning consultation requests before they book directly online.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A honeymoon inquiry captured at midnight</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Agency Name]. Planning a trip, or looking for inspiration? I'm happy to help with either.</div></div>
+    <div class="msg user"><div class="bubble">We're getting married in September and want to do a 2-week honeymoon in Europe. Not sure where — maybe Italy or Greece?</div></div>
+    <div class="msg bot"><div class="bubble">Congratulations! Both are stunning honeymoon destinations — the choice really depends on the vibe you're after. Italy (Amalfi Coast + Rome or Florence) is romantic and culturally rich with incredible food. Greek islands (Santorini + Mykonos, or quieter spots like Paros) are more beach-focused with those iconic sunsets. Late September is shoulder season for both — great weather, smaller crowds than peak July-August. Do you tend to prefer cultural exploration, beach and relaxation, or a mix?</div></div>
+    <div class="msg user"><div class="bubble">Mix, but definitely want some beach. Budget around $12,000 for both of us including flights.</div></div>
+    <div class="msg bot"><div class="bubble">$12,000 for two with flights is a solid honeymoon budget for Europe in late September — very doable for a beautiful 2-week trip. I'd suggest a Greece-focused itinerary (Athens + 1-2 islands) where your budget stretches furthest without sacrificing quality. Would you like to set up a complimentary planning consultation? I'll match you with one of our Europe specialists — no cost to chat, and we only earn a commission when you book through us.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your travel agency</h2>
+  <p class="section-sub" style="text-align:center">Demonstrate expertise, qualify leads, capture consultations</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Destination guidance</h3>
+      <p>Italy vs. Greece, Safari timing, Southeast Asia routes, Caribbean islands — your agency's destination knowledge is a competitive advantage. Configure the bot to share it, building trust before the first conversation.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Budget qualification</h3>
+      <p>A $5,000 trip and a $25,000 trip are very different clients. Ask about budget early, and guide each prospect toward what's realistic — so every planning consultation starts with aligned expectations.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+      <h3>Group and specialty travel</h3>
+      <p>Family reunions, honeymoons, group tours, solo travel, accessible travel, adventure travel — capture specialty inquiries with the right questions for each trip type and route to your appropriate specialist.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Consultation capture</h3>
+      <p>When a prospect is engaged, capture their destination interest, travel dates, group size, and budget — giving your advisor a complete brief before the first call and ensuring the consultation starts productively.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Do I charge a planning fee? How should I handle that in the chatbot?</p>
+      <p class="faq-a">If you charge planning fees, mention them early and frame them as a value signal: "We charge a $150 planning fee that's applied to your booking — this ensures you get a dedicated advisor, not a quote from an algorithm." Transparency about fees in the chatbot filters out clients who want free service while attracting clients who value the advisor relationship. Many agencies find that mentioning fees upfront actually improves consultation show rates.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot answer visa and entry requirement questions?</p>
+      <p class="faq-a">Configure general guidance: "US passport holders don't need a visa for Schengen countries for stays under 90 days, but ETIAS authorization will be required from 2025 onward." For complex visa situations, direct them to official government sources and note that your advisors handle the logistics as part of planning. Visa information changes frequently — update your system prompt when entry requirements change for your key destinations.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">We specialize in a specific region — should the chatbot reflect that?</p>
+      <p class="faq-a">Absolutely — niche specialization is a strength, not a limitation. Configure the bot to lead with your specialty: "We specialize in African safari and luxury lodge experiences — if you're looking for Europe or Caribbean, we have partner agencies we can refer." Prospects who reach a specialist chatbot that knows the region deeply are far more likely to convert than one that offers generic travel advice. Niche authority converts better than breadth.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Capture dream trip inquiries at any hour</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your travel agency website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hotel-chatbot.html">Hotel chatbot</a> · <a href="/short-term-rental-chatbot.html">Short-term rental chatbot</a> · <a href="/event-planner-chatbot.html">Event planner chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
