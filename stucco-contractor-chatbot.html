@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Stucco Contractors | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your stucco contractor website. Quote stucco repair and recoat by square footage, explain crack causes and EIFS systems, and book free estimates 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Stucco Contractors — Quote Repairs and Recoats 24/7"/>
+  <meta property="og:description" content="ChatFlow helps stucco contractors capture leads around the clock — quoting stucco repair and recoat by square footage, explaining crack types and moisture causes, and booking free on-site estimates."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/stucco-contractor-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote stucco repair and recoat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by scope in the system prompt. Crack repair only (hairline to 1/4 inch, patch and blend): $200–600 for a typical elevation. Full recoat (one elevation of a 2,000 sqft home): $2,000–4,500. Full exterior recoat (2,000 sqft home, all elevations): $5,000–12,000 depending on finish texture. EIFS (synthetic stucco) repair is priced higher due to complexity — hairline crack repair $300–700, section replacement $800–3,000 depending on extent. The chatbot asks about the home's square footage, whether it's traditional hard-coat or EIFS, the type and extent of damage, and whether a full recoat or targeted repair is needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot explain the difference between hairline cracks and structural stucco damage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hairline cracks (under 1/16 inch, no pattern): normal stucco movement — cosmetic repair, low urgency. Map or alligator cracking (spider-web pattern): often indicates the base coat has failed or there's underlying moisture — warrants investigation before recoating. Step cracks following mortar joints: may indicate foundation movement — flag for structural review. Wide cracks (1/4 inch or more) or cracks with staining: likely moisture infiltration — urgent repair needed to prevent wood framing damage. The chatbot asks customers to describe what they're seeing and routes urgent moisture-related damage for priority scheduling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle EIFS and synthetic stucco questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EIFS (Exterior Insulation and Finish System, often called synthetic stucco or Dryvit) requires different repair techniques than traditional hard-coat stucco. Configure the chatbot to ask whether the home was built after 1985 and whether the stucco feels slightly soft or spongy (EIFS) vs hard like concrete (traditional hard coat). EIFS damage frequently involves moisture intrusion behind the system — configure the chatbot to flag this for inspection and probe testing before quoting repair scope."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Stucco Contractor</div>
+  <h1>Triage stucco cracks by urgency and book the estimate before hairline cracks become moisture damage</h1>
+  <p class="hero-sub">Stucco customers see a crack and aren't sure whether it's cosmetic or a sign of moisture intrusion. ChatFlow helps them describe what they see, explains which crack types need immediate attention, and books your estimate — before they ignore the warning sign for another two rainy seasons.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Crack type triage, EIFS identification, and repair vs full recoat guidance</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking into stucco work? Are you dealing with cracks, staining, a full recoat, or something else?</div>
+      <div class="bubble user-b">We have cracks on two elevations. Some look like a spider web pattern, and there's some staining below one of the windows on the south side. House was built in 1998, Phoenix area.</div>
+      <div class="bubble bot">The spider-web (map cracking) pattern and staining below a window are two different issues — let me break them down:
+        <br><br><strong>Map cracking</strong> (spider web pattern) usually means the finish coat has reached the end of its life cycle — it's dried out and shrunk over time. This is recoatable, not an emergency, but it does mean a patch-and-blend won't look right anymore. A full recoat of the affected elevations is the right fix.
+        <br><br><strong>Staining below a window</strong> is a different concern. That pattern typically means water is getting in at the window frame — either the flashing has failed or the window-to-stucco seal has cracked. That moisture is going somewhere, and on a 1998 home in Phoenix it may have been working on the framing for a while. This needs inspection before I can scope it.
+        <br><br>For the two elevations with map cracking on a typical Phoenix stucco home: recoat estimate is <strong>$3,000–6,500</strong> depending on square footage and texture match. The window moisture issue is scoped separately at the estimate.
+        <br><br>Want to schedule a free on-site estimate?</div>
+      <div class="bubble user-b">Yes. Concerned about that window situation.</div>
+      <div class="bubble bot">You should be — catching it early is much better than waiting. What's your name and best contact?</div>
+      <div class="bubble user-b">Frank Navarro, 602-555-0161</div>
+      <div class="bubble bot">Got it, Frank! Free stucco estimate in Phoenix — two elevations with map cracking, window staining for moisture investigation. I'll pass your info along and we'll reach out within one business day to schedule. We'll check the window flashing carefully.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why stucco contractors use ChatFlow</h2>
+  <p class="section-sub">Triage crack urgency, route moisture damage for priority estimates, and capture full recoats</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Crack urgency triage</h3>
+      <p>Stucco cracks range from cosmetic to structurally significant — configure ChatFlow to ask customers to describe what they see and triage accordingly. Hairline cracks: low urgency, patch and blend. Map cracking: recoat needed but not emergency. Wide cracks or staining below windows: moisture infiltration risk, flag for priority scheduling. Customers who understand their crack type isn't just cosmetic are more motivated to schedule quickly — and moisture-related damage customers close at a much higher rate because they understand the risk of delay.</p>
+    </div>
+    <div class="card">
+      <h3>EIFS vs hard-coat identification</h3>
+      <p>EIFS (synthetic stucco, Dryvit) and traditional hard-coat stucco look similar but require completely different repair approaches — and EIFS has a much higher risk of concealed moisture damage. Configure ChatFlow to ask about home age (post-1985 EIFS era) and stucco feel (slightly soft/spongy = EIFS vs hard as concrete = traditional). EIFS inquiries are routed with a note that probe moisture testing may be needed before scoping the repair. Pre-identifying EIFS prevents estimators from arriving with the wrong repair approach.</p>
+    </div>
+    <div class="card">
+      <h3>Full recoat vs patch decision</h3>
+      <p>Stucco patch jobs that don't match the existing texture and color are a common customer complaint — configure ChatFlow to explain the recoat-vs-patch tradeoff honestly. When map cracking is widespread or the existing finish has significant fading, a full recoat of the affected elevation is often the right recommendation rather than visible patches. Customers who understand why a full recoat is sometimes better value than patching are less likely to resist the recommendation at estimate time — and they close faster.</p>
+    </div>
+    <div class="card">
+      <h3>Painting and color change bundling</h3>
+      <p>Many stucco recoat customers also want to change the home's color — configure ChatFlow to ask whether the customer is happy with the current color or wants to update it. A recoat over existing stucco in a new color is often no additional cost (same application process). Elastomeric paint applied over stucco ($1,500–3,500 for a typical home) is sometimes an alternative to recoat for customers on a tighter budget — surfacing this option positions you as the advisor rather than the salesperson.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote stucco repair and recoat?</p>
+      <p class="faq-a">You configure price ranges by scope. Crack repair only (patch and blend): $200–600. Full recoat, one elevation: $2,000–4,500. Full exterior recoat (2,000 sqft home): $5,000–12,000. EIFS repair: $300–700 for cracks, $800–3,000 for section replacement. The chatbot asks about home size, stucco type, damage description, and whether a full recoat is needed, then gives a range and books the free estimate.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot explain the difference between hairline cracks and structural stucco damage?</p>
+      <p class="faq-a">Hairline cracks under 1/16 inch: cosmetic, low urgency. Map/alligator cracking: base coat failure or moisture — recoat needed. Step cracks following mortar joints: possible foundation movement. Wide cracks or staining: moisture infiltration — urgent repair. The chatbot routes moisture-related damage for priority scheduling and explains why delay increases repair scope.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle EIFS and synthetic stucco questions?</p>
+      <p class="faq-a">The chatbot asks about home age and stucco feel to identify EIFS vs traditional hard coat. EIFS (post-1985, slightly soft) requires different repair and often concealed moisture damage — routed for inspection and probe testing before scoping. Traditional hard coat (hard as concrete) is priced and scoped directly from the description.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Triage stucco cracks by urgency and book repair and recoat estimates 24/7</h2>
+    <p>ChatFlow identifies moisture risk and books stucco estimates before damage spreads. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/painting-contractor-chatbot.html">Painting Contractor</a> · <a href="/masonry-chatbot.html">Masonry</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
