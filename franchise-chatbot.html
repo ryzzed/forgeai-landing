@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Franchise Chatbot — Consistent Lead Capture Across All Your Locations | ChatFlow</title>
+  <meta name="description" content="AI chatbot for franchise businesses. Deploy consistent, on-brand AI chat across all locations — capturing leads, answering location-specific questions, and routing customers to the right branch. $39/month per location."/>
+  <meta property="og:title" content="Franchise Chatbot — Brand-Consistent Lead Capture at Every Location"/>
+  <meta property="og:description" content="ChatFlow AI gives every franchise location a smart chatbot that answers questions consistently, captures leads, and routes customers — without any location needing to hire staff to manage it."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/franchise-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a franchise business?","acceptedAnswer":{"@type":"Answer","text":"A franchise chatbot can handle location-specific questions (hours, address, services offered at that branch), answer brand-standard FAQs consistently across all locations, capture leads and appointment requests, and route customers to the correct franchise location based on their zip code or city. Each location can customize operational details while maintaining brand voice and service standards set at the franchisor level."}},{"@type":"Question","name":"How do I deploy a chatbot across multiple franchise locations?","acceptedAnswer":{"@type":"Answer","text":"Each franchise location gets its own ChatFlow account, configured with location-specific details (address, hours, staff, local services) plus brand-standard information from a master template. The franchisor can provide a baseline system prompt template that franchisees customize with their specifics. This ensures every customer gets consistent brand messaging while location-specific questions are answered accurately."}},{"@type":"Question","name":"How much does a franchise chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month per location for 5,000 AI conversations. For franchise systems with 10 locations, that's $390/month — less than a part-time receptionist at one location, covering all ten. Many franchise locations find the free plan (1,000 conversations/month) sufficient. The consistency and lead capture value at scale makes the per-location cost very easy to justify."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Franchise Chatbot</div>
+  <h1>Brand-consistent lead capture<br/><span>at every franchise location.</span></h1>
+  <p class="hero-sub">Every franchise location has its own hours, team, and local details — but customers expect the same brand experience everywhere. ChatFlow deploys at each location with a shared template and location-specific details, ensuring consistent service and lead capture across your entire system.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A location-specific inquiry handled consistently — at any hour</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Brand Name] — [Location Name] branch. How can I help you today?</div></div>
+    <div class="msg user"><div class="bubble">Do you guys do the same services as the downtown location? I usually go there but it's far.</div></div>
+    <div class="msg bot"><div class="bubble">Great news — our [Location Name] branch offers the full [Brand Name] service menu. That includes [service 1], [service 2], and [service 3]. We're open Monday-Saturday 8am-6pm and Sunday 10am-4pm. Is there a specific service you're looking to book?</div></div>
+    <div class="msg user"><div class="bubble">Yes, I want to schedule a [service]. Do I need to book in advance?</div></div>
+    <div class="msg bot"><div class="bubble">We recommend booking at least 48 hours in advance for [service], especially on weekends. We can get you booked right now — I just need your name, phone number, and your preferred day and time. What works best for you?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">Built for multi-location operations</h2>
+  <p class="section-sub" style="text-align:center">One template, infinitely configurable per location</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+      <h3>Franchisor template system</h3>
+      <p>Build a master system prompt with brand standards, core service descriptions, and brand voice — then give franchisees a simple fill-in-the-blanks template for their hours, address, team, and local offerings.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Location-specific answers</h3>
+      <p>Each bot knows its own hours, team, parking, special services, and local promotions. Customers get accurate, location-specific answers — not generic brand responses that may not apply to their nearest branch.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Consistent lead capture</h3>
+      <p>Every location captures leads in the same format — name, contact, service interest, preferred timing. Franchisees wake up with qualified leads; franchisors can benchmark lead volume and conversion across the system.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div>
+      <h3>No corporate IT required</h3>
+      <p>Each franchisee manages their own ChatFlow account independently — no IT team or developer required. Add the widget snippet to their location website and update the system prompt when hours or services change.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the franchisor control the chatbot template centrally?</p>
+      <p class="faq-a">Currently, each franchise location manages their own ChatFlow account, which gives franchisees autonomy while requiring the franchisor to distribute a template. Many franchise systems share a master system prompt document that franchisees copy and customize with their location details. This approach keeps brand standards high without requiring corporate infrastructure. Future multi-account management features are on our roadmap.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What franchise types benefit most from a chatbot?</p>
+      <p class="faq-a">Service franchises with appointment-based models benefit the most — hair salons, fitness studios, tutoring centers, cleaning services, pet care, auto services. These businesses have predictable FAQ loads (pricing, availability, what to expect) and high value per booked appointment. Retail franchises benefit from reducing location/hours questions that don't need human staff to answer. Any franchise where customers compare multiple locations before choosing is a strong fit.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">We're the franchisor — can we offer ChatFlow as a value-add to our franchisees?</p>
+      <p class="faq-a">Yes — many franchisors recommend or require specific tech tools as part of their system. If you want to standardize ChatFlow across your franchise network, reach out through our website to discuss volume arrangements and onboarding support for your franchisees. A master template that you've already built and tested removes the setup friction for new franchisees entirely.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Consistent customer experience at every location</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on any franchise website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/gym-chatbot.html">Gym chatbot</a> · <a href="/hair-salon-chatbot.html">Hair salon chatbot</a> · <a href="/cleaning-chatbot.html">Cleaning service chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
