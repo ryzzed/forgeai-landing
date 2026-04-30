@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Dryer Vent Cleaning Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your dryer vent cleaning website. Quote by vent length and complexity, explain fire risk warning signs, and book annual maintenance appointments 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Dryer Vent Cleaning — Book Fire Safety Appointments 24/7"/>
+  <meta property="og:description" content="ChatFlow helps dryer vent cleaning companies capture leads around the clock — quoting by vent length and complexity, explaining fire risk warning signs, and booking annual maintenance appointments."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/dryer-vent-cleaning-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote dryer vent cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by vent length and complexity in the system prompt. Standard vent (up to 15 feet, one or two turns): $89–129. Long or complex vent (15–35+ feet, multiple turns, or bird cage removed): $129–199. Commercial or multi-unit dryer vents: $150–300 per unit. The chatbot asks where the dryer is located (first floor, second floor, basement), how long since last cleaning or if never cleaned, and whether there are warning signs, then gives a range and books the appointment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot educate customers about dryer vent fire risk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dryer fires cause approximately 2,900 home fires annually in the US — the leading cause is failure to clean vents. Configure the chatbot to ask about warning signs: clothes taking two cycles to dry, dryer running very hot to the touch, burning smell during operation, or last cleaning more than a year ago. These are natural engagement hooks that move a 'maybe someday' customer into 'I need to do this now.' The fire safety context makes the service feel essential rather than optional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot handle rerouting and vent repair inquiries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Vent rerouting and repair are higher-ticket add-ons — configure the chatbot to ask whether the customer has been told the vent needs rerouting, whether it vents through the roof or wall, and the approximate distance to the exterior. Vent rerouting (new path to exterior): $200–500. Duct repair or replacement (flexible to rigid metal): $75–200. Exterior vent hood replacement: $50–150. These additions surface naturally when customers describe symptoms or mention a previous inspection finding."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Dryer Vent Cleaning</div>
+  <h1>Turn "my clothes take forever to dry" into a booked fire safety appointment</h1>
+  <p class="hero-sub">Dryer vent cleaning is a purchase customers delay until they notice the warning signs — clothes taking two cycles, a hot dryer, or a burning smell. ChatFlow connects those symptoms to the fire risk, quotes the job, and books the appointment before customers move on or forget.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Symptom-to-risk education, transparent pricing, and annual plan conversion</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking to get your dryer vent cleaned? Quick question — are you booking for routine maintenance, or noticing any warning signs like clothes taking extra long to dry or a burning smell?</div>
+      <div class="bubble user-b">Clothes are definitely taking two cycles to dry lately, and the dryer feels really hot. I don't think it's been cleaned since we moved in 4 years ago.</div>
+      <div class="bubble bot">Those are the two clearest warning signs of a clogged vent — and four years without cleaning is a real fire risk. Lint buildup is the leading cause of dryer fires, and restricted airflow is exactly what causes the overheating and extended drying time you're describing.
+        <br><br>For a standard setup (dryer in a first-floor laundry room, vent exiting through the wall or roof), cleaning typically runs <strong>$99–149</strong>. If the vent runs a long distance or has multiple turns, it's toward the higher end.
+        <br><br>Where's your dryer located — first floor, second floor, or basement?</div>
+      <div class="bubble user-b">Second floor laundry room. Vent goes up through the roof.</div>
+      <div class="bubble bot">Roof-exit vents on the second floor tend to be longer runs — typically 20–30 feet with a few turns. That puts you at <strong>$139–179</strong>, and we'll check the roof cap while we're up there since those get clogged with lint and debris too.
+        <br><br>We also offer an annual reminder plan — we reach out each year to rebook so you don't have to think about it. Many customers forget after the first cleaning and are back to two-cycle drying in 3 years.
+        <br><br>Want to get something scheduled?</div>
+      <div class="bubble user-b">Yes, and the annual plan sounds good too. We're in Charlotte, NC.</div>
+      <div class="bubble bot">Charlotte is our service area. What's your name and best contact?</div>
+      <div class="bubble user-b">Rachel Odom, 704-555-0193</div>
+      <div class="bubble bot">Got it, Rachel! Dryer vent cleaning in Charlotte — second floor, roof exit, plus annual reminder plan. I'll pass your info along and we'll reach out within one business day to schedule. Your dryer (and your house) will thank you!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why dryer vent cleaning companies use ChatFlow</h2>
+  <p class="section-sub">Convert symptom-aware homeowners into booked appointments and annual maintenance plans</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Symptom-to-urgency conversion</h3>
+      <p>Most dryer vent cleaning customers don't search for "dryer vent cleaning" — they search "why does my dryer take so long" or "dryer feels hot." Configure ChatFlow to ask about symptoms in the opening message and connect them immediately to the fire risk and the fix. Customers who understand that their symptom is a warning sign — not just an inconvenience — act immediately rather than adding it to the mental to-do list. The fire safety context transforms a low-urgency maintenance task into a same-week booking.</p>
+    </div>
+    <div class="card">
+      <h3>Annual service plan sign-up</h3>
+      <p>The ideal dryer vent cleaning customer signs up for an annual reminder at the point of booking — configure ChatFlow to offer it naturally after quoting the service. Annual plan customers don't drift back to two-cycle drying over three years, don't comparison-shop each time, and are far more likely to call you for related services. A customer on an annual plan is worth 4–5x a one-time booking over a five-year horizon and requires zero re-acquisition cost.</p>
+    </div>
+    <div class="card">
+      <h3>Multi-unit and rental property routing</h3>
+      <p>Property managers and landlords with multiple rental units are your highest-volume customers — a single property manager may have 10–50 dryers across their portfolio needing annual service. Configure ChatFlow to ask whether the inquiry is for a single home or multiple units, and route multi-unit inquiries for a volume quote. Portfolio customers also have compliance motivation: landlords are increasingly required to document dryer vent maintenance as a fire safety measure.</p>
+    </div>
+    <div class="card">
+      <h3>Air duct cleaning bundling</h3>
+      <p>Many dryer vent cleaning companies also offer HVAC air duct cleaning — configure ChatFlow to mention this naturally after quoting the dryer vent job. Customers already in "home maintenance" mode are the most receptive audience for an air duct cleaning upsell ($300–500 for an average home). Bundling both services into one visit increases average ticket and improves crew scheduling efficiency. The cross-sell works best when framed as "while we're already in the house."</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote dryer vent cleaning?</p>
+      <p class="faq-a">You configure price ranges by vent complexity. Standard vent (up to 15 ft, one or two turns): $89–129. Long or complex vent (15–35+ ft, multiple turns, roof exit): $129–199. Commercial or multi-unit: $150–300 per unit. The chatbot asks dryer location, vent exit type, and time since last cleaning, then gives a range and books the appointment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot educate customers about dryer vent fire risk?</p>
+      <p class="faq-a">Configure the chatbot to ask about warning signs — clothes taking two cycles, dryer running hot, burning smell during operation. These symptoms are connected immediately to lint buildup and fire risk, creating urgency that converts a "I should do this someday" inquiry into a same-week booking. The fire safety context makes the service feel essential, not optional.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle rerouting and vent repair inquiries?</p>
+      <p class="faq-a">Yes. Vent rerouting: $200–500. Duct repair or flexible-to-rigid replacement: $75–200. Exterior vent hood replacement: $50–150. The chatbot asks whether the customer was told they need rerouting or noticed damage, and routes these for a quote visit rather than trying to price them over chat.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book dryer vent cleaning appointments and sign up annual plans 24/7</h2>
+    <p>ChatFlow turns warning signs into booked appointments. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/air-duct-cleaning-chatbot.html">Air Duct Cleaning</a> · <a href="/chimney-sweep-chatbot.html">Chimney Sweep</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
