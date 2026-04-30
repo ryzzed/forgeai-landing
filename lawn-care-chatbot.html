@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Lawn Care Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your lawn care website. Quote mowing and maintenance plans by lot size, offer fertilization and aeration add-ons, and sign up recurring customers 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Lawn Care Companies — Sign Up Recurring Customers 24/7"/>
+  <meta property="og:description" content="ChatFlow helps lawn care companies capture and convert leads around the clock — quoting mowing plans by lot size, upselling fertilization and aeration programs, and signing up recurring maintenance contracts."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/lawn-care-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote lawn mowing and maintenance plans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by lot size in the system prompt. Small lot under 5,000 sq ft: $35–55 per mow. Medium lot 5,000–10,000 sq ft: $45–75 per mow. Large lot 10,000–20,000 sq ft: $65–100 per mow. The chatbot asks for approximate yard size, mow frequency preference (weekly or bi-weekly), and any add-on services, then gives a weekly or monthly range and captures contact info for a free estimate or direct signup. Seasonal packages (full season, April–October) are offered at a per-mow discount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle fertilization and weed control program upsells?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fertilization and weed control programs are the highest-margin service in lawn care. Configure the chatbot to ask about current lawn health — bare spots, weeds, color issues, thin grass — and present a 5- or 6-application annual fertilization and weed control program at $40–75 per application depending on lot size. Customers asking about mowing who also have weed or thinning issues are prime candidates for the full program. Bundling mowing + fert/weed program increases annual customer value by 40–80%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot sign up customers for seasonal programs and recurring mowing contracts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Recurring contracts are the foundation of a profitable lawn care business. Configure the chatbot to present the seasonal mowing plan (e.g., weekly April–October = 26 mows) alongside the per-mow option — with the seasonal rate priced slightly lower per visit. Customers who sign up for the season at signup are locked in before competitors get a chance to offer. The chatbot captures name, address, lot size, and service preferences, and flags the customer for a welcome call or automatic service start."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Lawn Care</div>
+  <h1>Sign up recurring mowing customers and sell seasonal programs before spring rush fills your schedule</h1>
+  <p class="hero-sub">Lawn care is a recurring revenue business — one customer signed in April is worth $800–1,500 per season. ChatFlow quotes by lot size, presents seasonal packages, and locks in contracts before your competitors knock on the same door.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Lot-size pricing, seasonal program options, and fert/weed upsell</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking for lawn mowing service, a fertilization program, or both?</div>
+      <div class="bubble user-b">Mowing for sure. Probably fertilizing too — our lawn has a lot of weeds and some bare spots. Yard is maybe 8,000 sq ft total.</div>
+      <div class="bubble bot">8,000 sq ft with weed and thinning issues — that's a great candidate for the full program.
+        <br><br><strong>Mowing (bi-weekly):</strong> $55–70/visit for 8,000 sq ft — includes mow, edge, blow, trim. Weekly service runs $50–65/visit with a slight discount for frequency.
+        <br><br><strong>Fertilization + weed control program:</strong> 6 applications April through October — pre-emergent, broadleaf weed control, fertilizer rounds, and fall winterizer. <strong>$280–380 for the season</strong> at your lot size.
+        <br><br>Bundled together, most customers in your situation do bi-weekly mowing + the fert program. The weeds get controlled from both directions — the program kills them, and consistent mowing prevents them from re-seeding.
+        <br><br>Want a free yard visit to confirm pricing and start a service agreement?</div>
+      <div class="bubble user-b">Yes, let's do it. We're in Charlotte, NC.</div>
+      <div class="bubble bot">Charlotte is our primary service area. What's your name and address?</div>
+      <div class="bubble user-b">Rachel Owens, 704-555-0166, 4218 Pinecroft Rd</div>
+      <div class="bubble bot">Got it, Rachel! Mowing + fert program in Charlotte — I'll have someone reach out within one business day to confirm your first visit. Welcome aboard!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why lawn care companies use ChatFlow</h2>
+  <p class="section-sub">Sign up seasonal contracts and recurring programs before competitors get to the door</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Seasonal contract lockup</h3>
+      <p>The most valuable lawn care customer is one signed before the season starts. Configure ChatFlow to present the full-season mowing plan (weekly April–October at a slight per-visit discount vs on-demand) as the primary option. Customers who commit to the season upfront are locked in for 6–7 months of recurring revenue, require no re-selling, and tend to be more loyal than on-demand customers. Spring inquiry season (February–April) is your highest-conversion window.</p>
+    </div>
+    <div class="card">
+      <h3>Fertilization and weed program bundling</h3>
+      <p>A mowing customer who also signs for a fertilization and weed control program is worth 2–3x more annually than a mowing-only customer. Configure ChatFlow to ask about current lawn health — weeds, bare spots, color — as part of the intake. Customers with visible problems are highly receptive to the fert program because ChatFlow can explain the connection: mowing maintains height, but only a treatment program addresses weeds and nutrition. Presenting both together at intake dramatically increases program attach rate.</p>
+    </div>
+    <div class="card">
+      <h3>Aeration and overseeding upsells</h3>
+      <p>Fall aeration and overseeding is the highest-value one-time service in lawn care — typically $150–350 per application. Configure ChatFlow to ask about lawn thickness and present aeration as the solution for bare spots or thin grass during fall booking conversations. Customers who understand that aeration breaks up compacted soil and overseeding fills thin areas at the optimal time of year are far more receptive than customers who only hear about it as a upsell at the door.</p>
+    </div>
+    <div class="card">
+      <h3>Neighbor and neighborhood referral capture</h3>
+      <p>Lawn care has a strong geographic concentration effect — when you service one house on a street, neighbors notice the results and inquire. Configure ChatFlow to ask how the customer heard about you, and if they mention a neighbor, note that you can often route the crew to service multiple addresses on the same visit for a slight per-visit discount. Neighborhood bundling increases route efficiency and reduces per-customer service cost while growing your customer base organically.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote lawn mowing and maintenance plans?</p>
+      <p class="faq-a">You configure price ranges by lot size. Small lot under 5,000 sq ft: $35–55/mow. Medium 5,000–10,000 sq ft: $45–75/mow. Large 10,000–20,000 sq ft: $65–100/mow. The chatbot asks for yard size, mow frequency, and add-on services, then gives a weekly or monthly range and captures contact for a free estimate or direct signup. Seasonal packages are offered at a per-mow discount.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle fertilization and weed control program upsells?</p>
+      <p class="faq-a">Configure the chatbot to ask about current lawn health — bare spots, weeds, thin grass — and present a 5- or 6-application annual program at $40–75 per application. Customers with weed or thinning issues who are already asking about mowing are prime fert program candidates. Bundling mowing plus fert/weed program increases annual customer value by 40–80%.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot sign up customers for seasonal programs and recurring contracts?</p>
+      <p class="faq-a">Yes. Configure the chatbot to present the seasonal mowing plan alongside per-mow pricing, with the seasonal rate slightly lower per visit. Customers who sign up for the season are locked in before competitors get a chance. The chatbot captures name, address, lot size, and service preferences for a welcome call or automatic service start.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Lock in seasonal contracts and recurring programs before competitors knock</h2>
+    <p>ChatFlow signs up lawn care customers and sells programs 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/landscaping-chatbot.html">Landscaping</a> · <a href="/irrigation-chatbot.html">Irrigation</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
