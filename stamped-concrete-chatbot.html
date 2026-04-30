@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Stamped Concrete Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your stamped concrete website. Answer pattern and color questions, quote patio and driveway projects, and book stamped concrete jobs automatically."/>
+  <meta property="og:title" content="AI Chatbot for Stamped Concrete Companies — Book More Patio and Driveway Jobs"/>
+  <meta property="og:description" content="ChatFlow helps stamped concrete companies capture leads 24/7 — explaining pattern and color options, quoting patio and driveway projects, and booking jobs automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/stamped-concrete-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does stamped concrete cost per square foot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stamped concrete costs $12–22/sq ft installed for standard patterns (ashlar slate, cobblestone, wood plank). Complex patterns or multi-color work with release agents runs $18–28/sq ft. A 400 sq ft patio typically runs $5,000–9,000. A standard two-car driveway (600–700 sq ft) runs $8,000–16,000 for stamped concrete. Compared to pavers ($18–35/sq ft) or natural stone ($25–50/sq ft), stamped concrete offers a similar look at lower cost. The chatbot collects project type, square footage, and pattern interest to give a relevant range before any call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle pattern and color questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pattern and color selection is where stamped concrete customers get overwhelmed — there are dozens of combinations. Configure the chatbot to simplify the decision by asking what look the customer is going for (natural stone, brick, wood, slate), their base color preference (earthy tones, gray, tan), and whether they want a single-color or multi-tone finish. This narrows the options before the consultation and ensures the estimator brings relevant samples instead of a massive portfolio that paralyzes the customer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle stamped concrete maintenance questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maintenance concerns are a common objection for stamped concrete — customers worry about cracking, fading, and resealing. Configure the chatbot to explain that properly installed stamped concrete with fiber reinforcement and control joints performs well for 25+ years, that sealing every 2–3 years maintains color and gloss (a $150–300 service call), and that hairline cracks are normal in concrete and don't affect structural integrity. Customers who understand maintenance expectations up front are less likely to have buyer's remorse after installation."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Stamped Concrete</div>
+  <h1>Quote stamped concrete patios before customers default to plain brushed concrete</h1>
+  <p class="hero-sub">Customers asking "how much is a concrete patio?" don't know stamped concrete is an option — or assume it costs twice as much. ChatFlow explains the value, quotes by square footage, and books the estimate before they pour a plain gray slab they'll regret.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Pattern education, sq ft pricing, and estimate booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to PrestigeCrete. Looking for a stamped concrete patio, driveway, pool deck, or walkway?</div>
+      <div class="bubble user-b">We want a new backyard patio — our current one is cracked concrete slabs. I've seen the decorative patterns but don't know if they're way more expensive than regular concrete.</div>
+      <div class="bubble bot">Great question — stamped concrete costs more than plain concrete but less than most people expect.
+        <br><br>Plain brushed concrete: <strong>$6–9/sq ft</strong>. Stamped concrete with color and pattern: <strong>$12–20/sq ft</strong>. Natural stone or pavers: <strong>$18–35/sq ft</strong>.
+        <br><br>So stamped is roughly double plain concrete, but a fraction of the cost of real stone — with a similar visual result. For a 400 sq ft patio, that's the difference between ~$3,000 plain and ~$6,500–8,000 stamped.
+        <br><br>Most of our patio customers say once they see what stamped looks like in person, they can't go back to plain. The texture and color make the whole outdoor space feel completely different.
+        <br><br>What look are you drawn to — natural stone (slate, flagstone, cobblestone), a wood plank look, or a brick/herringbone pattern?</div>
+      <div class="bubble user-b">I like the natural flagstone look. The patio is probably 350–400 sq ft. We're in Baton Rouge, LA.</div>
+      <div class="bubble bot">Flagstone pattern is one of our most popular — looks incredible with a charcoal or tan base color and a darker antiquing release agent for depth.
+        <br><br>For 400 sq ft in flagstone pattern, you're looking at roughly <strong>$5,500–8,500</strong> depending on color layers and site prep for the existing slab removal.
+        <br><br>Want to book a free estimate? We'll look at the existing patio, measure, and bring pattern and color samples so you can see exactly what it'll look like before committing.</div>
+      <div class="bubble user-b">Yes, let's do it. Carol and Mike Thibodaux, 225-555-0149. Weekends work.</div>
+      <div class="bubble bot">Booked, Carol and Mike! Free estimate in Baton Rouge — weekend appointment. We'll call to confirm within one business day. The flagstone pattern is going to look incredible back there.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why stamped concrete companies use ChatFlow</h2>
+  <p class="section-sub">Upgrade plain concrete inquiries to stamped and decorative projects</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Upgrade plain concrete leads to stamped</h3>
+      <p>Many customers searching "concrete patio" don't know stamped is an option — or assume it's prohibitively expensive. Configure ChatFlow to proactively introduce stamped concrete when plain concrete is mentioned, explaining the cost difference and the visual outcome. Customers who understand they can get a flagstone or cobblestone look for 30–40% more than plain concrete often choose to upgrade — turning a $3,000 job into a $7,000 job with minimal additional complexity.</p>
+    </div>
+    <div class="card">
+      <h3>Pattern and color pre-selection narrows the consultation</h3>
+      <p>Stamped concrete customers who arrive at an estimate not knowing what pattern they want often delay the project while they research. Configure ChatFlow to narrow the pattern category (stone, brick, wood, geometric) and color preference (earthy, gray, light) during the initial conversation. Estimators who arrive with targeted samples for a customer who already knows they want "flagstone in charcoal" close on the spot rather than leaving to send a quote later.</p>
+    </div>
+    <div class="card">
+      <h3>Paver comparison wins the price-sensitive buyer</h3>
+      <p>Price-sensitive customers often assume pavers are cheaper than stamped concrete and go looking for paver quotes. Configure ChatFlow to make the stamped vs paver cost comparison explicit — stamped concrete at $12–20/sq ft vs pavers at $18–35/sq ft. Customers who see that stamped concrete achieves a similar look at lower cost convert without the need for a full competitive sales pitch.</p>
+    </div>
+    <div class="card">
+      <h3>Maintenance and longevity objection handling</h3>
+      <p>Stamped concrete customers worry about cracking and fading. Configure ChatFlow to address these concerns proactively — fiber-reinforced concrete with control joints lasts 25+ years, resealing every 2–3 years costs $150–300 and restores the original look, and hairline cracks are cosmetic, not structural. Customers who understand what to expect from maintenance arrive at the estimate without the "is this going to fall apart?" objection already loaded.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does stamped concrete cost per square foot?</p>
+      <p class="faq-a">Standard stamped patterns run $12–22/sq ft installed. Complex or multi-color work runs $18–28/sq ft. A 400 sq ft patio runs $5,000–9,000. A two-car driveway (600–700 sq ft) runs $8,000–16,000. Compared to pavers at $18–35/sq ft or natural stone at $25–50/sq ft, stamped concrete offers a similar look at significantly lower cost.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle pattern and color decisions?</p>
+      <p class="faq-a">Configure the chatbot to ask what look the customer is drawn to (natural stone, brick, wood, geometric) and color preference (earthy, gray, tan), then narrow to a specific category. Estimators who arrive with targeted samples for a customer who has already pre-selected a direction close on-site at much higher rates than those showing a full pattern catalog to an undecided customer.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle maintenance concerns?</p>
+      <p class="faq-a">Configure the chatbot to address cracking and fading concerns proactively: fiber reinforcement and control joints prevent structural cracking, resealing every 2–3 years for $150–300 maintains color, and hairline cracks are cosmetic. Customers who understand maintenance expectations in advance arrive at estimates without the objection already primed — and approve projects at higher rates.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book stamped concrete estimates and upgrade plain concrete leads automatically</h2>
+    <p>ChatFlow educates customers on decorative options and books estimates 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/concrete-contractor-chatbot.html">Concrete Contractor</a> · <a href="/deck-builder-chatbot.html">Deck Builder</a> · <a href="/patio-chatbot.html">Patio</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

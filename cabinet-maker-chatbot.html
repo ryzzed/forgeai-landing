@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Custom Cabinet Makers | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your custom cabinet website. Answer stock vs semi-custom vs custom questions, scope kitchen and bathroom cabinet projects, and book design consultations automatically."/>
+  <meta property="og:title" content="AI Chatbot for Custom Cabinet Makers — Book More Design Consultations"/>
+  <meta property="og:description" content="ChatFlow helps custom cabinet shops capture leads 24/7 — explaining cabinet tiers, scoping kitchen and bath projects, and booking design consultations automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/cabinet-maker-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do custom cabinets cost compared to stock or semi-custom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cabinet pricing tiers vary significantly. Stock cabinets (big box store, limited sizes and finishes) run $60–200 per linear foot installed. Semi-custom cabinets (more sizes, finish options, some modifications) run $150–350 per linear foot. Custom cabinets (built to exact dimensions, any wood species, any finish, full design flexibility) run $300–600+ per linear foot. For a typical kitchen (20–25 linear feet of cabinetry), custom cabinets run $6,000–15,000 for the boxes alone, plus installation and hardware. The chatbot explains these tiers and collects the customer's project scope before the first call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle kitchen remodel cabinet scoping?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kitchen cabinet inquiries need scoping before a meaningful quote is possible. Configure the chatbot to collect: approximate kitchen size (linear feet of cabinetry), whether uppers and lowers are both needed, island or peninsula interest, wood species or door style preference if they have one, and timeline. Customers who provide this information during the initial chat receive a much more accurate range — and arrive at the design consultation with realistic expectations rather than culture shock."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What cabinet project add-ons can the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention cabinet hardware selection (pulls and knobs add $200–600 to a kitchen project), soft-close hinges and drawer slides as a standard inclusion or upgrade, under-cabinet lighting ($300–600 installed, dramatically improves kitchen function), custom pantry or built-in shelving while the shop is already building, and bathroom vanity cabinets if the customer is also doing bathrooms. Customers who hear about the full scope of what's possible approve broader projects."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Custom Cabinets</div>
+  <h1>Convert cabinet shoppers before they settle for IKEA because no one answered</h1>
+  <p class="hero-sub">Custom cabinet customers are comparison shopping at 8pm. ChatFlow explains the stock vs semi-custom vs custom tiers, scopes their kitchen, and books a design consultation — before they measure their kitchen for flat-pack boxes instead.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Cabinet tier education, kitchen scoping, and consultation booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to Craftline Custom Cabinets. Are you planning a kitchen remodel, bathroom vanity, built-ins, or a different cabinet project?</div>
+      <div class="bubble user-b">Kitchen remodel. We want to replace all the cabinets — they're original 1990s oak, very dark. Not sure if we should go custom or semi-custom. What's the real difference?</div>
+      <div class="bubble bot">Great timing to be thinking about this — here's the honest breakdown:
+        <br><br><strong>Semi-custom:</strong> Factory-built in standard size increments (3-inch steps), more finish options than stock, some modifications possible. Good quality, typically <strong>$150–320/linear ft</strong> installed. Lead time 4–8 weeks. Best for kitchens with standard layouts.
+        <br><br><strong>Full custom:</strong> Built to your exact dimensions in our shop — fills every inch of space perfectly, any wood species, any finish, any door profile. We can do things semi-custom can't (unusual ceiling heights, non-standard spaces, built-in features). Runs <strong>$320–600+/linear ft</strong> installed. Lead time 8–14 weeks.
+        <br><br>For most kitchens swapping out dated oak for a fresh look, semi-custom hits the sweet spot of quality and price. Custom shines when the space has quirks or the homeowner wants something truly one-of-a-kind.
+        <br><br>What's your approximate kitchen layout — roughly how many linear feet of cabinets, and are you doing uppers and lowers?</div>
+      <div class="bubble user-b">Maybe 22 linear feet total — uppers and lowers. L-shaped kitchen, no island. We're in Schaumburg, IL.</div>
+      <div class="bubble bot">22 linear feet is a very typical kitchen — straightforward to scope. At semi-custom that's roughly <strong>$8,000–14,000</strong> for the cabinet boxes; at full custom <strong>$14,000–22,000</strong>. Add countertops, hardware, and installation for the full picture.
+        <br><br>We'd love to do a free design consultation — bring material samples, look at your space, and give you exact pricing on both options side by side so you can make an informed choice.
+        <br><br>Want to book that?</div>
+      <div class="bubble user-b">Yes. Lauren and David Cho, 847-555-0192. Saturdays work best.</div>
+      <div class="bubble bot">Booked, Lauren and David! Design consultation in Schaumburg — Saturday appointment. We'll call to confirm within one business day. Your 1990s oak doesn't stand a chance.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why custom cabinet shops use ChatFlow</h2>
+  <p class="section-sub">Capture kitchen remodel decisions before customers settle for big-box alternatives</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Win the stock vs semi-custom vs custom comparison</h3>
+      <p>Cabinet customers comparison-shop across a huge price range — from IKEA at $60/linear ft to full custom at $600/linear ft. Configure ChatFlow to explain the real differences: fit and finish quality, size flexibility, lead time, customization. Customers who understand the tiers self-select into the right product for their budget — and customers who can afford custom stop themselves from settling for semi-custom out of ignorance.</p>
+    </div>
+    <div class="card">
+      <h3>Kitchen remodel scope collection</h3>
+      <p>A cabinet quote without knowing linear footage, ceiling height, and layout is a guess. Configure ChatFlow to collect project scope during the initial conversation — linear footage estimate, upper and lower cabinet needs, island interest, special features. Consultations that start with pre-scoped projects spend time on design and material selection instead of basic measurement. Designers who can show work instead of asking beginner questions close at higher rates.</p>
+    </div>
+    <div class="card">
+      <h3>Long lead time pre-booking angle</h3>
+      <p>Custom cabinet lead times of 8–14 weeks mean customers who want cabinets before the holidays need to start in August. Configure ChatFlow to mention lead times in the booking conversation — customers who understand the timeline book sooner rather than later. A consultation booked in August with a clear 12-week lead time is a confirmed installation before Thanksgiving; a consultation in October is a kitchen in February.</p>
+    </div>
+    <div class="card">
+      <h3>Bathroom vanity and built-in add-on capture</h3>
+      <p>A cabinet shop building kitchen cabinets can typically do bathroom vanities, built-in bookshelves, mudroom lockers, and home office built-ins at the same time. Configure ChatFlow to ask about other cabinet or built-in needs during the scoping conversation — these add-ons are pure margin because the design relationship and shop setup are already in place. Customers don't realize they can bundle until someone asks.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much do custom cabinets cost vs semi-custom?</p>
+      <p class="faq-a">Semi-custom runs $150–350/linear ft installed. Full custom runs $300–600+/linear ft. A typical kitchen (20–25 linear feet) runs $8,000–14,000 semi-custom or $12,000–22,000 custom for the cabinet boxes. The chatbot explains the tier differences and collects project scope before the first call — so consultations start on design, not basics.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot scope a kitchen cabinet project?</p>
+      <p class="faq-a">Configure the chatbot to collect linear footage estimate, upper and lower cabinet needs, island or peninsula interest, wood species or door style preference, and project timeline. Customers who provide this during the initial conversation arrive at consultations ready for design discussion — not still deciding whether they want uppers. Pre-scoped projects close faster and at higher values.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What add-ons can the chatbot mention?</p>
+      <p class="faq-a">Configure the chatbot to mention under-cabinet lighting ($300–600 installed), hardware selection, soft-close upgrades, bathroom vanity cabinets, built-in pantry or shelving, and mudroom or home office built-ins. Customers who hear about these options during booking arrive at consultations already thinking about the broader project scope.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book custom cabinet design consultations automatically</h2>
+    <p>ChatFlow scopes kitchen projects and books consultations 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/kitchen-remodeling-chatbot.html">Kitchen Remodeling</a> · <a href="/cabinet-refacing-chatbot.html">Cabinet Refacing</a> · <a href="/cabinet-painting-chatbot.html">Cabinet Painting</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

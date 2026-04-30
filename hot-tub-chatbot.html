@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Hot Tub Dealers and Installers | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your hot tub website. Answer portable vs in-ground questions, quote delivery and installation, and book showroom appointments automatically."/>
+  <meta property="og:title" content="AI Chatbot for Hot Tub Dealers — Book More Showroom Appointments"/>
+  <meta property="og:description" content="ChatFlow helps hot tub dealers capture leads 24/7 — explaining portable vs in-ground options, quoting installation, and booking showroom appointments automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/hot-tub-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a hot tub cost installed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hot tub cost varies by type and features. A portable above-ground hot tub (most common) runs $4,000–8,000 for entry-level, $8,000–14,000 for mid-range with jets and features, and $14,000–25,000+ for premium brands (Jacuzzi, Hot Spring, Bullfrog). Delivery and electrical hookup typically add $500–1,500 — a dedicated 240V 50A circuit is required. An in-ground built-in spa runs $15,000–35,000+ depending on materials and features. The chatbot qualifies portable vs in-ground preference and budget tier before routing to the right product category."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle electrical and installation questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Electrical requirements are the biggest surprise for first-time hot tub buyers. Configure the chatbot to explain upfront that a portable hot tub requires a dedicated 240V/50A circuit — if the home doesn't have one, an electrician needs to run one before delivery (typically $300–800). The chatbot asks whether the customer has existing outdoor electrical, and if not, mentions the electrician requirement as part of the total project budget. Customers who understand this upfront have more realistic total cost expectations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What hot tub add-ons should the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention: insulated hot tub cover ($300–600, essential for energy efficiency and safety), cover lifter for easy single-person operation ($150–350), steps and handrail ($150–300), outdoor lighting around the tub area, privacy screen or pergola structure, chemical starter kit and ongoing maintenance, and extended service plan. For dealers with service departments, mentioning the annual maintenance plan during the initial conversation sets up a long-term customer relationship."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Hot Tub Sales</div>
+  <h1>Turn hot tub browsers into showroom appointments before they buy online</h1>
+  <p class="hero-sub">Hot tub shoppers do months of online research before buying. ChatFlow answers their electrical questions, explains the brand tiers, and books a showroom visit — before they click "Add to Cart" on a direct-to-consumer brand that doesn't include local service.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Budget qualification, electrical education, and showroom booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to Blue Ridge Spas. Looking for a hot tub for your backyard, or do you have questions about our brands and installation?</div>
+      <div class="bubble user-b">We want to get a hot tub for the backyard patio. Budget is probably $8,000–12,000 range. We have 4 people in the family. What do we need to know about installation?</div>
+      <div class="bubble bot">Great budget range — you're squarely in the mid-range market where you get excellent jets, energy-efficient insulation, and features without paying the luxury premium.
+        <br><br>For a family of 4, you're looking at a <strong>6–7 person tub</strong> (counterintuitive, but families use more space than you'd think). In your budget you'd be looking at brands like Caldera, Sundance, or our Hot Spring models in the mid-range tier — full jets, good insulation, app control, multiple massage zones.
+        <br><br><strong>Installation basics:</strong>
+        <br>• You need a <strong>240V/50A dedicated circuit</strong> — if your patio doesn't have outdoor electrical, an electrician runs a line from your panel. Usually $400–700 for a typical backyard run.
+        <br>• The tub sits on a solid flat surface — your existing patio is probably perfect.
+        <br>• Delivery and setup: our team handles crane or hand-truck delivery and connection. Included in the purchase.
+        <br><br>Want to come see some models in person? Way easier to pick once you sit in a few of them.</div>
+      <div class="bubble user-b">Yes, definitely. We're in Knoxville, TN.</div>
+      <div class="bubble bot">We're your local dealer in Knoxville. What's your name and best contact, and do weekends or weekday evenings work better for a showroom visit?</div>
+      <div class="bubble user-b">Stephanie and Jim Hooper, 865-555-0184. Weekends work great.</div>
+      <div class="bubble bot">Perfect, Stephanie and Jim! Showroom appointment in Knoxville — we'll hold a weekend slot and confirm within one business day. Bring the kids — trying is the best way to find the right fit.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why hot tub dealers use ChatFlow</h2>
+  <p class="section-sub">Convert online researchers into showroom visitors and buyers</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Capture research-phase leads before they buy online</h3>
+      <p>Hot tub customers research for months before buying — comparing brands, reading reviews, watching YouTube. This research phase is when the sale is won or lost. ChatFlow engages them at the research stage, answers their specific questions, and books a showroom visit — turning an online researcher into someone who has sat in your tubs and built a relationship with your sales team. Local dealers that engage researchers convert them; dealers that wait for walk-ins lose them.</p>
+    </div>
+    <div class="card">
+      <h3>Electrical requirement education prevents surprises</h3>
+      <p>The most common hot tub purchase obstacle is discovering the electrical requirement after the sale. Configure ChatFlow to mention the 240V/50A dedicated circuit requirement during the initial conversation — not as a deterrent, but as a normal part of planning. Customers who know about it upfront budget for the electrician, feel like you were honest with them, and don't cancel after delivery because of a surprise electrical cost.</p>
+    </div>
+    <div class="card">
+      <h3>Brand tier and value positioning</h3>
+      <p>Hot tub brands span from $3,000 direct-to-consumer to $25,000 premium. Configure ChatFlow to explain what differentiates your brands — insulation quality (impacts monthly energy cost), jet configuration, warranty and local service, and longevity. Customers who understand why your mid-range brand at $10,000 is a better 10-year investment than a $5,000 online brand are less likely to walk away on price alone.</p>
+    </div>
+    <div class="card">
+      <h3>Cover, chemical, and service plan upsells</h3>
+      <p>A hot tub sale without a cover is incomplete — configure ChatFlow to mention the insulated cover as a standard purchase item. Add a cover lifter for convenience, a chemical starter kit, and an annual service plan. These add-ons are easily worth $500–1,200 on an average purchase and customers who hear about them during the research conversation are far more likely to say yes at the showroom than customers who encounter them as line items during the close.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does a hot tub cost installed?</p>
+      <p class="faq-a">Entry-level portable hot tubs run $4,000–8,000. Mid-range runs $8,000–14,000. Premium brands run $14,000–25,000+. Delivery and electrical hookup add $500–1,500. An in-ground spa runs $15,000–35,000+. The chatbot qualifies budget tier and use case (family size, jets priority, therapy vs entertaining) before routing to the right product category.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle electrical requirement questions?</p>
+      <p class="faq-a">Configure the chatbot to explain upfront: portable hot tubs require a dedicated 240V/50A circuit. If the customer doesn't have outdoor electrical, an electrician runs a line from the panel ($400–700 typically). Customers who learn about this upfront budget for it as part of the project — rather than discovering it after the sale and feeling surprised or deceived.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What add-ons should the chatbot mention?</p>
+      <p class="faq-a">Configure the chatbot to mention insulated cover ($300–600, essential), cover lifter ($150–350), steps and handrail ($150–300), chemical starter kit, annual service plan, and outdoor lighting or privacy screen integration. These add-ons are mentioned during the research conversation — not as pressure, but as part of the full picture — priming customers to approve them at the showroom.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book hot tub showroom appointments before customers buy online</h2>
+    <p>ChatFlow qualifies hot tub leads and books showroom visits 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/pool-builder-chatbot.html">Pool Builder</a> · <a href="/sauna-installation-chatbot.html">Sauna Installation</a> · <a href="/outdoor-kitchen-chatbot.html">Outdoor Kitchen</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
