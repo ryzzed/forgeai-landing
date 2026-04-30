@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Pergola and Patio Cover Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your pergola installation website. Quote wood, aluminum, and vinyl pergolas by size, explain attached vs freestanding options, and book free design consultations 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Pergola Installation — Quote and Book Consultations 24/7"/>
+  <meta property="og:description" content="ChatFlow helps pergola and patio cover companies capture leads around the clock — quoting wood, aluminum, and vinyl pergolas by size, explaining louvered vs open options, and booking free design consultations."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/pergola-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote pergola installation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by material and size in the system prompt. Wood pergola (cedar or pine, 12x16): $3,500–6,500 installed. Aluminum pergola (powder-coated, low maintenance, 12x16): $4,500–9,000 installed. Vinyl pergola (12x16): $4,000–7,500 installed. Louvered aluminum pergola (adjustable roof slats, motorized): $8,000–20,000 depending on size. Attached pergola adds complexity vs freestanding: +$300–800. The chatbot asks about desired size, material preference, whether it will be attached to the house or freestanding, and whether shade coverage or open lattice is preferred, then gives a range and books the free design consultation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot explain the difference between pergolas and patio covers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional pergola (open lattice): partial shade, architectural interest, plants can grow up the structure, open to rain — most economical option. Solid patio cover (aluminum pan or corrugated): full rain protection, more utilitarian look, lower maintenance. Louvered pergola (adjustable aluminum slats): best of both worlds — open for sun, closed for rain and full shade, premium price but maximum functionality. The chatbot asks about the customer's primary goal — aesthetic appeal, rain protection, or sun shade — to identify which type fits and book the design consultation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle attached pergola and permit questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pergolas attached to the house typically require a building permit in most jurisdictions — configure the chatbot to mention this upfront. Permit costs typically $200–600 depending on the municipality. Attached structures also require proper ledger attachment to the house framing and may affect the roofline flashing. Freestanding pergolas often don't require permits if under a certain square footage (varies by jurisdiction). The chatbot asks whether the customer wants the pergola attached to the house and mentions the permit consideration so there are no surprises, then routes for the design consultation to confirm local requirements."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Pergola Installation</div>
+  <h1>Quote wood, aluminum, and louvered pergolas before customers settle for a big-box kit they'll regret</h1>
+  <p class="hero-sub">Pergola customers are researching materials, shade options, and permit requirements — but they won't call until they have a rough price. ChatFlow gives them an installed range by size and material, answers the louvered vs open question, and books the free design consultation before they buy a flat-pack kit that collapses in three years.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Material comparison, louvered vs open guidance, and attached vs freestanding scoping</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking to add a pergola or patio cover? What's the goal — shade, rain protection, or both — and are you thinking attached to the house or freestanding in the yard?</div>
+      <div class="bubble user-b">We want it attached to the back of the house, covering our concrete patio. About 14x20. We want actual shade and ideally some rain protection — we're in Houston so summer afternoons are brutal. We've been looking at the louvered ones.</div>
+      <div class="bubble bot">Houston summer afternoons are no joke — and a louvered pergola is exactly the right solution for what you're describing. Here's how it works:
+        <br><br><strong>Louvered aluminum pergola</strong> (adjustable motorized roof slats): open the louvers for sun, close them for full shade or rain protection. Remote control or smart phone app. You can use the patio year-round in Houston — open in the winter for sun, closed in the summer during afternoon storms.
+        <br><br>For a 14x20 (280 sq ft) attached louvered pergola:
+        <br>• <strong>Installed: $10,000–17,000</strong>
+        <br>• Includes posts, ledger attachment to the house, motorized louver system, gutters to manage rain runoff
+        <br>• LED lighting and integrated fans are popular additions: +$600–1,500
+        <br><br>A standard fixed-wood pergola in the same size runs $4,500–7,000 but won't give you rain protection.
+        <br><br>Attached structures in Houston typically need a permit — we handle that process. Want to schedule a free design consultation?</div>
+      <div class="bubble user-b">Yes — that's exactly what we want. The louvered version.</div>
+      <div class="bubble bot">What's your name and best contact?</div>
+      <div class="bubble user-b">Kevin Landry, 832-555-0174</div>
+      <div class="bubble bot">Got it, Kevin! Free pergola design consultation in Houston — 14x20 louvered aluminum attached to house, patio cover. I'll pass your info along and we'll reach out within one business day to schedule. This will completely change your backyard usability!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why pergola companies use ChatFlow</h2>
+  <p class="section-sub">Convert backyard outdoor living customers into booked consultations with material and function guidance</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Louvered vs open pergola education</h3>
+      <p>The louvered pergola vs traditional open pergola question is the primary decision bottleneck for high-intent customers — configure ChatFlow to identify the customer's primary goal (aesthetics vs rain protection vs adjustable shade) and recommend accordingly. Customers who understand that a louvered system gives them year-round outdoor living often upgrade from an open pergola they were considering, increasing average ticket by $4,000–8,000. The function explanation does the upgrade work better than a price conversation alone.</p>
+    </div>
+    <div class="card">
+      <h3>Permit and attachment education</h3>
+      <p>Attached pergolas almost always require permits — configure ChatFlow to mention this proactively when customers specify an attached structure. Customers who know about the permit requirement upfront don't feel ambushed when it appears in the contract. Stating that your company handles the permit process is a differentiation point — many DIY customers and less-established contractors try to skip permits, and homeowners who understand the liability of unpermitted structures choose the legitimate contractor. Permit transparency builds trust.</p>
+    </div>
+    <div class="card">
+      <h3>Lighting, fan, and outdoor kitchen bundling</h3>
+      <p>Pergola customers are creating outdoor living spaces — configure ChatFlow to ask about integrated LED lighting, ceiling fans (essential in warm climates), outdoor speakers, and whether an outdoor kitchen is part of the vision. LED lighting and fans add $600–1,500 and are extremely high close-rate additions to any pergola project. Outdoor kitchen bundling ($8,000–35,000) is a natural companion for customers designing a full outdoor entertainment area — capturing this interest during the chat creates a significantly larger project scope.</p>
+    </div>
+    <div class="card">
+      <h3>Material durability and maintenance education</h3>
+      <p>Wood, aluminum, and vinyl pergolas have very different maintenance profiles — configure ChatFlow to explain this based on the customer's climate. Wood (cedar or pine): natural look, requires staining or sealing every 2–3 years, susceptible to moisture and insects in humid climates. Aluminum: powder-coated, zero maintenance, lasts 30+ years, won't rot, warp, or require painting. Vinyl: low maintenance, won't rot or insects, limited color options. In humid Southern climates, aluminum's maintenance-free durability is often worth the price premium — the chatbot makes this case before the customer defaults to wood on price alone.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote pergola installation?</p>
+      <p class="faq-a">You configure price ranges by material and size. Wood pergola (cedar, 12x16): $3,500–6,500. Aluminum (12x16): $4,500–9,000. Vinyl (12x16): $4,000–7,500. Louvered aluminum (motorized, 12x16): $8,000–20,000. Attached adds $300–800 vs freestanding. The chatbot asks about size, material, shade vs rain protection goal, and attached vs freestanding, gives a range, and books the free design consultation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot explain the difference between pergolas and patio covers?</p>
+      <p class="faq-a">Traditional open pergola: partial shade, architectural interest, no rain protection. Solid patio cover: full rain protection, utilitarian look. Louvered pergola: adjustable slats — open for sun, closed for rain and full shade. The chatbot identifies the customer's primary goal and recommends the right type before booking the consultation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle permit and attachment questions?</p>
+      <p class="faq-a">The chatbot mentions permits proactively for attached structures ($200–600, handled by your company) so customers aren't surprised. It asks whether the structure is attached to the house or freestanding — freestanding often doesn't require a permit under a certain size. Permit transparency builds trust and differentiates from contractors who skip the process.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Quote pergola and patio cover installations and book design consultations 24/7</h2>
+    <p>ChatFlow educates customers on louvered vs open options and books consultations. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/deck-builder-chatbot.html">Deck Builder</a> · <a href="/outdoor-kitchen-chatbot.html">Outdoor Kitchen</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
