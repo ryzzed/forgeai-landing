@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Carpet Cleaning Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your carpet cleaning website. Quote by room count or square footage, upsell protection treatments, and book jobs 24/7 without phone calls."/>
+  <meta property="og:title" content="AI Chatbot for Carpet Cleaning Companies — Book More Jobs"/>
+  <meta property="og:description" content="ChatFlow helps carpet cleaning companies capture and book more jobs around the clock — instant quotes by room count, pet stain upsells, and upholstery add-ons."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/carpet-cleaning-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote carpet cleaning by room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure your room-based pricing in the system prompt. A typical structure: first room $75–95, each additional room $35–55, stairs $3–5 per step. Or flat per-room rate: living room $65–85, bedroom $45–65, hallway $25–35. The chatbot asks how many rooms and any special considerations (heavily soiled, pets), gives a range, and captures the booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot upsell Scotchgard and pet treatment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After quoting the cleaning, ChatFlow can mention stain protection (Scotchgard or equivalent, $20–30 per room), pet urine treatment ($40–70 per affected area), deodorizer ($15–25 per room), and upholstery cleaning (sofa $80–150, loveseat $60–100). The chatbot mentions these naturally as part of the booking conversation — not a hard sell — which increases average job value without feeling pushy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle same-day and next-day booking requests?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure availability guidance in the system prompt — for example, 'we typically have 1–2 day availability' or 'same-day service available when requested by 10am.' The chatbot sets accurate expectations for turnaround and captures the booking with the customer's preferred timing. Urgent requests can be flagged for priority follow-up in your dashboard."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Carpet Cleaning</div>
+  <h1>Book carpet cleaning jobs without your phone ringing all morning</h1>
+  <p class="hero-sub">Customers want a price and a booking in under 2 minutes. ChatFlow quotes by room count, adds pet treatment and protection upsells naturally, and captures the job — so you show up with a full schedule.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Instant room-count quote, add-on upsells, and booking capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to Fresh Start Carpet Cleaning. How many rooms are you looking to have cleaned, and do you have any pets or specific stain issues?</div>
+      <div class="bubble user-b">3 bedrooms, living room, and a hallway. We have two dogs so there are definitely some stained areas.</div>
+      <div class="bubble bot">Got it — 3 bedrooms, living room, and hallway with dog staining. That's a full house cleaning with pet treatment.
+        <br><br>Estimate:
+        <br>• Carpet cleaning (5 areas): <strong>$185–225</strong>
+        <br>• Pet urine treatment for affected areas: <strong>+$60–100</strong>
+        <br>• <strong>Total: $245–325</strong>
+        <br><br>If you'd like to add Scotchgard protection after cleaning ($20–25/room), that's popular with pet owners — it makes future accidents much easier to blot up before they set.
+        <br><br>Want to add protection, or just the cleaning + pet treatment?</div>
+      <div class="bubble user-b">Add the Scotchgard for the high-traffic rooms — living room and hallway.</div>
+      <div class="bubble bot">Perfect. Updated total: <strong>$285–380</strong> for cleaning + pet treatment + Scotchgard on living room and hallway.
+        <br><br>We typically have availability within 1–3 days. What's your preferred day and time range — mornings or afternoons?</div>
+      <div class="bubble user-b">Saturday morning would be ideal.</div>
+      <div class="bubble bot">Saturday morning works. What's your name, address, and best contact number to confirm the appointment?</div>
+      <div class="bubble user-b">Amy Chen, 4420 Birchwood Ct, Roswell GA. 678-555-0192.</div>
+      <div class="bubble bot">Booked, Amy! Carpet cleaning + pet treatment + Scotchgard at 4420 Birchwood Ct, Roswell — Saturday morning. You'll get a confirmation text with the exact arrival window. We'll see you then!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why carpet cleaning companies use ChatFlow</h2>
+  <p class="section-sub">Quote, upsell, and book — without picking up the phone</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Room-count quotes in 30 seconds</h3>
+      <p>Carpet cleaning is one of the easiest services to quote instantly — and customers expect it. ChatFlow gives a price range the moment they describe their rooms, which is often the difference between booking and moving on to the next search result. The company that answers price questions first usually gets the job.</p>
+    </div>
+    <div class="card">
+      <h3>Pet treatment and protection upsells</h3>
+      <p>Pet owners are your highest-value customers — and the most likely to add pet urine treatment, deodorizer, and Scotchgard. ChatFlow introduces these upsells naturally as part of the booking conversation, not as a separate sales pitch. Average job value increases of 25–40% are common when add-ons are mentioned at the right moment.</p>
+    </div>
+    <div class="card">
+      <h3>Move-out cleaning surge capture</h3>
+      <p>Move-out carpet cleaning is time-sensitive and high-volume — renters and sellers need it done by a specific date. ChatFlow captures those urgent bookings with all the context: address, room count, deadline date, and contact info. Move-out customers are excellent for repeat business when they move into their new home.</p>
+    </div>
+    <div class="card">
+      <h3>Upholstery cleaning cross-sell</h3>
+      <p>Customers booking carpet cleaning are often open to having their sofa and loveseat cleaned in the same visit. ChatFlow asks about upholstery naturally as part of the booking flow — "anything else you'd like us to look at while we're there?" — and captures the additional scope that increases your revenue per stop.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote carpet cleaning by room?</p>
+      <p class="faq-a">You configure your room-based pricing in the system prompt. A typical structure: first room $75–95, each additional room $35–55, stairs $3–5 per step. Or a flat per-room rate by room type. The chatbot asks how many rooms and any special considerations (heavily soiled, pets), gives a range, and captures the booking with preferred timing.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot upsell Scotchgard and pet treatment?</p>
+      <p class="faq-a">Yes. After quoting the cleaning, ChatFlow can mention stain protection (Scotchgard or equivalent, $20–30 per room), pet urine treatment ($40–70 per affected area), deodorizer ($15–25 per room), and upholstery cleaning (sofa $80–150, loveseat $60–100). The chatbot mentions these naturally as part of the booking conversation, which increases average job value without feeling pushy.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I handle same-day and next-day booking requests?</p>
+      <p class="faq-a">You configure availability guidance in the system prompt — for example, "we typically have 1–2 day availability" or "same-day service available when requested by 10am." The chatbot sets accurate expectations for turnaround and captures the booking with the customer's preferred timing. Urgent requests can be flagged for priority follow-up in your dashboard.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Fill your schedule with booked jobs — no phone calls required</h2>
+    <p>ChatFlow quotes, upsells, and books carpet cleaning jobs 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/cleaning-chatbot.html">House Cleaning</a> · <a href="/pressure-washing-chatbot.html">Pressure Washing</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
