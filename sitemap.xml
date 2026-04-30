@@ -961,4 +961,7 @@
   <url><loc>https://myflow.chat/shed-installation-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myflow.chat/carpet-installation-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myflow.chat/stucco-repair-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/awning-installation-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/soft-wash-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/water-softener-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
