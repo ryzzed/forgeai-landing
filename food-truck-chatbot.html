@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Truck Chatbot — Answer Location Questions and Take Pre-Orders 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for food trucks. Answer questions about your schedule, location, menu, and dietary options — and capture catering and private event inquiries automatically. $39/month."/>
+  <meta property="og:title" content="Food Truck Chatbot — Let Customers Find You and Book Events While You're Cooking"/>
+  <meta property="og:description" content="ChatFlow AI answers questions about your food truck schedule, menu, dietary options, and catering — turning website visitors into loyal regulars and event bookings."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/food-truck-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a food truck?","acceptedAnswer":{"@type":"Answer","text":"A food truck chatbot can answer questions about your weekly schedule and locations, menu items and pricing, dietary options (vegan, gluten-free, halal, etc.), catering availability, private event bookings, and how to follow you on social media. It captures catering inquiries and event requests when you're busy serving — so you never miss a high-value lead while you're in the middle of a lunch rush."}},{"@type":"Question","name":"How do I handle location questions in a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Update your system prompt weekly with your confirmed schedule — 'We're at the Downtown Farmer's Market every Saturday 8am-2pm, and at the Westside Food Park Tuesday through Thursday 11am-3pm.' For dynamic last-minute locations, direct customers to your Instagram or a link to your real-time location tracker. The chatbot handles the FAQ load so you can focus on the location updates that matter."}},{"@type":"Question","name":"How much does a food truck chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For most food trucks, even the free plan (1,000 conversations/month) may handle your website traffic. One catering booking from a chatbot-captured lead — even a small office lunch at $500-1,000 — pays for months of the subscription."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Food Truck Chatbot</div>
+  <h1>Answer location and menu questions<br/><span>and capture catering leads automatically.</span></h1>
+  <p class="hero-sub">Customers want to know where you'll be, what's on the menu, and whether you cater events — and they ask while you're in the middle of a lunch rush. ChatFlow AI answers them instantly and captures catering inquiries, so you wake up to new opportunities instead of missed messages.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A catering inquiry captured — while you're serving the lunch crowd</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hey! Welcome to [Truck Name]. Looking for our schedule, menu info, or interested in booking us for an event?</div></div>
+    <div class="msg user"><div class="bubble">Do you do corporate catering? We have about 80 people for a company lunch.</div></div>
+    <div class="msg bot"><div class="bubble">Absolutely — corporate lunches are one of our favorite gigs! For 80 people we can do a full service setup with two or three menu options, typically a 2-hour window. We serve tacos, bowls, and burritos — everything made to order. Do you have a date in mind, and is this on-site at your office?</div></div>
+    <div class="msg user"><div class="bubble">Yeah, our parking lot. Looking at sometime in June. What does it cost?</div></div>
+    <div class="msg bot"><div class="bubble">For 80 guests, catering packages typically run $18-25 per person depending on menu selections, plus a travel fee depending on your location. That's roughly $1,440-2,000 total for your group. We'd love to put together a custom quote — can I get your name, email, and the company name so our catering coordinator can follow up?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your truck</h2>
+  <p class="section-sub" style="text-align:center">Stay focused on the food — let the bot handle the questions</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Schedule and location FAQ</h3>
+      <p>Set your weekly spots in the system prompt — farmer's markets, food parks, office parks, regular stops. The bot tells customers exactly where to find you and when, and points them to your Instagram for real-time updates.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Menu and dietary questions</h3>
+      <p>What's vegan? What's gluten-free? Is anything halal or kosher? How spicy is the habanero salsa? Let the bot handle the dietary deep-dives so your crew can focus on service — not answering the same questions 40 times a day.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+      <h3>Catering and private events</h3>
+      <p>Corporate lunches, weddings, birthday parties, office happy hours — capture event details (date, guest count, location, budget) and route them to you as a complete inquiry. Never miss a $1,500 catering gig while you're cooking.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
+      <h3>Loyalty and social following</h3>
+      <p>Remind customers to follow you on Instagram or TikTok for daily location updates, share your loyalty punch card program, or promote your email list. Every website visitor is an opportunity to build your regular customer base.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">My location changes daily — how do I keep the chatbot accurate?</p>
+      <p class="faq-a">Update your system prompt weekly with confirmed recurring stops, and configure the bot to direct customers to your Instagram or a Google Maps link for same-day location details. For trucks with predictable weekly schedules, the system prompt handles 80% of location questions. For highly variable schedules, the bot becomes a routing tool: "Check our Instagram story for today's spot — we post our location by 9am every morning."</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle pre-orders or just inquiries?</p>
+      <p class="faq-a">ChatFlow captures lead information and inquiries — it doesn't connect to a POS or ordering system. For catering pre-orders, it collects the event details and passes them to you. For walk-up pre-orders, you'd still need a dedicated ordering platform (Square, Toast, etc.). Where ChatFlow excels is catering lead capture: collecting date, size, location, and contact info from prospects who would otherwise just leave your website.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">We operate multiple trucks — can one chatbot handle all of them?</p>
+      <p class="faq-a">Yes — configure each truck's schedule and service area in the system prompt, or create separate chatbots for each truck (each ChatFlow account supports multiple bots). If trucks cover different neighborhoods or days, clearly labeling each in the system prompt lets the bot route customers to the right truck. Multi-truck operators often find a single bot with "Truck 1 covers the downtown area Tuesday-Thursday, Truck 2 covers the university district Monday-Friday" is sufficient.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Stop missing catering leads while you're on the line</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your food truck website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/restaurant-chatbot.html">Restaurant chatbot</a> · <a href="/catering-chatbot.html">Catering chatbot</a> · <a href="/event-planner-chatbot.html">Event planner chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
