@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Home Addition Contractors | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your home addition website. Answer bump-out vs full addition questions, scope master suite and room additions, and book design consultations automatically."/>
+  <meta property="og:title" content="AI Chatbot for Home Addition Contractors — Book More Consultations"/>
+  <meta property="og:description" content="ChatFlow helps home addition contractors capture high-value leads 24/7 — scoping room additions and master suites, explaining costs, and booking design consultations automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/home-addition-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a home addition cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Home addition cost varies significantly by scope. A bump-out addition (extending an existing room 2–6 feet) runs $15,000–45,000 depending on size and whether a bathroom is involved. A full room addition (new bedroom or living space) typically runs $80,000–150,000 fully finished and permitted. A master suite addition (bedroom + bathroom + walk-in closet) runs $120,000–220,000. A two-story addition is priced per square foot at $250–400/sq ft fully finished. The chatbot collects what type of space they want and why, then gives a meaningful range before they ever call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle the 'move vs add on' decision?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many home addition leads start with 'we need more space but don't want to move.' This is a high-conversion mindset. Configure the chatbot to validate this framing — staying in a neighborhood you love while gaining the space you need is a real value proposition. The chatbot asks about what space they're missing (bedroom, office, master suite, family room), whether the project includes plumbing, and what their rough budget expectation is — all before the sales call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes home addition leads different from other remodel leads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Home addition projects are typically $80,000–220,000+ and represent months of planning. These customers are not impulsive — they've been thinking about the project for months before searching. Configure ChatFlow to treat them as sophisticated buyers: explain the design-build process, mention that permits and architectural drawings are part of the scope, and frame the free consultation as a project scoping meeting rather than a sales visit. This positioning attracts serious buyers and filters casual browsers."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Home Addition</div>
+  <h1>Capture high-value addition leads before they decide to move instead</h1>
+  <p class="hero-sub">A family researching home additions is deciding whether to add on or sell. ChatFlow answers their cost questions, validates the "stay and build" decision, and books a design consultation — converting a 6-month consideration into a signed contract.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Addition type scoping, budget framing, and consultation booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to Meridian Home Additions. Are you thinking about adding a bedroom, master suite, family room, or a different type of addition?</div>
+      <div class="bubble user-b">We want to add a master suite — we have a 3-bed 2-bath house and need a real master bedroom with a bigger closet and a nice bathroom. We don't want to move but are wondering if an addition is worth it vs just buying a bigger house.</div>
+      <div class="bubble bot">That's exactly the decision we help people think through — and for a lot of families in established neighborhoods, the addition wins.
+        <br><br>A <strong>master suite addition</strong> — bedroom, walk-in closet, and full bathroom — typically runs <strong>$130,000–200,000</strong> fully permitted and finished. That includes architectural drawings, permits, foundation, framing, plumbing, electrical, HVAC extension, tile, fixtures, and trim.
+        <br><br>Compared to moving: you keep your neighborhood, your kids' schools, your commute, and you add $80,000–120,000 to your home's value in most markets. You're not paying 6% agent fees, closing costs on both ends, or moving costs.
+        <br><br>A few questions to scope it better:
+        <br>• Do you have a first-floor or second-floor addition in mind? (Second-floor master over an existing footprint is common)
+        <br>• Any rough budget range you're working with?</div>
+      <div class="bubble user-b">We were thinking first floor off the back. Budget is somewhere around $150k. We're in Westfield, NJ.</div>
+      <div class="bubble bot">Westfield is a great market for addition ROI — property values support it well.
+        <br><br>A first-floor rear addition is very buildable from most layouts. At $150k your budget is right in the sweet spot for a quality master suite — we'd scope bedroom, walk-in closet, and a full tile bath with double vanity.
+        <br><br>The next step is a free design consultation where we walk the house, look at the rear footprint and foundation type, and sketch what's feasible. Usually takes about an hour.
+        <br><br>Want to book that?</div>
+      <div class="bubble user-b">Yes. Jennifer and Paul Ostrowski, 908-555-0139. Weekends work best.</div>
+      <div class="bubble bot">Booked, Jennifer and Paul! Design consultation in Westfield — weekend appointment. We'll call to confirm within one business day. This is going to be a great project.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why home addition contractors use ChatFlow</h2>
+  <p class="section-sub">Convert move-or-build decisions into scoped consultations</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Capture the move-vs-build decision moment</h3>
+      <p>Home addition leads are at their highest motivation when they're deciding between adding on and moving. Configure ChatFlow to validate the "stay and build" decision — neighborhood continuity, school district, built equity, avoided transaction costs. Customers who feel validated in their choice commit faster and negotiate less. The chatbot positions your company as the advisor who helped them make the right choice, not just another contractor quoting the job.</p>
+    </div>
+    <div class="card">
+      <h3>Scope master suite vs room addition vs bump-out</h3>
+      <p>A master suite addition ($130,000–200,000), a room addition ($80,000–150,000), and a bump-out ($15,000–45,000) are completely different projects. Configure ChatFlow to scope which type the customer actually needs — asking about space needs, budget, and whether plumbing is involved. Arriving at the consultation with a pre-scoped project means estimators spend time designing, not re-qualifying the customer from scratch.</p>
+    </div>
+    <div class="card">
+      <h3>Filter serious buyers from tire kickers</h3>
+      <p>Home additions are $80,000–200,000 decisions. Customers researching at that level aren't casual browsers — they've been thinking about it for months. Configure ChatFlow to treat them as sophisticated buyers: mention permits, architectural drawings, and design-build process. Positioning the consultation as a "project scoping meeting" rather than a "sales call" filters out customers not serious about the investment.</p>
+    </div>
+    <div class="card">
+      <h3>ROI and resale value framing</h3>
+      <p>Home addition customers are acutely aware of cost — and often underestimate resale value impact. Configure ChatFlow to mention that master suite additions typically recoup 50–70% in resale value in strong markets, and that adding square footage to an undersized home often outperforms moving transaction costs (agent fees, closing costs, moving). Customers who see the math are more likely to say yes and less likely to let the project die in committee.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does a home addition cost?</p>
+      <p class="faq-a">A bump-out addition runs $15,000–45,000. A full room addition runs $80,000–150,000 fully finished and permitted. A master suite addition runs $120,000–220,000. Two-story additions run $250–400/sq ft. The chatbot collects what space they want, whether plumbing is involved, and rough budget before the first call — so consultations start at design, not qualification.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle the move-vs-add decision?</p>
+      <p class="faq-a">Configure the chatbot to validate the "stay and build" framing — neighborhood continuity, avoided transaction costs, added home value. It frames the addition as a smart financial decision, not just a convenience. Customers who feel good about their choice move faster and negotiate less than customers left uncertain about whether they're making the right call.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What makes home addition leads worth treating differently?</p>
+      <p class="faq-a">Addition projects are $80,000–220,000 decisions that customers research for months. Configure the chatbot to treat them as sophisticated buyers — mention permits, architectural drawings, and design-build process. Frame the consultation as a project scoping meeting. This positioning attracts serious buyers who are ready to move, and filters browsers who aren't yet committed to the investment.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book master suite and room addition consultations automatically</h2>
+    <p>ChatFlow scopes addition projects and books design consultations 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/bathroom-remodeling-chatbot.html">Bathroom Remodeling</a> · <a href="/kitchen-remodeling-chatbot.html">Kitchen Remodeling</a> · <a href="/garage-conversion-chatbot.html">Garage Conversion</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

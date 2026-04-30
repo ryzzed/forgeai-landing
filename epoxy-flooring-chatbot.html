@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Epoxy Flooring Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your epoxy flooring website. Answer flake vs metallic vs solid color questions, quote garage and commercial floors, and book coating projects automatically."/>
+  <meta property="og:title" content="AI Chatbot for Epoxy Flooring Companies — Book More Floor Coating Jobs"/>
+  <meta property="og:description" content="ChatFlow helps epoxy flooring companies capture leads 24/7 — explaining coating options, quoting by square footage, and booking garage floor and commercial jobs automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/epoxy-flooring-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does epoxy flooring cost per square foot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Epoxy flooring cost varies by coating system and condition. A standard broadcast flake system (the most popular garage floor option) runs $3–5/sq ft installed, so a typical 2-car garage (400–500 sq ft) costs $1,200–2,500. A solid color epoxy runs $2–4/sq ft. Metallic epoxy with swirl or 3D effects runs $5–10/sq ft. Commercial floors (warehouses, showrooms) typically run $2–6/sq ft depending on prep needed and coating system. The chatbot collects space type, square footage, and coating style preference to give a relevant range before they call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle concrete condition questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Concrete condition is the biggest variable in epoxy floor pricing. Configure the chatbot to ask whether the customer has existing cracks, oil stains, or previous coatings — because prep work (grinding, crack repair, degreasing) can add $200–500 to the job. Customers who understand why prep matters accept higher quotes more readily. The chatbot also asks about moisture issues (a wet or damp basement slab needs a moisture-barrier primer) to flag whether a site assessment is needed before quoting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What epoxy flooring add-ons can the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention anti-slip additive (important in garages and commercial kitchens, minimal cost), topcoat upgrade from standard to polyaspartic (UV-stable, faster cure, adds $0.50–1.50/sq ft), base cove installation for seamless wall transition in commercial spaces, and expansion into adjacent utility room or shop floor while the crew is already there. Customers who hear about these options during booking arrive at the job ready to approve them."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Epoxy Flooring</div>
+  <h1>Quote garage and commercial floors instantly — before they get three other bids</h1>
+  <p class="hero-sub">Epoxy floor leads go cold fast. Homeowners comparing "flake vs metallic" at 9pm need an answer now, not a callback tomorrow. ChatFlow explains the options, gives a square footage range, and books the job while the motivation is still hot.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Coating style education, square footage quote, and job booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to SealRight Epoxy Floors. Looking for a garage floor coating, commercial floor, or have a question about our coating systems?</div>
+      <div class="bubble user-b">I want to do my 2-car garage floor. I keep seeing the speckled flake floors and the swirly metallic ones — what's the difference and how much do they cost?</div>
+      <div class="bubble bot">Great question — those are the two most popular systems and they look totally different.
+        <br><br><strong>Broadcast flake</strong> (the speckled look): vinyl flakes broadcast over a base coat, sealed with a clear topcoat. Extremely durable, hides imperfections well, good traction. Most popular for garages. A 2-car garage (typically 400–500 sq ft) runs <strong>$1,400–2,200 installed</strong>.
+        <br><br><strong>Metallic epoxy</strong> (the swirly, 3D look): metallic pigments manipulated during application create unique flowing patterns — no two floors look the same. Higher-end, more of a showroom feel. Same garage runs <strong>$2,000–4,000</strong> depending on design complexity.
+        <br><br>Both come with a polyaspartic topcoat for UV stability (won't yellow) and chemical resistance.
+        <br><br>A quick question: does your current slab have any oil stains, cracks, or a previous coating on it?</div>
+      <div class="bubble user-b">There are some oil spots near where I park. No cracks that I can see. Never been coated before.</div>
+      <div class="bubble bot">Oil spots are totally normal and fully handleable — we degrease and diamond-grind the entire surface before coating, which removes oil contamination and opens the concrete pores for a proper bond. Without that step, epoxy peels in a year; with it, it lasts 10–15 years.
+        <br><br>Your garage sounds like a straightforward job. Want to lock in a date? We can usually schedule within 1–2 weeks and the floor is ready to drive on in 24 hours.</div>
+      <div class="bubble user-b">Yes, let's do it. Flake system. I'm in Aurora, CO.</div>
+      <div class="bubble bot">We serve Aurora — perfect. What's your name and best contact? And do mornings or afternoons work better?</div>
+      <div class="bubble user-b">Dave Kowalczyk, 720-555-0174. Mornings work.</div>
+      <div class="bubble bot">Booked, Dave! Broadcast flake garage floor in Aurora — morning slot. We'll call to confirm the date within one business day. Your garage is going to look like a showroom floor.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why epoxy flooring companies use ChatFlow</h2>
+  <p class="section-sub">Convert floor comparisons into booked jobs before the next competitor responds</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Resolve flake vs metallic vs solid color</h3>
+      <p>Most epoxy leads start with "I've seen different styles but don't know what's what." Configure ChatFlow to explain the three main systems — broadcast flake, metallic, and solid color — with price ranges for each. Customers who understand the options make a decision during the conversation instead of going away to "think about it." A decided customer books a job; an undecided customer gets another three quotes.</p>
+    </div>
+    <div class="card">
+      <h3>Concrete prep education prevents price objections</h3>
+      <p>Grinding, degreasing, and crack repair aren't line items customers expect — until they see the invoice. Configure ChatFlow to explain upfront why surface prep is what makes epoxy last 10–15 years instead of peeling in 12 months. Customers who understand prep value before receiving a quote accept the price instead of comparing it only to the lowest bidder who skips prep entirely.</p>
+    </div>
+    <div class="card">
+      <h3>Commercial floor capture alongside garage work</h3>
+      <p>Epoxy flooring companies that do garages can often serve auto shops, warehouses, commercial kitchens, and showrooms. Configure ChatFlow to recognize commercial inquiries and route them separately — commercial jobs have larger square footage, different coating specs (slip ratings, cove base, resin systems), and typically higher margins. Don't let commercial leads fall through a garage-focused contact form.</p>
+    </div>
+    <div class="card">
+      <h3>Adjacent space upsells during booking</h3>
+      <p>A crew grinding and coating a 2-car garage is already set up to coat the adjacent utility room, workshop, or basement floor while they're there. Configure ChatFlow to ask about adjacent spaces during the booking conversation — adding 150 sq ft to a job that's already mobilized is pure margin. Customers who think of it during booking say yes; customers who realize it after the fact call back for a separate job.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does epoxy flooring cost per square foot?</p>
+      <p class="faq-a">Broadcast flake (most popular) runs $3–5/sq ft installed. A 2-car garage (400–500 sq ft) costs $1,200–2,500. Metallic epoxy runs $5–10/sq ft. Commercial floors run $2–6/sq ft depending on prep and coating system. The chatbot collects space type, square footage, and style preference to give a relevant range before any sales call.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle concrete condition questions?</p>
+      <p class="faq-a">Configure the chatbot to ask about oil stains, cracks, and previous coatings — these affect prep scope and price. It explains why grinding and degreasing are non-negotiable for lasting adhesion, and flags whether a moisture issue (damp slab) requires a barrier primer assessment before quoting. Customers who understand prep value accept quotes instead of shopping for the lowest bid.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What add-ons can the chatbot mention during booking?</p>
+      <p class="faq-a">Configure the chatbot to mention polyaspartic topcoat upgrade (UV-stable, faster cure), anti-slip additive for garages and commercial kitchens, adjacent space expansion (utility room, workshop, basement), and commercial cove base for seamless wall transition. Customers who hear these options during booking arrive at the job ready to approve them rather than learning about them for the first time on-site.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book garage and commercial floor coating jobs 24/7</h2>
+    <p>ChatFlow explains coating options and books jobs automatically. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/garage-floor-epoxy-chatbot.html">Garage Floor Epoxy</a> · <a href="/flooring-contractor-chatbot.html">Flooring Contractor</a> · <a href="/concrete-contractor-chatbot.html">Concrete Contractor</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
