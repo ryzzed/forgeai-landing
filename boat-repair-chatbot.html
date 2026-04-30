@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Boat Repair Shops | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your boat repair website. Triage engine, hull, and electrical issues, give cost estimates, and book haul-out and service appointments automatically."/>
+  <meta property="og:title" content="AI Chatbot for Boat Repair Shops — Book More Service Appointments"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/boat-repair-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does boat repair typically cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boat repair costs vary widely. An outboard engine service (oil, impeller, spark plugs) runs $200-500. A hull crack repair runs $300-1,500 depending on size and gelcoat work. An inboard engine rebuild runs $2,000-8,000. Electrical troubleshooting and rewiring runs $150-600/hour. Bottom paint for a 25-foot boat runs $600-1,200. Full fiberglass osmotic blister repair runs $3,000-8,000. The chatbot collects boat type, engine type, and symptom to give a relevant range."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle winterization and spring commissioning inquiries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Winterization is the highest-volume service period for most marine shops. Configure the chatbot to accept winterization bookings starting in August for fall service — shops that start booking early fill their haul-out calendar before competitors. Spring commissioning inquiries start in February. The chatbot books these appointments months ahead and reminds customers to schedule before slots fill, creating a predictable service calendar instead of a fall scramble."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What boat repair add-ons can the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention bottom paint application while the boat is hauled (incremental cost when out of water), impeller replacement during any engine service (cheap insurance, $50-120), VHF radio upgrade, bilge pump inspection, and annual hull wax or detail while in the yard. Boat owners who hear about preventive maintenance items during the service booking conversation approve them at high rates because the boat is already at the shop."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Boat Repair</div>
+  <h1>Fill your haul-out calendar before winter — book service while boaters are still thinking about it</h1>
+  <p class="hero-sub">Boat owners procrastinate on winterization until October and then cannot get scheduled. ChatFlow books haul-out appointments in August, triages engine and hull symptoms, and captures preventive maintenance — while slots are still available.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Symptom triage, repair estimate, and haul-out booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to Harborside Marine. Looking to schedule winterization, engine service, hull repair, or something else?</div>
+      <div class="bubble user-b">I want to get my boat winterized this fall. Also the outboard has been running a bit rough at higher RPMs. It is a 2018 23-foot center console with a 200hp Yamaha four-stroke.</div>
+      <div class="bubble bot">Good timing to think about this now — our fall haul-out calendar fills by late September and the rough RPM issue is worth diagnosing before you store it.
+        <br><br>Rough running at high RPM on a Yamaha four-stroke is often a fuel delivery issue (clogged VST filter or fuel injectors), a spark plug condition, or an ignition coil starting to fail. We would do a full engine diagnostic as part of the winterization inspection.
+        <br><br>For winterization on your setup: fogging the engine, flushing the cooling system, lower unit fluid change, battery maintenance, and hull inspection. Runs about $350-550 for a 200hp four-stroke including the lower unit service.
+        <br><br>If the rough running points to an injector service or ignition component, we would quote that separately after diagnostics.
+        <br><br>Do you trailer the boat or are you at a marina we can coordinate with?</div>
+      <div class="bubble user-b">I trailer it. I am in Annapolis, MD.</div>
+      <div class="bubble bot">We work with trailers — you bring it in or we can coordinate a pickup if needed. What is your name and best contact? And do you have a preferred date range for fall service?</div>
+      <div class="bubble user-b">Greg Thornton, 410-555-0174. Anytime in October works.</div>
+      <div class="bubble bot">Booked, Greg! Winterization plus engine diagnostic in Annapolis — October slot. We will call to confirm the specific week within one business day. We will get that RPM issue sorted before storage.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why marine repair shops use ChatFlow</h2>
+  <p class="section-sub">Fill haul-out calendars and capture seasonal service revenue</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Book winterization in August and September</h3>
+      <p>The biggest opportunity for marine shops is early winterization booking. Configure ChatFlow to start promoting fall haul-out appointments in August and mention that October slots fill fast. Boat owners who book early get the dates they want; shops that fill their calendar early can plan labor and parts orders. Early booking converts the procrastinating majority into scheduled appointments before the October rush makes scheduling impossible.</p>
+    </div>
+    <div class="card">
+      <h3>Engine symptom triage builds immediate trust</h3>
+      <p>Boat owners with engine problems are worried — an unreliable engine ruins a trip or strands you offshore. Configure ChatFlow to triage symptoms by engine type and symptom pattern: rough idle vs rough at speed, overheating, starting difficulty, smoke. Customers who receive a knowledgeable initial response — even a preliminary explanation of what might be wrong — choose the shop that demonstrated competence over the one that just said "bring it in."</p>
+    </div>
+    <div class="card">
+      <h3>Haul-out upsell maximizes per-boat revenue</h3>
+      <p>A boat already hauled out for winterization is the perfect time for bottom paint, hull blister repair, through-hull inspection, and zinc replacement. Configure ChatFlow to mention these haul-out services during the winterization booking — customers who know to budget for bottom paint arrive expecting the add-on rather than being surprised by it. A $450 winterization with $600 in bottom paint is a $1,050 job with minimal incremental effort.</p>
+    </div>
+    <div class="card">
+      <h3>Spring commissioning pre-booking in winter</h3>
+      <p>Marine shops that book spring commissioning appointments during the winter fill two seasons at once. Configure ChatFlow to offer a winterization-plus-spring-commissioning bundle during fall service booking — customers who book both at once get guaranteed spring availability and shops fill their spring calendar during the slow winter months. This bundling converts one-time seasonal customers into recurring annual service relationships.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does boat repair cost?</p>
+      <p class="faq-a">Outboard engine service runs $200-500. Hull crack repair runs $300-1,500. Inboard engine rebuild runs $2,000-8,000. Electrical work runs $150-600/hour. Bottom paint for a 25-foot boat runs $600-1,200. Winterization for a 200hp outboard runs $350-550. The chatbot collects boat type, engine type, and symptom to give a relevant estimate before the appointment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle winterization booking?</p>
+      <p class="faq-a">Configure the chatbot to start accepting fall haul-out bookings in August — mentioning that October slots fill quickly. Customers book now to get the dates they want. The chatbot also asks about any issues noticed during the season so they can be addressed at winterization rather than discovered in spring.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What add-ons should the chatbot mention for haul-out service?</p>
+      <p class="faq-a">Configure the chatbot to mention bottom paint application (best done while hauled, $600-1,200 for a 25-footer), hull blister inspection, impeller replacement (cheap insurance), zinc replacement, and spring commissioning pre-booking. A winterization job that includes bottom paint and zincs doubles the revenue with minimal incremental effort.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Fill your haul-out calendar before fall — book boat service 24/7</h2>
+    <p>ChatFlow triages marine problems and books service appointments automatically. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/rv-repair-chatbot.html">RV Repair</a> · <a href="/mechanic-chatbot.html">Auto Mechanic</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
