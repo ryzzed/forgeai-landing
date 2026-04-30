@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Exterior Painting Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your exterior painting website. Answer surface prep questions, give square footage estimates, and book painting jobs before the spring season fills up."/>
+  <meta property="og:title" content="AI Chatbot for Exterior Painting Companies — Book More Paint Jobs"/>
+  <meta property="og:description" content="ChatFlow helps exterior painting companies capture and convert leads 24/7 — answering prep questions, estimating by square footage, and booking spring and fall paint jobs automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/exterior-painting-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does exterior painting typically cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exterior painting cost depends primarily on square footage of paintable surface (not just house footprint). A 2,000 sq ft home with 1.5 stories typically runs $3,500–6,500 fully painted. Factors that affect price: number of stories (ladder and staging work), siding type (wood needs more prep than vinyl or fiber cement), paint quality tier (contractor vs premium), and condition (heavy peeling requires power washing, scraping, and priming before topcoat). The chatbot collects house size and siding type to give a meaningful range."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle questions about paint prep and surface condition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Surface prep is where exterior paint jobs succeed or fail. Configure the chatbot to explain that peeling paint requires scraping and priming — skipping prep leads to premature failure. It asks about current paint condition (peeling, chalking, fading) to estimate prep time and flag whether a site visit is needed before quoting. Customers who understand why prep costs money convert better than customers who get sticker shock at the estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What exterior painting upsells can the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention trim and shutters as natural add-ons ($400–800 typically), garage door paint or stain (+$150–300), and deck or fence staining if the crew is already on-site. Front door painting or staining is a high-value, low-cost add-on ($150–250) that most homeowners say yes to when they realize the crew is already there. The chatbot mentions these during the scoping conversation — not as pressure, but as options worth considering while scheduling."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Exterior Painting</div>
+  <h1>Stop losing spring paint jobs to competitors who answer faster</h1>
+  <p class="hero-sub">Homeowners decide on their exterior painter in March and April. ChatFlow answers their square-footage questions, explains why prep work matters, and books an estimate — before they click the next company on Google.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Square footage scoping, surface prep explanation, and estimate booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to ProCoat Exterior Painting. Looking for a quote on your home's exterior, or have a question about our process?</div>
+      <div class="bubble user-b">I want to get the outside of my house painted. It's a 2-story colonial, about 2,400 sq ft living space. The paint is definitely fading and there's some peeling around the windows.</div>
+      <div class="bubble bot">Good info — a 2-story colonial that size has roughly <strong>2,800–3,200 sq ft of paintable surface</strong> (more than living area due to gable ends and overhangs). That puts a full exterior paint job in the <strong>$4,200–7,000 range</strong> depending on paint quality and prep needed.
+        <br><br>The peeling around windows is important — that means we'll need to scrape, prime, and seal those areas before topcoat. Skipping prep is how paint fails in 2–3 years instead of 8–10, so we don't cut corners there.
+        <br><br>A few questions:
+        <br>• What's the siding material? (Wood, vinyl, fiber cement, stucco?)
+        <br>• Any specific areas of concern beyond the windows — soffits, trim, shutters?</div>
+      <div class="bubble user-b">Vinyl siding. The trim and shutters could use work too — they're looking pretty beat.</div>
+      <div class="bubble bot">Vinyl is actually good news — it holds paint well and prep is faster than wood. Trim and shutters painted at the same time typically add <strong>$500–900</strong> depending on how many windows and whether shutters need removal.
+        <br><br>We'd also check for any caulking gaps around windows and penetrations — failing caulk is the #1 cause of water intrusion and we re-seal everything as part of prep.
+        <br><br>Want to schedule a free on-site estimate? We can give you an exact number and walk through color options while we're there.</div>
+      <div class="bubble user-b">Yes. I'm in Naperville, IL.</div>
+      <div class="bubble bot">We serve Naperville — great. What's your name and best contact? And do mornings or afternoons work better for the estimate visit?</div>
+      <div class="bubble user-b">Lisa Hendricks, 630-555-0147. Mornings work best.</div>
+      <div class="bubble bot">Booked, Lisa! Free exterior estimate in Naperville — we'll call to confirm a morning slot within one business day. Looking forward to seeing the house.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why exterior painting companies use ChatFlow</h2>
+  <p class="section-sub">Capture spring bookings before your schedule is locked</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Spring season capture in January and February</h3>
+      <p>The best exterior painting companies are booked solid by mid-April. ChatFlow captures early-season inquiries — the January browser who wants to "get on the schedule" — and books estimate appointments months before the rush hits. A pre-filled spring schedule means you can plan crew size and material orders instead of scrambling.</p>
+    </div>
+    <div class="card">
+      <h3>Square footage education prevents sticker shock</h3>
+      <p>Homeowners consistently underestimate paintable surface area. Configure ChatFlow to explain the difference between living area square footage and paintable exterior surface — then give a range based on their home size and siding type. Educated customers who understand the scope convert from estimates to booked jobs at higher rates than customers who get a "call for a quote" non-answer.</p>
+    </div>
+    <div class="card">
+      <h3>Trim, shutters, and front door upsells</h3>
+      <p>A crew on-site for exterior painting is perfectly positioned to paint trim, shutters, garage doors, and the front door. Configure ChatFlow to mention these during the scoping conversation — not as an upsell push, but as practical options while the crew is already there. Customers who hear this during booking arrive at estimates already thinking about add-on work.</p>
+    </div>
+    <div class="card">
+      <h3>Prep work objection handling</h3>
+      <p>Price shoppers often get quotes from cut-rate painters who skip prep. Configure ChatFlow to explain why prep work — scraping, priming, caulking, power washing — is what separates a 10-year paint job from a 3-year one. Customers who understand the value of prep are less likely to choose the lowest bid and more likely to choose the company that explained the process.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does exterior painting typically cost?</p>
+      <p class="faq-a">Exterior painting cost depends on paintable surface area (larger than living sq ft due to gable ends and overhangs), siding type, paint quality, and condition. A 2,000 sq ft home typically runs $3,500–6,500 fully painted. Peeling or heavily chalked surfaces add prep time and cost. The chatbot collects house size and siding type to give a meaningful ballpark before they even call.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle prep work questions?</p>
+      <p class="faq-a">Surface prep is where paint jobs succeed or fail. Configure the chatbot to explain why scraping, priming, and caulking aren't optional — they're what makes paint last 8–10 years instead of 3. It asks about current paint condition (peeling, chalking, fading) to estimate prep scope and helps customers understand the value before they receive a quote.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What add-ons can the chatbot mention?</p>
+      <p class="faq-a">Configure the chatbot to mention trim and shutters ($400–800), garage door painting ($150–300), front door painting or staining ($150–250), and deck or fence staining if the crew is already on-site. These are mentioned during the scoping conversation as practical options — not as pressure — which primes customers to say yes when the estimator walks the job.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Fill your spring exterior painting schedule now</h2>
+    <p>ChatFlow answers square footage questions and books estimates 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/painting-contractor-chatbot.html">Painting Contractor</a> · <a href="/pressure-washing-chatbot.html">Pressure Washing</a> · <a href="/siding-contractor-chatbot.html">Siding</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
