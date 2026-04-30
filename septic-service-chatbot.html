@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Septic Service Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your septic service website. Answer pumping frequency questions, quote inspections and repairs, and book service calls 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Septic Service Companies — Book More Service Calls"/>
+  <meta property="og:description" content="ChatFlow helps septic service companies capture and book leads 24/7 — answering pumping interval questions, quoting inspections, and routing emergency backups immediately."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/septic-service-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the chatbot explain how often a septic tank needs pumping?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You configure the pumping frequency guidance in the system prompt: most systems need pumping every 3–5 years depending on household size and tank capacity. A 1,000-gallon tank for a 2-person household might go 5–7 years; the same tank for a family of 5 might need pumping every 2–3 years. The chatbot explains the factors and recommends an inspection if the customer doesn't know their last service date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle septic emergency calls like backups or alarm alerts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Septic emergencies — sewage backup in the house, alarm panel going off, strong odors near the drain field — need immediate response. Configure the chatbot to recognize emergency keywords and route those customers to your emergency line phone number immediately, with a note that you offer 24/7 emergency service. Non-emergency questions continue through the normal booking flow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot help with real estate inspection septic questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Septic inspections for home sales are a common and time-sensitive request. Configure the chatbot to recognize real estate language (home sale, contingency, closing, inspection period) and route those leads for priority scheduling — explaining that you provide written reports suitable for lenders and buyers, pump-and-inspect packages, and dye testing. Buyers and sellers often need the inspection completed quickly."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Septic Service</div>
+  <h1>Book septic pumping, inspections, and emergency calls around the clock</h1>
+  <p class="hero-sub">Customers searching "septic tank pumping near me" want to know the cost and book — they don't want to leave a voicemail and wait. ChatFlow answers pumping frequency questions, quotes service calls, and routes emergencies to your phone line immediately.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Emergency routing, pumping cost ranges, and booking capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo — two paths</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Is this a septic emergency (backup, alarm, odors) or are you scheduling routine service like pumping or an inspection?</div>
+      <div class="bubble user-b">Emergency — toilets won't flush and there's a backup in the laundry room.</div>
+      <div class="bubble bot">⚠️ <strong>That's an active backup — please call us now:</strong>
+        <br><br><strong>(555) 892-0400</strong> — we answer 24/7 for emergencies.
+        <br><br>Avoid running water or flushing until a technician has assessed the system. We'll dispatch someone as quickly as possible.</div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);margin:16px 0"></div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Is this a septic emergency (backup, alarm, odors) or are you scheduling routine service like pumping or an inspection?</div>
+      <div class="bubble user-b">Routine — we just moved into the house and have no idea when the tank was last pumped.</div>
+      <div class="bubble bot">That's a smart first step for a new home — you'll want to know where you stand.
+        <br><br>We recommend a <strong>pump-and-inspect</strong> when the service history is unknown. It includes pumping the tank, inspecting the baffles and distribution box, and giving you a written report on the system condition.
+        <br><br>Cost for a standard pump-and-inspect (up to 1,000 gallons): <strong>$350–475</strong>. Larger tanks or difficult access may run a bit higher.
+        <br><br>What's your address and best contact info? I'll get you on the schedule.</div>
+      <div class="bubble user-b">Mike and Carol Denton, 14 Pine Ridge Rd, Woodstock GA. 678-555-0184.</div>
+      <div class="bubble bot">Got it, Mike and Carol! Pump-and-inspect at 14 Pine Ridge Rd, Woodstock — we'll reach out within one business day to confirm the date and time. Welcome to the neighborhood!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why septic service companies use ChatFlow</h2>
+  <p class="section-sub">Capture the routine service bookings — and route the emergencies instantly</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Emergency vs routine split</h3>
+      <p>Septic customers have two very different needs: emergencies that need your phone number right now, and routine service they want to schedule at their convenience. ChatFlow handles both — routing emergencies to your phone immediately while capturing routine bookings through a conversational intake that collects all the information you need.</p>
+    </div>
+    <div class="card">
+      <h3>New homeowner education</h3>
+      <p>New homeowners who just bought a house with a septic system are a high-value audience. They don't know the service history, they want to understand the system, and they're going to need an inspection, pumping, and potentially ongoing maintenance. ChatFlow introduces your services in an educational, non-pushy way that builds the customer relationship from day one.</p>
+    </div>
+    <div class="card">
+      <h3>Real estate inspection priority routing</h3>
+      <p>Home sale contingencies have deadlines. When a customer mentions closing, inspection period, or lender requirements, ChatFlow recognizes the urgency and routes for priority scheduling — explaining that you provide written inspection reports suitable for real estate transactions, pump-and-inspect packages, and dye testing.</p>
+    </div>
+    <div class="card">
+      <h3>Pumping frequency and maintenance education</h3>
+      <p>Most septic problems are caused by homeowners not knowing when to service the system. ChatFlow answers pumping frequency questions — based on tank size and household occupancy — and can mention your maintenance reminder program if you have one. Educated customers maintain their systems, which means fewer emergency calls and more repeat business.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot explain how often a septic tank needs pumping?</p>
+      <p class="faq-a">Yes. You configure pumping frequency guidance in the system prompt: most systems need pumping every 3–5 years depending on household size and tank capacity. A 1,000-gallon tank for a 2-person household might go 5–7 years; the same tank for a family of 5 might need pumping every 2–3 years. The chatbot explains the factors and recommends a pump-and-inspect when the service history is unknown.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle septic emergency calls like backups or alarm alerts?</p>
+      <p class="faq-a">Septic emergencies — sewage backup in the house, alarm panel going off, strong odors near the drain field — need immediate response. Configure the chatbot to recognize emergency keywords and surface your emergency line phone number immediately, with a note that you offer 24/7 emergency service. Non-emergency questions continue through the normal booking flow without interruption.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot help with real estate inspection septic questions?</p>
+      <p class="faq-a">Septic inspections for home sales are a common and time-sensitive request. Configure the chatbot to recognize real estate language (home sale, contingency, closing, inspection period) and route those leads for priority scheduling — explaining that you provide written reports suitable for lenders and buyers, pump-and-inspect packages, and dye testing. Buyers and sellers need the inspection completed quickly, so expedited routing matters.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Route emergencies instantly and book routine service 24/7</h2>
+    <p>ChatFlow handles both paths — emergency phone routing and routine service booking. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/plumber-chatbot.html">Plumber</a> · <a href="/pest-control-chatbot.html">Pest Control</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
