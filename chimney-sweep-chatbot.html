@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Chimney Sweep Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your chimney sweep website. Answer cleaning frequency questions, quote sweep and inspection services, and book fall appointments before your schedule fills up."/>
+  <meta property="og:title" content="AI Chatbot for Chimney Sweep Companies — Book More Appointments"/>
+  <meta property="og:description" content="ChatFlow helps chimney sweep companies capture and book leads 24/7 — answering cleaning frequency questions, quoting sweeps and repairs, and capturing fall season appointments."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/chimney-sweep-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How often does a chimney need to be swept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The NFPA recommends annual inspection for all fireplaces. Cleaning frequency depends on use — wood-burning fireplaces used regularly (2+ cords per season) need annual sweeping; occasional use (under 1 cord) may go 2–3 years between sweeps, but annual inspection is still recommended. Gas fireplaces need annual inspection but less frequent cleaning. The chatbot explains the guidance and books the appointment before the customer decides to wait another year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does chimney sweep pricing typically include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure your service pricing in the system prompt. A standard chimney sweep + Level 1 inspection runs $150–250 for most residential fireplaces. Level 2 inspection (required for home sale or after a fire event) adds $100–200 for camera inspection. Chimney cap installation $200–450. Firebox repointing or crown repair ranges from $300–800 depending on extent. The chatbot gives these ranges and books the appointment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle customers worried about creosote buildup or chimney fires?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creosote and chimney fire concerns are high-urgency. Configure the chatbot to explain that heavy glazed creosote buildup (Stage 3) is a fire hazard requiring professional removal, and that any chimney fire — even a small 'chimney fire' incident — requires a Level 2 inspection before use. The chatbot validates the concern, explains the risk clearly, and books a priority inspection appointment."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Chimney Sweep</div>
+  <h1>Fill your fall schedule before it fills itself with voicemails</h1>
+  <p class="hero-sub">Every October, every chimney sweep in your market gets slammed with the same calls: "How much to clean my chimney?" ChatFlow answers that question instantly, explains why annual service matters, and books the appointment — even at 11pm when people finally remember to call.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Service explanation, price range, and appointment booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to CleanSweep Chimney. Looking to schedule a chimney sweep, inspection, or repair?</div>
+      <div class="bubble user-b">How much does it cost to get my chimney cleaned? Haven't had it done in a few years — we use it a couple times a month in winter.</div>
+      <div class="bubble bot">For a standard wood-burning fireplace, a chimney sweep + Level 1 inspection runs <strong>$175–225</strong>. That covers a full clean of the firebox and flue, inspection for obstructions, creosote buildup, and structural issues, plus a written report.
+        <br><br>With a few years between cleanings and regular use, there'll likely be creosote to remove — which is exactly what you want to clear before cold weather hits.
+        <br><br>A couple of quick questions:
+        <br>• Is this a wood-burning fireplace, gas, or wood stove/insert?
+        <br>• Do you have a chimney cap? (If not, critters and rain can enter — worth adding if missing)</div>
+      <div class="bubble user-b">Wood burning, standard masonry. Not sure about the cap — would have to look.</div>
+      <div class="bubble bot">We check for a cap as part of the inspection — no need to look beforehand. If it's missing or damaged, we can install one same day ($195–295 installed) since we'll already have the equipment up there.
+        <br><br>We're booking fall appointments now — typically 1–3 weeks out. Want to lock in a slot before the schedule fills up?</div>
+      <div class="bubble user-b">Yes, let's do it. I'm in Herndon, VA.</div>
+      <div class="bubble bot">We serve Herndon — great. What's your name and best number or email? And any day/time preferences?</div>
+      <div class="bubble user-b">Tom Reardon, 703-555-0192. Weekends or late afternoon.</div>
+      <div class="bubble bot">Booked, Tom! Chimney sweep + inspection in Herndon — weekend or late afternoon. I'll send this over and you'll get a confirmation with the specific date within one business day. Stay warm!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why chimney sweep companies use ChatFlow</h2>
+  <p class="section-sub">Capture fall season bookings before your schedule closes</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Fill the fall schedule in summer</h3>
+      <p>Smart chimney sweep companies start booking fall appointments in late summer. ChatFlow captures those early inquiries when families are thinking ahead — before the fall rush when you're turning people away. A pre-filled schedule means fewer emergency call-ins and more efficient routing.</p>
+    </div>
+    <div class="card">
+      <h3>Chimney cap and repair upsells</h3>
+      <p>A technician on the roof for a sweep is perfectly positioned to install a chimney cap, repoint cracked mortar, or repair a damaged crown. Configure ChatFlow to mention the cap inspection and common repair items as part of the booking conversation — customers who know you'll check these items are more prepared to say yes when your tech makes the recommendation on-site.</p>
+    </div>
+    <div class="card">
+      <h3>Post-chimney-fire inspection routing</h3>
+      <p>A chimney fire — even a small one — requires a Level 2 camera inspection before the fireplace can be safely used again. Configure ChatFlow to recognize chimney fire language (heard a roaring sound, saw smoke inside, smell unusual burning) and route those customers for priority Level 2 inspection scheduling with clear urgency.</p>
+    </div>
+    <div class="card">
+      <h3>Home sale inspection capture</h3>
+      <p>Home buyers and sellers need Level 2 chimney inspections for real estate transactions. Configure ChatFlow to recognize real estate language and explain your Level 2 service — camera inspection, written report, documentation for buyers and sellers — and route for priority scheduling given closing timelines.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How often does a chimney need to be swept?</p>
+      <p class="faq-a">The NFPA recommends annual inspection for all fireplaces. Cleaning frequency depends on use — wood-burning fireplaces used regularly (2+ cords per season) need annual sweeping; occasional use may go 2–3 years between sweeps, but annual inspection is still recommended. Gas fireplaces need annual inspection but less frequent cleaning. The chatbot explains the guidance and books the appointment before the customer decides to wait another year.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What does chimney sweep pricing typically include?</p>
+      <p class="faq-a">You configure your service pricing in the system prompt. A standard chimney sweep + Level 1 inspection runs $150–250 for most residential fireplaces. Level 2 inspection (required for home sale or after a fire event) adds $100–200 for camera inspection. Chimney cap installation $200–450. Firebox repointing or crown repair $300–800 depending on extent. The chatbot gives these ranges and books the appointment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle customers worried about creosote buildup or chimney fires?</p>
+      <p class="faq-a">Creosote and chimney fire concerns are high-urgency. Configure the chatbot to explain that heavy glazed creosote buildup (Stage 3) is a fire hazard requiring professional removal, and that any chimney fire — even a small incident — requires a Level 2 inspection before the fireplace can be used again. The chatbot validates the concern, explains the risk clearly, and books a priority inspection appointment.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book fall chimney appointments before October phone lines explode</h2>
+    <p>ChatFlow answers pricing questions and books appointments 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hvac-chatbot.html">HVAC</a> · <a href="/pest-control-chatbot.html">Pest Control</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

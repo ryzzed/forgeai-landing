@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Water Damage Restoration Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your water damage restoration website. Route emergencies instantly, explain the restoration process, and capture insurance claim leads 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Water Damage Restoration — Capture Emergency Leads"/>
+  <meta property="og:description" content="ChatFlow helps water damage restoration companies capture high-urgency leads 24/7 — routing active emergencies to your phone immediately and booking non-urgent assessments around the clock."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/water-damage-restoration-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle active water emergencies vs non-urgent assessments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The chatbot opens with a triage question: is this an active emergency (water currently flowing, pipe burst, flooding in progress) or an assessment of existing damage? Active emergencies immediately surface your 24/7 emergency line phone number with instructions to stop the water source if possible. Non-urgent assessments (finding old water staining, post-flood assessment days later) go through a booking flow that captures damage description, affected areas, and insurance information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot help customers understand the water damage restoration process?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You configure the restoration process in your system prompt: emergency mitigation (extract water, prevent spread), moisture mapping and monitoring (industrial dehumidifiers and air movers, typically 3–5 days of drying), damage assessment and documentation, then reconstruction (drywall, flooring, painting). Most homeowners don't know the process takes days to weeks — explaining it upfront reduces surprise and positions you as the expert before the assessment call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle insurance claim questions for water damage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Water damage from sudden events (burst pipe, appliance failure, storm) is typically covered by homeowners insurance. Configure the chatbot to explain that you work directly with insurance companies — providing documentation, scope reports, and adjuster coordination — and that many customers pay only their deductible. Capturing whether the customer has filed a claim or needs guidance on the claim process helps your team arrive prepared."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Water Damage Restoration</div>
+  <h1>Route emergencies to your phone — capture everything else automatically</h1>
+  <p class="hero-sub">Water damage calls come in at 3am after a pipe bursts, on a Sunday when a dishwasher floods the kitchen. ChatFlow routes active emergencies to your 24/7 line immediately and captures every non-urgent assessment booking around the clock.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Emergency triage, process explanation, and insurance intake</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo — two paths</div>
+    <div class="chat">
+      <div class="bubble bot">Hi — is this an active emergency (water currently flowing or flooding in progress) or assessment of existing water damage?</div>
+      <div class="bubble user-b">ACTIVE — pipe under the kitchen sink just burst, water everywhere</div>
+      <div class="bubble bot">🚨 <strong>Call us immediately: (555) 920-0400 — we answer 24/7.</strong>
+        <br><br>While you wait:
+        <br>• Shut off the water main or the valve under the sink if accessible
+        <br>• Move valuables and electronics out of the affected area
+        <br>• Do NOT use electrical appliances in standing water
+        <br><br>We dispatch within the hour for active emergencies. Call now.</div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);margin:16px 0"></div>
+    <div class="chat">
+      <div class="bubble bot">Hi — is this an active emergency or assessment of existing water damage?</div>
+      <div class="bubble user-b">Assessment — our washing machine overflowed yesterday. The floor is wet and we're worried about the subfloor under the vinyl.</div>
+      <div class="bubble bot">Good that you caught it quickly — the first 24–48 hours matter a lot for preventing mold growth.
+        <br><br>A few questions to understand the scope:
+        <br>• Roughly how large is the affected area? (Room size or sq ft estimate)
+        <br>• Is this on a slab foundation or is there a subfloor/crawlspace underneath?
+        <br>• Have you filed a homeowners insurance claim yet, or are you assessing before calling?</div>
+      <div class="bubble user-b">Maybe 10x12 foot area, it's a slab. We haven't called insurance yet, wasn't sure if it was worth it.</div>
+      <div class="bubble bot">At a 10x12 affected area with potential subfloor moisture penetrating vinyl, it's very likely worth filing — appliance overflow is a covered sudden event on most homeowners policies.
+        <br><br>What we'd do: moisture mapping to confirm where the water traveled, industrial drying equipment (dehumidifiers + air movers) for 3–5 days, then assess whether flooring needs replacement.
+        <br><br>We work directly with insurance adjusters and handle the documentation. Most customers pay only their deductible.
+        <br><br>Can I get your name, address, and phone to schedule an assessment — ideally today or tomorrow?</div>
+      <div class="bubble user-b">Renee Holloway, 5512 Oakdale Dr, Smyrna GA. 470-555-0193.</div>
+      <div class="bubble bot">Got it, Renee! Assessment at 5512 Oakdale Dr, Smyrna — I'll flag for same-day or next-morning scheduling. Someone will call within the hour. Hang tight!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why water damage restoration companies use ChatFlow</h2>
+  <p class="section-sub">Never miss an emergency call — and capture every assessment lead automatically</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Emergency triage that sends to your phone</h3>
+      <p>Active water emergencies need a phone call, not a chat. ChatFlow identifies emergency signals (pipe burst, active flooding, ceiling collapse) and immediately surfaces your 24/7 emergency number with stop-the-water instructions. Non-emergency situations go through the conversational booking flow.</p>
+    </div>
+    <div class="card">
+      <h3>Insurance claim guidance that converts</h3>
+      <p>Many customers don't know their damage is covered or don't know how to file. ChatFlow explains that sudden water events are typically covered and that you handle adjuster coordination and documentation. Customers who understand they might only owe their deductible convert to booked assessments at much higher rates.</p>
+    </div>
+    <div class="card">
+      <h3>Drying process education</h3>
+      <p>The restoration timeline — emergency mitigation, 3–5 days of drying, reconstruction — is unfamiliar territory for most homeowners. ChatFlow explains each phase so customers don't expect a one-day fix. Educated customers cooperate better with the process, rate your service higher, and are less likely to get frustrated at the timeline.</p>
+    </div>
+    <div class="card">
+      <h3>Appliance failure and slow leak leads</h3>
+      <p>Beyond burst pipes, water damage comes from dishwashers, refrigerator water lines, slow toilet leaks, and roof infiltration. These are often discovered days or weeks later. ChatFlow captures those non-emergency leads with all the context your estimator needs — source, duration, affected materials, insurance status — before the first visit.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle active water emergencies vs non-urgent assessments?</p>
+      <p class="faq-a">The chatbot opens with a triage question: is this an active emergency or assessment of existing damage? Active emergencies immediately surface your 24/7 emergency line phone number with instructions to stop the water source if possible. Non-urgent assessments go through a booking flow that captures damage description, affected areas, and insurance information — so your team arrives with full context for the assessment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot help customers understand the water damage restoration process?</p>
+      <p class="faq-a">Yes. You configure the restoration process in your system prompt: emergency mitigation (extract water, prevent spread), moisture mapping and monitoring (industrial dehumidifiers and air movers, typically 3–5 days of drying), damage assessment and documentation, then reconstruction. Most homeowners don't know the process takes days to weeks — explaining it upfront reduces surprise and positions you as the expert before the assessment call.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle insurance claim questions for water damage?</p>
+      <p class="faq-a">Water damage from sudden events (burst pipe, appliance failure, storm) is typically covered by homeowners insurance. Configure the chatbot to explain that you work directly with insurance companies — providing documentation, scope reports, and adjuster coordination — and that many customers pay only their deductible. Capturing whether the customer has filed a claim or needs guidance on the process helps your team arrive prepared and positions you as a helpful partner rather than just a vendor.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Route the emergency. Book the assessment. Never miss a water damage lead.</h2>
+    <p>ChatFlow handles both paths — emergency phone routing and booking intake — 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/mold-remediation-chatbot.html">Mold Remediation</a> · <a href="/plumber-chatbot.html">Plumber</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
