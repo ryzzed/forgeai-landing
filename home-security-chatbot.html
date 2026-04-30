@@ -1,179 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Chatbot for Home Security Companies | ChatFlow</title>
-  <meta name="description" content="Add an AI chatbot to your home security website. Answer monitoring plan questions, explain sensor placement, and book security consultations — 24/7 without a sales call."/>
-  <meta property="og:title" content="AI Chatbot for Home Security Companies — Book More Consultations"/>
-  <meta property="og:description" content="ChatFlow helps home security installation companies capture leads 24/7 — explaining monitoring tiers, smart home integration, and booking free security assessments automatically."/>
-  <meta property="og:type" content="website"/>
-  <link rel="canonical" href="https://myflow.chat/home-security-chatbot.html"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does a home security system installation cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Home security installation cost varies by system scope. A basic starter system (panel, 2 door sensors, motion detector, keypad) runs $400–700 installed. A mid-range whole-home system covering all entry points, glass break sensors, and interior motion runs $900–1,800 installed. Full smart home integration with cameras, video doorbell, smart locks, and Z-Wave automation runs $1,800–3,500+. Monitoring plans run $25–55/month depending on features. The chatbot collects home size and priority areas to suggest the right system tier."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the chatbot handle smart home integration questions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Smart home integration is where security companies lose sales to DIY alternatives. Configure the chatbot to explain the difference between professionally monitored systems and DIY platforms (Ring, Nest, SimpliSafe) — especially around central station monitoring, false alarm handling, police dispatch, and cellular backup when WiFi goes down. Customers who understand professional monitoring's advantages convert at much higher rates than those left to compare feature lists on their own."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What security triggers make the chatbot escalate urgency?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Configure high-urgency routing for: recent break-in or attempted break-in in the neighborhood, customer just moved into a new home, recently divorced or living alone for the first time, or business owner asking about commercial security. These situations have immediate motivation and budget. The chatbot validates the concern, explains response time advantages of professionally monitored systems, and books a same-week assessment."
-        }
-      }
-    ]
-  }
-  </script>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
-    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
-    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
-    .logo-text{font-weight:700;font-size:17px}
-    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
-    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
-    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
-    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
-    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
-    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
-    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
-    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
-    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
-    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
-    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
-    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
-    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
-    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
-    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
-    .chat{display:flex;flex-direction:column}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
-    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
-    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
-    .card p{font-size:13px;color:#64748b;line-height:1.6}
-    .faq-list{display:flex;flex-direction:column}
-    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
-    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
-    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
-    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
-    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
-    .cta-banner h2{margin-bottom:12px}
-    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
-    footer a{color:#4b5563;text-decoration:none}
-    footer a:hover{color:#94a3b8}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot for Home Security Installation Services | ChatFlow</title>
+<meta name="description" content="ChatFlow AI chatbot captures home security installation leads 24/7. Qualify home size, camera count, monitoring preference, and entry points — book alarm and camera jobs automatically.">
+<link rel="canonical" href="https://myflow.chat/home-security-chatbot.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a chatbot qualify home security installation leads automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. ChatFlow asks about home size, number of entry points, camera and sensor preferences, and monitoring needs — routing each lead to the right package tier without staff."}},{"@type":"Question","name":"What details does the chatbot collect for a security system quote?","acceptedAnswer":{"@type":"Answer","text":"It captures home square footage, number of doors and windows, indoor vs outdoor camera needs, smart lock interest, and whether 24/7 professional monitoring is desired."}},{"@type":"Question","name":"How do I add ChatFlow to my security installation website?","acceptedAnswer":{"@type":"Answer","text":"Paste one script tag and the widget is live in under five minutes — no developer or coding knowledge required."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e8e8f0;line-height:1.6}
+header{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:60px 20px;text-align:center}
+header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:16px}
+header p{font-size:1.1rem;color:#a0a0b8;max-width:600px;margin:0 auto 32px}
+.cta-btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-block}
+.cta-btn:hover{opacity:.9}
+section{padding:60px 20px;max-width:900px;margin:0 auto}
+h2{font-size:1.7rem;font-weight:700;margin-bottom:20px}
+.demo{background:#111118;border:1px solid #2a2a3e;border-radius:12px;padding:24px;margin:32px 0;max-width:480px}
+.demo h3{font-size:.85rem;color:#667eea;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.bot{background:#1e1e30;border-radius:12px 12px 12px 4px;padding:10px 14px;margin-bottom:10px;font-size:.9rem}
+.user-b{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px 12px 4px 12px;padding:10px 14px;margin-bottom:10px;font-size:.9rem;text-align:right}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:32px}
+.card{background:#111118;border:1px solid #2a2a3e;border-radius:12px;padding:24px}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:8px;color:#667eea}
+.card p{font-size:.88rem;color:#a0a0b8}
+.faq{margin-top:40px}
+.faq details{border:1px solid #2a2a3e;border-radius:8px;padding:16px;margin-bottom:12px}
+.faq summary{font-weight:600;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq p{margin-top:10px;color:#a0a0b8;font-size:.9rem}
+.cta-banner{background:linear-gradient(135deg,#1a1a2e,#16213e);text-align:center;padding:60px 20px;margin-top:40px}
+.cta-banner h2{margin-bottom:16px}
+.cta-banner p{color:#a0a0b8;margin-bottom:28px}
+footer{text-align:center;padding:32px 20px;color:#606080;font-size:.85rem;border-top:1px solid #1a1a2e}
+footer a{color:#667eea;text-decoration:none;margin:0 8px}
+</style>
 </head>
 <body>
-<nav class="nav">
-  <a href="/" class="logo">
-    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
-    <span class="logo-text">ChatFlow</span>
-  </a>
-  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
-</nav>
-<div class="hero">
-  <div class="badge">Home Security</div>
-  <h1>Convert security inquiries before the customer goes back to Amazon for a Ring kit</h1>
-  <p class="hero-sub">When someone searches "home security installation" at 10pm, they're scared about something. ChatFlow explains why professional monitoring beats DIY, answers system questions, and books a free assessment — before they settle for a self-install kit.</p>
-  <div class="cta-group">
-    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
-    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+<header>
+  <h1>AI Chatbot for Home Security Installation</h1>
+  <p>Book alarm and camera installation jobs 24/7. ChatFlow qualifies home size, entry points, and monitoring preferences — routing leads to the right security package automatically.</p>
+  <a href="https://myflow.chat" class="cta-btn">Start Free Trial</a>
+</header>
+
+<section>
+  <h2>See ChatFlow Qualify a Security Installation Lead</h2>
+  <div class="demo">
+    <h3>Live Chat Preview</h3>
+    <div class="bot">Hi! I can help design a security system for your home. Is this a new installation or an upgrade to an existing system?</div>
+    <div class="user-b">Brand new, we just moved into the house and it has nothing</div>
+    <div class="bot">Perfect starting point. How many exterior doors and ground-floor windows does the home have roughly?</div>
+    <div class="user-b">Two front doors, one back, and maybe 12 windows on the ground floor</div>
+    <div class="bot">Got it. Are you interested in outdoor cameras, indoor cameras, or both? And would you like 24/7 professional monitoring included?</div>
+    <div class="user-b">Both camera types, and yes professional monitoring is important</div>
+    <div class="bot">Excellent. I can schedule a free on-site security assessment this week to map coverage zones. What day works best?</div>
   </div>
-</div>
-<div class="section">
-  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
-  <p class="section-sub" style="text-align:center">System scoping, professional vs DIY education, and assessment booking</p>
-  <div class="demo-wrap">
-    <div class="demo-label">Live chat demo</div>
-    <div class="chat">
-      <div class="bubble bot">Hi! Welcome to SecureHome Systems. Looking for a security system for your home, or have questions about our monitoring plans?</div>
-      <div class="bubble user-b">We just moved into a new house and I want to get a security system. I was looking at Ring but also want to see what professional installation looks like. What would it cost?</div>
-      <div class="bubble bot">Congrats on the new house — and great timing to think about security before you're settled in.
-        <br><br>For a whole-home system on a typical 3–4 bedroom home, here's what we'd typically cover:
-        <br>• All entry doors and windows: door/window sensors
-        <br>• Main living areas: motion detectors
-        <br>• Video doorbell + 1–2 outdoor cameras
-        <br>• Panel with cellular backup (works even if WiFi is cut)
-        <br><br>That package typically runs <strong>$1,100–1,700 installed</strong> with <strong>24/7 professional monitoring at $35–45/month</strong>.
-        <br><br>The difference from Ring: our monitoring goes to a central station staffed by trained operators who can dispatch police, fire, or EMS within seconds — not just an app notification that you have to act on yourself. And cellular backup means it works even if your internet is out or someone cuts a cable.</div>
-      <div class="bubble user-b">That makes sense. We have a basement and back door I'm worried about — previous owners had a break-in apparently.</div>
-      <div class="bubble bot">Definitely worth addressing — we'd add glass break sensors in the basement and make sure the back door contact sensor includes a door position indicator so it catches a door held slightly ajar, not just fully open.
-        <br><br>We also do a free security assessment where we walk the property and identify vulnerabilities — entry points, sight lines, lighting gaps — before recommending exactly what you need. No obligation.
-        <br><br>Would you like to schedule that? It takes about 45 minutes and you'll leave with a specific quote.</div>
-      <div class="bubble user-b">Yes, let's do that. I'm in Leawood, KS.</div>
-      <div class="bubble bot">We serve Leawood — perfect. What's your name and best number? Any day or time preferences for the assessment?</div>
-      <div class="bubble user-b">Chris Darden, 913-555-0183. Evenings or Saturday work.</div>
-      <div class="bubble bot">Booked, Chris! Free security assessment in Leawood — evening or Saturday. We'll call to lock in a specific time within one business day. Welcome to the neighborhood.</div>
-    </div>
-  </div>
-</div>
-<div class="section">
-  <h2>Why home security companies use ChatFlow</h2>
-  <p class="section-sub">Convert fear-driven searches into booked assessments</p>
-  <div class="cards">
+
+  <div class="features">
     <div class="card">
-      <h3>Capture high-urgency after-hours leads</h3>
-      <p>Security inquiries often happen at night — after a neighbor mentions a break-in, after watching the news, after arriving home to an unsettling feeling. These high-urgency leads go cold fast. ChatFlow is available at 10pm when the motivation is highest, explains your professional monitoring advantage, and books the assessment before they rationalize a self-install kit instead.</p>
+      <h3>Property Scope Mapping</h3>
+      <p>Captures door count, window count, and acreage to recommend sensor quantities and camera placement before your technician visits.</p>
     </div>
     <div class="card">
-      <h3>Win the professional vs DIY comparison</h3>
-      <p>Ring and Nest have dominated search results for DIY security. Configure ChatFlow to proactively address the comparison — professional monitoring response times, cellular backup when WiFi fails, trained dispatch operators vs app-only alerts, and false alarm protocols. Customers who understand these differences choose professional installation over DIY at significantly higher rates.</p>
+      <h3>Monitoring Tier Routing</h3>
+      <p>Routes self-monitored vs professionally monitored leads to different packages — maximizing recurring revenue from monitoring contracts.</p>
     </div>
     <div class="card">
-      <h3>New homeowner and life-transition capture</h3>
-      <p>New homeowners, recent divorcees living alone for the first time, and parents with newly empty nests are high-conversion security customers. Configure ChatFlow to recognize these trigger phrases and respond with appropriate empathy — validating the concern before explaining the solution. These customers aren't price shopping; they're buying peace of mind.</p>
+      <h3>Smart Lock and Access Upsell</h3>
+      <p>Offers smart lock integration and video doorbell add-ons during qualification, increasing average installation value significantly.</p>
     </div>
     <div class="card">
-      <h3>Smart home and automation upsells</h3>
-      <p>Smart locks, automated lighting, and Z-Wave thermostat control are natural add-ons for customers buying a security system. Configure ChatFlow to mention smart home integration as an option during scoping — especially for new homeowners who are already thinking about making the house "their own." Security systems are the backbone; smart home is the upsell.</p>
+      <h3>Post-Incident Urgency Capture</h3>
+      <p>Identifies leads triggered by a recent break-in or near-miss — the highest-converting security leads — and prioritizes them for fast follow-up.</p>
     </div>
   </div>
-</div>
-<div class="section">
-  <h2 style="margin-bottom:32px">Common questions</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <p class="faq-q">How much does home security installation cost?</p>
-      <p class="faq-a">A basic starter system runs $400–700 installed. A whole-home mid-range system covering all entry points and interior motion runs $900–1,800 installed. Full smart home integration with cameras, doorbell, and smart locks runs $1,800–3,500+. Monitoring plans run $25–55/month. The chatbot collects home size and priority areas to recommend the right tier before the customer ever calls.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">How does the chatbot handle the DIY security comparison?</p>
-      <p class="faq-a">Configure the chatbot to proactively address the Ring/Nest/SimpliSafe comparison — cellular backup when WiFi is cut, central station dispatch vs app-only alerts, professional installation ensuring sensor placement and coverage, and false alarm protocols. Customers who understand these differences are far less likely to settle for a DIY kit.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">What high-urgency situations does the chatbot recognize?</p>
-      <p class="faq-a">Configure urgent routing for: recent neighborhood break-in, customer just moved in, living alone for the first time, or business owner asking about commercial coverage. These situations have immediate motivation and budget. The chatbot validates the concern and books a same-week assessment instead of letting the urgency cool overnight.</p>
-    </div>
+
+  <div class="faq">
+    <h2>Common Questions</h2>
+    <details>
+      <summary>Can a chatbot qualify home security installation leads automatically?</summary>
+      <p>Yes. ChatFlow asks about home size, number of entry points, camera and sensor preferences, and monitoring needs — routing each lead to the right package tier without staff.</p>
+    </details>
+    <details>
+      <summary>What details does the chatbot collect for a security system quote?</summary>
+      <p>It captures home square footage, number of doors and windows, indoor vs outdoor camera needs, smart lock interest, and whether 24/7 professional monitoring is desired.</p>
+    </details>
+    <details>
+      <summary>How do I add ChatFlow to my security installation website?</summary>
+      <p>Paste one script tag and the widget is live in under five minutes — no developer or coding knowledge required.</p>
+    </details>
   </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Book Security Installations Before Homeowners Choose a DIY Kit</h2>
+  <p>ChatFlow captures anxious homeowners at night and books your assessment automatically. Start your free trial today.</p>
+  <a href="https://myflow.chat" class="cta-btn">Get Started Free</a>
 </div>
-<div class="section" style="padding-bottom:80px">
-  <div class="cta-banner">
-    <h2>Convert security searches into booked assessments — 24/7</h2>
-    <p>ChatFlow explains professional monitoring and books consultations automatically. Setup takes 2 minutes.</p>
-    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
-  </div>
-</div>
+
 <footer>
-  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/electrician-chatbot.html">Electrician</a> · <a href="/smart-home-chatbot.html">Smart Home</a> · <a href="/generator-installation-chatbot.html">Generator Installation</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+  <p>&copy; 2025 ChatFlow by ForgeAI. All rights reserved.</p>
+  <a href="/index.html">Home</a>
+  <a href="/smart-home-chatbot.html">Smart Home</a>
+  <a href="/ev-charger-installation-chatbot.html">EV Charger Installation</a>
+  <a href="/generator-installation-chatbot.html">Generator Installation</a>
+  <a href="/resources.html">All Industries</a>
 </footer>
 </body>
 </html>
