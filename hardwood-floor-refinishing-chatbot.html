@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Hardwood Floor Refinishing Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your hardwood floor refinishing website. Quote sanding and refinishing by square footage, explain refinish vs replace, and book free estimates 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Hardwood Floor Refinishing — Quote Jobs 24/7"/>
+  <meta property="og:description" content="ChatFlow helps hardwood floor refinishing companies capture leads around the clock — quoting sanding and refinishing by square footage, explaining finish options, and booking free in-home estimates."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/hardwood-floor-refinishing-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote hardwood floor refinishing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by square footage in the system prompt. Sand and refinish (full sand, stain, 3 coats poly): $3–6 per sq ft. Screen and recoat (light abrasion, new topcoat only — no stain change): $1.50–2.50 per sq ft. A 500 sq ft living and dining area runs $1,500–3,000 for full refinishing. The chatbot asks for square footage, current floor condition (deep scratches, pet stains, cupping), and desired finish, then gives a range and books the free estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot explain refinish vs screen-and-recoat vs replacement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Screen and recoat: fastest and cheapest ($1.50–2.50/sqft), works only if floors have no deep scratches and finish is still intact — adds a new topcoat layer. Full sand and refinish: removes all old finish and surface layer ($3–6/sqft), can change stain color, fixes most scratches and wear. Replacement: needed only when boards are too thin to sand again (under 3/4 inch), severely cupped, or water-damaged beyond repair. The chatbot educates and routes appropriately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle finish and stain questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Finish and stain are major decision points for refinishing customers. Configure the chatbot to explain finish types: oil-based polyurethane (most durable, amber tint, longer dry time), water-based polyurethane (clear/no amber, faster dry, slightly less durable), hard wax oil (penetrating oil finish, matte look, easier to spot-repair). For stain: natural/no stain, light stains (early American, golden oak), medium (provincial, gunstock), dark (ebony, jacobean, dark walnut). Capturing stain direction helps your estimator bring the right samples."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Hardwood Floor Refinishing</div>
+  <h1>Quote hardwood refinishing and help homeowners choose the right service before they call someone else</h1>
+  <p class="hero-sub">Homeowners with scratched or dull hardwood floors don't know if they need a screen-and-recoat, a full sand and refinish, or new floors entirely. ChatFlow answers that question, explains stain and finish options, and books the estimate — before they request bids from three competitors.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Service selection, sqft-based pricing, and stain direction capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking to refinish your hardwood floors? Tell me what you're working with — square footage, current condition, and what's bothering you about them.</div>
+      <div class="bubble user-b">About 800 sq ft of oak floors throughout our first floor. They're scratched and the finish looks dull and worn, especially in the traffic areas. Also thinking about going darker — the current color is really light and dated.</div>
+      <div class="bubble bot">800 sq ft of worn oak that you want to go darker — that's a full sand and refinish job, which is great news because it's the most transformative service we do.
+        <br><br>Here's why: to change the stain color, we need to sand down to bare wood. A screen-and-recoat (the faster/cheaper option) can't change color. Since you want darker, full refinishing is the right call anyway.
+        <br><br>For 800 sq ft, full sand and refinish: <strong>$2,400–4,000</strong>. That includes drum sanding, edge sanding, stain of your choice, and 3 coats of polyurethane.
+        <br><br>For going darker, popular choices right now are <strong>Jacobean</strong> (rich brown), <strong>Dark Walnut</strong> (deep warm brown), and <strong>Ebony</strong> (very dark, dramatic). Do any of those directions interest you?</div>
+      <div class="bubble user-b">Jacobean sounds right. Can we do water-based poly so we move back in faster?</div>
+      <div class="bubble bot">Absolutely — water-based poly is great choice. Dry time is 2–4 hours between coats vs 8–12 for oil-based, and you can walk on it in 24 hours. The downside is it won't add the amber warmth that oil-based does, but with a dark stain like Jacobean that's usually fine — the stain color carries the look.
+        <br><br>Want to book a free in-home estimate? We'll look at the floor, confirm square footage, and bring stain samples so you can see Jacobean in your actual lighting.</div>
+      <div class="bubble user-b">Yes! We're in Minneapolis, MN.</div>
+      <div class="bubble bot">We serve the Minneapolis area. What's your name and best contact?</div>
+      <div class="bubble user-b">Amy Larson, 612-555-0164</div>
+      <div class="bubble bot">Perfect, Amy! Free refinishing estimate in Minneapolis — Jacobean stain, water-based poly. I'll pass your info along and we'll reach out within one business day to schedule. Looking forward to the transformation!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why hardwood floor refinishing companies use ChatFlow</h2>
+  <p class="section-sub">Guide homeowners to the right service and capture the estimate before competitors do</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Screen-and-recoat vs full refinish routing</h3>
+      <p>Many homeowners don't know the difference between a screen-and-recoat and a full sand and refinish — and choosing wrong wastes money. Configure ChatFlow to ask the right qualifying questions: Are there deep scratches? Do you want to change the color? Is the finish still intact in low-traffic areas? This triage routes customers to the right service level — preventing the frustrating situation where a customer books a recoat and arrives expecting a transformation that only a full refinish can deliver.</p>
+    </div>
+    <div class="card">
+      <h3>Stain and finish pre-selection</h3>
+      <p>Stain and finish choices are the most emotionally significant decisions in a floor refinishing project. Configure ChatFlow to ask about color direction and finish preference early in the conversation. Customers who've identified "Jacobean stain, water-based poly" before the estimate arrive more decisive and close faster. Your estimator shows up knowing which samples to bring rather than running through the full catalog from scratch.</p>
+    </div>
+    <div class="card">
+      <h3>Home sale timing capture</h3>
+      <p>Homeowners listing a house often want floors refinished before listing or before closing. Configure ChatFlow to recognize home sale context and note timeline expectations. Pre-listing refinishing jobs have a built-in deadline that creates natural urgency. Sellers who understand that refinished floors typically increase sale price by more than the refinishing cost are motivated buyers — not price shoppers.</p>
+    </div>
+    <div class="card">
+      <h3>Multi-room and whole-home scoping</h3>
+      <p>A customer calling about one room often has floors throughout the house that would benefit from refinishing. Configure ChatFlow to ask about all hardwood areas — living room, dining room, hallway, bedrooms — and note that whole-home jobs get a lower per-square-foot rate due to setup efficiency. Many customers who called about one room book the whole first floor once they understand the economics of doing it all at once.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote hardwood floor refinishing?</p>
+      <p class="faq-a">You configure price ranges by square footage. Full sand and refinish: $3–6 per sq ft. Screen and recoat: $1.50–2.50 per sq ft. A 500 sq ft area runs $1,500–3,000 for full refinishing. The chatbot asks for square footage, current floor condition, and desired finish, then gives a range and books the free in-home estimate.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot explain refinish vs screen-and-recoat vs replacement?</p>
+      <p class="faq-a">Yes. Screen and recoat ($1.50–2.50/sqft): works only if no deep scratches and finish is still intact — adds new topcoat, cannot change stain color. Full sand and refinish ($3–6/sqft): removes all old finish, can change stain color, fixes most scratches. Replacement: needed only when boards are too thin to sand, severely cupped, or water-damaged. The chatbot asks qualifying questions and routes to the right service level.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle finish and stain questions?</p>
+      <p class="faq-a">Configure the chatbot to explain finish types (oil-based poly, water-based poly, hard wax oil) and stain options (natural, light, medium, dark ranges). Capturing stain direction during the chat conversation means your estimator arrives with the right samples — which shortens the consultation and increases close rate.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Guide homeowners to the right floor service and capture the estimate first</h2>
+    <p>ChatFlow educates, quotes, and books hardwood refinishing jobs 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/flooring-contractor-chatbot.html">Flooring Contractor</a> · <a href="/garage-floor-epoxy-chatbot.html">Garage Floor Epoxy</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
