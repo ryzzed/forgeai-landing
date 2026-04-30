@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Window Tinting Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your window tinting website. Quote residential, commercial, and auto tinting by window count and film type, and book appointments 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Window Tinting Companies — Quote and Book Jobs 24/7"/>
+  <meta property="og:description" content="ChatFlow helps window tinting companies capture and quote leads around the clock — explaining film types and VLT percentages, quoting residential and auto tinting, and booking free estimates."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/window-tinting-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote residential window tinting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by window count and film type in the system prompt. Standard solar film (3M, LLumar): $8–15 per sq ft installed. Decorative or privacy film: $6–12 per sq ft. Security/safety film: $12–20 per sq ft. A typical 2,000 sq ft home with 15–20 windows runs $600–1,400 for solar film depending on window size and film grade. The chatbot asks for home size or window count, primary goal (heat rejection, glare, privacy, UV protection), and gives a range before booking the free measure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot explain window film VLT percentages and shade options?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. VLT (Visible Light Transmission) is the most common customer question. Configure the chatbot to explain: 5% VLT is very dark (limo tint) — maximum privacy, mostly used on exterior-facing glass not for viewing. 15–20% VLT: dark tint, moderate view reduction, maximum heat rejection. 35% VLT: medium tint, good balance of heat rejection and view. 50–70% VLT: light tint, barely noticeable aesthetically, still blocks 50–70% of UV and heat. Most homeowners choose 35–50% for living areas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the chatbot handle auto window tinting quotes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Auto tinting is often a same-week or same-day service. Configure auto tinting pricing: sedan all windows $180–350; SUV/truck $220–400; premium ceramic film add 30–50%. State tint laws vary — configure the chatbot to note legal VLT limits for your state (front side windows, rear windows, windshield strip) so customers arrive already understanding what's legal. Auto customers often convert quickly since the decision timeline is short."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Window Tinting</div>
+  <h1>Quote residential, commercial, and auto tinting before customers get confused by VLT percentages</h1>
+  <p class="hero-sub">Window tinting customers have two problems: they don't know what VLT percentage to choose, and they can't get a price without calling. ChatFlow solves both — explaining shade options in plain language, giving instant price ranges, and booking the appointment on the spot.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Film type education, VLT guidance, and same-week booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking to get windows tinted — home, office, or vehicle?</div>
+      <div class="bubble user-b">Home. We have a sunroom that gets brutal in summer — like 95 degrees even with AC running. Maybe 8 large windows.</div>
+      <div class="bubble bot">A hot sunroom is one of the best use cases for window film — you can dramatically cut the heat load without changing the look of the windows.
+        <br><br>For heat rejection in a sunroom, I'd recommend looking at <strong>35–50% VLT solar film</strong>:
+        <br>• <strong>35% VLT</strong> — noticeably darker from outside, excellent heat rejection (55–65%), good glare reduction. Most popular for sunrooms.
+        <br>• <strong>50% VLT</strong> — light tint, barely visible aesthetically, still blocks 40–55% of heat. Better if you don't want to change the look at all.
+        <br><br>For 8 large sunroom windows (estimating ~15 sq ft each = 120 sq ft total):
+        <br>• Standard solar film: <strong>$720–1,100</strong> installed
+        <br>• Premium ceramic film (better heat rejection, no signal interference): <strong>$1,100–1,600</strong>
+        <br><br>We do free on-site measures — confirm exact square footage and show you film samples in your lighting. Want to schedule one?</div>
+      <div class="bubble user-b">Yes! We're in Phoenix, AZ.</div>
+      <div class="bubble bot">Phoenix is exactly where this pays off — you'll feel the difference from day one. What's your name and best contact?</div>
+      <div class="bubble user-b">Laura Kim, 480-555-0159</div>
+      <div class="bubble bot">Great, Laura! Free window film measure in Phoenix — I'll pass your info along and we'll reach out within one business day to schedule. Looking forward to cooling that sunroom down!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why window tinting companies use ChatFlow</h2>
+  <p class="section-sub">Educate customers on film options and capture bookings across residential, commercial, and auto</p>
+  <div class="cards">
+    <div class="card">
+      <h3>VLT confusion resolution</h3>
+      <p>VLT percentages (5%, 15%, 35%, 50%, 70%) are meaningless to most customers without explanation. Configure ChatFlow to translate VLT into plain English: how dark it looks from outside, how much heat it blocks, whether you can see through it at night. Customers who understand what they're choosing arrive at the estimate with a preference — which shortens your sales consultation from education-plus-close to confirmation-and-close.</p>
+    </div>
+    <div class="card">
+      <h3>Auto tinting same-week capture</h3>
+      <p>Auto window tinting is typically a same-week decision — customers aren't comparing bids over months. Configure ChatFlow to quote auto tinting by vehicle type (sedan, SUV, truck), mention state legal limits, and offer same-week scheduling. Auto customers who get an instant price are far more likely to book on the spot than those who have to wait for a callback. Auto tinting also introduces customers to residential services for their home.</p>
+    </div>
+    <div class="card">
+      <h3>Commercial and office building routing</h3>
+      <p>Commercial window tinting (office buildings, retail storefronts, restaurants) is higher-ticket and involves more square footage. Configure ChatFlow to ask whether the inquiry is residential or commercial, and route commercial jobs for a site visit and custom quote conversation. One office building can represent 10–30x the revenue of a residential job — capturing those leads with appropriate urgency matters.</p>
+    </div>
+    <div class="card">
+      <h3>Energy savings ROI conversation</h3>
+      <p>Residential customers in hot climates often frame window tinting as a home improvement investment, not just a comfort upgrade. Configure ChatFlow to mention that quality solar film can reduce cooling costs by 20–30% on south and west-facing windows. Customers in Arizona, Texas, Florida, and California particularly respond to the energy savings angle — it reframes the cost as a payback investment rather than a one-time expense.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote residential window tinting?</p>
+      <p class="faq-a">You configure price ranges by window count and film type. Standard solar film: $8–15 per sq ft installed. Decorative or privacy film: $6–12 per sq ft. Security/safety film: $12–20 per sq ft. A 2,000 sq ft home with 15–20 windows typically runs $600–1,400 for solar film. The chatbot asks for home size or window count, primary goal (heat, glare, privacy, UV), and gives a range before booking the free measure.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot explain VLT percentages and shade options?</p>
+      <p class="faq-a">Yes. Configure the chatbot to translate VLT into plain English: 5% is very dark (limo tint); 15–20% is dark with maximum heat rejection; 35% is medium — popular balance of heat and aesthetics; 50–70% is light, barely noticeable but still blocks significant UV and heat. Most homeowners choose 35–50% for living areas. Understanding the options before the estimate shortens the sales conversation significantly.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Does the chatbot handle auto window tinting quotes?</p>
+      <p class="faq-a">Yes. Configure auto tinting pricing: sedan all windows $180–350; SUV/truck $220–400; premium ceramic film adds 30–50%. Configure the chatbot to note state legal VLT limits for your market so customers arrive already knowing what's legal. Auto customers typically convert quickly since the decision timeline is short.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Capture residential, commercial, and auto tinting leads before they give up on calling</h2>
+    <p>ChatFlow explains film options and books appointments 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/window-replacement-chatbot.html">Window Replacement</a> · <a href="/window-cleaning-chatbot.html">Window Cleaning</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
