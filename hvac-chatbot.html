@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HVAC Chatbot — Capture More Service Calls 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for HVAC companies. Capture emergency calls, qualify service requests, and book appointments 24/7 — even when your technicians are in the field. $39/month."/>
+  <meta property="og:title" content="HVAC Chatbot — Capture Every Service Call, Day or Night"/>
+  <meta property="og:description" content="Your HVAC leads don't wait until business hours. ChatFlow AI answers immediately, qualifies the job, and captures contact details — so you never miss a service call."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/hvac-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for an HVAC company?","acceptedAnswer":{"@type":"Answer","text":"An AI chatbot for HVAC companies can: answer common questions about services (AC repair, furnace replacement, heat pump installation), qualify service requests (is this an emergency or routine?), capture contact info and service address, explain pricing ranges and service areas, and book appointments — all 24/7 without a dispatcher on call."}},{"@type":"Question","name":"How does an HVAC chatbot handle emergency calls?","acceptedAnswer":{"@type":"Answer","text":"Configure your ChatFlow system prompt to identify emergency keywords (no heat, AC not working in summer heat, carbon monoxide concern) and respond with your emergency line number, estimated response time, and a form to capture contact details. Emergency vs non-emergency routing is handled by the AI based on the system prompt you write."}},{"@type":"Question","name":"How much does an HVAC chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations — flat rate, no per-conversation fees. Most HVAC companies with a local service area never approach 5,000 monthly conversations. The Starter plan covers typical HVAC website traffic comfortably. There's also a free plan with 1,000 conversations per month."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex;gap:8px}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .steps{display:flex;flex-direction:column;gap:20px}
+    .step{display:flex;gap:16px;align-items:flex-start}
+    .step-num{width:32px;height:32px;background:#7c3aed;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0;margin-top:2px}
+    .step-body h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+    .step-body p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    HVAC Chatbot
+  </div>
+  <h1>Capture HVAC service calls<br/><span>even at 2am in July.</span></h1>
+  <p class="hero-sub">When a homeowner's AC breaks in a heat wave, they call whoever answers first. ChatFlow AI answers your website visitors instantly — qualifies the job, captures the lead, and books you more service calls.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">How ChatFlow handles a typical HVAC service inquiry</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! I'm here for [Your HVAC Company]. Is this an emergency service need or can I help you schedule a routine appointment?</div></div>
+    <div class="msg user"><div class="bubble">My AC stopped working and it's 95 degrees inside</div></div>
+    <div class="msg bot"><div class="bubble">That's definitely urgent — I'll get someone on this right away. We offer same-day emergency service in [service area]. Can I get your address and best callback number so a technician can reach you?</div></div>
+    <div class="msg user"><div class="bubble">Yes, 847 Maple Street. 555-0192</div></div>
+    <div class="msg bot"><div class="bubble">Got it. Emergency AC repair at 847 Maple St, callback at 555-0192. Our dispatcher will call you within 30 minutes to confirm arrival time. Is the system completely off or just not cooling properly?</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Built for HVAC service businesses</h2>
+  <p class="section-sub" style="text-align:center">Every common scenario your website visitors ask about</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <h3>Emergency triage, 24/7</h3>
+      <p>The AI identifies emergency keywords and responds with your emergency protocol — contact number, estimated response time, and lead capture. Never miss an emergency call because no one was watching the website.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Appointment booking</h3>
+      <p>Collect service type, address, preferred time window, and contact info — all through natural conversation. No online booking system required. Leads go straight to your inbox.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Service area qualification</h3>
+      <p>Automatically ask for the visitor's zip code or city and confirm whether you service their area — before they fill out a full form. Saves time for you and the customer.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing questions answered</h3>
+      <p>Train the chatbot to explain your service call fee, typical repair ranges, and maintenance plan pricing. Fewer phone calls about prices, more qualified leads who already know what to expect.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">Live in 3 steps</h2>
+  <p class="section-sub" style="text-align:center">No developer, no integration, no setup fee</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body"><h3>Describe your HVAC business</h3><p>Write a system prompt: your service area, services offered (AC repair, furnace install, heat pumps, maintenance plans), pricing ranges, emergency protocol, and hours. Plain text — no code.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body"><h3>Paste one script tag</h3><p>Copy the embed code from your ChatFlow dashboard and paste it before the &lt;/body&gt; tag of your website — or hand it to your web person. Works on any website builder.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body"><h3>Start capturing leads</h3><p>The chatbot goes live immediately. Every conversation and captured contact info appears in your ChatFlow dashboard. No CRM required — copy leads to your dispatch software manually or via export.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle after-hours emergency requests?</p>
+      <p class="faq-a">Yes — this is one of the strongest use cases for HVAC chatbots. Configure your system prompt with your emergency response protocol (emergency line, response time, after-hours surcharge) and the AI handles the conversation 24/7. You wake up to a list of qualified emergency leads with contact info, not missed website visits.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if someone asks a question I didn't anticipate?</p>
+      <p class="faq-a">The AI handles open-ended questions naturally based on your system prompt context. If a homeowner asks "what SEER rating should I get?" the chatbot can answer intelligently based on the context you've provided. If something is outside its knowledge, it asks for a callback rather than giving wrong information.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does ChatFlow pricing compare to a live answering service?</p>
+      <p class="faq-a">A 24/7 live answering service for HVAC typically costs $100-300/month for basic call capture. ChatFlow is $39/month and handles website chat conversations automatically. For HVAC companies that want to capture leads from their website (not just phone calls), ChatFlow provides more coverage at a fraction of the cost of a live service.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Stop losing leads while you're in the field</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your HVAC website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/plumber-chatbot.html">Plumber chatbot</a> · <a href="/electrician-chatbot.html">Electrician chatbot</a> · <a href="/roofing-chatbot.html">Roofing chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>

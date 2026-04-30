@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tattoo Shop Chatbot — Book Consultations & Answer Client Questions | ChatFlow</title>
+  <meta name="description" content="AI chatbot for tattoo shops. Answer questions about pricing, artist styles, deposits, and aftercare — and capture consultation bookings 24/7. $39/month flat."/>
+  <meta property="og:title" content="Tattoo Shop Chatbot — Capture Bookings and Answer Client Questions Automatically"/>
+  <meta property="og:description" content="ChatFlow AI answers your tattoo shop's most common questions: pricing, artist availability, deposit policy, custom vs flash — and captures consultation requests 24/7."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/tattoo-shop-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a tattoo shop?","acceptedAnswer":{"@type":"Answer","text":"A tattoo shop chatbot can answer questions about pricing ranges (by size and complexity), artist styles and availability, deposit policies, minimum age requirements, aftercare instructions, what to bring to a consultation, and how to submit a custom design request. It can capture consultation booking requests 24/7 — even when your artists are tattooing."}},{"@type":"Question","name":"How do I handle custom design questions with a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Configure your system prompt to explain your custom design intake process — reference photos, placement, size, style preference, budget range — and have the AI collect that information through conversation. This pre-qualifies the inquiry and saves artists from back-and-forth emails asking for the same information every time."}},{"@type":"Question","name":"How much does a tattoo shop chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month flat for 5,000 AI conversations. Most tattoo shops won't approach that volume. There's also a free plan with 1,000 conversations per month — plenty for smaller shops starting out. No per-conversation fees, no setup cost."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex;gap:8px}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    Tattoo Shop Chatbot
+  </div>
+  <h1>Answer tattoo questions<br/><span>while you're in the chair.</span></h1>
+  <p class="hero-sub">You can't check DMs while tattooing. ChatFlow AI answers every pricing, availability, and booking question automatically — capturing consultation requests while your hands are busy.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/" class="btn-ghost">See how it works →</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">How ChatFlow handles a custom tattoo inquiry</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hey! I'm here for [Shop Name]. Are you looking to book a consultation, check on pricing, or something else?</div></div>
+    <div class="msg user"><div class="bubble">I want a custom piece — a wolf and mountain sleeve</div></div>
+    <div class="msg bot"><div class="bubble">A wolf and mountain sleeve sounds amazing! For custom sleeves, we do a paid consultation first where the artist can look at reference images and discuss placement, style (fine line, blackwork, traditional?), and timeline. Our consultation fee is $50, applied to your deposit. Roughly what size are you thinking and which arm?</div></div>
+    <div class="msg user"><div class="bubble">Full sleeve, right arm. Fine line style</div></div>
+    <div class="msg bot"><div class="bubble">Full sleeve fine line — that's typically a multi-session project. Starting quote range is $1,200-2,800 depending on detail and shading. Want to get on the books for a consultation? I just need your name, email, and a rough idea of your timeline.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your chatbot handles automatically</h2>
+  <p class="section-sub" style="text-align:center">Every DM question — answered, even during sessions</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing range questions</h3>
+      <p>Train it with your minimum, hourly rate, and rough ranges by size/complexity. The chatbot gives accurate ranges and sets expectations — reducing sticker shock at the consultation.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Custom design intake</h3>
+      <p>Collect style preference, size, placement, reference images link, and budget range through conversation. Artists get pre-qualified leads instead of cold "how much?" inquiries.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Artist availability + booking</h3>
+      <p>Describe each artist's style and availability. The chatbot matches clients to the right artist and captures their info for a follow-up booking call or confirmation email.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Aftercare and policy FAQs</h3>
+      <p>Deposit policy, age requirements, touch-up policy, healing timeline, aftercare instructions — handle all of it automatically and consistently without anyone on staff answering the same question for the hundredth time.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How do I add photos of my work to the chatbot?</p>
+      <p class="faq-a">ChatFlow's chatbot is text-based — it can describe your artists' styles, link to your portfolio (Instagram, website gallery), and explain what types of work each artist specializes in. For a visual portfolio, the chatbot can direct visitors to your Instagram or gallery page with a direct link.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot give accurate custom pricing?</p>
+      <p class="faq-a">It can give accurate ranges based on what you train it with — hourly rate, minimum, typical ranges for small/medium/large pieces. The chatbot should be clear that final pricing requires a consultation. This sets realistic expectations and reduces no-shows from sticker shock.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">My shop has 3 artists with different styles — can the chatbot handle that?</p>
+      <p class="faq-a">Yes — describe each artist in your system prompt: their specialties (Japanese, fine line, traditional, realism), current availability, booking lead time, and consultation process. The chatbot will match inquiries to the right artist and capture their contact info for the appropriate person to follow up.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Never miss a booking inquiry while you're tattooing</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hair-salon-chatbot.html">Hair salon chatbot</a> · <a href="/nail-salon-chatbot.html">Nail salon chatbot</a> · <a href="/spa-chatbot.html">Spa chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>

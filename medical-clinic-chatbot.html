@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Clinic Chatbot — Patient FAQ & Appointment Booking AI | ChatFlow</title>
+  <meta name="description" content="AI chatbot for medical clinics. Answer patient questions about services, accepted insurance, and hours. Capture new patient inquiries 24/7 — without adding staff. $39/month."/>
+  <meta property="og:title" content="Medical Clinic Chatbot — Handle Patient Questions Without Adding Staff"/>
+  <meta property="og:description" content="ChatFlow AI answers patient questions about your clinic, accepted insurance, and services automatically. Capture new patient inquiries 24/7. No HIPAA-sensitive data stored."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/medical-clinic-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a medical clinic?","acceptedAnswer":{"@type":"Answer","text":"A medical clinic chatbot can answer common patient questions about services offered, accepted insurance plans, clinic hours, location, what to bring to a first appointment, and how to request a referral. It can capture new patient contact information and preferred appointment times. It should not collect medical history, symptoms, or other PHI."}},{"@type":"Question","name":"Is a medical clinic chatbot HIPAA compliant?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is not a HIPAA BAA partner and should not be configured to collect protected health information (PHI) such as symptoms, diagnosis, or medical history. ChatFlow is appropriate for pre-visit FAQ (insurance, services, hours, location) and new patient lead capture (name, contact, appointment preference) — not clinical intake."}},{"@type":"Question","name":"How much does a medical clinic chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. Most small medical clinics (1-3 providers) have far fewer monthly website visitors than that. The Starter plan covers typical clinic traffic. There is also a free plan with 1,000 conversations per month for very small practices."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex;gap:8px}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .notice{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:14px 18px;font-size:13px;color:#fbbf24;line-height:1.5;margin-bottom:32px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+    </div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    Medical Clinic Chatbot
+  </div>
+  <h1>Answer patient questions<br/><span>without adding front desk staff.</span></h1>
+  <p class="hero-sub">Your front desk fields the same questions hundreds of times: "Do you accept my insurance?" "What are your hours?" "How do I become a new patient?" ChatFlow AI answers all of them automatically, 24/7.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/" class="btn-ghost">See how it works →</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="notice">
+    <strong>Important:</strong> ChatFlow should not be configured to collect protected health information (PHI) — symptoms, diagnoses, or medical history. Use it for pre-visit FAQ, insurance questions, and new patient contact capture only.
+  </div>
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">Typical patient inquiry handled automatically</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Clinic Name]. I can help with questions about our services, accepted insurance, or scheduling a new patient appointment. What can I help you with?</div></div>
+    <div class="msg user"><div class="bubble">Do you accept Blue Cross Blue Shield?</div></div>
+    <div class="msg bot"><div class="bubble">Yes — we accept Blue Cross Blue Shield PPO and HMO plans. We also accept Aetna, UnitedHealthcare, Cigna, and Medicare. Would you like to schedule a new patient appointment?</div></div>
+    <div class="msg user"><div class="bubble">Yes, what does a new patient visit involve?</div></div>
+    <div class="msg bot"><div class="bubble">Your first visit includes a complete health history review and physical exam with one of our physicians. It typically takes 45-60 minutes. You'll want to bring your insurance card and a photo ID. Ready to schedule? I can collect your info for a callback from our team.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center">What your clinic chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">The questions your front desk answers on repeat — automated</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Insurance questions</h3>
+      <p>Train the chatbot with your accepted insurance plans. It answers insurance questions instantly, at any hour — reducing phone volume and helping patients decide before they call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>New patient intake initiation</h3>
+      <p>Capture new patient name, phone, preferred provider, and best times for a callback — through a natural conversation. Your front desk calls them back with the appointment, cutting phone tag.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Hours, location, and directions</h3>
+      <p>Clinic hours, address, parking, telehealth availability — these are the most common website questions. The chatbot answers all of them instantly without a phone call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+      <h3>Services overview</h3>
+      <p>Explain what conditions you treat, which specialists are on staff, what procedures you offer, and what to expect at different visit types — all without a call or website digging.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Is ChatFlow HIPAA compliant?</p>
+      <p class="faq-a">ChatFlow is not a HIPAA Business Associate Agreement (BAA) partner. It should only be used for general patient FAQ — accepted insurance, services, hours, location — and new patient contact capture (name, phone, preferred times). Do not configure it to collect symptoms, diagnosis details, or any protected health information. For HIPAA-compliant intake, use your EHR's patient portal.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle appointment scheduling directly?</p>
+      <p class="faq-a">ChatFlow can capture scheduling requests and preferred times, which your front desk then books in your EHR system. For direct calendar integration (e.g., booking a slot in real time), you'd need a scheduling-specific tool. ChatFlow's strength is qualifying the patient and capturing their info so your team calls back with a confirmed slot — reducing the back-and-forth phone calls.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Will the chatbot give medical advice?</p>
+      <p class="faq-a">Configure your system prompt to explicitly decline symptom-specific questions and redirect to calling the clinic or seeking emergency care for urgent situations. The AI follows your system prompt reliably — if you write "never diagnose or provide medical advice, always direct to call the clinic," it will consistently do that. This is one of the first things to include in your medical clinic system prompt.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Free up your front desk for patients in the office</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your clinic website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/dental-chatbot.html">Dental chatbot</a> · <a href="/therapist-chatbot.html">Therapist chatbot</a> · <a href="/chiropractor-chatbot.html">Chiropractor chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+
+</body>
+</html>
