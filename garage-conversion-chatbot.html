@@ -1,180 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Chatbot for Garage Conversion Contractors | ChatFlow</title>
-  <meta name="description" content="Add an AI chatbot to your garage conversion website. Quote ADU, bedroom, and home office conversions, explain permit requirements, and book free design consultations 24/7."/>
-  <meta property="og:title" content="AI Chatbot for Garage Conversion — Quote ADU and Living Space Conversions 24/7"/>
-  <meta property="og:description" content="ChatFlow helps garage conversion contractors capture leads around the clock — quoting ADU, bedroom, and home office conversions, explaining permit and insulation requirements, and booking free design consultations."/>
-  <meta property="og:type" content="website"/>
-  <link rel="canonical" href="https://myflow.chat/garage-conversion-chatbot.html"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How does the chatbot quote garage conversion to living space?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You configure price ranges by conversion type in the system prompt. Basic conversion (insulation, drywall, flooring, electrical — no plumbing): $15,000–30,000 for a 2-car garage. ADU conversion (full kitchen and bathroom added, permitted living unit): $40,000–85,000. Home office or bedroom conversion (mid-range, HVAC connection or mini-split, no full kitchen or bath): $20,000–40,000. The chatbot asks about the intended use, garage size, whether a bathroom is needed, and the local jurisdiction to identify whether an ADU permit is required, then gives a range and books the free design consultation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the chatbot explain ADU regulations and permit requirements?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ADU (Accessory Dwelling Unit) regulations vary significantly by state and municipality — configure the chatbot to ask what state and city the customer is in to give relevant context. California has highly permissive ADU laws — most conversions are by-right with streamlined permits. Texas municipalities vary widely. Many East Coast cities require design review. The chatbot explains that ADU permits typically require separate HVAC, egress windows, fire separation from the main home, and a separate electrical meter depending on jurisdiction. Routing customers for a consultation with permit research is the correct first step before scoping the project."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the chatbot handle rental income and ADU ROI questions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ADU rental income is a major motivator for garage conversions — configure the chatbot to address this directly. A garage ADU in a mid-cost city can rent for $1,200–2,500/month. At $1,800/month, a $65,000 conversion investment pays back in roughly 3 years of rental income. Long-term rental or Airbnb ADUs in high-demand markets often return 8–12% annually on the conversion cost. The chatbot frames the conversion as an investment with a payback period rather than just a cost — which is the framing that converts 'interested' to 'ready to book a consultation.'"
-        }
-      }
-    ]
-  }
-  </script>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
-    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
-    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
-    .logo-text{font-weight:700;font-size:17px}
-    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
-    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
-    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
-    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
-    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
-    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
-    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
-    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
-    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
-    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
-    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
-    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
-    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
-    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
-    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
-    .chat{display:flex;flex-direction:column}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
-    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
-    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
-    .card p{font-size:13px;color:#64748b;line-height:1.6}
-    .faq-list{display:flex;flex-direction:column}
-    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
-    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
-    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
-    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
-    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
-    .cta-banner h2{margin-bottom:12px}
-    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
-    footer a{color:#4b5563;text-decoration:none}
-    footer a:hover{color:#94a3b8}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot for Garage Conversion Services | ChatFlow</title>
+<meta name="description" content="ChatFlow AI chatbot captures garage conversion leads 24/7. Qualify intended use, insulation needs, HVAC, electrical, and permit requirements — book garage-to-living-space conversion jobs automatically.">
+<link rel="canonical" href="https://myflow.chat/garage-conversion-chatbot.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a chatbot qualify garage conversion leads automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. ChatFlow asks about intended use, insulation needs, HVAC requirements, electrical scope, and permit status — routing each conversion lead to the right contractor without staff."}},{"@type":"Question","name":"What details does the chatbot collect for a garage conversion quote?","acceptedAnswer":{"@type":"Answer","text":"It captures garage size, intended use (bedroom, ADU, office, gym), insulation needs, HVAC option, electrical panel capacity, plumbing for bathroom addition, and local permit requirements."}},{"@type":"Question","name":"How do I add ChatFlow to my remodeling or general contractor website?","acceptedAnswer":{"@type":"Answer","text":"Paste one script tag and the widget is live in under five minutes — no developer needed."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e8e8f0;line-height:1.6}
+header{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:60px 20px;text-align:center}
+header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:16px}
+header p{font-size:1.1rem;color:#a0a0b8;max-width:600px;margin:0 auto 32px}
+.cta-btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-block}
+.cta-btn:hover{opacity:.9}
+section{padding:60px 20px;max-width:900px;margin:0 auto}
+h2{font-size:1.7rem;font-weight:700;margin-bottom:20px}
+.demo{background:#111118;border:1px solid #2a2a3e;border-radius:12px;padding:24px;margin:32px 0;max-width:480px}
+.demo h3{font-size:.85rem;color:#667eea;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.bot{background:#1e1e30;border-radius:12px 12px 12px 4px;padding:10px 14px;margin-bottom:10px;font-size:.9rem}
+.user-b{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px 12px 4px 12px;padding:10px 14px;margin-bottom:10px;font-size:.9rem;text-align:right}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:32px}
+.card{background:#111118;border:1px solid #2a2a3e;border-radius:12px;padding:24px}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:8px;color:#667eea}
+.card p{font-size:.88rem;color:#a0a0b8}
+.faq{margin-top:40px}
+.faq details{border:1px solid #2a2a3e;border-radius:8px;padding:16px;margin-bottom:12px}
+.faq summary{font-weight:600;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq p{margin-top:10px;color:#a0a0b8;font-size:.9rem}
+.cta-banner{background:linear-gradient(135deg,#1a1a2e,#16213e);text-align:center;padding:60px 20px;margin-top:40px}
+.cta-banner h2{margin-bottom:16px}
+.cta-banner p{color:#a0a0b8;margin-bottom:28px}
+footer{text-align:center;padding:32px 20px;color:#606080;font-size:.85rem;border-top:1px solid #1a1a2e}
+footer a{color:#667eea;text-decoration:none;margin:0 8px}
+</style>
 </head>
 <body>
-<nav class="nav">
-  <a href="/" class="logo">
-    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
-    <span class="logo-text">ChatFlow</span>
-  </a>
-  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
-</nav>
-<div class="hero">
-  <div class="badge">Garage Conversion</div>
-  <h1>Quote garage-to-ADU and living space conversions — and frame it as an investment with a payback period</h1>
-  <p class="hero-sub">Garage conversion customers are sitting on unused square footage that could be a rental income stream, a guest suite, or a home office. ChatFlow quotes the conversion cost, frames the ADU ROI story, explains permit requirements, and books the design consultation before they spend years thinking about it.</p>
-  <div class="cta-group">
-    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
-    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+<header>
+  <h1>AI Chatbot for Garage Conversion Services</h1>
+  <p>Book garage-to-living-space conversion jobs 24/7. ChatFlow qualifies intended use, HVAC needs, electrical scope, and permit requirements — routing every lead to the right contractor automatically.</p>
+  <a href="https://myflow.chat" class="cta-btn">Start Free Trial</a>
+</header>
+
+<section>
+  <h2>See ChatFlow Qualify a Garage Conversion Lead</h2>
+  <div class="demo">
+    <h3>Live Chat Preview</h3>
+    <div class="bot">Hi! I can help get your garage conversion quoted. What are you planning to use the space for — a bedroom, home office, gym, ADU, or something else?</div>
+    <div class="user-b">We want to convert it into a guest suite with a small bathroom</div>
+    <div class="bot">Great use case — guest suites add real value to a home. Is it a single-car or two-car garage, and does it currently have any insulation or HVAC?</div>
+    <div class="user-b">Single car, no insulation, currently just bare walls and a concrete floor</div>
+    <div class="bot">Starting from bare means we handle insulation, drywall, flooring, and mini-split for climate control. Adding a bathroom also requires a plumbing rough-in. Does your area require a permit for this type of conversion?</div>
+    <div class="user-b">I believe so but not sure of the details</div>
+    <div class="bot">We handle the permit application as part of the project. I can schedule a free site assessment this week — what day works best?</div>
   </div>
-</div>
-<div class="section">
-  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
-  <p class="section-sub" style="text-align:center">Conversion type scoping, ADU rental ROI framing, and permit context education</p>
-  <div class="demo-wrap">
-    <div class="demo-label">Live chat demo</div>
-    <div class="chat">
-      <div class="bubble bot">Hi! Looking to convert your garage into living space? Tell me the goal — ADU for rental income, in-law suite, home office, or something else?</div>
-      <div class="bubble user-b">We want to convert our 2-car attached garage into a full ADU we can rent out. We're in Sacramento, CA. Two-car garage, about 460 square feet. We want it to be a proper 1-bedroom apartment — kitchen, bathroom, separate entrance.</div>
-      <div class="bubble bot">Sacramento is one of the best markets for this — California's ADU laws are very permissive and Sacramento city ordinances have been streamlined for garage conversions. A full 1-bedroom ADU with kitchen and bath in a 460 sqft garage is very doable.
-        <br><br>Here's a rough scope:
-        <br><br>• Insulation, framing, drywall, flooring: foundation of any conversion
-        <br>• Full kitchen (cabinets, countertop, sink, appliances): adds $8,000–15,000
-        <br>• Full bathroom (shower, toilet, vanity, tile): adds $10,000–18,000
-        <br>• Mini-split HVAC: $3,000–5,000
-        <br>• Electrical panel sub-feed, new circuits, outlets: $4,000–7,000
-        <br>• Separate entrance (door, landing, path): $2,000–4,000
-        <br>• Permit, plans, and inspections: $3,000–6,000
-        <br><br><strong>Total ADU conversion: $45,000–75,000</strong> depending on finish level
-        <br><br>At Sacramento rents, a 1BR ADU typically goes for $1,400–1,800/month. That's a <strong>payback period of roughly 3–4 years</strong> on the conversion cost — after that it's nearly pure return.
-        <br><br>Want to schedule a free design consultation? We'll pull your parcel, confirm setbacks and requirements, and give you an accurate quote.
-        </div>
-      <div class="bubble user-b">Yes — let's do it. This has been on our list for two years.</div>
-      <div class="bubble bot">What's your name and best contact?</div>
-      <div class="bubble user-b">Dan Morales, 916-555-0143</div>
-      <div class="bubble bot">Got it, Dan! Free garage ADU consultation in Sacramento — 460 sqft, full 1BR apartment, kitchen and bath. I'll pass your info along and we'll reach out within one business day. Two years was long enough — let's get this moving!</div>
-    </div>
-  </div>
-</div>
-<div class="section">
-  <h2>Why garage conversion contractors use ChatFlow</h2>
-  <p class="section-sub">Convert years of "we've been meaning to" into booked ADU consultations with ROI framing</p>
-  <div class="cards">
+
+  <div class="features">
     <div class="card">
-      <h3>ADU rental ROI as the conversion driver</h3>
-      <p>Garage conversions are often stalled by sticker shock — $50,000–75,000 feels like a lot until you frame it as an investment. Configure ChatFlow to calculate the payback period during the quote conversation: "At $1,600/month rental, that's a 3.5-year payback." Customers who see the conversion as generating $15,000–20,000 per year in rental income indefinitely make the decision much faster than those who only see the project cost. The ROI framing shifts the mental model from expense to asset — which is the highest-impact thing your chatbot can do for conversions.</p>
+      <h3>Use Case Routing</h3>
+      <p>Routes bedroom, ADU, office, gym, and rental unit leads to the correct permit category and scope tier — ensuring your estimate covers all required trades.</p>
     </div>
     <div class="card">
-      <h3>California ADU law expertise capture</h3>
-      <p>California has the most permissive ADU laws in the country — configure ChatFlow to specifically address California homeowners with confidence. Junior ADUs (under 500 sqft attached), standard ADUs, and garage conversions are all streamlined under SB 9 and related legislation. Owner-occupancy requirements were eliminated. Processing time is capped at 60 days. Many California homeowners are unaware of how easy ADU permitting now is — the chatbot that corrects this misconception and books the consultation is converting customers who thought the process was prohibitively complex.</p>
+      <h3>Existing Condition Assessment</h3>
+      <p>Identifies insulation, electrical, and HVAC gaps upfront to build complete scope — preventing mid-project surprises that erode margins.</p>
+    </div>
+    <parameter name="card">
+      <h3>Plumbing and Bathroom Detection</h3>
+      <p>Flags bathroom addition requests and routes plumbing rough-in scope to the right sub — capturing the full project value from the first chat.</p>
     </div>
     <div class="card">
-      <h3>In-law suite and multi-generational routing</h3>
-      <p>Not all garage conversions are for rental — configure ChatFlow to ask whether the customer is planning for rental income, a family member (aging parent, adult child), or personal use (home office, gym, guest suite). Each use case has different scope requirements: rental ADU needs separate entrance and kitchen; in-law suite may share utilities; home office doesn't need plumbing. Pre-qualifying the use during the chat means your designer arrives knowing the right scope and the customer's decision drivers — improving consultation efficiency and close rate.</p>
-    </div>
-    <div class="card">
-      <h3>Financing and construction loan awareness</h3>
-      <p>Many garage conversion customers don't know that home equity lines of credit and construction loans make the project accessible without paying cash — configure ChatFlow to mention financing options briefly. ADU conversions typically increase the home's appraised value by $80,000–150,000 in high-cost markets, often making a HELOC the natural funding source. Customers who understand the financing path are dramatically more likely to move from consultation to contract than those who assume they need to save the full amount in cash first.</p>
+      <h3>ADU and Rental Revenue Framing</h3>
+      <p>Frames ADU conversions around rental income potential — helping homeowners justify higher project budgets with concrete ROI calculations.</p>
     </div>
   </div>
-</div>
-<div class="section">
-  <h2 style="margin-bottom:32px">Common questions</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <p class="faq-q">How does the chatbot quote garage conversion to living space?</p>
-      <p class="faq-a">You configure price ranges by conversion type. Basic conversion (no plumbing, insulation/drywall/flooring/electrical): $15,000–30,000 for a 2-car garage. ADU with full kitchen and bathroom: $40,000–85,000. Home office/bedroom (HVAC, no full kitchen or bath): $20,000–40,000. The chatbot asks about intended use, garage size, and jurisdiction, gives a range plus rental ROI payback period for ADU inquiries, and books the free design consultation.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">How does the chatbot explain ADU regulations and permit requirements?</p>
-      <p class="faq-a">The chatbot asks about state and city to give relevant context. California: highly permissive, streamlined permitting (60-day processing cap), owner-occupancy eliminated. Other states: varies widely. ADU permits typically require separate HVAC, egress windows, fire separation, and sometimes separate electrical meter. The consultation includes parcel review and permit research before finalizing scope.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">How does the chatbot handle rental income and ADU ROI questions?</p>
-      <p class="faq-a">The chatbot frames ADU conversions as investments with a payback period — quoting local rental market rates and calculating years to recoup the conversion cost. A $65,000 conversion renting for $1,800/month = 3-year payback; after that it generates 8–12%+ annual return on investment. This framing converts "this is expensive" to "this is a financial decision," which dramatically improves close rate on high-ticket ADU projects.</p>
-    </div>
+
+  <div class="faq">
+    <h2>Common Questions</h2>
+    <details>
+      <summary>Can a chatbot qualify garage conversion leads automatically?</summary>
+      <p>Yes. ChatFlow asks about intended use, insulation needs, HVAC requirements, electrical scope, and permit status — routing each conversion lead to the right contractor without staff.</p>
+    </details>
+    <details>
+      <summary>What details does the chatbot collect for a garage conversion quote?</summary>
+      <p>It captures garage size, intended use (bedroom, ADU, office, gym), insulation needs, HVAC option, electrical panel capacity, plumbing for bathroom addition, and local permit requirements.</p>
+    </details>
+    <details>
+      <summary>How do I add ChatFlow to my remodeling or general contractor website?</summary>
+      <p>Paste one script tag and the widget is live in under five minutes — no developer needed.</p>
+    </details>
   </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Book High-Value Garage Conversion Projects Before Competitors Respond</h2>
+  <p>ChatFlow captures conversion leads 24/7 and routes them to your estimate calendar automatically. Start your free trial today.</p>
+  <a href="https://myflow.chat" class="cta-btn">Get Started Free</a>
 </div>
-<div class="section" style="padding-bottom:80px">
-  <div class="cta-banner">
-    <h2>Convert years of "we've been meaning to" into booked garage ADU consultations 24/7</h2>
-    <p>ChatFlow quotes garage conversions with rental ROI framing and books consultations. Setup takes 2 minutes.</p>
-    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
-  </div>
-</div>
+
 <footer>
-  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/kitchen-remodeling-chatbot.html">Kitchen Remodeling</a> · <a href="/bathroom-remodeling-chatbot.html">Bathroom Remodeling</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+  <p>&copy; 2025 ChatFlow by ForgeAI. All rights reserved.</p>
+  <a href="/index.html">Home</a>
+  <a href="/basement-finishing-chatbot.html">Basement Finishing</a>
+  <a href="/home-addition-chatbot.html">Home Addition</a>
+  <a href="/mini-split-installation-chatbot.html">Mini Split Installation</a>
+  <a href="/resources.html">All Industries</a>
 </footer>
 </body>
 </html>
