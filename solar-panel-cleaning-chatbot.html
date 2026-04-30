@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Solar Panel Cleaning Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your solar panel cleaning website. Quote by panel count, explain energy output impact of soiling, and book recurring maintenance 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Solar Panel Cleaning Companies — Quote and Book Cleanings 24/7"/>
+  <meta property="og:description" content="ChatFlow helps solar panel cleaning companies capture leads around the clock — quoting by panel count, explaining soiling loss impact on energy output, and booking recurring maintenance schedules."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/solar-panel-cleaning-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote solar panel cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by panel count in the system prompt. Small residential system (10–15 panels): $120–180. Medium system (16–25 panels): $150–250. Large system (26–40 panels): $220–350. Commercial and ground-mounted arrays are custom. The chatbot asks for panel count, roof pitch (affects safety/access pricing), and last cleaning date, gives a range, and books the appointment. Recurring maintenance plans (2x or 4x per year) are offered at a discount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot explain the energy output impact of dirty solar panels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. This is the key value proposition conversation. Dust, pollen, bird droppings, and debris reduce panel output by 15–30% in many climates — sometimes more in dusty or high-pollen regions. Configure the chatbot to explain that a $150–200 cleaning on a 25-panel system that produces $150/month in electricity can recover $25–45/month in lost output — paying for itself in 4–6 months. Customers who understand the ROI convert quickly to recurring maintenance plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle recurring maintenance plan signups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recurring plans are the highest-value conversion in solar cleaning. Configure the chatbot to present the one-time cleaning price alongside the annual plan (2x/year or 4x/year at a per-visit discount). Customers who've been solar owners for 2+ years and have never cleaned often sign up for recurring plans once they understand the ongoing soiling loss. The chatbot captures plan preference during booking, flagging it for your team to formalize on-site."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Solar Panel Cleaning</div>
+  <h1>Convert solar owners into recurring cleaning customers with ROI-first conversations</h1>
+  <p class="hero-sub">Solar owners who've never cleaned their panels are losing 15–30% of their energy output to dust and debris — and most don't know it. ChatFlow explains the output impact, quotes by panel count, and converts one-time cleanings into annual maintenance plans.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Output impact education, panel-count pricing, and maintenance plan capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Looking to get your solar panels cleaned? How many panels do you have, and when were they last cleaned?</div>
+      <div class="bubble user-b">We have 22 panels. They've never been cleaned — we installed 3 years ago. Our output seems lower than it used to be.</div>
+      <div class="bubble bot">That tracks. Panels that haven't been cleaned in 3 years — especially through pollen seasons — typically see 15–25% output reduction from accumulated soiling. Dust, pollen, bird droppings, and smog film all reduce the light reaching the cells.
+        <br><br>For 22 panels, a professional cleaning runs <strong>$165–230</strong>. That typically includes deionized water rinse and squeegee — no soaps or chemicals that could leave residue.
+        <br><br>Here's the math: if your system was producing $120/month and soiling knocked it down 20%, you're losing about $24/month — roughly $290/year. A cleaning that recovers that output pays for itself in 7–8 months, then saves you money every month after.
+        <br><br>Want to book a cleaning? And are you interested in a recurring plan (2x/year) so output stays maximized year-round?</div>
+      <div class="bubble user-b">Yes, let's do it. And a recurring plan sounds good. We're in Tucson, AZ.</div>
+      <div class="bubble bot">Tucson is a great market for this — the dust and Monsoon season sediment really builds up. What's your name and best contact?</div>
+      <div class="bubble user-b">James Whitfield, 520-555-0147</div>
+      <div class="bubble bot">Got it, James! Solar cleaning + 2x/year maintenance plan in Tucson — I'll pass your info along and someone will reach out within one business day to schedule. Looking forward to getting your output back up!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why solar panel cleaning companies use ChatFlow</h2>
+  <p class="section-sub">Turn one-time cleans into recurring revenue with ROI-first education</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Output loss education converts</h3>
+      <p>Most solar owners have no idea their panels are underperforming due to soiling. Configure ChatFlow to open with the output impact frame — 15–30% energy loss from accumulated debris in typical climates. Customers who understand they're losing $200–400/year in electricity value are far more motivated than customers who just see "solar panel cleaning" as optional maintenance. The ROI conversation is your strongest sales tool.</p>
+    </div>
+    <div class="card">
+      <h3>Recurring plan conversion</h3>
+      <p>A one-time cleaning pays $150–300. A 2x/year recurring plan pays $300–600 annually per customer, indefinitely. Configure ChatFlow to present both options at every booking — one-time price alongside the annual plan at a slight per-visit discount. Customers who've just understood the output loss impact are primed to buy the recurring plan. This is where your business scales: predictable recurring revenue from a growing solar install base.</p>
+    </div>
+    <div class="card">
+      <h3>Post-Monsoon and pollen season capture</h3>
+      <p>Soiling peaks at predictable times: after Monsoon season (Southwest), spring pollen (everywhere), and summer wildfire smoke (West Coast). Configure ChatFlow to create seasonal urgency — "it's peak soiling season in your area" — and capture the wave of demand. Operators who capture these seasonal spikes build their customer base faster than those waiting for inbound inquiries year-round.</p>
+    </div>
+    <div class="card">
+      <h3>Commercial and multi-site routing</h3>
+      <p>Commercial solar installations — warehouses, schools, office parks — have 50–500+ panels and represent 5–20x the revenue of a residential clean. Configure ChatFlow to ask about system size and whether it's residential or commercial. Commercial inquiries get routed immediately for a custom quote conversation rather than the standard pricing flow. Capturing one commercial account can be worth 10–20 residential cleanings.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote solar panel cleaning?</p>
+      <p class="faq-a">You configure price ranges by panel count. Small system (10–15 panels): $120–180. Medium system (16–25 panels): $150–250. Large system (26–40 panels): $220–350. The chatbot asks for panel count, roof pitch, and last cleaning date, gives a range, and books the appointment. Recurring maintenance plans (2x or 4x per year) are offered at a per-visit discount.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot explain the energy output impact of dirty solar panels?</p>
+      <p class="faq-a">Yes. Configure the chatbot to explain that dust, pollen, bird droppings, and debris reduce panel output by 15–30% in many climates. A cleaning that costs $150–200 on a system producing $120/month in electricity can recover $18–36/month in lost output — paying for itself in 5–8 months. Customers who understand the ROI convert quickly to recurring maintenance plans.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle recurring maintenance plan signups?</p>
+      <p class="faq-a">Configure the chatbot to present both the one-time cleaning price and the annual plan (2x/year or 4x/year at a per-visit discount) at every booking. Customers who've understood the output loss impact are primed for recurring plans. The chatbot captures plan preference during booking so your team can formalize the agreement on-site or via follow-up.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Build recurring solar cleaning revenue from the growing install base in your area</h2>
+    <p>ChatFlow explains output loss, quotes cleanings, and books maintenance plans 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/solar-chatbot.html">Solar Company</a> · <a href="/window-cleaning-chatbot.html">Window Cleaning</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
