@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Optometrist Chatbot — Book Eye Exams and Answer Vision Questions 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for optometry practices. Answer questions about eye exams, insurance, contact lens fittings, and eyewear — and capture appointment requests 24/7. $39/month."/>
+  <meta property="og:title" content="Optometrist Chatbot — Fill Your Exam Schedule Without Phone Tag"/>
+  <meta property="og:description" content="ChatFlow AI answers questions about eye exams, vision insurance, contact lens fittings, and eyewear options — capturing appointment requests while you're with patients."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/optometrist-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for an optometry practice?","acceptedAnswer":{"@type":"Answer","text":"An optometrist chatbot can answer questions about comprehensive eye exams, contact lens fittings, vision insurance plans accepted, eyewear brands and pricing, whether you're accepting new patients, and what to expect at an appointment. It captures appointment requests from patients searching after hours or on weekends when your front desk isn't available."}},{"@type":"Question","name":"How does the chatbot handle vision insurance questions?","acceptedAnswer":{"@type":"Answer","text":"Configure the bot to list which insurance plans you accept (VSP, EyeMed, Davis Vision, Spectera, etc.) and explain that benefit specifics vary by individual plan. Direct patients to call their insurance or your front desk for specific coverage details. Never have the bot confirm what a specific patient's insurance will cover — that requires actual benefit verification."}},{"@type":"Question","name":"How much does an optometrist chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. The free plan (1,000 conversations/month) is sufficient for most single-doctor practices. One additional comprehensive exam per month (typically $100-200+) from a chatbot-captured appointment request covers the entire monthly subscription cost."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Optometrist Chatbot</div>
+  <h1>Book eye exams and answer<br/><span>vision questions around the clock.</span></h1>
+  <p class="hero-sub">Patients search for eye care on evenings and weekends. ChatFlow AI answers questions about exams, insurance, contact lenses, and eyewear — and captures appointment requests while you're seeing other patients.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A new patient inquiry handled after hours</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Eye Care Practice]. Are you looking to schedule an exam, or do you have questions about our services?</div></div>
+    <div class="msg user"><div class="bubble">I haven't had an eye exam in 3 years. Do you take new patients? I have VSP insurance.</div></div>
+    <div class="msg bot"><div class="bubble">Great timing — we are accepting new patients! And yes, we accept VSP. A comprehensive eye exam typically takes 45-60 minutes and covers distance and near vision, eye pressure, and an overall health check of the eyes. Your VSP plan likely covers one exam per year — you'd want to call VSP at the number on your card to confirm your specific benefits before your visit.</div></div>
+    <div class="msg user"><div class="bubble">Do you have appointments on Saturdays?</div></div>
+    <div class="msg bot"><div class="bubble">Yes — we see patients Saturdays 9am to 2pm. Weekday evenings are also available until 6pm. Want to request an appointment? I can grab your name, contact info, and preferred day/time and have our team confirm the booking.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">Handle every pre-appointment question automatically</h2>
+  <p class="section-sub" style="text-align:center">The questions your front desk answers twenty times a week</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></div>
+      <h3>Services and exam types</h3>
+      <p>Comprehensive eye exams, contact lens fittings, LASIK co-management, dry eye treatment, myopia control — explain what you offer so patients know whether they're in the right place.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Insurance and self-pay</h3>
+      <p>List VSP, EyeMed, Davis Vision, Spectera, Humana Vision, and medical plans you accept. For self-pay patients, give exam pricing so they can make an informed decision without calling.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Contact lens FAQ</h3>
+      <p>First-time contact fittings, brand options, daily vs. monthly lenses, pricing with and without insurance — the questions new contact wearers and switchers ask before booking a fitting.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg></div>
+      <h3>Eyewear and optical</h3>
+      <p>Frame brands carried, designer vs. value options, lens types (progressive, anti-reflective, blue light), in-house vs. lab processing time — help patients know what to expect from your optical.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle urgent vision questions (eye pain, sudden vision change)?</p>
+      <p class="faq-a">Configure the bot with clear instructions for potential emergencies: "If you're experiencing sudden vision loss, eye pain, flashes or floaters, or eye injury, please call us immediately at [phone] or go to your nearest urgent care or emergency room." This ensures the bot doesn't cause harm by engaging in lengthy conversation when a patient needs immediate care.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can I use the chatbot to remind patients about annual exams?</p>
+      <p class="faq-a">ChatFlow is a website widget — it engages website visitors rather than sending outbound messages. For annual reminder campaigns, you'd pair it with an email marketing tool. The chatbot is most valuable for capturing new patients and answering questions from existing patients who return to your website to book.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What about pediatric eye exams?</p>
+      <p class="faq-a">Include your youngest age for exams, what a pediatric exam involves, and any programs like InfantSEE in your system prompt. Parents researching eye care for young children have specific questions about the exam process for kids — answering these builds confidence before they call to schedule.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Fill your exam schedule without playing phone tag</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your practice website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/dental-chatbot.html">Dental chatbot</a> · <a href="/medical-clinic-chatbot.html">Medical clinic chatbot</a> · <a href="/chiropractor-chatbot.html">Chiropractor chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

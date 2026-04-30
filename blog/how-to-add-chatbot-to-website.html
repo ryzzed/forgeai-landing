@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Add a Chatbot to Your Website (Without Hiring a Developer) | ChatFlow Blog</title>
+  <meta name="description" content="Step-by-step guide to adding an AI chatbot to any website. Works with WordPress, Squarespace, Wix, Shopify, and custom HTML sites. Takes about 2 minutes."/>
+  <meta property="og:title" content="How to Add a Chatbot to Your Website in 2 Minutes"/>
+  <meta property="og:description" content="A practical guide to adding an AI chatbot to any website — WordPress, Squarespace, Wix, Shopify, or custom HTML. No developer needed."/>
+  <meta property="og:type" content="article"/>
+  <link rel="canonical" href="https://myflow.chat/blog/how-to-add-chatbot-to-website.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Add a Chatbot to Your Website (Without Hiring a Developer)","description":"Step-by-step guide to adding an AI chatbot to any website. Works with WordPress, Squarespace, Wix, Shopify, and custom HTML sites.","author":{"@type":"Organization","name":"ChatFlow"},"publisher":{"@type":"Organization","name":"ChatFlow","url":"https://myflow.chat"},"datePublished":"2025-06-01","dateModified":"2025-06-01"}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .article-wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+    .article-meta{display:flex;gap:16px;align-items:center;margin-bottom:32px;flex-wrap:wrap}
+    .article-tag{background:rgba(124,58,237,.15);color:#a78bfa;border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:4px 12px;font-size:12px;font-weight:600}
+    .article-date{font-size:13px;color:#64748b}
+    .article-read{font-size:13px;color:#64748b}
+    h1{font-size:clamp(26px,4vw,40px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:20px}
+    .article-intro{font-size:17px;color:#94a3b8;line-height:1.7;margin-bottom:40px;border-left:3px solid #7c3aed;padding-left:20px}
+    .toc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px 24px;margin-bottom:40px}
+    .toc h3{font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+    .toc ol{list-style:decimal;padding-left:18px}
+    .toc li{font-size:14px;color:#94a3b8;line-height:1.8}
+    .toc a{color:#a78bfa;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    h2{font-size:clamp(20px,3vw,26px);font-weight:800;color:#fff;margin:48px 0 16px}
+    h3{font-size:17px;font-weight:700;color:#e2e8f0;margin:28px 0 10px}
+    p{font-size:15px;color:#94a3b8;line-height:1.75;margin-bottom:16px}
+    ul,ol{padding-left:22px;margin-bottom:16px}
+    li{font-size:15px;color:#94a3b8;line-height:1.7;margin-bottom:6px}
+    strong{color:#e2e8f0}
+    code{background:rgba(124,58,237,.15);color:#c4b5fd;padding:2px 7px;border-radius:4px;font-family:'SF Mono',Monaco,monospace;font-size:13px}
+    pre{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:20px;margin:20px 0;overflow-x:auto}
+    pre code{background:none;padding:0;font-size:13px;color:#c4b5fd;line-height:1.7}
+    .callout{background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:12px;padding:20px 24px;margin:24px 0;font-size:14px;color:#c4b5fd;line-height:1.6}
+    .callout strong{color:#a78bfa}
+    .step-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px;margin:20px 0}
+    .step-num{display:inline-flex;width:28px;height:28px;background:#7c3aed;border-radius:50%;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;margin-bottom:10px}
+    .step-box h3{margin-top:0}
+    .platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:24px 0}
+    .platform-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px 18px}
+    .platform-card h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
+    .platform-card p{font-size:12px;color:#64748b;margin:0;line-height:1.5}
+    .cta-inline{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:16px;padding:32px;text-align:center;margin:48px 0}
+    .cta-inline h3{font-size:20px;font-weight:800;color:#fff;margin-bottom:8px}
+    .cta-inline p{color:#94a3b8;font-size:14px;margin-bottom:20px}
+    .btn-primary{background:#7c3aed;color:#fff;padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="article-wrap">
+  <div class="article-meta">
+    <span class="article-tag">Setup Guide</span>
+    <span class="article-date">June 2025</span>
+    <span class="article-read">6 min read</span>
+  </div>
+  <h1>How to Add a Chatbot to Your Website (Without Hiring a Developer)</h1>
+  <p class="article-intro">Adding a chatbot to any website takes about 2 minutes. You paste one line of code, write a brief description of your business, and the AI starts answering visitor questions automatically. This guide walks through the whole process — and shows you how to make it actually useful.</p>
+
+  <div class="toc">
+    <h3>In this guide</h3>
+    <ol>
+      <li><a href="#step1">Step 1: Create a free account and get your script tag</a></li>
+      <li><a href="#step2">Step 2: Write your system prompt (this is what makes it useful)</a></li>
+      <li><a href="#step3">Step 3: Add the script to your website</a></li>
+      <li><a href="#platforms">Platform-specific instructions</a></li>
+      <li><a href="#test">Step 4: Test it before going live</a></li>
+      <li><a href="#tips">Tips for getting better responses</a></li>
+    </ol>
+  </div>
+
+  <h2 id="step1">Step 1: Create a free account and get your script tag</h2>
+  <p>Go to <strong>app.myflow.chat/register</strong> and create a free account. No credit card required — the free plan gives you 1,000 AI conversations per month, which is plenty to get started.</p>
+  <p>Once you're in the dashboard:</p>
+  <ol>
+    <li>Click <strong>New Chatbot</strong></li>
+    <li>Give it a name (e.g., "Main website bot")</li>
+    <li>You'll land on the configuration page — this is where your script tag lives</li>
+  </ol>
+  <p>Your script tag looks like this:</p>
+  <pre><code>&lt;script src="https://cdn.myflow.chat/widget.js"
+  data-bot-id="your-bot-id-here"
+  async&gt;&lt;/script&gt;</code></pre>
+  <p>Copy that tag. You'll need it in Step 3.</p>
+
+  <div class="callout"><strong>The script tag goes in the <code>&lt;head&gt;</code> or just before the closing <code>&lt;/body&gt;</code> tag of your site.</strong> Either location works — placing it before <code>&lt;/body&gt;</code> is slightly better for page load performance since it won't block the rest of the page from rendering.</div>
+
+  <h2 id="step2">Step 2: Write your system prompt</h2>
+  <p>The system prompt is the most important part. It's a text description of your business that tells the AI what to say and how to behave. A well-written system prompt is the difference between a chatbot that gives generic answers and one that sounds like your actual business.</p>
+  <p>A good system prompt covers:</p>
+
+  <div class="step-box">
+    <div class="step-num">1</div>
+    <h3>Who you are</h3>
+    <p>Business name, location, what you do, and your one-sentence pitch. "We are [Name], a [type of business] in [city]. We [what you do] for [who you serve]."</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">2</div>
+    <h3>Key facts visitors ask about</h3>
+    <p>Hours, pricing (or pricing ranges), location, parking, services offered, how to book/contact. Include the specific details that would otherwise require a phone call or email.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">3</div>
+    <h3>Tone and personality</h3>
+    <p>"Respond in a friendly, professional tone" or "Keep answers concise and direct" — tell it how you want it to sound. Match your brand voice.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">4</div>
+    <h3>What to do when it doesn't know something</h3>
+    <p>"If you don't know the answer, direct the visitor to call us at [phone] or email [email]." This prevents the bot from guessing at questions outside its knowledge.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">5</div>
+    <h3>Lead capture instruction</h3>
+    <p>"When a visitor seems interested in booking or purchasing, ask for their name and email so we can follow up." This turns conversations into leads.</p>
+  </div>
+
+  <p>Here's a minimal working example for a hair salon:</p>
+  <pre><code>You are the assistant for Bella Studio, a hair salon in Austin, TX.
+
+Services and pricing:
+- Haircut (women's): $65-85 depending on length
+- Haircut (men's): $35
+- Color: starting at $120 for single process
+- Highlights: starting at $160
+- Blowout: $45
+
+Hours: Tuesday-Saturday 9am-6pm. Closed Sunday and Monday.
+Location: 1204 South Congress Ave, Austin TX. Parking on the street.
+Booking: via phone at (512) 555-0123 or online at bellas.com/book
+
+Respond warmly and helpfully. Keep answers brief.
+If asked about something not listed here, suggest they call us at (512) 555-0123.
+When someone wants to book, share the booking link and offer to help them
+choose the right service.</code></pre>
+
+  <p>See our <a href="/blog/chatbot-system-prompt-guide.html" style="color:#a78bfa">full system prompt guide</a> for copy-paste templates across 6 business types.</p>
+
+  <h2 id="step3">Step 3: Add the script to your website</h2>
+  <p>This step depends on your website platform. The general approach is: find where you can add custom HTML or "header code" in your site settings, and paste the script tag there.</p>
+
+  <h2 id="platforms">Platform-specific instructions</h2>
+
+  <div class="platform-grid">
+    <div class="platform-card">
+      <h4>WordPress</h4>
+      <p>Go to <strong>Appearance → Theme Editor → header.php</strong> and paste just before <code>&lt;/head&gt;</code>. Or use a plugin like <em>Insert Headers and Footers</em> to add it without touching code.</p>
+    </div>
+    <div class="platform-card">
+      <h4>Squarespace</h4>
+      <p>Go to <strong>Settings → Advanced → Code Injection → Header</strong> and paste your script tag. It will appear on every page automatically.</p>
+    </div>
+    <div class="platform-card">
+      <h4>Wix</h4>
+      <p>Go to <strong>Settings → Custom Code → Add Code → Head</strong>. Paste your script. Set "Add Code to Pages" to "All Pages."</p>
+    </div>
+    <div class="platform-card">
+      <h4>Shopify</h4>
+      <p>Go to <strong>Online Store → Themes → Edit code → theme.liquid</strong>. Paste just before the closing <code>&lt;/head&gt;</code> tag.</p>
+    </div>
+    <div class="platform-card">
+      <h4>Webflow</h4>
+      <p>Go to <strong>Project Settings → Custom Code → Head Code</strong> and paste your script. Publish the site after saving.</p>
+    </div>
+    <div class="platform-card">
+      <h4>Custom HTML</h4>
+      <p>Open your HTML file and paste the script tag just before <code>&lt;/body&gt;</code>. Upload the updated file to your server.</p>
+    </div>
+  </div>
+
+  <div class="callout"><strong>Google Tag Manager users:</strong> You can deploy the chatbot through GTM without touching your site code. Create a new Custom HTML tag, paste the script, set it to fire on All Pages. This is the cleanest method if you already use GTM.</div>
+
+  <h2 id="test">Step 4: Test before going live</h2>
+  <p>Before sending real traffic to the chatbot, test it yourself:</p>
+  <ul>
+    <li><strong>Visit your site in an incognito window</strong> — you should see the chat widget appear in the bottom corner</li>
+    <li><strong>Ask it the questions your customers ask most often</strong> — does it get them right?</li>
+    <li><strong>Try an off-topic question</strong> — does it correctly defer to a phone number or email rather than guessing?</li>
+    <li><strong>Ask for pricing</strong> — does it give accurate numbers from your system prompt?</li>
+    <li><strong>Test the lead capture</strong> — when you express intent to book, does it ask for your info?</li>
+  </ul>
+  <p>If anything seems off, edit your system prompt and re-test. Most issues are fixable by adding more specific information about the problem area.</p>
+
+  <h2 id="tips">Tips for better responses</h2>
+
+  <h3>Be specific, not vague</h3>
+  <p>Vague: "We offer competitive pricing." Specific: "Pricing starts at $65 for a standard cleaning. Deep cleans are $120 for homes under 1,500 sq ft." The more concrete you are, the better the answers.</p>
+
+  <h3>Anticipate the questions you dread answering</h3>
+  <p>Think about the 10 questions you get asked most often by phone or email. Make sure each has a clear answer in your system prompt. The chatbot is most valuable when it handles the repetitive stuff reliably.</p>
+
+  <h3>Update it when your info changes</h3>
+  <p>Pricing went up? Hours changed? New service added? Keep your system prompt current. It only takes 30 seconds to edit. Stale information is the most common reason chatbots give wrong answers.</p>
+
+  <h3>Don't try to make it do too much</h3>
+  <p>A chatbot that tries to handle 50 scenarios often handles 50 scenarios mediocrely. Start with your most important 10 questions, get those perfect, then expand. Narrow and accurate beats broad and unreliable.</p>
+
+  <div class="cta-inline">
+    <h3>Ready to add a chatbot to your site?</h3>
+    <p>Free plan includes 1,000 conversations/month. No credit card. Live in 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary">Start free →</a>
+  </div>
+
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/resources.html">Resources</a> · <a href="/blog/chatbot-system-prompt-guide.html">System prompt guide</a> · <a href="/blog/ai-chatbot-vs-live-chat.html">AI chatbot vs live chat</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

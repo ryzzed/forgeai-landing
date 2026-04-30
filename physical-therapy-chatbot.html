@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Physical Therapy Chatbot — Answer Patient Questions and Book Evaluations 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for physical therapy clinics. Answer questions about conditions treated, insurance, new patient process, and pricing — and capture evaluation requests automatically. $39/month."/>
+  <meta property="og:title" content="Physical Therapy Chatbot — Fill Your Schedule Without Playing Phone Tag"/>
+  <meta property="og:description" content="ChatFlow AI answers questions about your PT clinic's specialties, insurance participation, and new patient process — and captures evaluation requests while you're treating patients."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/physical-therapy-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a physical therapy clinic?","acceptedAnswer":{"@type":"Answer","text":"A physical therapy chatbot can answer questions about conditions treated (back pain, sports injuries, post-surgical rehab, balance issues), insurance participation, whether a doctor's referral is required, what to expect at the first visit, and pricing for self-pay patients. It captures new patient evaluation requests so prospective patients can initiate the process outside office hours."}},{"@type":"Question","name":"Can a chatbot handle insurance questions for PT?","acceptedAnswer":{"@type":"Answer","text":"The chatbot can list which insurance plans you accept and explain that benefits vary by plan — directing patients to call their insurance or your front desk for specific coverage details. This is the appropriate approach: confirm you accept their carrier, set expectations that they'll need to verify their specific benefits, and capture their contact info for follow-up. Never have the bot claim coverage it can't verify."}},{"@type":"Question","name":"Is a chatbot appropriate for a physical therapy clinic?","acceptedAnswer":{"@type":"Answer","text":"Yes — for answering general questions about services and the intake process. A PT chatbot should not provide clinical advice, diagnose conditions, or recommend specific treatments. Configure it to answer questions about your clinic's services and process, and direct clinical questions ('should I do PT for my knee pain?') to schedule an evaluation with the therapist."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .callout{background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:20px 24px;margin:0 0 40px;font-size:14px;color:#fde68a;line-height:1.6}
+    .callout strong{color:#fbbf24}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Physical Therapy Chatbot</div>
+  <h1>Answer patient questions and book<br/><span>evaluations while you're with a patient.</span></h1>
+  <p class="hero-sub">Prospective PT patients have predictable questions — insurance, referrals, what to expect, conditions you treat. ChatFlow AI answers them 24/7 and captures new patient requests so you're not losing referrals because no one answered the phone.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A new patient inquiry handled automatically</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [PT Clinic]. Are you looking to schedule an evaluation, or do you have questions about our services?</div></div>
+    <div class="msg user"><div class="bubble">I have chronic lower back pain. Do you treat that?</div></div>
+    <div class="msg bot"><div class="bubble">Yes — lower back pain is one of the most common conditions we treat, including herniated discs, muscle strains, sciatica, and postural issues. Our therapists will do a full evaluation to understand what's driving your pain and build a personalized treatment plan. Do you have a referral from your doctor, or are you coming in directly?</div></div>
+    <div class="msg user"><div class="bubble">No referral. Do I need one? Also do you take Blue Cross?</div></div>
+    <div class="msg bot"><div class="bubble">Good news — we accept direct access patients (no referral required in most states). We do accept Blue Cross Blue Shield, though specific coverage depends on your individual plan. I'd recommend calling your insurance to verify your PT benefits before your first visit. Want to schedule an initial evaluation? I can grab your name and contact info.</div></div>
+  </div>
+  <div class="callout"><strong>Scope reminder:</strong> Configure the bot to answer questions about your clinic's services and process — not to give clinical recommendations. For questions like "should I do PT for my knee?" instruct the bot to direct patients to schedule an evaluation where the therapist can properly assess their situation.</div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">Handle every pre-visit question automatically</h2>
+  <p class="section-sub" style="text-align:center">The questions that fill your front desk voicemail</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Insurance and billing</h3>
+      <p>List accepted insurance carriers, explain direct-pay rates for self-pay patients, and set expectations around copays and deductibles — without making coverage promises you can't guarantee.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div>
+      <h3>Conditions and specialties</h3>
+      <p>Back pain, sports injuries, post-surgical rehab, balance and vestibular issues, TMJ, pediatric PT — explain what you treat so patients know you're the right fit before they call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>First visit FAQ</h3>
+      <p>What to bring, what to wear, how long the evaluation takes, whether to bring imaging — set expectations so patients arrive prepared and first appointments run smoothly.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>New patient capture</h3>
+      <p>When a prospective patient is ready to schedule, capture their name, contact info, condition, and insurance — giving your front desk everything needed to complete the booking.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle telehealth PT questions?</p>
+      <p class="faq-a">Yes — if you offer telehealth sessions, configure the bot to explain which conditions are suitable for telehealth versus in-clinic treatment, what the session involves, technical requirements, and whether insurance covers it. Many PT clinics have expanded telehealth offerings and this is a common question from patients in different geographic areas.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What about patients asking if PT will help their specific condition?</p>
+      <p class="faq-a">Instruct the bot to respond warmly but defer to a clinical evaluation: "I can't say for certain without an evaluation, but [condition] is something we commonly treat — a 45-minute initial evaluation with one of our therapists would give you a proper assessment and clear picture of whether PT is right for your situation. Want to schedule that?" This protects you clinically while still capturing the lead.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can I configure it for a multi-therapist clinic with different specialties?</p>
+      <p class="faq-a">Yes — include each therapist's name, certifications, and specialty areas in the system prompt. The bot can then match patient inquiries to the right therapist. "For sports rehab, I'd recommend Dr. [Name] who is a Certified Strength and Conditioning Specialist and works with a lot of runners and athletes."</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Stop losing patients to unanswered phone calls</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your clinic website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/chiropractor-chatbot.html">Chiropractor chatbot</a> · <a href="/medical-clinic-chatbot.html">Medical clinic chatbot</a> · <a href="/dental-chatbot.html">Dental chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

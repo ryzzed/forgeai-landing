@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Planner Chatbot — Capture Inquiries and Qualify Leads 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for event planning businesses. Answer questions about packages, availability, venues, pricing ranges, and past events — and capture inquiry details automatically. $39/month."/>
+  <meta property="og:title" content="Event Planner Chatbot — Never Miss an Event Inquiry"/>
+  <meta property="og:description" content="ChatFlow AI answers questions about your event planning services, packages, and pricing — and captures leads from couples, corporate clients, and families researching for their event."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/event-planner-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for an event planning business?","acceptedAnswer":{"@type":"Answer","text":"An event planner chatbot can answer questions about the types of events you plan (weddings, corporate events, birthday parties, mitzvahs), your service packages, pricing ranges, geographic coverage, and availability windows. It captures qualified inquiry details — event type, date, guest count, budget range — so you receive complete lead information rather than just an email address."}},{"@type":"Question","name":"How do I handle pricing questions through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Most event planners provide pricing ranges rather than fixed quotes, which is exactly what a chatbot handles well. Configure ranges like 'our weddings typically range from $3,500 to $12,000 depending on guest count, venue complexity, and service tier.' This sets expectations without committing to a number, and qualified leads who are comfortable with those ranges self-select before your first consultation."}},{"@type":"Question","name":"How much does an event planner chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For event planners, the volume is typically modest — even the free plan (1,000 conversations/month) covers most small planning businesses. One additional event booking per year from chatbot-captured leads typically generates revenue equivalent to years of ChatFlow subscriptions."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Event Planner Chatbot</div>
+  <h1>Capture every event inquiry<br/><span>before they contact your competitor.</span></h1>
+  <p class="hero-sub">Couples and corporate clients researching event planners do most of their research late at night and on weekends. ChatFlow AI answers questions about your services, packages, and pricing ranges — and collects the inquiry details you need before a consultation.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A wedding inquiry captured automatically</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Planner Name]. Are you looking for help with an upcoming event, or just exploring what we offer?</div></div>
+    <div class="msg user"><div class="bubble">We just got engaged and looking for a wedding planner for next October</div></div>
+    <div class="msg bot"><div class="bubble">Congratulations! October is one of our favorite months for weddings. We offer full-service planning, month-of coordination, and partial planning packages. How many guests are you thinking, and do you have a venue in mind yet?</div></div>
+    <div class="msg user"><div class="bubble">About 120 guests, no venue yet. What does full planning cost?</div></div>
+    <div class="msg bot"><div class="bubble">For a 120-guest wedding, our full planning package typically ranges from $6,500 to $9,500 depending on timeline, vendor complexity, and location. That includes venue scouting, vendor coordination, day-of management, and everything in between. Would you like to schedule a free 30-minute discovery call? I can grab your contact details and get you on our calendar.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for you</h2>
+  <p class="section-sub" style="text-align:center">From first inquiry to qualified lead — automatically</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Package and service explanation</h3>
+      <p>Full planning, partial planning, day-of coordination — explain what each tier includes so prospects arrive at consultations already understanding your offerings.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing range transparency</h3>
+      <p>Give realistic ranges based on guest count and service level. Prospects who are comfortable with your ranges self-qualify — you stop wasting consultations on mismatched budgets.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Intake and qualification</h3>
+      <p>Event date, guest count, venue status, budget range — the bot asks the right questions so every inquiry arrives pre-qualified with the info you need to give a useful response.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Availability and timeline guidance</h3>
+      <p>Book 6-12 months out for weddings? Corporate clients with 3-week notice? Set expectations about lead times so inquiries know whether to move quickly or whether there's time to consider.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">I do both weddings and corporate events — can the bot handle both?</p>
+      <p class="faq-a">Yes — configure separate pricing, typical timelines, and package details for each event type in your system prompt. The bot identifies the type of event the visitor is asking about and adapts its answers accordingly. You can even configure different lead capture prompts (wedding: ask for date and venue status; corporate: ask for company, attendee count, and event objective).</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I handle the question "are you available on [date]?"</p>
+      <p class="faq-a">Configure the bot to say "I can't confirm availability in real-time, but send me your date and I'll check our calendar and get back to you within [X] hours." The bot then captures their name, email, and date — giving you a warm lead with all the info needed to follow up quickly.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What about questions about past events and portfolio?</p>
+      <p class="faq-a">Include descriptions of notable events you've planned in your system prompt — types, scale, venues, themes. The bot can describe your experience and portfolio without you needing to be available at 11pm when couples are browsing. You can also link to your portfolio gallery in the chatbot widget settings.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Never miss an event inquiry while you're running another event</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/wedding-venue-chatbot.html">Wedding venue chatbot</a> · <a href="/catering-chatbot.html">Catering chatbot</a> · <a href="/photography-chatbot.html">Photography chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
