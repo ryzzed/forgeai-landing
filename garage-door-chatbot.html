@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garage Door Chatbot — Capture Repair and Installation Requests 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for garage door repair and installation businesses. Route emergency calls, capture quote requests, and answer pricing questions automatically. $39/month."/>
+  <meta property="og:title" content="Garage Door Chatbot — Handle Emergency Calls and Capture Quotes While You're on a Job"/>
+  <meta property="og:description" content="ChatFlow AI handles garage door inquiries around the clock — routing emergency breakdowns to your phone and capturing non-urgent quote requests while you're on a service call."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/garage-door-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a garage door company?","acceptedAnswer":{"@type":"Answer","text":"A garage door chatbot can answer questions about your services (spring replacement, opener repair/installation, panel replacement, new door installation), give pricing ranges for common repairs, explain your brands and product lines, and capture service call requests. Critically, it should route emergency calls — car trapped in garage, broken spring, door won't close — to your phone immediately, while capturing non-urgent requests for scheduled callbacks."}},{"@type":"Question","name":"How do I handle emergency garage door calls through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Configure the bot to recognize emergency language: 'car stuck in garage,' 'door won't close,' 'spring broke,' 'can't get out.' When it detects urgency, it should immediately display your phone number: 'This sounds like an emergency — call us directly at [number] for same-day service. We prioritize safety calls.' Only after surfacing the phone number should it offer to capture information if they'd prefer a callback. Never make an emergency customer fill out a form."}},{"@type":"Question","name":"How much does a garage door chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For garage door companies where a spring replacement runs $250-450 and a new door installation runs $1,000-3,000+, capturing even one additional job per month through the chatbot yields strong ROI. The free plan (1,000 conversations/month) works for smaller operations."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Garage Door Chatbot</div>
+  <h1>Handle emergency calls and capture<br/><span>quotes while you're on a service call.</span></h1>
+  <p class="hero-sub">A broken spring at 7pm is an emergency — your customer needs a phone number, not a form. ChatFlow AI routes urgent calls to your line immediately, and captures non-emergency quote requests for scheduled service — handling both correctly, 24/7.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">Two different scenarios — handled the right way</p>
+  <div class="demo-chat">
+    <h3>Emergency Flow</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Garage Door. Repair, installation, or do you have an emergency?</div></div>
+    <div class="msg user"><div class="bubble">Emergency — spring snapped, car is stuck inside. Can't get to work.</div></div>
+    <div class="msg bot"><div class="bubble">That's a broken spring — we handle this daily. Call us right now at [phone number] for same-day service. We have technicians available and can usually reach you within 2-3 hours. Don't try to manually lift the door — it's heavy without the spring and can cause injury.</div></div>
+  </div>
+  <div class="demo-chat" style="margin-top:24px">
+    <h3>Non-Emergency Quote Flow</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Garage Door. Repair, installation, or do you have an emergency?</div></div>
+    <div class="msg user"><div class="bubble">Looking to replace our old door — it's original from 1998 and doesn't look great anymore.</div></div>
+    <div class="msg bot"><div class="bubble">1998 doors are past their life expectancy — a new door is worth it for both curb appeal and insulation. Single-car steel door installed: typically $900-1,500. Double-car: $1,400-2,500. Premium insulated or carriage-style doors run higher. What's the garage size and would you want the opener replaced too (they're usually the same age)?</div></div>
+    <div class="msg user"><div class="bubble">Double car. Opener seems fine still.</div></div>
+    <div class="msg bot"><div class="bubble">Double-car replacement is a straightforward job — usually done in 3-4 hours. To get you a firm quote, what's your zip code and best number to call? I'll have someone reach out to schedule a free measurement and walk you through door options.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your garage door business</h2>
+  <p class="section-sub" style="text-align:center">Emergencies routed correctly, quotes captured — day and night</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <h3>Emergency routing</h3>
+      <p>Broken springs, door won't close (security risk), car trapped, cable snapped — these need a phone call, not a form. The bot recognizes emergency keywords and immediately surfaces your number with a direct call-to-action before anything else.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Repair and installation pricing</h3>
+      <p>Spring replacement, cable repair, panel replacement, opener installation, and new door quotes by size and style. Customers comparing 2-3 companies get your pricing immediately — before they decide to call someone else.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Door styles and brands</h3>
+      <p>Steel, wood, carriage-style, insulated, windows vs no windows, R-value options. Homeowners replacing a door often don't know what they want — the bot helps them understand options before you arrive with a product catalog.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+      <h3>Opener and smart features</h3>
+      <p>Opener brands (LiftMaster, Chamberlain, Genie), belt vs chain vs screw drive, Wi-Fi and app control, battery backup. Smart home integration questions are common — the bot handles them and positions your expertise before the estimate.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How do I handle the "how much does a spring replacement cost" question honestly?</p>
+      <p class="faq-a">Be transparent: "Spring replacement typically runs $200-350 for a single spring, $280-450 for two springs (we recommend replacing both even if only one broke — they wear together). The cost depends on spring type (torsion vs extension) and spring size, which varies by door weight. If the cable also needs replacing, add $75-100. We can confirm the exact type and quote firm when we arrive." This level of honesty builds trust and filters out customers who are only looking for the cheapest option, which tends to attract call-backs on botched work anyway.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Should I advertise same-day or next-day service guarantees through the chatbot?</p>
+      <p class="faq-a">Only if you can consistently deliver. "We offer same-day service for emergency repairs when availability allows" is honest. "Guaranteed same-day service" creates a promise you may not be able to keep during busy seasons. The chatbot should say: "We prioritize emergency calls and typically reach customers within 2-4 hours for urgent repairs. For non-emergency service, we schedule appointments within 24-48 hours." Under-promise and over-deliver beats the opposite every time.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I do both residential and commercial — should the bot handle both?</p>
+      <p class="faq-a">Yes, with a clear split: "For residential garage doors, we typically schedule same-day or next-day. For commercial overhead doors, rolling steel, and high-use applications, we do a site assessment and provide a commercial quote — different hardware and installation requirements. Which type of property is this?" Commercial garage door work (warehouses, loading docks, commercial buildings) often has higher margins and different customer relationships — capturing that separately helps you route it to the right estimator.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Handle every call correctly — emergencies and quotes, 24/7</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your garage door website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/locksmith-chatbot.html">Locksmith chatbot</a> · <a href="/hvac-chatbot.html">HVAC chatbot</a> · <a href="/handyman-chatbot.html">Handyman chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

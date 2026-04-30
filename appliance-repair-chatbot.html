@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appliance Repair Chatbot — Capture Service Calls and Diagnose Issues 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for appliance repair businesses. Capture service call requests, help diagnose issues, and answer pricing questions automatically. $39/month."/>
+  <meta property="og:title" content="Appliance Repair Chatbot — Book Service Calls While You're on a Repair"/>
+  <meta property="og:description" content="ChatFlow AI captures appliance repair requests, helps identify the problem, and books service calls — so homeowners don't give up and buy new when a simple repair would do."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/appliance-repair-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for an appliance repair business?","acceptedAnswer":{"@type":"Answer","text":"An appliance repair chatbot can capture service call requests, ask basic diagnostic questions (what's the appliance doing, how old is it, what brand), give guidance on whether repair vs replacement makes sense, and answer questions about service fees and common repair costs. Appliance problems often happen at inconvenient times — a chatbot that responds immediately and captures the service request is significantly better than voicemail for homeowners who want to know if repair is worth it before committing."}},{"@type":"Question","name":"How should I handle the repair vs replace question through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Be honest and give a useful framework: 'As a general rule, if the repair cost is more than 50% of a new appliance cost and the unit is over 8-10 years old, replacement often makes more sense. Our service call includes a diagnosis — if the repair isn't cost-effective, we'll tell you that honestly before doing any work. The diagnostic fee is $85-95, applied toward the repair if you proceed.' This transparency builds trust and captures customers who would otherwise assume you're going to push an expensive repair."}},{"@type":"Question","name":"How much does an appliance repair chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For appliance repair businesses where an average repair runs $150-350, capturing even two additional service calls per month through the chatbot more than covers the cost. The free plan (1,000 conversations/month) works for smaller appliance repair operations."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Appliance Repair Chatbot</div>
+  <h1>Book service calls while you're<br/><span>under someone's refrigerator.</span></h1>
+  <p class="hero-sub">When a homeowner's washer stops mid-cycle, they search for a repair tech immediately. ChatFlow AI captures that moment — asking diagnostic questions, explaining your service fee, and booking the call while you're finishing the current job.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A homeowner with a broken washer — captured before they give up and buy new</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Appliance Repair. What appliance are you having issues with?</div></div>
+    <div class="msg user"><div class="bubble">Washing machine — it fills with water but the drum won't spin. Samsung front loader, about 6 years old.</div></div>
+    <div class="msg bot"><div class="bubble">That's typically a door latch, control board, or motor/coupling issue on a 6-year Samsung front loader — all repairable. Samsung parts are well-stocked and 6 years is young for a quality unit. Service call to diagnose is $89 (applied toward the repair if we proceed). Repair cost depends on the part — most common fixes on that symptom run $150-280 total including labor. Worth repairing. What's your zip code and best number to schedule?</div></div>
+    <div class="msg user"><div class="bubble">32803. 407-555-1234.</div></div>
+    <div class="msg bot"><div class="bubble">That's in our service area. I'll have a technician call you back within the hour to confirm availability. Earliest availability is usually next business day morning. Is there a time that works best for you?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your repair business</h2>
+  <p class="section-sub" style="text-align:center">Every service call captured — before the homeowner decides to buy new instead</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Basic diagnostic intake</h3>
+      <p>Appliance type, brand, model if available, age, and what symptoms it's showing. This context helps you arrive with likely parts and tools — reducing the "need to order parts" callbacks that frustrate customers and extend your job time.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Service fee transparency</h3>
+      <p>Your diagnostic/service call fee, what it covers, and whether it applies toward the repair. This is the question every appliance repair customer has — answering it in chat before they ask it on the phone saves time and filters out price shoppers who won't book.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Repair vs replace guidance</h3>
+      <p>Give the honest framework — appliance age, repair cost relative to replacement — so homeowners know you're looking out for them. Customers who feel advised rather than sold to return for future repairs and refer neighbors.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Service area and scheduling</h3>
+      <p>Zip code confirmation, typical availability, and whether same-day service is possible. Homeowners with a broken appliance want to know when you can come — the bot sets that expectation immediately rather than making them wait for a callback to find out.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">What appliances should I list as outside my scope?</p>
+      <p class="faq-a">Be explicit: "We repair washers, dryers, refrigerators, dishwashers, ovens/ranges, and microwaves. We don't currently service small appliances (blenders, coffee makers, toasters), window AC units, or built-in appliances like wine coolers." Scope clarity prevents you from showing up to a job you can't complete — and helps the homeowner quickly identify whether they've found the right technician before investing in a service call appointment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I handle warranty questions?</p>
+      <p class="faq-a">"If your appliance is under manufacturer warranty, the repair may be covered — contact the manufacturer first. If it's expired or you're past the extended warranty period, we handle repairs independently. We don't have any manufacturer warranty contracts, but our repairs come with a 90-day warranty on parts and labor." This protects you from doing a warranty repair you won't get reimbursed for, and gives customers clarity on their options.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Should the chatbot give specific cost estimates before the technician diagnoses?</p>
+      <p class="faq-a">Give ranges for common repairs, not exact quotes: "Refrigerator not cooling: common causes are a faulty compressor ($300-500 repair), dirty condenser coils (free DIY or $85 service call), or a failed defrost system ($150-250). We can't confirm the cause until we see it." Ranges with common causes are helpful to homeowners deciding whether to call vs replace. Specific quotes before diagnosis set expectations you may not be able to meet — and can lose you the job if you're wrong in the direction the customer doesn't like.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Capture every service call — before they give up and buy new</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your appliance repair website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hvac-chatbot.html">HVAC chatbot</a> · <a href="/mechanic-chatbot.html">Auto mechanic chatbot</a> · <a href="/handyman-chatbot.html">Handyman chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
