@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for RV Repair Shops | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your RV repair website. Triage roof leaks, slide-out problems, and engine issues, give cost estimates, and book service appointments automatically."/>
+  <meta property="og:title" content="AI Chatbot for RV Repair Shops — Book More Service Appointments"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/rv-repair-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does RV repair typically cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RV repair costs vary widely by problem type. A slide-out motor or gear replacement runs $300-800 in parts plus labor. An RV roof reseal runs $500-1,500 depending on roof length and material. A water damage repair from a roof leak can run $1,500-8,000 depending on extent of delamination and wood rot. Awning replacement runs $600-1,800. Generator service runs $150-400. The chatbot collects the symptom and RV type to give a realistic range before the appointment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle RV roof leak urgency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RV roof leaks are high-urgency because water damage compounds rapidly. Configure the chatbot to ask whether the customer has noticed soft spots on the interior ceiling, delamination of the exterior walls, or musty smell — all signs that water has been getting in for a while. Customers with active leaks or signs of existing water damage should be routed for priority inspection. The chatbot explains that delayed repair turns a $800 reseal into a $5,000 delamination repair."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What seasonal RV service packages can the chatbot mention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configure the chatbot to mention spring commissioning service (de-winterizing, roof inspection, appliance test, $150-300), fall winterization ($100-200), annual roof inspection and reseal program, and pre-trip inspection before a long journey. RV owners who travel frequently are good candidates for annual service plans. The chatbot can offer a multi-service bundle discount during the booking conversation to increase average ticket and retention."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">RV Repair</div>
+  <h1>Book RV service before roof leaks become $5,000 delamination repairs</h1>
+  <p class="hero-sub">RV owners call about a "small drip" that has been dripping for months. ChatFlow triages the symptom, explains the urgency of water damage, and books the service appointment — before a weekend of camping turns into a flooded interior.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Symptom triage, urgency explanation, and service booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to RoamReady RV Service. Dealing with a roof leak, slide-out issue, appliance problem, or something else?</div>
+      <div class="bubble user-b">We noticed a small wet spot on the ceiling near the front cap after some heavy rain. Not a big drip, just a damp area. 2019 Class C motorhome.</div>
+      <div class="bubble bot">Good that you caught it — but I want to be honest: a damp ceiling spot on an RV is worth addressing quickly. What looks small from inside can mean the roof seams or lap sealant have cracked and water has been wicking into the substrate.
+        <br><br>The concern is delamination — once the luan or wood substrate gets wet and soft, repair cost goes from an $800-1,200 roof reseal to $3,000-8,000 for wall delamination repair. Class C motorhomes are particularly vulnerable near the front cap seam.
+        <br><br>We would do a full roof inspection, probe the area around the damp spot for soft substrate, and seal any compromised seams. Inspection runs $85-120, applied toward repairs.
+        <br><br>How soon are you planning to use the RV? That helps us prioritize the appointment.</div>
+      <div class="bubble user-b">We have a trip planned in 3 weeks. I am in Tucson, AZ.</div>
+      <div class="bubble bot">Three weeks is enough time to get this sorted — but we should not wait on it. Tucson's monsoon season does not help roof seams.
+        <br><br>What is your name and best contact? We can usually get a Class C in for roof inspection within a week.</div>
+      <div class="bubble user-b">Don Salazar, 520-555-0162. Weekday mornings work.</div>
+      <div class="bubble bot">Booked, Don! RV roof inspection in Tucson — weekday morning. We will call to confirm the specific day within one business day. Get that trip in — we will make sure the RV is ready for it.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why RV repair shops use ChatFlow</h2>
+  <p class="section-sub">Convert roof leak calls into booked inspections before damage compounds</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Roof leak urgency education drives early booking</h3>
+      <p>RV owners often downplay roof leaks — a damp spot "is not that bad." Configure ChatFlow to explain the delamination risk clearly: water in the substrate turns a $900 reseal into a $5,000 structural repair. Customers who understand the risk book the inspection immediately instead of waiting until the next heavy rain confirms the problem. Urgency education is the highest-value function ChatFlow serves for RV repair shops.</p>
+    </div>
+    <div class="card">
+      <h3>Pre-trip inspection capture</h3>
+      <p>RV owners with planned trips are highly motivated to resolve issues before departure. Configure ChatFlow to ask about upcoming trips when taking any service inquiry — a customer with a trip in 3 weeks books immediately. Pre-trip inspections are also an opportunity to find and quote deferred maintenance items (roof seals, awning fabric, battery health) that the customer may not have noticed yet.</p>
+    </div>
+    <div class="card">
+      <h3>Seasonal service package revenue</h3>
+      <p>RV owners in cold climates need winterization every fall and spring commissioning every spring. Configure ChatFlow to offer annual service packages during any service booking — winterization + spring commissioning + roof inspection for a bundled rate. Customers who sign up for annual packages become recurring revenue instead of unpredictable one-time service calls.</p>
+    </div>
+    <div class="card">
+      <h3>Slide-out and awning problem triage</h3>
+      <p>Slide-out malfunctions are the second most common RV repair inquiry after roof leaks. Configure ChatFlow to triage slide-out symptoms: motor grinding (likely motor or gear failure, $300-800), slide not fully extending (alignment or seal issue, $150-400), slide leaking (seal replacement, $200-500). Customers who get a realistic cost range during the inquiry convert to booked appointments instead of procrastinating on a problem they fear is expensive.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How much does RV repair cost?</p>
+      <p class="faq-a">Slide-out motor replacement runs $300-800 plus labor. Roof reseal runs $500-1,500. Water damage delamination repair runs $1,500-8,000. Awning replacement runs $600-1,800. Generator service runs $150-400. The chatbot triages the symptom and RV type to give a relevant estimate range before the appointment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle RV roof leak urgency?</p>
+      <p class="faq-a">Configure the chatbot to ask whether the customer has noticed soft ceiling spots, wall delamination bubbles, or musty smell — signs water has been entering for a while. It explains that a $900 reseal becomes a $5,000 delamination repair if ignored. Urgency-educated customers book inspections immediately rather than waiting for the next rainstorm to confirm the problem.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What seasonal RV service packages can the chatbot offer?</p>
+      <p class="faq-a">Configure the chatbot to mention spring commissioning ($150-300), fall winterization ($100-200), annual roof inspection and reseal, and pre-trip inspection bundles. Annual service plan customers become predictable recurring revenue rather than unpredictable one-time repairs. The chatbot can offer a bundled discount during any service booking conversation.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book RV service before small leaks become big repairs — 24/7</h2>
+    <p>ChatFlow triages RV problems and books service appointments automatically. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/auto-detailing-chatbot.html">Auto Detailing</a> · <a href="/mechanic-chatbot.html">Auto Mechanic</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
