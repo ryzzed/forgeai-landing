@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Air Duct Cleaning Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your air duct cleaning website. Answer IAQ questions, quote duct cleaning by home size, and book appointments 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Air Duct Cleaning Companies — Book More Jobs 24/7"/>
+  <meta property="og:description" content="ChatFlow helps air duct cleaning companies capture and book leads around the clock — answering indoor air quality questions, quoting by home size, and routing dryer vent cleaning add-ons."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/air-duct-cleaning-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote air duct cleaning by home size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by square footage in the system prompt. Typical ranges: 1,000–1,500 sq ft home $250–350; 1,500–2,500 sq ft $300–450; 2,500–4,000 sq ft $400–600; over 4,000 sq ft custom quote. The chatbot asks for approximate square footage and number of supply/return vents, gives the range, and books the appointment. Add-ons like dryer vent cleaning ($80–120) and sanitizing treatment ($75–150) are mentioned naturally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot address indoor air quality and health concerns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Many customers inquire because of allergy symptoms, musty odors, visible dust at vents, or after a renovation. Configure the chatbot to validate these concerns — renovations generate significant drywall and insulation dust that circulates through the duct system; mold spores from a musty odor should be addressed before fall heating season. The chatbot explains what the cleaning process covers and books with appropriate urgency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle dryer vent cleaning upsells?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dryer vent cleaning is a natural add-on for any air duct job — the technician is already there with equipment. Configure the chatbot to ask whether the customer's dryer takes longer than one cycle to dry clothes (a common sign of restricted airflow) and mention that dryer vent fires cause 2,900 home fires annually per the NFPA. Customers who understand the safety angle readily add dryer vent cleaning to the appointment."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Air Duct Cleaning</div>
+  <h1>Convert indoor air quality worries into booked duct cleaning appointments</h1>
+  <p class="hero-sub">Homeowners search "air duct cleaning cost" when they notice dusty vents, allergy flare-ups, or musty smells. ChatFlow answers the cost question instantly, explains what the service covers, and books the job before they call three competitors.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">IAQ education, size-based pricing, and add-on capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Are you looking to get your air ducts cleaned? Tell me a bit about your home — size, any specific concerns like allergies or a musty smell?</div>
+      <div class="bubble user-b">Yeah, we just finished a basement renovation and I can see dust blowing out of every vent. House is about 2,400 sq ft, 2 floors.</div>
+      <div class="bubble bot">That's a classic post-renovation situation — drywall dust and insulation particles get pulled into the return air system during construction and circulate every time the HVAC runs. Worth cleaning before that debris works its way into the air handler.
+        <br><br>For a 2,400 sq ft two-story home, a full duct cleaning typically runs <strong>$350–450</strong>. That covers all supply and return vents, main trunk lines, and the air handler cabinet.
+        <br><br>A couple of questions:
+        <br>• Is your dryer vent separate from your HVAC ducts? We can clean both in the same visit for $80–100 more — dryer vents are a common fire hazard when clogged.
+        <br>• Any pets or smokers in the home? If so, a sanitizing treatment ($75–150) eliminates odors from the duct walls after cleaning.</div>
+      <div class="bubble user-b">We have a dog. And yes the dryer takes forever lately — probably worth doing. No smokers.</div>
+      <div class="bubble bot">The slow dryer is a clear sign of restricted airflow — definitely worth clearing while we're there. With the dog, the sanitizing treatment is a nice upgrade too.
+        <br><br>Rough estimate for your home: duct cleaning + dryer vent + sanitize = <strong>$510–610</strong>. We can confirm the exact number after seeing your vent layout.
+        <br><br>Want to book a free no-obligation estimate? Or we can schedule the cleaning directly if you're ready to move forward.</div>
+      <div class="bubble user-b">Let's schedule it. I'm in Naperville, IL.</div>
+      <div class="bubble bot">We serve Naperville — great. What's your name and best contact? Any day or time preferences?</div>
+      <div class="bubble user-b">Kevin Park, 630-555-0193. Weekdays work best.</div>
+      <div class="bubble bot">Got it, Kevin! Duct cleaning + dryer vent + sanitize in Naperville — I'll pass your info along and we'll reach out within one business day to confirm a weekday appointment. See you soon!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why air duct cleaning companies use ChatFlow</h2>
+  <p class="section-sub">Capture the allergy season and post-renovation demand before competitors answer</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Post-renovation and new homeowner capture</h3>
+      <p>Renovation projects — basement finishing, kitchen remodels, additions — generate dust that contaminates ductwork. New homeowners often want ducts cleaned before moving in. Configure ChatFlow to recognize these high-intent triggers and validate the customer's concern with a clear explanation of why duct cleaning makes sense in their specific situation. These customers have a built-in reason to book quickly.</p>
+    </div>
+    <div class="card">
+      <h3>Dryer vent add-on at every booking</h3>
+      <p>Dryer vent cleaning is a natural complement to duct work — technician already on site, equipment already deployed, 20 minutes of incremental labor. Configure ChatFlow to ask about dryer performance (slow drying is the tell-tale symptom) and mention the fire safety angle. Customers who get the add-on at booking rather than at the door are more likely to keep it, increasing your average ticket without a hard sell.</p>
+    </div>
+    <div class="card">
+      <h3>Allergy and IAQ concern routing</h3>
+      <p>Customers mentioning allergies, asthma, or air quality concerns are your most motivated leads. Configure ChatFlow to explain that HVAC ducts accumulate dust, pet dander, mold spores, and pollen over time — and that a complete cleaning removes the reservoir of particles that re-circulate with every HVAC cycle. Customers with health concerns close at high rates once they understand the connection.</p>
+    </div>
+    <div class="card">
+      <h3>Seasonal demand capture</h3>
+      <p>Spring allergy season and fall heating startup are peak demand windows. Configure ChatFlow to create urgency around seasonal timing — getting ducts cleaned before the furnace runs for the first time each fall, or before spring allergy season begins. Customers who understand the seasonal angle book sooner rather than adding it to their "someday" list.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote air duct cleaning by home size?</p>
+      <p class="faq-a">You configure price ranges by square footage in the system prompt. Typical ranges: 1,000–1,500 sq ft $250–350; 1,500–2,500 sq ft $300–450; 2,500–4,000 sq ft $400–600; over 4,000 sq ft custom quote. The chatbot asks for approximate square footage and number of vents, gives the range, and books the appointment. Add-ons like dryer vent cleaning ($80–120) and sanitizing treatment ($75–150) are mentioned naturally during the conversation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot address indoor air quality and health concerns?</p>
+      <p class="faq-a">Yes. Many customers inquire because of allergy symptoms, musty odors, visible dust at vents, or after a renovation. Configure the chatbot to validate these concerns — renovations generate significant drywall and insulation dust; mold spores from a musty odor should be addressed before heating season. The chatbot explains what the cleaning process covers and books with appropriate urgency.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle dryer vent cleaning upsells?</p>
+      <p class="faq-a">Configure the chatbot to ask whether the customer's dryer takes longer than one cycle to dry clothes — a common sign of restricted airflow — and mention that dryer vent fires cause 2,900 home fires annually per the NFPA. Customers who understand the safety angle readily add dryer vent cleaning to the appointment. The add-on is mentioned naturally as part of scoping, not as an upsell push.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn allergy season and renovation projects into booked duct cleaning jobs</h2>
+    <p>ChatFlow answers pricing questions and books appointments 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/hvac-chatbot.html">HVAC</a> · <a href="/carpet-cleaning-chatbot.html">Carpet Cleaning</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

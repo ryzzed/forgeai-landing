@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Pool Builders and Contractors | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your pool building website. Answer pool type and cost questions, scope inground pool projects, and book free design consultations 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Pool Builders — Book More Consultations"/>
+  <meta property="og:description" content="ChatFlow helps pool builders capture and pre-qualify leads around the clock — explaining pool types and costs, answering gunite vs fiberglass questions, and booking free design consultations."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/pool-builder-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the chatbot explain gunite vs fiberglass vs vinyl liner pools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You configure pool type comparisons in the system prompt. Gunite/concrete: fully custom shape and size, most durable, higher cost ($55,000–120,000+), can add any feature. Fiberglass: factory-molded shell, faster installation (2–4 weeks vs 3–6 months), smooth surface resists algae, lower lifetime maintenance, limited to available mold shapes ($40,000–85,000). Vinyl liner: lower upfront cost ($30,000–65,000), liner needs replacement every 7–12 years, any shape possible. The chatbot explains the tradeoffs and captures the consultation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle the inground pool cost question?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pool cost is the most-searched question in your market. Configure realistic all-in ranges in the system prompt — including decking, equipment, permit, fencing, and landscaping restoration, not just the pool shell. A complete inground pool project typically runs $50,000–130,000 depending on pool type, size, features (spa, water feature, LED lighting, automation), and region. Customers who understand the full investment make better consultation appointments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot handle HOA and permit questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Configure the chatbot to explain that all inground pools require permits, and that HOA approval (if applicable) happens before permit submission. Your team handles the permit process as part of the project. For HOA questions, the chatbot explains what's typically required — site plan, equipment specifications, fence/barrier compliance — and notes that you've navigated hundreds of HOA approvals and can guide the process."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Pool Builder</div>
+  <h1>Answer the questions pool buyers spend months researching — in one conversation</h1>
+  <p class="hero-sub">Pool buyers research for 6–12 months before calling. They want to know gunite vs fiberglass, what it really costs all-in, and how long it takes. ChatFlow answers those questions and captures the free design consultation before they call three other builders.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Pool type education, full project cost ranges, and consultation capture</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Thinking about building an inground pool? Tell me what you're envisioning — pool type, size, any features like a spa or water feature?</div>
+      <div class="bubble user-b">We want an inground pool, probably 15x30 with a spa. Not sure if we should do gunite or fiberglass. What's the difference?</div>
+      <div class="bubble bot">Great question — it's the most important decision in the process.
+        <br><br><strong>Gunite (concrete):</strong> Fully custom — any shape, size, depth, or feature. 3–5 month build time. Higher upfront cost. Requires resurfacing every 10–15 years. Maximum design flexibility.
+        <br><br><strong>Fiberglass shell:</strong> Factory-molded — faster install (6–10 weeks), smoother surface that resists algae, lower lifetime chemical costs. Limited to available mold shapes, though most popular sizes including 15x30 are common molds.
+        <br><br>For a 15x30 with a spa: fiberglass is a great fit if you like one of the available designs. Gunite is the choice if you want a specific shape, freeform, or beach entry.
+        <br><br>Do you have an aesthetic in mind — clean modern lines, tropical freeform, or something else?</div>
+      <div class="bubble user-b">We like clean modern lines. What's the full cost going to be, including everything?</div>
+      <div class="bubble bot">Good question to ask — the "shell price" doesn't tell the full story. Here's the all-in picture for a 15x30 pool + spa:
+        <br><br>• <strong>Fiberglass pool + spa:</strong> $65,000–90,000 complete
+        <br>• <strong>Gunite pool + spa:</strong> $80,000–115,000 complete
+        <br><br>"Complete" means pool/spa, equipment pad (pump, filter, heater, automation), concrete coping and decking around the pool, permit, backfill, and startup chemicals. Does not include fencing (required by code, $2,500–5,000), landscaping restoration, or optional upgrades like LED lighting, water features, or automation apps.
+        <br><br>Want to schedule a free design consultation? We'll bring 3D renderings and give you an exact project price.</div>
+      <div class="bubble user-b">Yes! We're in Scottsdale, AZ.</div>
+      <div class="bubble bot">Scottsdale is our home market — we build a lot of pools there. What's your name and best contact? We typically have consultations within a week.</div>
+      <div class="bubble user-b">Derek and Alicia Moreno, 480-555-0184</div>
+      <div class="bubble bot">Great, Derek and Alicia! Free design consultation in Scottsdale — I'll pass your info along and our design team will reach out within one business day. We'll bring samples, renderings, and an exact number for your backyard. Looking forward to it!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why pool builders use ChatFlow</h2>
+  <p class="section-sub">Capture the 6-month research journey and convert it into a consultation</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Answer the gunite vs fiberglass question</h3>
+      <p>This is the most-searched question in pool buying and the first thing every prospect wants to know. ChatFlow gives your perspective — a clear, honest comparison that moves prospects toward the right choice for their situation. Companies that answer this question well online build trust before any competitor gets a chance to pitch.</p>
+    </div>
+    <div class="card">
+      <h3>Full all-in cost transparency</h3>
+      <p>Pool buyers are often sticker-shocked when they discover that the "pool price" doesn't include decking, fencing, equipment, or landscaping. ChatFlow sets expectations with a complete project cost — including everything — which filters out mismatched budgets and means your consultation appointments are with serious, informed buyers.</p>
+    </div>
+    <div class="card">
+      <h3>Feature and upgrade scoping</h3>
+      <p>Spa, water feature, LED lighting, automation, beach entry, tanning ledge, fire bowls — every feature the customer mentions during the chat conversation is logged as part of their profile. Your design consultant arrives already knowing the vision, making the consultation feel personalized rather than starting from scratch.</p>
+    </div>
+    <div class="card">
+      <h3>HOA and permit navigation</h3>
+      <p>Many first-time pool buyers are anxious about HOA approval and permits. ChatFlow explains the process — HOA first, then permit, your team manages both — which reduces anxiety and positions you as a full-service builder rather than just a construction company. Buyers who understand the process close faster.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot explain gunite vs fiberglass vs vinyl liner pools?</p>
+      <p class="faq-a">Yes. You configure pool type comparisons in the system prompt. Gunite/concrete: fully custom shape and size, most durable, higher cost ($55,000–120,000+), can add any feature. Fiberglass: factory-molded shell, faster installation (6–10 weeks vs 3–5 months), smooth surface resists algae, lower lifetime maintenance, limited to available mold shapes ($40,000–85,000). Vinyl liner: lower upfront cost ($30,000–65,000), liner replacement every 7–12 years, any shape possible. The chatbot explains tradeoffs and captures the consultation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle the inground pool cost question?</p>
+      <p class="faq-a">Pool cost is the most-searched question in your market. Configure realistic all-in ranges — including decking, equipment, permit, fencing, and landscaping restoration, not just the pool shell. A complete inground pool project typically runs $50,000–130,000 depending on pool type, size, features, and region. Customers who understand the full investment make better consultation appointments and are less likely to be surprised during the sales process.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot handle HOA and permit questions?</p>
+      <p class="faq-a">Yes. Configure the chatbot to explain that all inground pools require permits, and that HOA approval (if applicable) happens before permit submission. Your team handles the permit process as part of the project. For HOA questions, the chatbot explains what's typically required — site plan, equipment specifications, fence/barrier compliance — and notes that you guide clients through the entire approval process.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Convert 6 months of pool research into a booked design consultation</h2>
+    <p>ChatFlow answers gunite vs fiberglass, full project cost, and feature questions 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/pool-service-chatbot.html">Pool Service</a> · <a href="/landscaping-chatbot.html">Landscaping</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
