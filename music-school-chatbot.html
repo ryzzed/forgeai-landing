@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music School Chatbot — Answer Lesson Questions and Enroll Students 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for music schools and private instructors. Answer questions about instruments, lesson formats, age requirements, and pricing — and capture enrollments automatically. $39/month."/>
+  <meta property="og:title" content="Music School Chatbot — Enroll Students Without Playing Phone Tag"/>
+  <meta property="og:description" content="ChatFlow AI answers questions about your music lessons — instruments offered, teacher bios, pricing, age minimums, in-person vs. online — and captures trial lesson signups automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/music-school-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a music school?","acceptedAnswer":{"@type":"Answer","text":"A music school chatbot can answer questions about instruments offered, teacher qualifications, lesson formats (group vs. private), pricing, minimum ages, recital schedules, and instrument rental. It can match prospective students to the right teacher and lesson type, and capture trial lesson signups before visitors leave your site."}},{"@type":"Question","name":"Is a chatbot useful for a small or independent music teacher?","acceptedAnswer":{"@type":"Answer","text":"Especially for small studios and independent teachers. You're often teaching when parents are trying to reach you — a chatbot handles the initial inquiry, answers pricing and availability questions, and captures the parent's contact info for follow-up. You never lose a prospective student because no one answered the phone during lesson time."}},{"@type":"Question","name":"How much does a music school chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For most music schools and private instructors, website traffic is modest — the free plan (1,000 conversations/month) may cover your needs entirely. If even one new student enrollment per month results from the chatbot, the annual lesson revenue typically covers the chatbot cost 10x over."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Music School Chatbot</div>
+  <h1>Enroll new students while<br/><span>you're in the middle of a lesson.</span></h1>
+  <p class="hero-sub">Parents researching music lessons have the same questions every time — instruments, age requirements, pricing, teacher background. ChatFlow AI answers them instantly and captures trial lesson signups so you never lose a student because no one picked up the phone.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A parent inquiry handled while the teacher is with a student</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Music School Name]. Are you looking for lessons for yourself or for a child?</div></div>
+    <div class="msg user"><div class="bubble">For my 7-year-old daughter. She wants to learn piano.</div></div>
+    <div class="msg bot"><div class="bubble">How wonderful! We have two teachers who specialize in young beginners — both trained in the Faber method which is fantastic for kids starting at 7. Lessons are 30 minutes for beginners and are held Tuesday through Saturday. Pricing is $65/lesson or $240/month for 4 lessons.</div></div>
+    <div class="msg user"><div class="bubble">Does she need her own piano to start?</div></div>
+    <div class="msg bot"><div class="bubble">A keyboard with weighted keys is ideal for home practice — we can recommend a few beginner-friendly options in the $150-300 range. If you want to try first before investing, we can start with just studio lessons. We offer a free 30-minute trial lesson so she can meet the teacher and see if it's a fit. Want to schedule that?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">Answer every enrollment question automatically</h2>
+  <p class="section-sub" style="text-align:center">The questions parents and adult learners ask before signing up</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div>
+      <h3>Instrument and teacher matching</h3>
+      <p>Guitar, piano, violin, voice, drums — describe each instrument's suitability by age and learning style. Match prospective students to the right teacher based on age, goals, and musical interest.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pricing and lesson structure</h3>
+      <p>30 vs. 45 vs. 60-minute lessons, monthly packages vs. pay-per-lesson, group vs. private — explain your pricing structure clearly so families know what to expect before their first call.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+      <h3>Age and starting level FAQ</h3>
+      <p>Minimum age for each instrument, beginner vs. intermediate programs, adult learner tracks — answer "is my child ready?" and "I haven't played in 20 years, can I start?" without interrupting a lesson.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+      <h3>In-person vs. online lessons</h3>
+      <p>If you offer online lessons, explain how they work, what's required (instrument, device, internet), and how the experience compares to in-person. Capture students outside your geographic area.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can I use this as a solo instructor, not a full school?</p>
+      <p class="faq-a">Absolutely — many of our music teacher customers are independent instructors teaching out of their home studio or a rented space. The chatbot works the same way: add your instrument, schedule availability, pricing, and teaching philosophy to the system prompt. Parents and adult students get answers at 9pm when they're browsing and you're done teaching for the day.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What about recital and performance questions?</p>
+      <p class="faq-a">Include your recital schedule, format (formal vs. informal), whether recitals are required, and any associated costs in the system prompt. Parents researching music schools often care deeply about recitals — having clear, immediate answers helps them choose you over a school where this information is hard to find.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can it handle questions in different languages?</p>
+      <p class="faq-a">ChatFlow's underlying LLM (LLaMA 3.3 70B) supports dozens of languages. If you serve a multilingual community, the bot can respond in the language the visitor writes in without any extra configuration. Many music schools in urban areas serve families where English is a second language — this is a meaningful advantage for capturing those enrollments.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Never lose a student because you were in the middle of a lesson</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your studio website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/tutoring-chatbot.html">Tutoring chatbot</a> · <a href="/yoga-studio-chatbot.html">Yoga studio chatbot</a> · <a href="/personal-trainer-chatbot.html">Personal trainer chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

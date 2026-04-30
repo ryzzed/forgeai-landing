@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Advisor Chatbot — Qualify Leads 24/7 Without a Compliance Risk | ChatFlow</title>
+  <meta name="description" content="AI chatbot for financial advisors and RIAs. Qualify prospects, answer general questions about services, and capture leads — without giving specific investment advice. $39/month."/>
+  <meta property="og:title" content="Financial Advisor Chatbot — Qualify Prospects While You Sleep"/>
+  <meta property="og:description" content="ChatFlow AI answers questions about your financial planning services, minimum investment thresholds, and specialties — and books intro calls automatically."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/financial-advisor-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a financial advisor?","acceptedAnswer":{"@type":"Answer","text":"A financial advisor chatbot can answer general questions about your services, minimum investment amounts, areas of specialization (retirement planning, tax strategy, estate planning), and the process for becoming a client. It can qualify prospects and book intro calls — without ever giving specific investment advice, which must come from the advisor."}},{"@type":"Question","name":"Is an AI chatbot compliant for financial advisors?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow does not give investment advice — that's the advisor's role. The chatbot answers questions about your firm's services, fees, process, and specialties, and captures leads. You configure what it can and cannot discuss via the system prompt. For compliance-sensitive topics, you can instruct the bot to always direct visitors to schedule a consultation rather than answering."}},{"@type":"Question","name":"How much does a financial advisor chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For most advisory websites with modest traffic, this covers all visitor interactions comfortably. If even one additional qualified prospect per month schedules a call due to the chatbot, it pays for itself many times over given typical AUM-based fee structures."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .callout{background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:20px 24px;margin:0 0 40px;font-size:14px;color:#fde68a;line-height:1.6}
+    .callout strong{color:#fbbf24}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Financial Advisor Chatbot</div>
+  <h1>Qualify prospects and book calls<br/><span>without giving investment advice.</span></h1>
+  <p class="hero-sub">Visitors to your advisory website want to know if you're the right fit before they reach out. ChatFlow AI answers questions about your services, minimums, and specialties — and captures the intro call before they leave.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">How ChatFlow qualifies a prospect inquiry</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Firm Name]. Are you looking for information about our financial planning services, or do you have a specific question I can help with?</div></div>
+    <div class="msg user"><div class="bubble">I just sold my business and have about $2M to invest. Do you work with people like me?</div></div>
+    <div class="msg bot"><div class="bubble">Congratulations on your exit! Yes — we specialize in exactly that situation. Our practice focuses on business owners going through liquidity events: tax-efficient planning, investment strategy, and building a financial plan for what comes next. Our minimum for comprehensive planning is $500K in investable assets.</div></div>
+    <div class="msg user"><div class="bubble">What does working with you actually look like?</div></div>
+    <div class="msg bot"><div class="bubble">We start with a 30-minute discovery call — no cost, no obligation. We discuss your goals, timeline, and current situation. If it's a fit, we build a proposal. Most clients are fully onboarded within 3-4 weeks of that first call. Want me to grab a spot on the calendar for you?</div></div>
+  </div>
+  <div class="callout"><strong>Compliance note:</strong> ChatFlow is configured via your system prompt — you decide what the bot can and cannot say. For investment-specific questions, instruct the bot to direct visitors to schedule a consultation rather than answering directly. The chatbot handles qualification and scheduling; investment advice stays with you.</div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles</h2>
+  <p class="section-sub" style="text-align:center">Answer the questions that come before the relationship starts</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Prospect qualification</h3>
+      <p>The bot asks about asset levels, life situation, and goals — filtering for fit before a human touches the lead. Only qualified prospects reach your calendar.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Services and specialties FAQ</h3>
+      <p>Retirement planning, tax strategy, estate planning, insurance analysis — explain your specialties in plain language so prospects know immediately whether you're the right fit for them.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Fee structure explanation</h3>
+      <p>AUM-based fees, flat retainer, hourly — explain your model clearly so the fee conversation doesn't dominate your first call. Educated prospects close faster.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Discovery call capture</h3>
+      <p>When the prospect is ready, the bot captures their name, email, and preferred timing — so you wake up with qualified leads in your inbox, not just anonymous website visits.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How do I configure the chatbot to stay compliant?</p>
+      <p class="faq-a">In your system prompt, explicitly instruct the bot on what it can and cannot discuss. For example: "Do not give specific investment recommendations or advice. For any question about what someone should invest in, direct them to schedule a discovery call." The bot follows your instructions precisely. Most advisors configure it to discuss firm services, process, specialties, and fees — and route all specific advice questions to a consultation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the bot integrate with my scheduling tool?</p>
+      <p class="faq-a">ChatFlow captures leads and their contact details through the chat conversation. For calendar booking, the bot can share your Calendly, Acuity, or booking link and prompt the visitor to click it. This keeps the handoff clean without requiring direct integration.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I work with a specific niche — can I configure the bot for that?</p>
+      <p class="faq-a">Yes. If you focus on physicians, tech employees with equity comp, divorce financial planning, or any other niche — configure that context in your system prompt. The bot can ask qualifying questions relevant to your niche ("Are you currently employed at a tech company with unvested RSUs?") and filter for the clients you actually want to work with.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn website visitors into qualified prospects automatically</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your advisory website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/law-firm-chatbot.html">Law firm chatbot</a> · <a href="/insurance-chatbot.html">Insurance chatbot</a> · <a href="/mortgage-chatbot.html">Mortgage chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
