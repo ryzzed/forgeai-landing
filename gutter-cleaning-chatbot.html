@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Gutter Cleaning Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your gutter cleaning website. Quote instantly by linear footage, book seasonal cleanings, and upsell gutter guards — without answering the same calls all day."/>
+  <meta property="og:title" content="AI Chatbot for Gutter Cleaning Companies — Book More Jobs"/>
+  <meta property="og:description" content="ChatFlow helps gutter cleaning companies capture and book jobs 24/7 — instant quotes by home size, seasonal maintenance reminders, and gutter guard upsells."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/gutter-cleaning-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote gutter cleaning jobs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure your pricing tiers in the system prompt — typically by home story count and linear footage. A single-story home with 150 linear feet might be $95–130; two stories with 200 linear feet runs $150–220; homes with heavy tree coverage or clogged downspouts may be on the higher end. The chatbot asks for home size or story count, gives a price range, and captures the booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the chatbot upsell gutter guards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After quoting the cleaning, the chatbot can mention gutter guard installation — explaining that guards reduce cleaning frequency from twice a year to every 3–5 years and giving an installed cost range ($8–20 per linear foot depending on guard type). Customers who just paid for a cleaning are in the right mindset to consider a long-term fix. You configure whether to mention this every time or only for certain home types."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I set up seasonal reminder campaigns with ChatFlow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatFlow captures customer contact info and service history in your dashboard. For seasonal outreach — pre-fall cleaning reminder, post-storm check — you export the contact list and use your own email tool (Mailchimp, Gmail, etc.) to send reminders. ChatFlow doesn't send automated campaigns natively, but capturing structured lead data makes those campaigns possible."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Gutter Cleaning</div>
+  <h1>Book gutter cleaning jobs without playing phone tag</h1>
+  <p class="hero-sub">Customers search "gutter cleaning near me," land on your site, and want a price immediately. ChatFlow quotes by home size, captures the booking, and upsells gutter guards — all without a phone call.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Instant pricing, booking capture, and gutter guard upsell</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Welcome to CleanFlow Gutters. Looking to get your gutters cleaned or have questions about gutter guards? I can give you a price estimate right now.</div>
+      <div class="bubble user-b">How much to clean my gutters? 2-story house.</div>
+      <div class="bubble bot">For a 2-story home, gutter cleaning runs <strong>$150–220</strong> depending on linear footage and how clogged they are. Most 2-story homes fall in the $160–185 range.
+        <br><br>A few quick questions:
+        <br>• Roughly how many linear feet of gutters? (Or just: is it a typical-sized house, large, or very large?)
+        <br>• Any particularly heavy tree coverage or known blockages?</div>
+      <div class="bubble user-b">Typical size, lots of oak trees so they get pretty clogged up</div>
+      <div class="bubble bot">Got it — with heavy oak debris, figure on the higher end: <strong>$185–220</strong>, and we'd clear the downspouts too since oaks are notorious for clogging those.
+        <br><br>One thing worth knowing: if you're dealing with this every fall and spring, <strong>gutter guards</strong> pay for themselves in 3–4 years. Installed cost is $12–18 per linear foot depending on the guard type — and then you're looking at maybe one cleaning every 3–5 years instead of twice a year.
+        <br><br>Want to book the cleaning now and we can also assess for guards while we're there?</div>
+      <div class="bubble user-b">Yes, let's book. What info do you need?</div>
+      <div class="bubble bot">Perfect! Just need your name, address, and best contact number. What works for scheduling — weekday mornings, afternoons, or weekends?</div>
+      <div class="bubble user-b">Paul Hendrix, 742 Magnolia Dr, Maitland. 407-555-0162. Weekday mornings work best.</div>
+      <div class="bubble bot">Booked, Paul! Gutter cleaning + guard assessment at 742 Magnolia Dr, Maitland — weekday morning. I'll send your details to the crew and you'll get a confirmation text with the exact date within a few hours.</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why gutter cleaning companies use ChatFlow</h2>
+  <p class="section-sub">The customer wants a price — give it to them before they click Back</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Instant quotes by home size</h3>
+      <p>Gutter cleaning is a commodity service — customers comparison shop on price. ChatFlow quotes your rate ranges immediately based on home story count and size so customers don't have to wait for a callback to get a number. The company that answers first usually gets the job.</p>
+    </div>
+    <div class="card">
+      <h3>Natural gutter guard upsell</h3>
+      <p>The best moment to mention gutter guards is right after the customer commits to a cleaning. They're already thinking about their gutters, already have their wallet out mentally. ChatFlow introduces guards in context — cost per linear foot, payback timeline — and captures the "assess when you're there" intent naturally.</p>
+    </div>
+    <div class="card">
+      <h3>Seasonal surge handling</h3>
+      <p>Gutter cleaning spikes in fall and again in spring. During those surges your phone rings constantly with the same question: "how much?" ChatFlow handles the volume — quoting, capturing addresses and contact info, and scheduling preferences — while you focus on running the crew.</p>
+    </div>
+    <div class="card">
+      <h3>Capture after-hours searches</h3>
+      <p>Homeowners notice clogged gutters on a rainy weekend when water is overflowing. That's when they search and that's when they want to book — not during business hours. ChatFlow captures those searches and contacts so your Monday morning starts with a full job queue.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote gutter cleaning jobs?</p>
+      <p class="faq-a">You configure your pricing tiers in the system prompt — typically by home story count and linear footage. A single-story home with 150 linear feet might be $95–130; two stories with 200 linear feet runs $150–220; homes with heavy tree coverage or clogged downspouts are on the higher end. The chatbot asks for home size or story count, gives a price range, and captures the booking.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot upsell gutter guards?</p>
+      <p class="faq-a">Yes. After quoting the cleaning, the chatbot can mention gutter guard installation — explaining that guards reduce cleaning frequency from twice a year to every 3–5 years and giving an installed cost range ($8–20 per linear foot depending on guard type). Customers who just booked a cleaning are in the right mindset to consider a long-term solution. You configure whether to mention guards every time or only for customers who mention heavy debris.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I set up seasonal reminder campaigns with ChatFlow?</p>
+      <p class="faq-a">ChatFlow captures customer contact info and service notes in your dashboard. For seasonal outreach — pre-fall cleaning reminder, post-storm check — you export the contact list and use your own email tool (Mailchimp, Gmail, etc.) to send reminders. ChatFlow doesn't send automated campaigns natively, but capturing structured lead data with service history makes those campaigns straightforward.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Answer "how much?" instantly and book the job on the spot</h2>
+    <p>ChatFlow quotes, captures, and upsells for your gutter cleaning business 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/pressure-washing-chatbot.html">Pressure Washing</a> · <a href="/window-cleaning-chatbot.html">Window Cleaning</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Foundation Repair Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your foundation repair website. Answer crack and waterproofing questions, explain repair methods and costs, and book free inspections 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Foundation Repair Companies — Book More Inspections"/>
+  <meta property="og:description" content="ChatFlow helps foundation repair contractors capture high-anxiety leads 24/7 — explaining crack types, waterproofing options, and pier system costs before the free inspection."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/foundation-repair-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the chatbot help homeowners understand if their foundation crack is serious?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure the chatbot to explain crack severity indicators in plain language — hairline vertical cracks are common settlement and usually cosmetic; horizontal cracks in block foundations signal lateral pressure and need immediate evaluation; stair-step cracks in brick may indicate differential settlement. The chatbot always ends with: these are indicators, not a diagnosis — a free inspection is needed for an accurate assessment. This builds trust without practicing engineering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot explain foundation repair costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Foundation repair spans a huge range depending on method and severity. Configure typical ranges in the system prompt: crack injection (epoxy or polyurethane) $300–800 per crack; interior drainage system $8,000–15,000 for an average basement; push pier or helical pier systems $1,200–2,000 per pier, average job 8–12 piers. The chatbot frames these as ranges that a free inspection will narrow down significantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle the waterproofing vs drainage vs structural repair question?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Foundation companies often offer multiple services that customers confuse. You configure the chatbot to distinguish: waterproofing (preventing water intrusion from outside), interior drainage (managing water that gets in), and structural repair (stabilizing movement or settling). Customers describe their symptom — wet basement, visible crack, sticking doors, sloping floors — and the chatbot explains which category likely applies and why an inspection is needed to confirm."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Foundation Repair</div>
+  <h1>Answer foundation questions at 2am — before homeowner anxiety sends them to a competitor</h1>
+  <p class="hero-sub">Foundation problems are discovered at night, on weekends, often during a home sale. Homeowners want answers immediately. ChatFlow explains what they're seeing, sets realistic expectations, and books the free inspection while their concern is fresh.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Crack type explanation, cost education, and inspection booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi — I'm here to help with foundation questions. What are you seeing? A crack, water intrusion, doors sticking, or something else?</div>
+      <div class="bubble user-b">There's a crack in our basement wall that runs diagonally. It wasn't there last year. We're trying to sell the house in 2 months.</div>
+      <div class="bubble bot">A diagonal crack that appeared within the past year is something worth having looked at — especially with a home sale coming up.
+        <br><br>A few details help me give you better context:
+        <br>• Is the wall poured concrete or concrete block (CMU)?
+        <br>• Roughly how long is the crack, and is it hairline-width or wide enough to fit a credit card?
+        <br>• Any moisture, staining, or white mineral deposits around it?</div>
+      <div class="bubble user-b">Poured concrete, maybe 18 inches long, pretty thin — no water. Started at a corner.</div>
+      <div class="bubble bot">A hairline diagonal crack starting at a corner in poured concrete is often a shrinkage or minor settlement crack — fairly common and typically repairable with epoxy or polyurethane injection rather than a major structural repair.
+        <br><br>That said, I want to be clear: I can't diagnose from a description. What I can tell you is that crack injection is typically <strong>$300–600</strong> for a crack that size, and with a home sale timeline you'll want a documented repair and transferable warranty — both of which our inspections provide.
+        <br><br>Would a free inspection work? We can usually get out within a few business days.</div>
+      <div class="bubble user-b">Yes, that would be great. We're in Clermont.</div>
+      <div class="bubble bot">We cover Clermont — no problem. What's the best name, phone number, and your availability this week or next?</div>
+      <div class="bubble user-b">Tom and Rhea Baskin, 352-555-0194. Flexible, whenever you can come.</div>
+      <div class="bubble bot">Perfect, Tom and Rhea. Free inspection in Clermont — I'll pass your info to the scheduling team and someone will reach out today or tomorrow to confirm the visit. Hang tight!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why foundation repair companies use ChatFlow</h2>
+  <p class="section-sub">Be the company that answered at 11pm — not the one that called back Tuesday</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Handle the anxiety-driven search</h3>
+      <p>Foundation problems trigger immediate anxiety. Homeowners search at all hours — "is my foundation crack serious," "horizontal crack basement wall," "sticking doors foundation." ChatFlow captures those searches with calm, informative responses that build trust before any sales conversation starts.</p>
+    </div>
+    <div class="card">
+      <h3>Explain crack severity honestly</h3>
+      <p>Not every crack is a crisis. Configure ChatFlow to explain the range — hairline vertical shrinkage cracks vs. horizontal pressure cracks vs. diagonal settlement cracks — and set honest expectations. Homeowners who feel educated rather than scared are more likely to book an inspection and less likely to feel sold to.</p>
+    </div>
+    <div class="card">
+      <h3>Home sale urgency capture</h3>
+      <p>A significant portion of foundation leads come from homeowners under contract or listing soon. They need documentation, a repair, and a transferable warranty — and they need it quickly. ChatFlow identifies that urgency and routes those leads for priority scheduling.</p>
+    </div>
+    <div class="card">
+      <h3>Waterproofing vs structural clarity</h3>
+      <p>Customers don't know if they need waterproofing, drainage, or structural repair — and mismatched expectations kill conversions. ChatFlow asks symptom questions (wet basement? crack? movement?) and maps them to the right service category before the inspection, so your team shows up with the right specialist.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot help homeowners understand if their foundation crack is serious?</p>
+      <p class="faq-a">You configure the chatbot to explain crack severity indicators in plain language — hairline vertical cracks are common settlement and usually cosmetic; horizontal cracks in block foundations signal lateral pressure and need immediate evaluation; stair-step cracks in brick may indicate differential settlement. The chatbot always concludes that a free inspection is needed for an accurate assessment — building trust without practicing engineering.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot explain foundation repair costs?</p>
+      <p class="faq-a">Foundation repair spans a wide range depending on method and severity. Configure typical ranges in the system prompt: crack injection (epoxy or polyurethane) $300–800 per crack; interior drainage system $8,000–15,000 for an average basement; push pier or helical pier systems $1,200–2,000 per pier with average jobs requiring 8–12 piers. The chatbot frames these as ranges that a free inspection will narrow down significantly, which sets expectations without sticker-shocking the customer.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle the waterproofing vs drainage vs structural repair question?</p>
+      <p class="faq-a">Foundation companies often offer multiple services that customers confuse. You configure the chatbot to distinguish: waterproofing (preventing water intrusion from outside), interior drainage (managing water that gets in), and structural repair (stabilizing movement or settling). Customers describe their symptom — wet basement, visible crack, sticking doors, sloping floors — and the chatbot explains which category likely applies and why an inspection is needed to confirm the right solution.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Be the company that answers foundation questions at midnight</h2>
+    <p>ChatFlow educates, reassures, and books free inspections 24/7. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/roofing-chatbot.html">Roofing</a> · <a href="/pest-control-chatbot.html">Pest Control</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
