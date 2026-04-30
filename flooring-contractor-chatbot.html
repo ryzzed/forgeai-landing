@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flooring Contractor Chatbot — Capture Quotes for Hardwood, Tile, and LVP Installation | ChatFlow</title>
+  <meta name="description" content="AI chatbot for flooring contractors. Give material estimates, help homeowners choose flooring, and capture quote requests automatically. $39/month."/>
+  <meta property="og:title" content="Flooring Contractor Chatbot — Capture Jobs While Your Crew Is Installing"/>
+  <meta property="og:description" content="ChatFlow AI answers flooring questions, gives square-footage estimates, and captures installation quote requests — so homeowners don't call another flooring company while you're on a job."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/flooring-contractor-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a flooring contractor?","acceptedAnswer":{"@type":"Answer","text":"A flooring chatbot can answer questions about flooring materials (hardwood, LVP, laminate, tile, carpet), give per-square-foot installation estimates, explain subfloor requirements, and capture quote requests. It qualifies projects by asking about square footage, current flooring, subfloor type, and whether stairs are involved — so you arrive at estimates prepared. Homeowners selecting flooring often have many questions before they're ready to book; a chatbot that answers them immediately captures interest that would otherwise go to a competitor or big-box store."}},{"@type":"Question","name":"How should I price flooring installation through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Give per-square-foot ranges by material type: 'Hardwood installation: $4-8/sq ft labor (material additional). LVP/luxury vinyl: $3-5/sq ft labor. Tile: $6-12/sq ft labor depending on tile size and pattern. Carpet: $2-4/sq ft labor.' Separate labor from material so customers understand the full cost picture. Add: 'Old flooring removal and disposal adds $1-2/sq ft. Subfloor repairs are quoted separately based on condition.'"}},{"@type":"Question","name":"How much does a flooring contractor chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For flooring contractors where a full home installation runs $5,000-20,000+, capturing even one additional job per month through the chatbot yields enormous ROI. The free plan (1,000 conversations/month) works for smaller flooring operations."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Flooring Contractor Chatbot</div>
+  <h1>Answer flooring questions and capture<br/><span>quotes while your crew is laying tile.</span></h1>
+  <p class="hero-sub">Homeowners shopping for new flooring have questions before they're ready to book an estimate — what's the difference between LVP and laminate, how much does hardwood cost, can you install over concrete? ChatFlow AI answers those questions and captures the lead 24/7.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A homeowner undecided on material — guided and captured</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Flooring. New installation, refinishing, or repair — and what type of flooring are you considering?</div></div>
+    <div class="msg user"><div class="bubble">New installation — replacing carpet in our main living areas. Not sure if we should do hardwood or that vinyl plank everyone's doing now.</div></div>
+    <div class="msg bot"><div class="bubble">Both are great options — the choice usually comes down to your priorities. Hardwood adds the most resale value and can be refinished multiple times over decades. LVP (luxury vinyl plank) is fully waterproof, softer underfoot, and costs 30-40% less installed. If you have kids or pets, or a room that gets wet, LVP is the practical choice. If you want the long-term investment and authentic wood feel, hardwood is worth it. How many square feet are we talking about?</div></div>
+    <div class="msg user"><div class="bubble">Living room and dining room — probably around 600-700 sq ft.</div></div>
+    <div class="msg bot"><div class="bubble">600-700 sq ft is a nice project. Estimate for LVP installation (labor only, material additional): $1,800-2,500. Hardwood installation (labor only): $2,400-3,500. Material costs typically add $2-6/sq ft depending on grade. Old carpet removal and disposal: $400-500 extra. What's your zip code and best number to schedule a free measure and material review?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your flooring business</h2>
+  <p class="section-sub" style="text-align:center">Every lead captured — from the early researcher to the ready-to-book buyer</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Material comparison guidance</h3>
+      <p>Hardwood vs LVP vs laminate vs tile vs carpet — the honest tradeoffs for different situations. Most homeowners are undecided when they first reach out. The bot helps them make a confident choice before the estimate visit, making that conversation more productive.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Per-square-foot estimates</h3>
+      <p>Labor pricing separated from material, with removal and disposal as an add-on. Total estimate ranges calculated from square footage the homeowner provides. Customers who see a number before calling are more committed when they book the estimate.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Subfloor and installation requirements</h3>
+      <p>Can you install over existing tile? Does concrete need a moisture barrier? Does old carpet need to come up first? These technical questions often stop homeowners from moving forward. The bot answers them and removes the hesitation.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+      <h3>Refinishing vs replacement</h3>
+      <p>For existing hardwood, the question is often whether to refinish or replace. The bot can explain: "Hardwood can usually be refinished 2-3 times depending on plank thickness. Refinishing costs $3-5/sq ft — significantly cheaper than replacement if the wood is in decent condition." Captures both the refinishing and the replacement lead.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How do I handle material supply — do I supply, or does the customer buy their own?</p>
+      <p class="faq-a">Be clear upfront: "We supply materials and include them in the total quote — this gives us quality control and warranty coverage. If you've already purchased materials, we can install customer-supplied flooring, though our labor warranty applies only to workmanship, not material defects." Many flooring contractors prefer to supply materials for quality and margin reasons — the bot can explain the value clearly without the customer needing to ask why they can't buy from a big-box store and have you install it.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What should I say about acclimation for hardwood?</p>
+      <p class="faq-a">"Solid hardwood needs to acclimate in your home for 3-7 days before installation — the wood adjusts to your home's humidity and temperature to prevent warping after installation. We deliver the materials early and schedule installation after acclimation is complete. This is a standard part of the process and extends the life of your floor significantly." Most homeowners don't know about acclimation — explaining it proactively shows expertise and prevents frustration when installation is scheduled with a lead time.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I also do commercial flooring — how should the bot handle that?</p>
+      <p class="faq-a">Separate the qualification: "For commercial flooring — office spaces, retail, healthcare, multi-unit residential — we work from architectural specs and do a site survey for larger projects. What type of facility and roughly how many square feet? Commercial projects have different timeline requirements and often involve VCT, polished concrete, or commercial carpet tile we can discuss." Commercial flooring is a different sales motion — the bot captures the lead and routes to a commercial-specific follow-up process.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Capture flooring leads before they call someone else</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your flooring contractor website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/painting-contractor-chatbot.html">Painting contractor chatbot</a> · <a href="/handyman-chatbot.html">Handyman chatbot</a> · <a href="/interior-designer-chatbot.html">Interior designer chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

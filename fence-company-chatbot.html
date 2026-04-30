@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fence Company Chatbot — Capture Quotes for Fence Installation and Repair 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for fence installation and repair companies. Capture quote requests, qualify project scope, and give material estimates automatically. $39/month."/>
+  <meta property="og:title" content="Fence Company Chatbot — Fill Your Estimate Schedule While Your Crew Is Installing"/>
+  <meta property="og:description" content="ChatFlow AI captures fence quote requests, asks about linear footage and material preferences, and checks your service area — so homeowners don't move on while you're on a job."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/fence-company-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a fence company?","acceptedAnswer":{"@type":"Answer","text":"A fence chatbot can answer questions about fence materials (wood, vinyl, chain link, aluminum, wrought iron), give ballpark pricing per linear foot, explain post-setting methods, and capture quote requests. It qualifies projects by asking about linear footage, fence purpose (privacy, security, pool code), existing posts, and terrain — so you arrive at estimates prepared rather than starting from scratch."}},{"@type":"Question","name":"How should I handle fence pricing through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Give per-linear-foot ranges by material: 'Wood privacy fence installed: $22-35/ft. Vinyl privacy fence: $30-45/ft. 4ft chain link: $15-22/ft. Aluminum ornamental: $28-40/ft.' This is how homeowners think about fence pricing and how they compare quotes. Add: 'Gate installation adds $150-400 per gate depending on style and width. Final pricing depends on terrain, soil conditions, and whether old fence removal is included.'"}},{"@type":"Question","name":"How much does a fence company chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For fence companies where a typical residential job runs $2,000-8,000, capturing one additional job per month through the chatbot yields 50-200x ROI. The free plan (1,000 conversations/month) works well for smaller fence operations."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Fence Company Chatbot</div>
+  <h1>Fill your estimate calendar while<br/><span>your crew is setting posts.</span></h1>
+  <p class="hero-sub">Homeowners planning a fence often research multiple companies at once and book with the first to respond. ChatFlow AI answers their material questions, gives per-foot estimates, and captures their info — so your schedule fills while you're on the job site.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A new fence inquiry — qualified and captured automatically</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Fence Company. New installation, repair, or looking for a quote?</div></div>
+    <div class="msg user"><div class="bubble">New installation — want to fence the whole backyard for my dogs. Not sure what material to go with.</div></div>
+    <div class="msg bot"><div class="bubble">For dogs, the two most popular options are wood privacy fence ($22-35/ft installed) and vinyl privacy fence ($30-45/ft installed). Wood looks classic but needs staining every few years; vinyl is maintenance-free but typically costs 20-30% more upfront. Either works great for dog containment. Do you know roughly how many linear feet you need — or I can estimate based on your lot size if you know the dimensions?</div></div>
+    <div class="msg user"><div class="bubble">The backyard is about 60x80 feet. Three sides need fencing — one side is already fenced by the neighbor.</div></div>
+    <div class="msg bot"><div class="bubble">That's roughly 220 linear feet (60+80+80). Wood estimate: $4,800-7,700. Vinyl: $6,600-9,900. Both include one walk-through gate. Those are ballparks — terrain and gate count affect the final number. What's your zip code, and what's the best number to call you for a free on-site estimate?</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your fence business</h2>
+  <p class="section-sub" style="text-align:center">Every quote request captured — including the undecided ones who need material guidance</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>Material comparison and guidance</h3>
+      <p>Wood, vinyl, chain link, aluminum, wrought iron — pros, cons, and price differences. Many homeowners arrive undecided. The bot helps them narrow down before you get on the phone, making the estimate visit more productive.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Per-linear-foot estimates</h3>
+      <p>Material-specific pricing with linear footage calculation from lot dimensions. Homeowners who can see a rough total before calling are more likely to commit to an estimate visit — and less likely to be surprised when you quote.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Pool code and HOA compliance</h3>
+      <p>Pool safety fences require specific heights and latch standards — the bot can explain your code-compliant options. HOA fencing often restricts materials and colors — the bot helps homeowners understand what requires HOA approval before you arrive.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+      <h3>Old fence removal and disposal</h3>
+      <p>Most homeowners replacing a fence need the old one removed. The bot should address this proactively: "Old fence removal and disposal is typically $3-5 per linear foot additional, depending on material. We can quote that separately or include it in the project." Gets it out of the way before the estimate visit.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How should the chatbot handle permit questions?</p>
+      <p class="faq-a">Be clear about who's responsible: "Most municipalities require a permit for fences over 4 feet. We pull the permit as part of the job — typically $75-150 depending on your jurisdiction. We handle the paperwork and inspection scheduling. You should also check with your HOA if applicable, since they may have additional restrictions we'd need to work within." Pulling permits is standard for established fence companies — the bot positions it as a service feature, not a hassle.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What about underground utility locating — should the chatbot mention it?</p>
+      <p class="faq-a">Yes — it's a professional differentiator: "Before we set any posts, we call 811 (Call Before You Dig) to have underground utilities marked. It's required by law and protects your property and our crew. We handle this automatically as part of every installation." Many homeowners don't know this is required or done — mentioning it proactively builds confidence that you run a professional operation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I do both residential and commercial fencing — how should the bot handle commercial inquiries?</p>
+      <p class="faq-a">Residential and commercial are different qualification paths: "For commercial fencing — parking lots, industrial facilities, sports facilities, perimeter security — we do a site survey and formal bid. What type of facility and roughly how many linear feet? I can get our commercial estimator in touch with you." Commercial fence work often involves security fencing, high-visibility projects, and different decision-maker processes — the bot should capture the lead and route to a different follow-up track.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Fill your estimate calendar before the competition calls back</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your fence company website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/landscaping-chatbot.html">Landscaping chatbot</a> · <a href="/handyman-chatbot.html">Handyman chatbot</a> · <a href="/roofing-chatbot.html">Roofing chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
