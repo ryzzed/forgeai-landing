@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot for Sauna Installation Companies | ChatFlow</title>
+  <meta name="description" content="Add an AI chatbot to your sauna installation website. Quote indoor and outdoor sauna installation, explain traditional vs infrared options, and book free site assessments 24/7."/>
+  <meta property="og:title" content="AI Chatbot for Sauna Installation — Quote Indoor and Outdoor Saunas 24/7"/>
+  <meta property="og:description" content="ChatFlow helps sauna installation companies capture leads around the clock — quoting indoor and outdoor sauna installation, explaining traditional vs infrared options, and booking free site assessments."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/sauna-installation-chatbot.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the chatbot quote sauna installation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You configure price ranges by sauna type and size in the system prompt. Pre-built indoor infrared sauna (2-person, plug-in 120V): $2,500–5,000 supply and install. Pre-built indoor traditional steam sauna (2-person, 240V required): $3,500–7,500 installed. Custom-built indoor traditional sauna (cedar, 4x6 to 6x8): $6,000–15,000. Outdoor barrel sauna (6-foot, 4-person): $4,500–9,000 installed with electrical. Custom outdoor sauna cabin: $15,000–40,000+. The chatbot asks about indoor vs outdoor preference, traditional steam vs infrared, number of users, and available electrical capacity, then gives a range and books the free site assessment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot help customers choose between traditional and infrared saunas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional steam sauna: heats the air to 160–200°F using a wood-burning or electric stove with steam from water poured on rocks. Authentic Finnish sauna experience, higher temperatures, typically requires 240V electrical, better for multiple users. Infrared sauna: heats the body directly with infrared light at lower air temperatures (120–140°F), easier installation (many plug into 120V), lower operating cost, gentler experience often preferred for wellness and recovery use. The chatbot asks whether the customer prioritizes authentic high-heat experience or everyday wellness use to recommend the right type."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the chatbot handle outdoor barrel sauna and sauna cabin questions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Outdoor saunas are increasingly popular as backyard additions — configure the chatbot to ask about available yard space, distance from the electrical panel (affects wiring cost), and whether a changing room or deck is desired. Outdoor barrel sauna (6-foot, pre-built): $4,500–9,000 including electrical run and concrete pad or deck base. Custom sauna cabin with changing room and deck: $15,000–40,000+. The chatbot asks about property and power access to identify whether a standard barrel or custom structure fits the space and captures the site assessment appointment to confirm feasibility."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff;margin-bottom:16px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:32px}
+    .demo-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;max-width:560px;margin:0 auto 0}
+    .demo-label{font-size:11px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .bubble{padding:11px 15px;border-radius:12px;font-size:14px;line-height:1.55;max-width:88%;margin-bottom:10px;color:#e2e8f0}
+    .bot{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.2);align-self:flex-start}
+    .user-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);margin-left:auto;text-align:right}
+    .chat{display:flex;flex-direction:column}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:0}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge">Sauna Installation</div>
+  <h1>Answer the traditional vs infrared question and book sauna installations while wellness demand is at its peak</h1>
+  <p class="hero-sub">Sauna demand has surged alongside the home wellness movement — but customers are stuck on infrared vs traditional, indoor vs outdoor, and what their 240V panel can support. ChatFlow resolves those questions, gives a real installed price, and books the site assessment before they spend weeks researching and talking themselves out of it.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try it free for 14 days →</a>
+    <a href="/pricing.html" class="btn-ghost">See pricing</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:8px">What your customers experience</h2>
+  <p class="section-sub" style="text-align:center">Traditional vs infrared guidance, outdoor barrel scoping, and site assessment booking</p>
+  <div class="demo-wrap">
+    <div class="demo-label">Live chat demo</div>
+    <div class="chat">
+      <div class="bubble bot">Hi! Interested in a sauna installation? Indoor or outdoor, and are you leaning toward traditional steam or infrared — or still figuring that out?</div>
+      <div class="bubble user-b">We want an outdoor sauna. We have a decent backyard and we've been looking at those outdoor barrel saunas. Probably 4 people max. We want the authentic experience — steam, high heat, the whole thing.</div>
+      <div class="bubble bot">Outdoor barrel sauna with traditional steam is a great choice — that's the authentic Finnish experience and it works beautifully outdoors year-round. Here's what to expect:
+        <br><br>• <strong>6-foot barrel sauna (4-person):</strong> $4,500–8,500 installed
+        <br>• Includes the barrel, delivery, assembly, concrete pad or gravel base, and 240V electrical run from your panel
+        <br>• Electrical run cost depends on distance from your panel to the install site — short run ($200–400) vs long run across the yard ($500–1,000+)
+        <br><br>If you want to go up a level: a custom outdoor sauna cabin with a small changing room and a deck adds significant character — those typically run <strong>$15,000–30,000+</strong> depending on size and finish.
+        <br><br>The barrel is a great starting point for most backyard setups. Want to schedule a free site visit? We'll assess where it should go, confirm the electrical run distance, and make sure there are no permit requirements in your area.
+        <br><br>Where are you located?</div>
+      <div class="bubble user-b">Woodbury, MN — just outside the Twin Cities.</div>
+      <div class="bubble bot">Twin Cities area is our service region — outdoor barrel saunas are especially popular here. What's your name and best contact?</div>
+      <div class="bubble user-b">Brad Sorenson, 651-555-0168</div>
+      <div class="bubble bot">Got it, Brad! Free sauna site assessment in Woodbury — outdoor barrel, 4-person, traditional steam. I'll pass your info along and we'll reach out within one business day. You're going to love having this in the backyard come January!</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>Why sauna installation companies use ChatFlow</h2>
+  <p class="section-sub">Capture high-intent wellness customers and convert research-phase interest into booked site assessments</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Traditional vs infrared decision resolution</h3>
+      <p>The traditional vs infrared question is the biggest decision bottleneck for sauna customers — configure ChatFlow to resolve it based on use priorities. Traditional: authentic high-heat steam experience, Finnish sauna culture, better for groups, requires 240V and more installation work. Infrared: lower temperature, direct-body heating, easier electrical requirements (some are 120V plug-in), popular for everyday wellness and recovery use. Customers who get a confident recommendation based on their priorities move faster from research to booking than those who stay in comparison mode.</p>
+    </div>
+    <div class="card">
+      <h3>Electrical pre-qualification</h3>
+      <p>Electrical capacity is the most common sauna installation constraint — configure ChatFlow to ask about panel amperage and proximity to the installation site. A 200-amp panel with short run to an attached garage is simple; a 100-amp panel with a 100-foot run to a backyard location may need a sub-panel. Pre-qualifying this during the chat means your installer arrives knowing whether an electrician needs to be coordinated separately — preventing the "I didn't know I needed an electrician" friction that delays projects.</p>
+    </div>
+    <div class="card">
+      <h3>Outdoor vs indoor routing</h3>
+      <p>Outdoor barrel saunas and indoor custom builds have completely different site requirements and scopes — configure ChatFlow to identify this early and route accordingly. Outdoor: site selection (level ground, drainage, distance from panel), permit check, base preparation. Indoor: room size check (minimum 4x6 for a 2-person), ventilation requirements, 240V circuit availability. Both paths lead to a site assessment, but your team arrives with the right questions and tools for the installation type.</p>
+    </div>
+    <div class="card">
+      <h3>Cold plunge and wellness room bundling</html>
+      <p>Sauna customers are wellness-oriented and frequently interested in cold plunge tubs ($3,000–8,000 installed), outdoor showers ($1,500–4,000), or a covered structure over the outdoor sauna. Configure ChatFlow to mention cold plunge and outdoor shower as natural companions to an outdoor sauna setup — the contrast therapy combination (hot sauna, cold plunge) is a trending wellness practice that customers are researching alongside the sauna. Bundling these into one project increases average ticket and simplifies the construction coordination for the customer.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot quote sauna installation?</p>
+      <p class="faq-a">You configure price ranges by type. Pre-built indoor infrared (2-person, 120V): $2,500–5,000. Indoor traditional steam (2-person, 240V): $3,500–7,500. Custom indoor cedar sauna (4x6–6x8): $6,000–15,000. Outdoor barrel sauna (6-foot, 4-person): $4,500–9,000. Custom outdoor sauna cabin: $15,000–40,000+. The chatbot asks about indoor vs outdoor, traditional vs infrared, user count, and electrical access, then gives a range and books the free site assessment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot help customers choose between traditional and infrared saunas?</p>
+      <p class="faq-a">Traditional: 160–200°F, steam from water on rocks, authentic Finnish experience, requires 240V, better for groups. Infrared: 120–140°F, direct-body heating, easier installation (some 120V plug-in), popular for daily wellness and recovery. The chatbot asks about use priorities and recommends accordingly before booking the site assessment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How does the chatbot handle outdoor barrel sauna questions?</p>
+      <p class="faq-a">The chatbot asks about yard space, panel proximity, and whether a changing room or deck is desired. Outdoor barrel (6-foot, 4-person): $4,500–9,000 including electrical and base. Custom sauna cabin with changing room: $15,000–40,000+. Electrical run distance (short $200–400 vs long $500–1,000+) is scoped at the site assessment visit.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Book sauna installations and answer the traditional vs infrared question 24/7</h2>
+    <p>ChatFlow captures wellness-driven sauna leads and books site assessments. Setup takes 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Start free — no credit card →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/pool-builder-chatbot.html">Pool Builder</a> · <a href="/outdoor-kitchen-chatbot.html">Outdoor Kitchen</a> · <a href="/resources.html">All industries</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
