@@ -1024,4 +1024,7 @@
   <url><loc>https://myflow.chat/furnace-installation-chatbot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myflow.chat/boiler-repair-chatbot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myflow.chat/home-security-chatbot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/central-ac-installation-chatbot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/repiping-chatbot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/radiant-floor-heating-chatbot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
