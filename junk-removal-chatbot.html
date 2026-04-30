@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Junk Removal Chatbot — Capture Quotes and Book Same-Day Pickups 24/7 | ChatFlow</title>
+  <meta name="description" content="AI chatbot for junk removal businesses. Give instant price estimates, check your service area, and capture booking requests automatically. $39/month."/>
+  <meta property="og:title" content="Junk Removal Chatbot — Quote and Book Jobs While You're on a Pickup"/>
+  <meta property="og:description" content="ChatFlow AI gives junk removal estimates, checks your service area, and captures booking requests — so customers don't call a competitor while you're loading a truck."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/junk-removal-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a junk removal business?","acceptedAnswer":{"@type":"Answer","text":"A junk removal chatbot can give price estimates based on load size (fraction of truck, full truck), answer questions about what you accept and what you won't haul (hazmat, electronics, mattresses), confirm service area coverage, and capture same-day or scheduled booking requests. Because junk removal customers often want a fast response and same-day service, a chatbot that responds instantly and captures the request is significantly more effective than a missed call."}},{"@type":"Question","name":"How should I price junk removal through a chatbot?","acceptedAnswer":{"@type":"Answer","text":"Give volume-based estimates: '1/4 truck load: $125-175. 1/2 truck: $200-275. Full truck: $350-475. Prices vary based on item type and whether stairs or long carries are involved.' This volume-based model is standard in the industry and easy for customers to self-qualify. You can also list per-item rates for common single items (couch: $75-100, mattress: $60-80, appliance: $80-120) for customers who just have one or two things."}},{"@type":"Question","name":"How much does a junk removal chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month for 5,000 AI conversations. For junk removal businesses where an average job runs $200-400, capturing even one additional booking per month through the chatbot covers the cost with significant margin. The free plan (1,000 conversations/month) works well for smaller junk removal operations."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Junk Removal Chatbot</div>
+  <h1>Book same-day pickups while you're<br/><span>loading the last truck.</span></h1>
+  <p class="hero-sub">Junk removal customers want fast answers and same-day service. When they visit your website and you're on a job, ChatFlow AI gives them an instant estimate, checks your service area, and captures the booking — so you end the day with tomorrow's schedule full.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">A same-day booking — quoted and captured automatically</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Name] Junk Removal. Need same-day pickup, or are you scheduling for later this week?</div></div>
+    <div class="msg user"><div class="bubble">Same-day if possible — cleaning out my garage. Old couch, broken treadmill, some boxes of random stuff, a few trash bags.</div></div>
+    <div class="msg bot"><div class="bubble">That sounds like a 1/4 to 1/2 truck load depending on the boxes. Ballpark: $150-250. We can usually do same-day if you're in our area — what zip code are you in, and do you have access to the garage (driveway we can pull up to)?</div></div>
+    <div class="msg user"><div class="bubble">32803. Yeah, big driveway, no issue.</div></div>
+    <div class="msg bot"><div class="bubble">That's in our service area and easy access. To get you on the schedule, I just need your name and best number — our dispatcher will call you within 30 minutes to confirm availability and give you a 2-hour arrival window for today.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">What the chatbot handles for your junk removal business</h2>
+  <p class="section-sub" style="text-align:center">Fast answers and instant booking — matching what junk removal customers expect</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Instant load estimates</h3>
+      <p>Volume-based pricing by fraction of truck — the standard junk removal model. Per-item rates for single pieces (couch, mattress, appliance). Customers who know the price before calling are more likely to book without shopping around.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+      <h3>What you take and don't take</h3>
+      <p>List accepted items (furniture, appliances, electronics, yard waste) and what you don't haul (hazmat, paint, chemicals, tires, construction debris). Saves you showing up to a job you can't complete — and the customer the wasted time.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      <h3>Service area and scheduling</h3>
+      <p>Zip code check, same-day vs next-day availability, and arrival window expectations. Junk removal customers want to know when you're coming — the bot sets that expectation before your dispatcher calls to confirm.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+      <h3>Donation and recycling info</h3>
+      <p>"We donate usable furniture to local charities and recycle what we can — we don't just dump everything." This differentiator matters to environmentally conscious customers and builds trust before they've met you. Worth mentioning unprompted.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How do I handle estate cleanouts and large commercial jobs differently?</p>
+      <p class="faq-a">Configure the bot to recognize large jobs and change the approach: "For full estate cleanouts or commercial cleanouts, I'd send one of our estimators to do a walk-through rather than estimating by chat. These jobs vary significantly in scope. What's your timeline, and would you like to schedule a free walk-through estimate?" Large jobs need to be seen — the bot's job is to capture the lead and set the expectation, not to quote a job you haven't seen.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What about electronics recycling — should I advertise that?</p>
+      <p class="faq-a">Yes, but be clear about fees if there are any. "We accept TVs, computers, and electronics for responsible recycling. TVs over 32" have a $15-25 recycling fee due to disposal costs. Everything else is included in the standard load price." Customers searching for electronics disposal specifically will be relieved to find you handle it — and the transparency on fees prevents the surprise when the crew arrives.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I offer labor-only loading (customer rents dumpster, I provide crew) — can the chatbot explain this?</p>
+      <p class="faq-a">Absolutely. "We also offer loading-only service if you've already rented a dumpster or container — we provide the crew to load it for you. Typically $100-150/hour for a 2-person crew, 2-hour minimum." Some customers prefer this for large cleanouts where they want control over the dumpster timeline. Offering both options in the same chat conversation captures customers who might have otherwise rented a dumpster and gone with a different labor crew.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn every website visit into a booking while you're on a job</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your junk removal website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/moving-company-chatbot.html">Moving company chatbot</a> · <a href="/handyman-chatbot.html">Handyman chatbot</a> · <a href="/cleaning-chatbot.html">Cleaning service chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
