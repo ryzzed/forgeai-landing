@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coworking Space Chatbot — Convert Website Visitors Into Members | ChatFlow</title>
+  <meta name="description" content="AI chatbot for coworking spaces. Answer membership plan questions, handle tour requests, and capture leads 24/7 — without adding front desk staff. $39/month flat."/>
+  <meta property="og:title" content="Coworking Space Chatbot — Book Tours and Answer Membership Questions Automatically"/>
+  <meta property="og:description" content="ChatFlow AI answers every coworking question: hot desk vs dedicated desk, pricing, amenities, day passes. Captures tour requests automatically, 24/7."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://myflow.chat/coworking-space-chatbot.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can an AI chatbot do for a coworking space?","acceptedAnswer":{"@type":"Answer","text":"A coworking space chatbot can answer questions about membership plans (hot desk, dedicated desk, private office), day pass pricing, amenities (high-speed WiFi, printing, meeting rooms, coffee), parking, and how to schedule a tour. It captures tour requests and new member inquiries automatically, 24/7, without requiring front desk staff to be on call."}},{"@type":"Question","name":"How does a coworking chatbot handle pricing questions?","acceptedAnswer":{"@type":"Answer","text":"Train the chatbot with your exact membership tiers: hot desk monthly rate, dedicated desk rate, private office pricing, day pass cost, meeting room hourly rates, and any promotional pricing. The AI presents this information conversationally and compares plans based on what the visitor describes about their work situation."}},{"@type":"Question","name":"How much does a coworking space chatbot cost?","acceptedAnswer":{"@type":"Answer","text":"ChatFlow is $39/month flat for 5,000 AI conversations. For most coworking spaces with local marketing, this exceeds the typical monthly website chat volume. There's also a free plan with 1,000 conversations per month to start."}}]}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .hero{max-width:800px;margin:0 auto;text-align:center;padding:60px 24px 48px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:5px 14px;font-size:12px;color:#a78bfa;margin-bottom:24px;font-weight:500}
+    h1{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:20px}
+    h1 span{color:#7c3aed}
+    .hero-sub{font-size:18px;color:#94a3b8;line-height:1.6;max-width:580px;margin:0 auto 36px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:#7c3aed;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-ghost{background:transparent;color:#e2e8f0;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.12)}
+    .section{max-width:900px;margin:0 auto;padding:0 24px 64px}
+    h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;margin-bottom:12px}
+    .section-sub{font-size:16px;color:#64748b;margin-bottom:40px}
+    .demo-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;max-width:480px;margin:0 auto 40px}
+    .demo-chat h3{font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .msg{margin-bottom:12px;display:flex}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:80%}
+    .bot .bubble{background:rgba(124,58,237,.15);color:#e2e8f0;border-radius:4px 12px 12px 12px}
+    .user .bubble{background:#7c3aed;color:#fff;border-radius:12px 4px 12px 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px}
+    .card-icon{width:40px;height:40px;background:rgba(124,58,237,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:18px 0}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+    .faq-q{font-weight:600;color:#e2e8f0;margin-bottom:8px;font-size:15px}
+    .faq-a{font-size:14px;color:#64748b;line-height:1.6}
+    .cta-banner{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:48px;text-align:center;max-width:620px;margin:0 auto}
+    .cta-banner h2{margin-bottom:12px}
+    .cta-banner p{color:#94a3b8;font-size:16px;margin-bottom:28px}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+<div class="hero">
+  <div class="badge"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg> Coworking Space Chatbot</div>
+  <h1>Book more tours.<br/><span>Answer every membership question automatically.</span></h1>
+  <p class="hero-sub">Freelancers and remote workers research coworking spaces at all hours. ChatFlow AI answers membership plan questions, compares options, and captures tour requests — 24/7, without your team on call.</p>
+  <div class="cta-group">
+    <a href="https://app.myflow.chat/register" class="btn-primary">Try free — 2 minutes</a>
+    <a href="/chatbot-roi-calculator.html" class="btn-ghost">Calculate your ROI →</a>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">See it in action</h2>
+  <p class="section-sub" style="text-align:center">How ChatFlow handles a coworking membership inquiry</p>
+  <div class="demo-chat">
+    <h3>Live Chat Preview</h3>
+    <div class="msg bot"><div class="bubble">Hi! Welcome to [Space Name]. Are you looking for a day pass, a monthly membership, or a private office?</div></div>
+    <div class="msg user"><div class="bubble">I'm a freelance designer, need somewhere to work 3 days a week</div></div>
+    <div class="msg bot"><div class="bubble">A part-time hot desk membership sounds like the right fit — it's $199/month for 10 days/mo, or $279/month for unlimited hot desk access. Both include high-speed WiFi, printing, unlimited coffee, and 2 free meeting room hours per month. Would you like to schedule a tour to see the space?</div></div>
+    <div class="msg user"><div class="bubble">Yes! Is there parking?</div></div>
+    <div class="msg bot"><div class="bubble">We have a parking garage next door — monthly parking is $85/mo or $12/day. We can add it to your membership. Want to pick a tour time? I just need your name and email.</div></div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center">Built for coworking space marketing</h2>
+  <p class="section-sub" style="text-align:center">Convert more website visitors into tours and memberships</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <h3>Plan comparison</h3>
+      <p>Hot desk, dedicated desk, private office, day pass — the chatbot helps visitors choose the right plan based on their work situation, team size, and budget. Better qualified leads, fewer tours that go nowhere.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+      <h3>Tour booking capture</h3>
+      <p>The chatbot answers questions and then asks if they'd like to schedule a tour. Captures name, email, preferred time, and what they're looking for — so your team walks into every tour prepared.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>Amenity deep-dives</h3>
+      <p>WiFi speed, phone booth availability, standing desks, event space rental, virtual mailbox, 24/7 access — configure all your amenity details once. The chatbot answers accurately every time.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg width="20" height="20" fill="none" stroke="#a78bfa" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <h3>24/7 lead capture</h3>
+      <p>Remote workers browse coworking options outside business hours. ChatFlow captures those evening and weekend inquiries — leads that would otherwise bounce with no way to engage.</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2 style="text-align:center;margin-bottom:32px">Common questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">Can the chatbot check real-time desk availability?</p>
+      <p class="faq-a">ChatFlow doesn't connect to your space management software directly. It can describe your general capacity and current availability based on what you've written in the system prompt, and direct inquiries to your team for real-time confirmation. For live desk inventory, you'd need an integration with your coworking management software.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">We offer corporate team packages — can the chatbot handle those?</p>
+      <p class="faq-a">Yes — include your corporate/team pricing in the system prompt (e.g., team offices starting at X/month for Y desks, enterprise agreements available). The chatbot qualifies team size, collects contact info, and routes larger inquiries to your sales team for a custom quote conversation.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How is a chatbot better than a contact form for a coworking space?</p>
+      <p class="faq-a">A contact form is passive — the visitor decides to fill it out after reading your website. A chatbot proactively engages, answers their specific questions (What's the WiFi speed? Do you have private call rooms?), and then naturally asks if they'd like to tour. Visitors who get answers to their questions are significantly more likely to convert than those who just fill out a generic form.</p>
+    </div>
+  </div>
+</div>
+<div class="section" style="padding-bottom:80px">
+  <div class="cta-banner">
+    <h2>Turn browsing remote workers into paying members</h2>
+    <p>Start free today. No credit card. Live in 2 minutes on your website.</p>
+    <a href="https://app.myflow.chat/register" class="btn-primary" style="display:inline-block">Try ChatFlow free →</a>
+  </div>
+</div>
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/real-estate-chatbot.html">Real estate chatbot</a> · <a href="/hotel-chatbot.html">Hotel chatbot</a> · <a href="/wedding-venue-chatbot.html">Venue chatbot</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>

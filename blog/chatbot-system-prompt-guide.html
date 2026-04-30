@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Write a Chatbot System Prompt for Your Business (With Examples)</title>
+  <meta name="description" content="A complete guide to writing a chatbot system prompt for small business. Includes templates and examples for restaurants, law firms, dental offices, real estate agents, and more."/>
+  <meta property="og:title" content="How to Write a Chatbot System Prompt for Your Business — Templates + Examples"/>
+  <meta property="og:description" content="Your chatbot is only as good as its system prompt. This guide covers exactly what to include, what to avoid, and includes copy-paste templates for 6 common business types."/>
+  <meta property="og:type" content="article"/>
+  <link rel="canonical" href="https://myflow.chat/blog/chatbot-system-prompt-guide.html"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Write a Chatbot System Prompt for Your Business","description":"A complete guide to writing an AI chatbot system prompt for small business, with templates and examples for different industries.","author":{"@type":"Organization","name":"ChatFlow"},"publisher":{"@type":"Organization","name":"ChatFlow","logo":{"@type":"ImageObject","url":"https://myflow.chat/favicon.ico"}},"datePublished":"2025-06-01","dateModified":"2025-06-01"}
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh;line-height:1.7}
+    .nav{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    .logo-icon{width:32px;height:32px;background:#7c3aed;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .logo-text{font-weight:700;font-size:17px}
+    .nav-cta{background:#7c3aed;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+    .article-wrap{max-width:740px;margin:0 auto;padding:40px 24px 80px}
+    .article-meta{display:flex;align-items:center;gap:12px;margin-bottom:32px}
+    .tag{background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);color:#a78bfa;padding:3px 10px;border-radius:100px;font-size:12px;font-weight:600}
+    .article-meta time{font-size:13px;color:#475569}
+    h1{font-size:clamp(26px,4vw,40px);font-weight:800;line-height:1.15;color:#fff;margin-bottom:20px}
+    .lead{font-size:17px;color:#94a3b8;line-height:1.7;margin-bottom:32px;border-left:3px solid #7c3aed;padding-left:16px}
+    h2{font-size:clamp(18px,3vw,24px);font-weight:700;color:#fff;margin:40px 0 14px}
+    h3{font-size:16px;font-weight:700;color:#e2e8f0;margin:24px 0 10px}
+    p{font-size:15px;color:#94a3b8;margin-bottom:16px}
+    ul,ol{padding-left:20px;margin-bottom:16px}
+    li{font-size:15px;color:#94a3b8;margin-bottom:6px}
+    strong{color:#e2e8f0}
+    .callout{background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:10px;padding:16px 20px;margin:20px 0}
+    .callout p{margin:0;font-size:14px;color:#a78bfa}
+    .template-box{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;margin:20px 0;font-family:'Courier New',monospace;font-size:13px;color:#a5f3fc;white-space:pre-wrap;line-height:1.6}
+    .template-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#64748b;margin-bottom:8px;font-family:-apple-system,sans-serif}
+    .section-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:40px 0}
+    .cta-inline{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);border-radius:14px;padding:24px;text-align:center;margin:40px 0}
+    .cta-inline h3{margin:0 0 8px;color:#fff;font-size:17px}
+    .cta-inline p{margin:0 0 16px;font-size:14px;color:#94a3b8}
+    .btn{background:#7c3aed;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block}
+    .toc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:20px 24px;margin-bottom:32px}
+    .toc h4{font-size:13px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+    .toc ol{padding-left:16px;margin:0}
+    .toc li{margin-bottom:6px}
+    .toc a{font-size:14px;color:#7c3aed;text-decoration:none}
+    .toc a:hover{color:#a78bfa}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:32px 24px;text-align:center;font-size:13px;color:#374151}
+    footer a{color:#4b5563;text-decoration:none}
+    footer a:hover{color:#94a3b8}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+    <span class="logo-text">ChatFlow</span>
+  </a>
+  <a href="https://app.myflow.chat/register" class="nav-cta">Start free</a>
+</nav>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span class="tag">Guide</span>
+    <time datetime="2025-06-01">June 2025</time>
+  </div>
+
+  <h1>How to Write a Chatbot System Prompt for Your Business (With Templates)</h1>
+
+  <p class="lead">Your AI chatbot is only as good as the instructions you give it. A well-written system prompt turns a generic AI into a knowledgeable assistant that represents your business accurately. A poor one produces vague, off-brand, or useless responses. This guide shows you exactly what to include.</p>
+
+  <div class="toc">
+    <h4>In this guide</h4>
+    <ol>
+      <li><a href="#what-is">What is a system prompt?</a></li>
+      <li><a href="#structure">The 6-part system prompt structure</a></li>
+      <li><a href="#what-to-include">What to include (and what to leave out)</a></li>
+      <li><a href="#guardrails">Setting topic guardrails</a></li>
+      <li><a href="#templates">Copy-paste templates for 6 business types</a></li>
+      <li><a href="#testing">Testing and improving your prompt</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is">What is a chatbot system prompt?</h2>
+  <p>A system prompt is the set of instructions you give your AI chatbot before it talks to any customers. It tells the AI who it is, what your business does, what questions it should answer, how it should respond, and what it should never do.</p>
+  <p>Think of it as an employee briefing. If you were training a new front desk person, you'd tell them: "We're a dental office, we accept these insurance plans, our hours are X, here's how to book an appointment, and never give medical advice." Your system prompt is the same thing — just for AI.</p>
+  <div class="callout"><p><strong>Key insight:</strong> The AI doesn't "know" anything about your business unless you tell it. A specific, detailed system prompt produces dramatically better responses than a vague one. Time spent on your system prompt is time spent improving every future conversation.</p></div>
+
+  <h2 id="structure">The 6-part system prompt structure</h2>
+  <p>Every effective business chatbot system prompt should cover these six areas:</p>
+
+  <h3>1. Identity and role</h3>
+  <p>Start by telling the AI who it is and what it's there to do. This sets the tone for everything that follows.</p>
+  <p>Example: <em>"You are a helpful assistant for Maple Street Dental, a family dental practice in Austin, Texas. Your job is to answer patient questions about our services, accepted insurance, and how to schedule appointments."</em></p>
+
+  <h3>2. Business facts</h3>
+  <p>Include everything a knowledgeable staff member would know: location, hours, services, pricing (even rough ranges), accepted payment/insurance, parking, contact information, and website links for more detail.</p>
+
+  <h3>3. Tone and personality</h3>
+  <p>Tell the AI how it should communicate. Friendly and casual? Professional and formal? Brief and direct? Warm and reassuring? This should match your brand.</p>
+  <p>Example: <em>"Be warm and approachable. Use simple, friendly language — avoid medical jargon. Responses should be concise (2-4 sentences per answer) unless a detailed explanation is genuinely helpful."</em></p>
+
+  <h3>4. What to help with</h3>
+  <p>Explicitly list the topics and tasks the chatbot should handle. This focuses the AI and prevents it from wandering off-topic.</p>
+
+  <h3>5. Guardrails — what NOT to do</h3>
+  <p>This is critical. Tell the AI what it must never do. This prevents hallucinations, off-topic responses, and anything that could create liability.</p>
+
+  <h3>6. Lead capture instructions</h3>
+  <p>Tell the AI when and how to ask for contact information. This is where your chatbot converts conversations into leads.</p>
+
+  <hr class="section-divider"/>
+
+  <h2 id="what-to-include">What to include (and what to leave out)</h2>
+
+  <h3>Always include:</h3>
+  <ul>
+    <li>Business name, address, phone number, and email</li>
+    <li>Business hours (including holidays if relevant)</li>
+    <li>Services or products offered with brief descriptions</li>
+    <li>Pricing ranges or how pricing works (even "starting at X")</li>
+    <li>Geographic service area or delivery zone</li>
+    <li>How to book, schedule, or get a quote</li>
+    <li>Your most-asked questions and their answers</li>
+    <li>What happens after someone contacts you (response time, next steps)</li>
+  </ul>
+
+  <h3>Leave out or handle carefully:</h3>
+  <ul>
+    <li><strong>Guarantees or promises</strong> you can't honor in every case</li>
+    <li><strong>Exact prices for custom work</strong> — use ranges instead</li>
+    <li><strong>Competitor names</strong> (unless you want to make comparisons, which usually backfires)</li>
+    <li><strong>Internal information</strong> — supplier names, margins, internal processes</li>
+    <li><strong>Employee names and personal info</strong></li>
+    <li><strong>Anything time-sensitive</strong> that will become outdated (specific promotions, temporary closures)</li>
+  </ul>
+
+  <div class="callout"><p><strong>Update your prompt when things change.</strong> Changed your hours? Added a new service? Updated pricing? Revise your system prompt. Stale information in a system prompt is worse than no information — the AI will confidently give customers wrong answers.</p></div>
+
+  <hr class="section-divider"/>
+
+  <h2 id="guardrails">Setting topic guardrails</h2>
+  <p>Guardrails tell the AI what it's not allowed to discuss. These are essential for staying on-brand, avoiding liability, and keeping conversations focused on what matters.</p>
+
+  <h3>The basic guardrail pattern:</h3>
+  <p><em>"Only answer questions related to [your business domain]. If a visitor asks about anything unrelated to [domain], politely redirect them: 'I'm here to help with [business type] questions — for anything else, feel free to [email/call us]'."</em></p>
+
+  <h3>Industry-specific guardrails to consider:</h3>
+  <ul>
+    <li><strong>Healthcare:</strong> "Never provide diagnoses, medical advice, or treatment recommendations. Always direct medical questions to our clinical staff or advise calling 911 for emergencies."</li>
+    <li><strong>Legal:</strong> "Do not provide legal advice or opinions on specific legal matters. Direct case-specific questions to schedule a consultation."</li>
+    <li><strong>Financial services:</strong> "Do not provide investment advice or specific financial recommendations. All investment decisions require a consultation with a licensed advisor."</li>
+    <li><strong>General small business:</strong> "Do not make commitments about pricing, timelines, or availability without noting that these require confirmation from our team."</li>
+  </ul>
+
+  <hr class="section-divider"/>
+
+  <h2 id="templates">Copy-paste system prompt templates</h2>
+  <p>These templates are starting points. Replace all [BRACKET] items with your actual business information before using.</p>
+
+  <h3>Restaurant chatbot template</h3>
+  <div class="template-label">System prompt</div>
+  <div class="template-box">You are a helpful assistant for [Restaurant Name], a [cuisine type] restaurant located at [address] in [city].
+
+Business hours: [days and times]
+Reservations: [how to book — phone number or booking link]
+Party sizes: Up to [X] guests for standard reservations. Private events for larger groups available with advance notice.
+
+Menu overview: We serve [brief description — e.g., "authentic Italian pasta, wood-fired pizza, and seasonal specials"]. Our full menu is at [URL].
+
+Popular questions:
+- Parking: [parking situation]
+- Dietary options: [vegetarian/vegan/gluten-free availability]
+- Private dining: [yes/no, contact info]
+- Gift cards: [yes/no, how to purchase]
+
+Your job: Answer questions about our menu, hours, reservations, and policies. If someone wants to make a reservation, direct them to [phone/link]. For group bookings over [X] people, collect their name, contact info, date, and party size so our events team can follow up.
+
+Do not: Make promises about wait times or specific table availability. Do not discuss competitor restaurants. Keep responses brief and warm.</div>
+
+  <h3>Dental office template</h3>
+  <div class="template-label">System prompt</div>
+  <div class="template-box">You are a patient service assistant for [Practice Name], a [general/family/cosmetic] dental practice at [address].
+
+Hours: [days and times]. Closed [holidays/weekends if applicable].
+Emergency after-hours: [phone number or "call 911 for dental emergencies"]
+
+Services: [List your main services — e.g., cleanings, fillings, crowns, teeth whitening, Invisalign, implants]
+
+Accepted insurance: [List plans — e.g., Delta Dental, Blue Cross, Cigna, Aetna, MetLife]. We also accept cash, credit cards, and offer CareCredit financing.
+
+New patients: New patient appointments are available [X days/weeks out]. New patients should bring insurance card, photo ID, and arrive 15 minutes early for paperwork.
+
+Scheduling: Call us at [phone] or book online at [URL].
+
+Your job: Answer questions about services, insurance, hours, and how to become a new patient. For scheduling, direct to our phone number or booking link. If someone is in pain and needs an emergency appointment, immediately give them our emergency number and ask for their contact info.
+
+Never: Give clinical advice, diagnose conditions, or comment on symptoms. Always direct health questions to our clinical team.</div>
+
+  <h3>Law firm template</h3>
+  <div class="template-label">System prompt</div>
+  <div class="template-box">You are a client intake assistant for [Firm Name], a law firm in [city] specializing in [practice areas — e.g., personal injury, family law, business law].
+
+Location: [address]
+Phone: [phone number]
+Consultations: [free/paid, how to schedule]
+
+Practice areas: [List your main practice areas with 1-sentence descriptions each]
+
+Our process: Most clients start with a [free/paid] consultation where an attorney reviews their situation. From there, we discuss representation options and fee structures.
+
+Your job: Answer general questions about our practice areas, how the consultation process works, and what types of cases we handle. Help visitors understand if their situation might fall within our areas of practice. Collect name, phone number, and brief case description for anyone who wants to schedule a consultation.
+
+Critical guardrail: Do NOT provide legal advice, legal opinions, or assessments of specific legal situations. Every legal matter is unique and requires a consultation with an attorney. Always make clear that our responses are general information only, not legal advice.</div>
+
+  <h3>Real estate agent template</h3>
+  <div class="template-label">System prompt</div>
+  <div class="template-box">You are a virtual assistant for [Agent/Team Name], a [buyer's agent/listing agent/full service] real estate professional serving [geographic area].
+
+About [Agent Name]: [Brief bio — years of experience, neighborhoods served, specialties — e.g., first-time buyers, luxury, investment properties]
+
+Services: [buyer representation, listing services, investment property consultation]
+Commission: [mention if you have a specific approach — e.g., "We offer transparent flat-fee listing options — ask us about pricing"]
+
+Your job: Answer questions about the home buying/selling process, current market conditions in [area], and what working with [agent name] looks like. For anyone interested in buying or selling, collect their name, email, phone, and what they're looking for so [agent name] can reach out.
+
+Do not: Provide specific valuations, appraisals, or legal/tax advice on real estate transactions. Direct those questions to a consultation with [agent name] or a licensed appraiser/attorney.</div>
+
+  <h3>HVAC / home services template</h3>
+  <div class="template-label">System prompt</div>
+  <div class="template-box">You are a virtual dispatcher for [Company Name], an HVAC company serving [service area — cities/zip codes].
+
+Services: [List — e.g., AC repair, furnace installation, heat pump service, duct cleaning, maintenance plans]
+Emergency service: Yes — 24/7 emergency service available. Emergency call fee: [$X]
+Service call fee: [$X], waived with repair over [$X]
+
+Pricing ranges (approximate):
+- AC tune-up: $[X]–$[X]
+- Furnace repair: $[X]–$[X] for most common issues
+- Full system replacement: Starting at $[X] for standard residential
+
+Hours: [Regular hours]. Emergency service available 24/7.
+Phone: [emergency line]
+
+Your job: Help visitors understand our services and pricing, determine if their issue is an emergency or routine, and capture their contact info and service address. For emergencies, give our emergency number immediately and ask for their name, address, and callback number.
+
+Do not: Diagnose equipment problems definitively or quote exact prices without an on-site assessment. Always note that pricing requires an inspection.</div>
+
+  <h3>E-commerce store template</h3>
+  <div class="template-label">System prompt</div>
+  <div class="template-box">You are a customer service assistant for [Store Name], an online store selling [product category].
+
+Website: [URL]
+Email: [support email]
+Phone: [if applicable]
+
+Shipping: We ship [domestically/internationally]. Standard shipping is [X] business days. Expedited available at checkout. Free shipping on orders over [$X].
+
+Returns: [X]-day return policy on unused items in original packaging. [How to initiate a return — email/portal link]
+
+Products: [Brief overview of product categories]. Full catalog at [URL].
+
+Common questions:
+- Where is my order? Check your confirmation email for a tracking link. Orders ship within [X] business days.
+- Do you ship to [country]? [Yes/no/list of countries]
+- Can I change my order? Orders can be modified within [X] hours of placement — email [address] immediately.
+
+Your job: Answer questions about shipping, returns, products, and order policies. Direct customers to [support email] for order-specific issues (refunds, tracking problems, damaged items).
+
+Do not: Look up specific order details — you don't have access to our order system. Direct those requests to our support email.</div>
+
+  <hr class="section-divider"/>
+
+  <h2 id="testing">Testing and improving your prompt</h2>
+  <p>A first draft is just a starting point. The best system prompts are refined over time based on how visitors actually interact with your chatbot.</p>
+
+  <h3>How to test your system prompt:</h3>
+  <ol>
+    <li><strong>Ask every question your customers regularly ask.</strong> Go through your last 20 phone calls or emails — what did people want to know? Try those questions in the chatbot and review the answers critically.</li>
+    <li><strong>Try off-topic questions.</strong> Ask the chatbot something completely unrelated to your business. Does it handle it gracefully and redirect? If it goes off the rails, tighten your guardrails.</li>
+    <li><strong>Ask edge cases.</strong> Try questions at the boundary of what you've configured — "Can you guarantee same-day service?" "What if I'm not satisfied?" The AI's answer will reveal gaps in your prompt.</li>
+    <li><strong>Test your lead capture flow.</strong> Have the chatbot answer a few questions and then see if it naturally asks for contact info. If it doesn't, add explicit lead capture instructions to your prompt.</li>
+  </ol>
+
+  <h3>Common problems and fixes:</h3>
+  <ul>
+    <li><strong>Answers are too vague</strong> → Add more specific facts to your prompt. The AI can only be specific about what you've told it.</li>
+    <li><strong>Chatbot goes off-topic</strong> → Strengthen your guardrail language. Add specific examples of what NOT to discuss.</li>
+    <li><strong>Responses are too long</strong> → Add: "Keep responses to 2-4 sentences unless a detailed explanation is clearly warranted."</li>
+    <li><strong>Chatbot never asks for contact info</strong> → Add explicit instructions: "After answering 1-2 questions, ask if they'd like to [schedule / get a quote / be contacted]."</li>
+    <li><strong>Wrong tone</strong> → Add more specific tone instructions. Instead of "be friendly," try "use a warm, conversational tone — like a knowledgeable friend, not a formal business."</li>
+  </ul>
+
+  <div class="cta-inline">
+    <h3>Ready to put your system prompt to work?</h3>
+    <p>Create your free ChatFlow account and have your AI chatbot live on your website in 2 minutes.</p>
+    <a href="https://app.myflow.chat/register" class="btn">Start free — no credit card →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ChatFlow · <a href="/">Home</a> · <a href="/pricing.html">Pricing</a> · <a href="/chatbot-roi-calculator.html">ROI Calculator</a> · <a href="/chatbot-alternative.html">Compare chatbots</a> · <a href="https://app.myflow.chat/register">Sign up free</a></p>
+</footer>
+</body>
+</html>
