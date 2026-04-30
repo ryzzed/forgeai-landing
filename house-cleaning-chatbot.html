@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot for House Cleaning Services | ChatFlow</title>
+<meta name="description" content="Fill your cleaning calendar faster with an AI chatbot that qualifies home size, frequency preference, and special requests — booking standard recurring cleans and one-time deep cleans 24/7.">
+<link rel="canonical" href="https://myflow.chat/house-cleaning-chatbot">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does an AI chatbot help a house cleaning company get more bookings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A chatbot collects home size, bedroom and bathroom count, frequency preference, and special requests (pets, allergies, specific focus areas) so your team arrives prepared. It books recurring bi-weekly cleans — the core revenue driver — and captures one-time deep cleans for move-in, move-out, and post-construction situations. Homeowners research cleaning services outside business hours and ChatFlow converts them immediately rather than waiting for a callback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should a house cleaning chatbot ask to qualify and book leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask home square footage or bedroom and bathroom count, frequency (weekly, bi-weekly, monthly, or one-time), whether this is a standard clean or deep clean, if they have pets, any specific focus areas (kitchen, bathrooms, inside appliances), and preferred day and time. Bi-weekly recurring customers are your most valuable — the chatbot should present recurring options before one-time pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the chatbot convert one-time clean customers into recurring clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After booking a one-time deep clean, the chatbot explains the recurring maintenance discount (typically 10-15% off) and asks if they would like to schedule ongoing bi-weekly or monthly service starting after the first clean. Customers who experience a great deep clean are the most receptive to recurring — capturing that intent during booking is far more effective than asking after the fact."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0f; color: #e8e8f0; line-height: 1.6; }
+  header { background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 100%); padding: 80px 20px 60px; text-align: center; border-bottom: 1px solid #2a1a4e; }
+  header h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; background: linear-gradient(135deg, #a78bfa, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+  header p { font-size: 1.15rem; color: #9ca3af; max-width: 640px; margin: 0 auto 32px; }
+  .cta-btn { display: inline-block; background: linear-gradient(135deg, #7c3aed, #a78bfa); color: white; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: opacity .2s; }
+  .cta-btn:hover { opacity: .85; }
+  section { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+  h2 { font-size: 1.7rem; font-weight: 700; color: #c4b5fd; margin-bottom: 28px; }
+  .demo-wrap { background: #12121a; border: 1px solid #2a1a4e; border-radius: 16px; padding: 32px; margin-bottom: 48px; }
+  .demo-header { font-size: .85rem; color: #6b7280; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 20px; }
+  .chat { display: flex; flex-direction: column; gap: 12px; }
+  .bot { background: #1e1b4b; border: 1px solid #3730a3; border-radius: 12px 12px 12px 0; padding: 12px 16px; max-width: 82%; font-size: .95rem; }
+  .user-b { background: #4c1d95; border-radius: 12px 12px 0 12px; padding: 12px 16px; max-width: 72%; align-self: flex-end; font-size: .95rem; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 48px; }
+  .card { background: #12121a; border: 1px solid #2a1a4e; border-radius: 12px; padding: 24px; }
+  .card h3 { font-size: 1rem; color: #a78bfa; margin-bottom: 8px; font-weight: 600; }
+  .card p { font-size: .9rem; color: #9ca3af; }
+  .faq { display: flex; flex-direction: column; gap: 20px; margin-bottom: 48px; }
+  .faq-item { background: #12121a; border: 1px solid #2a1a4e; border-radius: 12px; padding: 24px; }
+  .faq-item h3 { font-size: 1rem; color: #c4b5fd; margin-bottom: 8px; font-weight: 600; }
+  .faq-item p { font-size: .9rem; color: #9ca3af; }
+  .cta-banner { background: linear-gradient(135deg, #1e1b4b, #4c1d95); border-radius: 16px; padding: 48px 32px; text-align: center; margin-bottom: 48px; }
+  .cta-banner h2 { color: #e8e8f0; margin-bottom: 12px; }
+  .cta-banner p { color: #c4b5fd; margin-bottom: 28px; }
+  footer { background: #080810; border-top: 1px solid #1a1a2e; padding: 32px 20px; text-align: center; font-size: .85rem; color: #6b7280; }
+  footer a { color: #7c3aed; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .related { margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AI Chatbot for House Cleaning Services</h1>
+  <p>Fill your recurring cleaning calendar without answering evening texts — qualify home size, frequency, and special needs automatically, then book deep cleans and recurring clients 24/7.</p>
+  <a href="https://myflow.chat/signup" class="cta-btn">Try ChatFlow Free</a>
+</header>
+
+<section>
+  <h2>See It In Action</h2>
+  <div class="demo-wrap">
+    <div class="demo-header">Live Chat Preview — Sparkle Clean Co., Chicago IL</div>
+    <div class="chat">
+      <div class="bot">Hi! I&#39;m the assistant for Sparkle Clean Co. Are you looking for a one-time deep clean, or regular ongoing cleaning service?</div>
+      <div class="user-b">I want to start regular cleaning. The house has been a disaster since we had our second baby three months ago.</div>
+      <div class="bot">Congratulations on the new baby! Regular cleaning with a newborn and a toddler is absolutely the right call. How many bedrooms and bathrooms does your home have, and roughly what&#39;s the square footage?</div>
+      <div class="user-b">4 bedrooms, 2.5 bathrooms, about 2,100 square feet. We also have a dog.</div>
+      <div class="bot">Got it — 4 bed, 2.5 bath, dog household. For a home that size with a pet, bi-weekly service is usually the sweet spot — weekly can feel like overkill and monthly doesn&#39;t quite keep pace with dog hair and a toddler. Bi-weekly for a 2,100 sq ft home typically runs $165-$195 per visit. Would you like a first-visit deep clean to get everything reset, and then bi-weekly maintenance from there?</div>
+      <div class="user-b">Yes, that sounds perfect. The first deep clean is definitely needed.</div>
+      <div class="bot">A first deep clean for your home would be $245-$285 — it takes about 30-45 minutes longer and covers inside appliances, baseboards, and any buildup that maintenance cleans don&#39;t address. After that, bi-weekly maintenance would be $165-$195. Any allergies or products we should avoid, or areas to focus on?</div>
+      <div class="user-b">No allergies, but the kitchen and both bathrooms are the priority.</div>
+      <div class="bot">Noted — kitchen and bathrooms as priority areas. I have Saturday the 10th and Monday the 12th open for the first deep clean. Which works better for your family?</div>
+    </div>
+  </div>
+
+  <h2>Built for House Cleaning Companies</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Recurring Revenue First</h3>
+      <p>Presents bi-weekly and weekly options before one-time pricing — anchoring the conversation on recurring service that builds predictable monthly revenue rather than one-off jobs.</p>
+    </div>
+    <div class="card">
+      <h3>Home Size Qualification</h3>
+      <p>Collects bedroom count, bathroom count, and square footage to price accurately — preventing underquoted jobs that erode margins and overquoted jobs that lose to competitors.</p>
+    </div>
+    <div class="card">
+      <h3>Deep Clean to Recurring Conversion</h3>
+      <p>Books deep clean first, then presents recurring maintenance with discount — converting one-time customers into long-term accounts during the highest-receptivity moment.</p>
+    </div>
+    <div class="card">
+      <h3>Pet and Allergy Notes</h3>
+      <p>Collects pet and allergy information upfront — ensuring your team brings the right supplies and preventing the post-visit complaints that damage reviews and cause cancellations.</p>
+    </div>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h3>How does an AI chatbot help a house cleaning company get more bookings?</h3>
+      <p>A chatbot collects home size, frequency preference, and special requests so your team arrives prepared. It books recurring bi-weekly cleans and captures one-time deep cleans for move-in, move-out, and post-construction situations. Homeowners research cleaning services outside business hours and ChatFlow converts them immediately.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What should a house cleaning chatbot ask to qualify and book leads?</h3>
+      <p>Ask home square footage or bedroom and bathroom count, frequency (weekly, bi-weekly, monthly, or one-time), whether this is a standard clean or deep clean, if they have pets, any specific focus areas, and preferred day and time. Bi-weekly recurring customers are your most valuable — the chatbot presents recurring options before one-time pricing.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can the chatbot convert one-time clean customers into recurring clients?</h3>
+      <p>Yes. After booking a one-time deep clean, the chatbot explains the recurring maintenance discount and asks if they would like to schedule ongoing bi-weekly or monthly service. Customers who experience a great deep clean are the most receptive to recurring — capturing that intent during booking is far more effective than asking after the fact.</p>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h2>Stop Answering Booking Requests at 10 PM</h2>
+    <p>New parents, busy professionals, and move-in customers search for cleaners after hours. ChatFlow books them while you sleep.</p>
+    <a href="https://myflow.chat/signup" class="cta-btn">Start Free — No Credit Card</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 ChatFlow by ForgeAI. <a href="https://myflow.chat">myflow.chat</a></p>
+  <p class="related">Related: <a href="/commercial-cleaning-chatbot">Commercial Cleaning Chatbot</a> &bull; <a href="/dog-grooming-chatbot">Dog Grooming Chatbot</a> &bull; <a href="/moving-company-chatbot">Moving Company Chatbot</a></p>
+</footer>
+
+</body>
+</html>
