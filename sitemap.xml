@@ -943,4 +943,7 @@
   <url><loc>https://myflow.chat/boat-repair-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myflow.chat/dumpster-rental-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myflow.chat/kitchen-hood-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/drain-cleaning-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/gutter-guard-installation-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myflow.chat/custom-closet-chatbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
